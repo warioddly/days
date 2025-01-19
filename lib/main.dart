@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
       title: 'Days',
       restorationScopeId: 'app',
       theme: AppTheme.theme,
+      debugShowCheckedModeBanner: false,
       scrollBehavior: const CupertinoScrollBehavior(),
       routerDelegate: AppRouter.router.routerDelegate,
       routeInformationParser: AppRouter.router.routeInformationParser,

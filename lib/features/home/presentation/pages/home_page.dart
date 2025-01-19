@@ -1,10 +1,10 @@
 import 'dart:ui';
-
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/core/utils/datetime_utils.dart';
-import 'package:days/features/home/presentation/widgets/day_dot.dart';
-import 'package:days/shared/models/vector2.dart';
+import 'package:days/shared/ui/dot/dot.dart';
+import 'package:days/shared/ui/dot/dots_list_builder.dart';
+import 'package:days/shared/utils/dot_builder_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,13 +17,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  var addYear = 8, leftDays = 0, todayScrollOffset = 0.0;
-  final days = <List<DayDot>>[];
-  final DateTime date = DateTime(2001, 6, 28);
-  final scrollController = ScrollController();
-  var _scrolling = false;
-  var blockSize = 22.0;
+  var leftDays = 0, todayScrollOffset = 0.0, _scrolling = false;
 
+  final date = DateTime(2001, 6, 28);
+  final scrollController = ScrollController();
+
+  List<List<Dot>> days = <List<Dot>>[];
 
   @override
   void initState() {
@@ -32,21 +31,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
-  void dispose() {
-    scrollController.dispose();
-    super.dispose();
-  }
-
-  @override
-  void didUpdateWidget(covariant HomePage oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    print("didUpdateWidget");
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: DecoratedBox(
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/mountain.jpeg'),
@@ -80,6 +67,7 @@ class _HomePageState extends State<HomePage> {
                           backgroundColor: Colors.transparent,
                           flexibleSpace: FlexibleSpaceBar(
                             title: const Text('Days'),
+                            centerTitle: true,
                           ),
                           actions: [
 
@@ -93,34 +81,15 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
 
-                        SliverList(
-                          delegate: SliverChildBuilderDelegate(
-                                (_, index) {
-                              return Container(
-                                margin: Dimensions.normalPadding.paddingHorizontal,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    for (final dot in days[index])
-                                      SizedBox(
-                                        key: ValueKey(dot.position),
-                                        height: blockSize,
-                                        child: dot,
-                                      )
-                                  ],
-                                ),
-                              );
-                            },
-                            childCount: days.length,
-                          ),
-                        ),
+                        DotsListBuilder(days: days),
 
                       ],
                     ),
                   ),
               
                   Container(
-                    margin: Dimensions.normalPadding.padding.copyWith(
+                    margin: Dimensions.dotContainerSize.padding.copyWith(
+                      top: Dimensions.smallPadding,
                       bottom: Dimensions.empty,
                     ),
                     child: Row(
@@ -145,8 +114,21 @@ class _HomePageState extends State<HomePage> {
                         ),
 
                         Expanded(
-                          child: Text(
-                            'Left $leftDays days',
+                          child: RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: leftDays.toString(),
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                                TextSpan(
+                                  text: ' left days',
+                                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                    color: Colors.white54,
+                                  ),
+                                ),
+                              ],
+                            ),
                             textAlign: TextAlign.right,
                           ),
                         )
@@ -167,47 +149,28 @@ class _HomePageState extends State<HomePage> {
 
   void init() {
 
-    final size = MediaQuery.of(context).size;
-    final dayPerRow = size.width ~/ blockSize;
-    final year = date.year;
     final now = DateTime.now();
+    final to = DateTime(date.year + 100, 12, 31);
 
-    final yearsInDays = DateTimeUtils.getDaysFrom(
-      date,
-      DateTime(date.year + 100, 12, 31),
+    final dotContainerSize = Dimensions.dotContainerSize;
+
+    final size = MediaQuery.of(context).size;
+    final dotsPerRow = ((size.width - (dotContainerSize / 2 + Dimensions.dotSize) * 2) ~/ dotContainerSize);
+    final dotsPerColumn = size.height ~/ dotContainerSize;
+    final safeAreaInsets = MediaQuery.of(context).padding;
+    final safeAreaCompensation = safeAreaInsets.bottom;
+
+    days = DotBuilderUtils.buildDots(
+        from: date,
+        to: to,
+        now: now,
+        dotsPerRow: dotsPerRow,
+        beforeOffsetCallback: (int index) {
+          todayScrollOffset = (index * dotContainerSize) + (dotsPerColumn - safeAreaCompensation);
+        },
     );
 
     leftDays = DateTimeUtils.getDaysFrom(date, now);
-
-    for (var i = 0; i < yearsInDays / dayPerRow; i++) {
-
-      final children = <DayDot>[];
-
-      for (var j = 0; j < dayPerRow; j++) {
-
-        final day = DateTime(year, 1, 0).add(Duration(days: i * dayPerRow + j));
-        final isBefore = day.isBefore(now);
-
-        if (day.isBefore(now)) {
-          todayScrollOffset += 1.255;
-        }
-
-        children.add(
-          DayDot(
-            key: ValueKey(Vector2(j.toDouble(), i.toDouble())),
-            Vector2(j.toDouble(), i.toDouble()),
-            date: day,
-            isBefore: isBefore,
-            color: isBefore
-                ? Colors.white12
-                : Colors.white
-          ),
-        );
-      }
-
-      days.add(children);
-
-    }
 
     if (mounted) {
       Future.delayed(Duration.zero, () => scrollTo(todayScrollOffset));
@@ -228,6 +191,12 @@ class _HomePageState extends State<HomePage> {
       duration: const Duration(milliseconds: 2000),
       curve: Curves.easeInOutQuart,
     ).then((_) => _scrolling = false);
+  }
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
   }
 
 }
