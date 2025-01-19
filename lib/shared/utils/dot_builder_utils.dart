@@ -1,6 +1,7 @@
 import 'package:days/core/utils/datetime_utils.dart';
 import 'package:days/shared/models/vector2.dart';
 import 'package:days/shared/ui/dot/dot.dart';
+import 'package:flutter/material.dart';
 
 class DotBuilderUtils {
 
@@ -36,7 +37,9 @@ class DotBuilderUtils {
         final position = Vector2(j.toDouble(), i.toDouble());
 
         final dot = isBefore
-            ? Dot.before(position, date: day, isBefore: isBefore)
+            ? day.year == now.year && day.month == now.month && day.day == now.day
+              ? Dot(position, date: day, isBefore: false, color: Colors.blue)
+              : Dot.before(position, date: day, isBefore: isBefore)
             : Dot.after(position, date: day, isBefore: isBefore);
 
         children.add(dot);
