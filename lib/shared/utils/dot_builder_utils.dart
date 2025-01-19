@@ -1,6 +1,6 @@
-import 'package:days/core/utils/datetime_utils.dart';
 import 'package:days/shared/models/vector2.dart';
 import 'package:days/shared/ui/dot/dot.dart';
+import 'package:days/shared/utils/enums/view_type_enum.dart';
 import 'package:flutter/material.dart';
 
 class DotBuilderUtils {
@@ -9,6 +9,7 @@ class DotBuilderUtils {
     required DateTime from,
     required DateTime to,
     required DateTime now,
+    required ViewType viewType,
     required int dotsPerRow,
     double? offset,
     void Function(int index)? beforeOffsetCallback,
@@ -16,17 +17,15 @@ class DotBuilderUtils {
 
     assert(from.isBefore(to));
 
-    final days = <List<Dot>>[];
+    final days = <List<Dot>>[], length = viewType.calculation(from, to);
 
-    final yearsInDays = DateTimeUtils.getDaysFrom(from, to);
-
-    for (var i = 0; i < yearsInDays / dotsPerRow; i++) {
+    for (var i = 0; i < length / dotsPerRow; i++) {
 
       final children = <Dot>[];
 
       for (var j = 0; j < dotsPerRow; j++) {
 
-        final day = DateTime(from.year, 1, 0).add(Duration(days: i * dotsPerRow + j));
+        final day = viewType.calculationDay(from, i * dotsPerRow + j);
 
         final isBefore = day.isBefore(now);
 
@@ -36,11 +35,11 @@ class DotBuilderUtils {
 
         final position = Vector2(j.toDouble(), i.toDouble());
 
-        final dot = isBefore
-            ? day.year == now.year && day.month == now.month && day.day == now.day
-              ? Dot(position, date: day, isBefore: false, color: Colors.blue)
-              : Dot.before(position, date: day, isBefore: isBefore)
-            : Dot.after(position, date: day, isBefore: isBefore);
+        final dot = viewType.sameWith(day, now)
+              ? Dot(position, date: day, color: Colors.tealAccent)
+              : isBefore
+                ? Dot.before(position, date: day, isBefore: isBefore)
+                : Dot.after(position, date: day, isBefore: isBefore);
 
         children.add(dot);
 

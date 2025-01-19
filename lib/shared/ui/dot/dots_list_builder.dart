@@ -4,9 +4,9 @@ import 'package:days/shared/ui/dot/dot.dart';
 import 'package:flutter/material.dart';
 
 class DotsListBuilder extends StatelessWidget {
-  const DotsListBuilder({super.key, required this.days});
+  const DotsListBuilder({super.key, required this.dots});
 
-  final List<List<Dot>> days;
+  final List<List<Dot>> dots;
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +18,13 @@ class DotsListBuilder extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                for (final dot in days[index])
+                for (final dot in dots[index])
                   dot
               ],
             ),
           );
         },
-        childCount: days.length,
+        childCount: dots.length,
       ),
     );
   }

@@ -1,11 +1,11 @@
 import 'dart:ui';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
-import 'package:days/core/utils/datetime_utils.dart';
+import 'package:days/features/home/presentation/widgets/app_bar.dart';
 import 'package:days/shared/ui/dot/dot.dart';
 import 'package:days/shared/ui/dot/dots_list_builder.dart';
 import 'package:days/shared/utils/dot_builder_utils.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:days/shared/utils/enums/view_type_enum.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,12 +17,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  var leftDays = 0, todayScrollOffset = 0.0, _scrolling = false;
+  var left = 0, todayScrollOffset = 0.0, _scrolling = false;
 
+  final viewType = ValueNotifier(ViewType.months);
   final date = DateTime(2001, 6, 28);
   final scrollController = ScrollController();
 
-  List<List<Dot>> days = <List<Dot>>[];
+  List<List<Dot>> dots = <List<Dot>>[];
 
   @override
   void initState() {
@@ -61,27 +62,22 @@ class _HomePageState extends State<HomePage> {
                       controller: scrollController,
                       slivers: [
 
-                        SliverAppBar(
-                          floating: false,
-                          pinned: false,
-                          backgroundColor: Colors.transparent,
-                          flexibleSpace: FlexibleSpaceBar(
-                            title: const Text('Days'),
-                            centerTitle: true,
-                          ),
-                          actions: [
-
-                            IconButton(
-                              icon: const Icon(CupertinoIcons.calendar),
-                              onPressed: () {
-
-                              },
-                            )
-
-                          ],
+                        HomeAppBar(
+                          viewType: viewType.value,
+                          onTypeChanged: (ViewType type) {
+                            viewType.value = type;
+                            init();
+                          },
                         ),
 
-                        DotsListBuilder(days: days),
+                        ValueListenableBuilder(
+                          valueListenable: viewType,
+                          builder: (context, value, child) {
+                            return DotsListBuilder(
+                                dots: dots
+                            );
+                          },
+                        ),
 
                       ],
                     ),
@@ -89,7 +85,7 @@ class _HomePageState extends State<HomePage> {
               
                   Container(
                     margin: Dimensions.dotContainerSize.padding.copyWith(
-                      top: Dimensions.smallPadding,
+                      top: Dimensions.small,
                       bottom: Dimensions.empty,
                     ),
                     child: Row(
@@ -108,28 +104,31 @@ class _HomePageState extends State<HomePage> {
                               scrollTo(todayScrollOffset);
                             },
                             child: Text(
-                              'Today',
+                              'Tøday',
                             ),
                           ),
                         ),
 
                         Expanded(
-                          child: RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: leftDays.toString(),
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                                TextSpan(
-                                  text: ' left days',
-                                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                    color: Colors.white54,
+                          child: GestureDetector(
+                            onTap: () => scrollTo(0),
+                            child: RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: left.toString(),
+                                    style: Theme.of(context).textTheme.bodySmall,
                                   ),
-                                ),
-                              ],
+                                  TextSpan(
+                                    text: ' left ${viewType.value.name.toLowerCase()}',
+                                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                      color: Colors.white54,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              textAlign: TextAlign.right,
                             ),
-                            textAlign: TextAlign.right,
                           ),
                         )
 
@@ -160,17 +159,18 @@ class _HomePageState extends State<HomePage> {
     final safeAreaInsets = MediaQuery.of(context).padding;
     final safeAreaCompensation = safeAreaInsets.bottom;
 
-    days = DotBuilderUtils.buildDots(
+    dots = DotBuilderUtils.buildDots(
         from: date,
         to: to,
         now: now,
+        viewType: viewType.value,
         dotsPerRow: dotsPerRow,
         beforeOffsetCallback: (int index) {
           todayScrollOffset = (index * dotContainerSize) + (dotsPerColumn - safeAreaCompensation);
         },
     );
 
-    leftDays = DateTimeUtils.getDaysFrom(date, now);
+    left = viewType.value.calculation(date, now);
 
     if (mounted) {
       Future.delayed(Duration.zero, () => scrollTo(todayScrollOffset));

@@ -1,13 +1,16 @@
 
 
 
+import 'package:days/core/constants/dimensions.dart';
+import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
 
   static ThemeData get theme {
     return ThemeData(
-      
+      useMaterial3: true,
+      fontFamily: 'ChakraPetch',
       colorScheme: ColorScheme(
         primary: Colors.white,
         onPrimary: Colors.black,
@@ -19,8 +22,13 @@ class AppTheme {
         surface: Colors.black,
         onSurface: Colors.white,
       ),
-      useMaterial3: true,
       scaffoldBackgroundColor: Colors.black,
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: Colors.black,
+        shape: RoundedRectangleBorder(
+          borderRadius: Dimensions.large.topBorder,
+        ),
+      ),
     );
   }
 
