@@ -1,15 +1,14 @@
 import 'dart:ui';
-
 import 'package:days/core/extensions/string_extensions.dart';
-import 'package:days/shared/utils/enums/view_type_enum.dart';
+import 'package:days/features/home/domain/entity/settings_entity.dart';
+import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
+import 'package:days/features/home/presentation/widgets/settings_bottom_sheet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeAppBar extends StatefulWidget {
-  const HomeAppBar({super.key, required this.onTypeChanged, required this.viewType});
-
-  final ViewType viewType;
-  final Function(ViewType type) onTypeChanged;
+  const HomeAppBar({super.key});
 
   @override
   State<HomeAppBar> createState() => _HomeAppBarState();
@@ -18,13 +17,13 @@ class HomeAppBar extends StatefulWidget {
 class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateMixin {
 
   late final AnimationController _controller;
-  ViewType viewType = ViewType.days;
+  GridType viewType = GridType.days;
   var title = '';
 
   @override
   void initState() {
     super.initState();
-    viewType = widget.viewType;
+    // viewType = widget.viewType;
     title = viewType.name;
     _controller = AnimationController(
       duration: const Duration(milliseconds: 100),
@@ -80,32 +79,19 @@ class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateM
         context: context,
         clipBehavior: Clip.antiAlias,
         builder: (context) {
-          return SizedBox(
-            height: MediaQuery.of(context).size.height * .4,
-            child: Column(
-              children: [
-
-                for (var type in ViewType.values)
-                  ListTile(
-                    title: Text(type.name.capitalize),
-                    onTap: () {
-                      _onTypeChanged(type);
-                      Navigator.of(context).pop();
-                    },
-                  ),
-
-              ],
-            ),
-          );
+          return BlocProvider(
+            create: (context) => this.context.read<SettingsBloc>(),
+            child: SettingBottomSheetContent(),
+          ) ;
         }
     );
 
   }
 
-  void _onTypeChanged(ViewType type) {
-      _controller.forward(from: 0.0).then((value) => _controller.reverse());
-      widget.onTypeChanged(viewType = type);
-  }
+  // void _onTypeChanged(ViewType type) {
+  //     _controller.forward(from: 0.0).then((value) => _controller.reverse());
+  //     widget.onTypeChanged(viewType = type);
+  // }
 
   @override
   void dispose() {

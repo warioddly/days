@@ -1,12 +1,17 @@
-import 'dart:ui';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
+import 'package:days/core/services/locator_service.dart';
+import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
+import 'package:days/features/home/presentation/utils/extensions/grid_type_extension.dart';
 import 'package:days/features/home/presentation/widgets/app_bar.dart';
 import 'package:days/shared/ui/dot/dot.dart';
 import 'package:days/shared/ui/dot/dots_list_builder.dart';
+import 'package:days/shared/ui/widgets/background_blur.dart';
+import 'package:days/shared/ui/widgets/background_image.dart';
 import 'package:days/shared/utils/dot_builder_utils.dart';
-import 'package:days/shared/utils/enums/view_type_enum.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,130 +22,151 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  List<List<Dot>> dots = <List<Dot>>[];
+
   var left = 0, todayScrollOffset = 0.0, _scrolling = false;
 
-  final viewType = ValueNotifier(ViewType.months);
-  final date = DateTime(2001, 6, 28);
+  final settingsBloc = $getIt<SettingsBloc>();
   final scrollController = ScrollController();
-
-  List<List<Dot>> dots = <List<Dot>>[];
 
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration.zero, init);
+    settingsBloc.add(GetSettings());
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: DecoratedBox(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/mountain.jpeg'),
-            fit: BoxFit.cover,
-            filterQuality: FilterQuality.low
-          ),
-        ),
-        child: Stack(
-          children: [
+      body: BackgroundImage(
+        child: BlocProvider(
+          create: (context) => settingsBloc,
+          child: Stack(
+            children: [
 
-            BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 45, sigmaY: 45),
-              child: Container(
-                color: Colors.black.withAlpha(200),
-              ),
-            ),
+              const BackgroundBlur(),
 
-            SafeArea(
-              top: false,
-              child: Column(
-                children: [
-              
-                  Expanded(
-                    child: CustomScrollView(
-                      controller: scrollController,
-                      slivers: [
+              SafeArea(
+                top: false,
+                child: Column(
+                  children: [
 
-                        HomeAppBar(
-                          viewType: viewType.value,
-                          onTypeChanged: (ViewType type) {
-                            viewType.value = type;
-                            init();
-                          },
-                        ),
+                    Expanded(
+                      child: CustomScrollView(
+                        controller: scrollController,
+                        slivers: [
 
-                        ValueListenableBuilder(
-                          valueListenable: viewType,
-                          builder: (context, value, child) {
-                            return DotsListBuilder(
-                                dots: dots
-                            );
-                          },
-                        ),
+                          const HomeAppBar(),
 
-                      ],
-                    ),
-                  ),
-              
-                  Container(
-                    margin: Dimensions.dotContainerSize.padding.copyWith(
-                      top: Dimensions.small,
-                      bottom: Dimensions.empty,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                          BlocConsumer<SettingsBloc, SettingsModelState>(
+                            bloc: settingsBloc,
+                            listener: (context, state) {
 
-                        Expanded(
-                          child: Text(
-                            DateTime.now().year.toString(),
-                          ),
-                        ),
+                              final eventState = state.state;
 
-                        Flexible(
-                          child: GestureDetector(
-                            onTap: () {
-                              scrollTo(todayScrollOffset);
+                              if (eventState is SettingsLoaded) {
+                                init();
+                              }
+
                             },
-                            child: Text(
-                              'Tøday',
-                            ),
-                          ),
-                        ),
+                            builder: (context, state) {
 
-                        Expanded(
-                          child: GestureDetector(
-                            onTap: () => scrollTo(0),
-                            child: RichText(
-                              text: TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: left.toString(),
+                              final eventState = state.state;
+
+                              if (eventState is SettingsLoaded) {
+                                return DotsListBuilder(
+                                    dots: dots
+                                );
+                              }
+
+                              if (eventState is SettingsError) {
+                                return SliverToBoxAdapter(
+                                  child: Text(
+                                    eventState.message.toString(),
                                     style: Theme.of(context).textTheme.bodySmall,
-                                  ),
-                                  TextSpan(
-                                    text: ' left ${viewType.value.name.toLowerCase()}',
-                                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                      color: Colors.white54,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              textAlign: TextAlign.right,
+                                  )
+                                );
+                              }
+
+                              return SliverToBoxAdapter(
+                                child: const CupertinoActivityIndicator(),
+                              );
+
+                            }
+                          )
+
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      margin: Dimensions.dotContainerSize.padding.copyWith(
+                        top: Dimensions.small,
+                        bottom: Dimensions.empty,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+
+                          Expanded(
+                            child: Text(
+                              DateTime.now().year.toString(),
                             ),
                           ),
-                        )
 
-                      ],
+                          Flexible(
+                            child: GestureDetector(
+                              onTap: () {
+                                scrollTo(todayScrollOffset);
+                              },
+                              child: Text(
+                                'Tøday',
+                              ),
+                            ),
+                          ),
+
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () => scrollTo(0),
+                              child: BlocBuilder<SettingsBloc, SettingsModelState>(
+                                builder: (context, state) {
+
+                                  if (state.state is SettingsLoaded) {
+                                    return RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: left.toString(),
+                                            style: Theme.of(context).textTheme.bodySmall,
+                                          ),
+                                          TextSpan(
+                                            text: '$left ${state.entity.gridType.name.toLowerCase()}',
+                                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                              color: Colors.white54,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      textAlign: TextAlign.right,
+                                    );
+                                  }
+
+                                  return const SizedBox();
+                                },
+                              ),
+                            ),
+                          )
+
+                        ],
+                      ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
               ),
-            ),
 
-          ]
+            ]
+          ),
         ),
       ),
     );
@@ -148,33 +174,35 @@ class _HomePageState extends State<HomePage> {
 
   void init() {
 
+    final settings = settingsBloc.state.entity;
     final now = DateTime.now();
-    final to = DateTime(date.year + 100, 12, 31);
-
+    final from = settings.birthday;
+    final to = settings.endDateTime;
+    final gridType = settings.gridType;
     final dotContainerSize = Dimensions.dotContainerSize;
-
     final size = MediaQuery.of(context).size;
     final dotsPerRow = ((size.width - (dotContainerSize / 2 + Dimensions.dotSize) * 2) ~/ dotContainerSize);
     final dotsPerColumn = size.height ~/ dotContainerSize;
-    final safeAreaInsets = MediaQuery.of(context).padding;
-    final safeAreaCompensation = safeAreaInsets.bottom;
+    final safeAreaCompensation = MediaQuery.of(context).padding.bottom;
+
+    left = gridType.calculation(from, now);
+
+    print('from $from');
+    print('to $to');
 
     dots = DotBuilderUtils.buildDots(
-        from: date,
+        from: from,
         to: to,
         now: now,
-        viewType: viewType.value,
+        gridType: gridType,
         dotsPerRow: dotsPerRow,
         beforeOffsetCallback: (int index) {
           todayScrollOffset = (index * dotContainerSize) + (dotsPerColumn - safeAreaCompensation);
         },
     );
 
-    left = viewType.value.calculation(date, now);
-
     if (mounted) {
       Future.delayed(Duration.zero, () => scrollTo(todayScrollOffset));
-      setState(() { });
     }
 
   }
@@ -183,9 +211,7 @@ class _HomePageState extends State<HomePage> {
     if (_scrolling) {
       return;
     }
-
     _scrolling = true;
-
     scrollController.animateTo(
       offset,
       duration: const Duration(milliseconds: 2000),

@@ -45,29 +45,32 @@ class Dot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onTap: () {
-        if (date != null) {
-          print( date?.toIso8601String() ?? '');
-        }
-      },
-      child: SizedBox.square(
-        dimension: Dimensions.dotContainerSize,
-        child: Center(
-          child: Container(
-            width: Dimensions.dotSize,
-            height: Dimensions.dotSize,
-            decoration: BoxDecoration(
-              color: color,
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: isBefore ? Colors.black12 : Colors.white,
-                  blurRadius: 3,
-                  spreadRadius: .2,
-                ),
-              ],
+    return Tooltip(
+      message: date?.toIso8601String() ?? '',
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () {
+          if (date != null) {
+            print( date?.toIso8601String() ?? '');
+          }
+        },
+        child: SizedBox.square(
+          dimension: Dimensions.dotContainerSize,
+          child: Center(
+            child: Container(
+              width: Dimensions.dotSize,
+              height: Dimensions.dotSize,
+              decoration: BoxDecoration(
+                color: color,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: isBefore ? Colors.black12 : Colors.white,
+                    blurRadius: 3,
+                    spreadRadius: .2,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

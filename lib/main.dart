@@ -1,10 +1,11 @@
 import 'package:days/core/configs/routes.dart';
+import 'package:days/core/services/locator_service.dart';
 import 'package:days/core/theme/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() {
+void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -12,6 +13,8 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown
   ]);
+
+  await initDependencyInjection();
 
   runApp(const MyApp());
 }
