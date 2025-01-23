@@ -36,3 +36,13 @@ extension BorderExtension on double {
 
 
 }
+
+extension SizedBoxExtension on double {
+
+  SizedBox get verticalBox => SizedBox(height: this);
+
+  SizedBox get horizontalBox => SizedBox(width: this);
+
+  SizedBox get squareBox => SizedBox.square(dimension: this);
+
+}

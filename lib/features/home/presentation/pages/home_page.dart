@@ -89,7 +89,12 @@ class _HomePageState extends State<HomePage> {
                               }
 
                               return SliverToBoxAdapter(
-                                child: const CupertinoActivityIndicator(),
+                                child: SizedBox(
+                                  height: MediaQuery.of(context).size.height,
+                                  child: Center(
+                                    child: const CupertinoActivityIndicator(),
+                                  ),
+                                ),
                               );
 
                             }
@@ -140,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                                             style: Theme.of(context).textTheme.bodySmall,
                                           ),
                                           TextSpan(
-                                            text: '$left ${state.entity.gridType.name.toLowerCase()}',
+                                            text: ' left ${state.entity.gridType.name}',
                                             style: Theme.of(context).textTheme.bodySmall?.copyWith(
                                               color: Colors.white54,
                                             ),
@@ -201,7 +206,7 @@ class _HomePageState extends State<HomePage> {
         },
     );
 
-    if (mounted) {
+    if (mounted && dots.length > dotsPerColumn) {
       Future.delayed(Duration.zero, () => scrollTo(todayScrollOffset));
     }
 

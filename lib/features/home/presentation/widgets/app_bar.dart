@@ -17,14 +17,12 @@ class HomeAppBar extends StatefulWidget {
 class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateMixin {
 
   late final AnimationController _controller;
-  GridType viewType = GridType.days;
   var title = '';
+  var gridType = GridType.months;
 
   @override
   void initState() {
     super.initState();
-    // viewType = widget.viewType;
-    title = viewType.name;
     _controller = AnimationController(
       duration: const Duration(milliseconds: 100),
       vsync: this,
@@ -33,6 +31,7 @@ class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
+    final bloc = context.read<SettingsBloc>();
     return SliverAppBar(
       floating: false,
       pinned: false,
@@ -40,26 +39,48 @@ class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateM
       backgroundColor: Colors.transparent,
       flexibleSpace: FlexibleSpaceBar(
         centerTitle: true,
-        title: AnimatedBuilder(
-            animation: _controller,
-            builder: (context, child) {
+        title: BlocListener<SettingsBloc, SettingsModelState>(
+          bloc: bloc,
+          listenWhen: (previous, current) => true,
+          listener: (context, state) {
 
-              final value = _controller.value;
-
-              if (value > .5) {
-                title = viewType.name;
-              }
-
-              return ImageFiltered(
-                imageFilter: ImageFilter.blur(
-                  sigmaX: value * 10,
-                  sigmaY: value * 5,
-                ),
-                child: Text(
-                    title.capitalize,
-                ),
-              );
+            if (state.state is SettingsLoaded && gridType != state.entity.gridType) {
+                _controller.forward(from: 0.0).then((value) => _controller.reverse());
+                gridType = state.entity.gridType;
             }
+
+          },
+          child: AnimatedBuilder(
+              animation: _controller,
+              builder: (context, child) {
+
+                final value = _controller.value;
+                final gridName = gridType.name;
+
+                if (title.isEmpty) {
+                  title = gridName;
+                }
+
+                if (value > .5) {
+                  title = gridName;
+                }
+
+                return ImageFiltered(
+                  imageFilter: ImageFilter.blur(
+                    sigmaX: value * 10,
+                    sigmaY: value * 5,
+                  ),
+                  child: Text(
+                    title.capitalize,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                );
+              }
+          ),
         ),
       ),
       actions: [
@@ -73,25 +94,36 @@ class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateM
     );
   }
 
-  void _actionModal() {
+  void _actionModal() async {
 
-    showModalBottomSheet(
+    final entity = context.read<SettingsBloc>().state.entity;
+
+    final result = await showModalBottomSheet<SettingsEntity?>(
+        isScrollControlled: true,
         context: context,
         clipBehavior: Clip.antiAlias,
         builder: (context) {
-          return BlocProvider(
-            create: (context) => this.context.read<SettingsBloc>(),
-            child: SettingBottomSheetContent(),
-          ) ;
+          return SettingBottomSheetContent(
+            entity: entity,
+          );
         }
     );
 
-  }
+    if (result != null && mounted) {
 
-  // void _onTypeChanged(ViewType type) {
-  //     _controller.forward(from: 0.0).then((value) => _controller.reverse());
-  //     widget.onTypeChanged(viewType = type);
-  // }
+      if (result.birthday.isAfter(result.endDateTime)) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Birthday cannot be after end date'),
+          ),
+        );
+        return;
+      }
+
+      context.read<SettingsBloc>().add(SetSettings(result));
+    }
+
+  }
 
   @override
   void dispose() {

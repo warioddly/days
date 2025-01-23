@@ -8,6 +8,7 @@ class SettingsModel extends SettingsEntity {
     required super.gridType,
   });
 
+  SettingsModel.initial() : super.initial();
 
   factory SettingsModel.fromJson(Map<String, dynamic> json) {
     return SettingsModel(

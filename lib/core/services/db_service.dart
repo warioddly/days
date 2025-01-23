@@ -1,5 +1,7 @@
 
 
+import 'dart:convert';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DbService {
@@ -21,6 +23,8 @@ class DbService {
       _preferences.setStringList(key, value);
     } else if (value is DateTime) {
       _preferences.setString(key, value.toIso8601String());
+    } else if (value is Map) {
+      _preferences.setString(key, json.encode(value));
     }
     else {
       throw Exception('Type not supported');

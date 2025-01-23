@@ -36,14 +36,17 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
 
       final entity = await getSettingsUseCase(null);
 
+
+      print("entity: ${entity.birthday}");
       emit(state.copyWith(
         entity: entity,
         state: SettingsLoaded(),
       ));
 
-    } catch (e) {
+    } catch (e, stackTrace) {
+      print("Error: $e StackTrace: $stackTrace");
       emit(state.copyWith(
-        state: SettingsLoaded(),
+        state: SettingsError(e),
       ));
     }
 
@@ -63,10 +66,14 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
       await setSettingsUseCase(event.entity);
 
       emit(state.copyWith(
-        state: SettingsLoaded(),
+        entity: event.entity,
       ));
+      print("entity:w ${event.entity.birthday}");
 
-    } catch (e) {
+      add(GetSettings());
+
+    } catch (e, stackTrace) {
+      print("Error: $e StackTrace: $stackTrace");
       emit(state.copyWith(
         state: SettingsError(e),
       ));

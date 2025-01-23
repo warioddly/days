@@ -1,10 +1,7 @@
-import 'package:days/core/extensions/string_extensions.dart';
 import 'package:days/core/utils/datetime_utils.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 
 extension GridTypeExtension on GridType {
-
-  String get name => toString().capitalize;
 
   int calculation(DateTime start, DateTime end) {
     return switch (this) {
@@ -32,6 +29,5 @@ extension GridTypeExtension on GridType {
       GridType.years => DateTimeUtils.isSameYear(a, b),
     };
   }
-
 
 }
