@@ -17,26 +17,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Flutter
-        uses: subosito/flutter-action@v2
+      - name: Download APK artifact
+        uses: actions/download-artifact@v3
         with:
-          flutter-version: '3.27.1'
-
-      # Настройка Android SDK
-      - name: Set up Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-
-      - name: Accept Android SDK licenses
-        run: yes | flutter doctor --android-licenses
-
-      - name: Run Flutter doctor
-        run: flutter doctor
-
-      # Сборка APK файла
-      - name: Build APK
-        run: flutter build apk --release
+          name: app-release
 
       # Подготовка к деплою в Google Play
       - name: Upload to Google Play
@@ -44,9 +28,16 @@ jobs:
         with:
           serviceAccountJson: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT }}
           packageName: com.warioddly.days
-          releaseFiles: build/app/outputs/flutter-apk/app-release.apk
+          releaseFiles: app-release/app-release.apk
           track: internal
 
       # Опционально: Очистка после сборки
       - name: Clean up
         run: flutter clean
+
+      - name: Delete artifact
+        run: |
+          ARTIFACT_ID=$(gh api -X GET /repos/${{ github.repository }}/actions/artifacts | jq -r '.artifacts[] | select(.name == "app-release") | .id')
+          gh api -X DELETE /repos/${{ github.repository }}/actions/artifacts/$ARTIFACT_ID
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
