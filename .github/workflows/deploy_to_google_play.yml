@@ -1,0 +1,81 @@
+name: Deploy to Google Play
+
+on:
+  # Run this workflow when any new code is pushed into the main branch
+  push:
+    branches: [main]
+
+jobs:
+  store_deploy_android:
+    # Only run this job if the branch name starts with 'release/'
+    if: startsWith(github.head_ref, 'release/')
+    name: Release Android App
+    runs-on: ubuntu-latest
+    env:
+      JAVA_VERSION: 12.0
+      FLUTTER_VERSION: 3.13.1
+      AAB_PATH: build/app/outputs/bundle/release/app-release.aab
+      KEYSTORE_PATH: android/upload-keystore.jks
+      KEY_PROPS_PATH: android/key.properties
+      SERVICE_ACCOUNT_PATH: store_credentials.json
+    steps:
+
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Setup Java to compile the Android project
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: ${{ env.JAVA_VERSION }}
+      
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v3
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+
+      # Decode Android env variables
+      - name: Decode Android keystore
+        run: echo "${{ secrets.ANDROID_KEYSTORE }}" | base64 --decode > ${{ env.KEYSTORE_PATH }}
+
+      - name: Decode Android key properties
+        run: echo "${{ secrets.ANDROID_KEY_PROPERTIES }}" | base64 --decode > ${{ env.KEY_PROPS_PATH }}
+
+      # Decode Android release Service Account
+      - name: Decode Android Service Account
+        run: echo "${{ secrets.PRODUCTION_CREDENTIAL_FILE }}" | base64 --decode > ${{ env.SERVICE_ACCOUNT_PATH }}
+
+      # Run flutter commands
+      - name: Run flutter pub get
+        run: flutter pub get
+
+      - name: 📦 Install dependencies
+        run: flutter pub get
+
+      - name: 🕵️ Analyze to check for bad Dart/Flutter practices
+        run: flutter analyze
+
+      - name: 📉 Run all app tests
+        run: flutter test
+
+      # Build Android Bundle release file
+      - name: Build aab
+        run: |
+          flutter build appbundle 
+          --release
+
+      # Upload generated aab to project artifacts
+      - name: Upload generated aab to the artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: aab-stores
+          path: "{{ env.AAB_PATH }}"
+
+      # Deploy bundle to Google Play internal testing
+      # - name: Deploy to Play Store (Internal testing)
+      #   uses: r0adkll/upload-google-play@v1
+      #   with:
+      #     serviceAccountJson: {{ env.SERVICE_ACCOUNT_PATH }}
+      #     packageName: com.yourapp.package
+      #     releaseFiles: {{ env.AAB_PATH }}
+      #     track: internal
