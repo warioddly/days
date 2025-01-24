@@ -9,6 +9,7 @@ on:
 
 jobs:
   create-release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Create GitHub Release
     runs-on: ubuntu-latest
 
