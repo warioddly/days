@@ -2,14 +2,11 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/core/services/locator_service.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
-import 'package:days/features/home/presentation/utils/extensions/grid_type_extension.dart';
 import 'package:days/features/home/presentation/widgets/app_bar.dart';
-import 'package:days/shared/ui/dot/dot.dart';
-import 'package:days/shared/ui/dot/dots_list_builder.dart';
+import 'package:days/features/home/presentation/widgets/dot_list_body.dart';
+import 'package:days/features/home/presentation/widgets/dot.dart';
 import 'package:days/shared/ui/widgets/background_blur.dart';
 import 'package:days/shared/ui/widgets/background_image.dart';
-import 'package:days/shared/utils/dot_builder_utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,7 +21,9 @@ class _HomePageState extends State<HomePage> {
 
   List<List<Dot>> dots = <List<Dot>>[];
 
-  var left = 0, todayScrollOffset = 0.0, _scrolling = false;
+  var left = 0;
+  var todayScrollOffset = 0.0;
+  var _scrolling = false;
 
   final settingsBloc = $getIt<SettingsBloc>();
   final scrollController = ScrollController();
@@ -54,52 +53,9 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       child: CustomScrollView(
                         controller: scrollController,
-                        slivers: [
-
-                          const HomeAppBar(),
-
-                          BlocConsumer<SettingsBloc, SettingsModelState>(
-                            bloc: settingsBloc,
-                            listener: (context, state) {
-
-                              final eventState = state.state;
-
-                              if (eventState is SettingsLoaded) {
-                                init();
-                              }
-
-                            },
-                            builder: (context, state) {
-
-                              final eventState = state.state;
-
-                              if (eventState is SettingsLoaded) {
-                                return DotsListBuilder(
-                                    dots: dots
-                                );
-                              }
-
-                              if (eventState is SettingsError) {
-                                return SliverToBoxAdapter(
-                                  child: Text(
-                                    eventState.message.toString(),
-                                    style: Theme.of(context).textTheme.bodySmall,
-                                  )
-                                );
-                              }
-
-                              return SliverToBoxAdapter(
-                                child: SizedBox(
-                                  height: MediaQuery.of(context).size.height,
-                                  child: Center(
-                                    child: const CupertinoActivityIndicator(),
-                                  ),
-                                ),
-                              );
-
-                            }
-                          )
-
+                        slivers: const [
+                          HomeAppBar(),
+                          DotListBody(),
                         ],
                       ),
                     ),
@@ -124,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                               onTap: () {
                                 scrollTo(todayScrollOffset);
                               },
-                              child: Text(
+                              child: const Text(
                                 'Tøday',
                               ),
                             ),
@@ -175,41 +131,6 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
-  }
-
-  void init() {
-
-    final settings = settingsBloc.state.entity;
-    final now = DateTime.now();
-    final from = settings.birthday;
-    final to = settings.endDateTime;
-    final gridType = settings.gridType;
-    final dotContainerSize = Dimensions.dotContainerSize;
-    final size = MediaQuery.of(context).size;
-    final dotsPerRow = ((size.width - (dotContainerSize / 2 + Dimensions.dotSize) * 2) ~/ dotContainerSize);
-    final dotsPerColumn = size.height ~/ dotContainerSize;
-    final safeAreaCompensation = MediaQuery.of(context).padding.bottom;
-
-    left = gridType.calculation(from, now);
-
-    print('from $from');
-    print('to $to');
-
-    dots = DotBuilderUtils.buildDots(
-        from: from,
-        to: to,
-        now: now,
-        gridType: gridType,
-        dotsPerRow: dotsPerRow,
-        beforeOffsetCallback: (int index) {
-          todayScrollOffset = (index * dotContainerSize) + (dotsPerColumn - safeAreaCompensation);
-        },
-    );
-
-    if (mounted && dots.length > dotsPerColumn) {
-      Future.delayed(Duration.zero, () => scrollTo(todayScrollOffset));
-    }
-
   }
 
   void scrollTo(double offset) {

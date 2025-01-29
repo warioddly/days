@@ -1,11 +1,8 @@
-
-
 import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DbService {
-
   final SharedPreferences _preferences;
 
   DbService(this._preferences);
@@ -25,11 +22,9 @@ class DbService {
       _preferences.setString(key, value.toIso8601String());
     } else if (value is Map) {
       _preferences.setString(key, json.encode(value));
-    }
-    else {
+    } else {
       throw Exception('Type not supported');
     }
-
   }
 
   dynamic get(String key) {
@@ -43,5 +38,4 @@ class DbService {
   void clear() {
     _preferences.clear();
   }
-
 }

@@ -3,7 +3,6 @@ import 'package:days/shared/models/vector2.dart';
 import 'package:flutter/material.dart';
 
 class Dot extends StatelessWidget {
-
   final Vector2 position;
   final DateTime? date;
   final Color? color;
@@ -23,12 +22,12 @@ class Dot extends StatelessWidget {
     DateTime? date,
     bool isBefore = false,
   }) : this(
-    position,
-    date: date,
-    color: Colors.white12,
-    isBefore: isBefore,
-    key: key,
-  );
+          position,
+          date: date,
+          color: Colors.white12,
+          isBefore: isBefore,
+          key: key,
+        );
 
   const Dot.after(
     Vector2 position, {
@@ -36,12 +35,12 @@ class Dot extends StatelessWidget {
     DateTime? date,
     bool isBefore = false,
   }) : this(
-    position,
-    date: date,
-    color: Colors.white,
-    isBefore: isBefore,
-    key: key,
-  );
+          position,
+          date: date,
+          color: Colors.white,
+          isBefore: isBefore,
+          key: key,
+        );
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +50,7 @@ class Dot extends StatelessWidget {
         behavior: HitTestBehavior.opaque,
         onTap: () {
           if (date != null) {
-            print( date?.toIso8601String() ?? '');
+            print(date?.toIso8601String() ?? '');
           }
         },
         child: SizedBox.square(

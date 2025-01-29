@@ -1,12 +1,8 @@
-
-
-
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
-
   static ThemeData get theme {
     return ThemeData(
       useMaterial3: true,
@@ -31,5 +27,4 @@ class AppTheme {
       ),
     );
   }
-
 }
