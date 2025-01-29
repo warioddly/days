@@ -36,8 +36,6 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
 
       final entity = await getSettingsUseCase(null);
 
-
-      print("entity: ${entity.birthday}");
       emit(state.copyWith(
         entity: entity,
         state: SettingsLoaded(),
@@ -68,7 +66,6 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
       emit(state.copyWith(
         entity: event.entity,
       ));
-      print("entity:w ${event.entity.birthday}");
 
       add(GetSettings());
 

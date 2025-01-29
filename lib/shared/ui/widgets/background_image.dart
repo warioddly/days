@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class BackgroundImage extends StatelessWidget {
-  const BackgroundImage({super.key, required this.child});
+class Background extends StatelessWidget {
+  const Background({required this.child, super.key});
 
   final Widget child;
 

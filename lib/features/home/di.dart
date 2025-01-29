@@ -11,26 +11,40 @@ import 'package:days/features/home/domain/usecase/set_settings_usecase.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 
 class HomeModule extends LocatorModule {
-
   @override
   void builder() {
+    getIt.registerFactory<SettingsModelMapper>(() => SettingsModelMapper());
 
-    register<SettingsModelMapper>(SettingsModelMapper());
+    getIt.registerFactory<SettingsDataSource>(
+      () => SettingsLocalDataSourceImpl(
+        db: getIt<DbService>(),
+      ),
+    );
 
-    register<SettingsDataSource>(SettingsLocalDataSourceImpl(db: $getIt<DbService>()));
-    register<SettingsRepository>(SettingsRepositoryImpl(
-        localDataSource: $getIt<SettingsDataSource>(),
-        settingsModelMapper: $getIt<SettingsModelMapper>()
-    ));
+    getIt.registerFactory<SettingsRepository>(
+      () => SettingsRepositoryImpl(
+        localDataSource: getIt<SettingsDataSource>(),
+        settingsModelMapper: getIt<SettingsModelMapper>(),
+      ),
+    );
 
-    registerFactory(() => SetSettingsUseCase(repository: $getIt<SettingsRepository>()));
-    registerFactory(() => GetSettingsUseCase(repository: $getIt<SettingsRepository>()));
+    getIt.registerFactory(
+      () => SetSettingsUseCase(
+        repository: getIt<SettingsRepository>(),
+      ),
+    );
 
-    registerFactory(() => SettingsBloc(
-      setSettingsUseCase: $getIt<SetSettingsUseCase>(),
-      getSettingsUseCase: $getIt<GetSettingsUseCase>(),
-    ));
+    getIt.registerFactory(
+      () => GetSettingsUseCase(
+        repository: getIt<SettingsRepository>(),
+      ),
+    );
 
+    getIt.registerFactory(
+      () => SettingsBloc(
+        setSettingsUseCase: getIt<SetSettingsUseCase>(),
+        getSettingsUseCase: getIt<GetSettingsUseCase>(),
+      ),
+    );
   }
-
 }
