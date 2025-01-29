@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:days/core/extensions/string_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
@@ -14,8 +15,8 @@ class HomeAppBar extends StatefulWidget {
   State<HomeAppBar> createState() => _HomeAppBarState();
 }
 
-class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateMixin {
-
+class _HomeAppBarState extends State<HomeAppBar>
+    with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   var title = '';
   var gridType = GridType.months;
@@ -43,17 +44,17 @@ class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateM
           bloc: bloc,
           listenWhen: (previous, current) => true,
           listener: (context, state) {
-
-            if (state.state is SettingsLoaded && gridType != state.entity.gridType) {
-                _controller.forward(from: 0.0).then((value) => _controller.reverse());
-                gridType = state.entity.gridType;
+            if (state.state is SettingsLoaded &&
+                gridType != state.entity.gridType) {
+              _controller
+                  .forward(from: 0.0)
+                  .then((value) => _controller.reverse());
+              gridType = state.entity.gridType;
             }
-
           },
           child: AnimatedBuilder(
               animation: _controller,
               builder: (context, child) {
-
                 final value = _controller.value;
                 final gridName = gridType.name;
 
@@ -72,45 +73,40 @@ class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateM
                   ),
                   child: Text(
                     title.capitalize,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 );
-              }
-          ),
+              }),
         ),
       ),
       actions: [
-
         IconButton(
           icon: const Icon(CupertinoIcons.calendar),
           onPressed: _actionModal,
         )
-
       ],
     );
   }
 
   void _actionModal() async {
-
     final entity = context.read<SettingsBloc>().state.entity;
 
     final result = await showModalBottomSheet<SettingsEntity?>(
-        isScrollControlled: true,
-        context: context,
-        clipBehavior: Clip.antiAlias,
-        builder: (context) {
-          return SettingBottomSheetContent(
-            entity: entity,
-          );
-        }
+      isScrollControlled: true,
+      context: context,
+      clipBehavior: Clip.antiAlias,
+      builder: (context) {
+        return SettingBottomSheetContent(
+          entity: entity,
+        );
+      },
     );
 
     if (result != null && mounted) {
-
       if (result.birthday.isAfter(result.endDateTime)) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
@@ -122,7 +118,6 @@ class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateM
 
       context.read<SettingsBloc>().add(SetSettings(result));
     }
-
   }
 
   @override
@@ -130,5 +125,4 @@ class _HomeAppBarState extends State<HomeAppBar> with SingleTickerProviderStateM
     _controller.dispose();
     super.dispose();
   }
-
 }

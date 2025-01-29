@@ -1,9 +1,7 @@
-
 import 'package:days/core/interfaces/locator_module_interface.dart';
 import 'package:days/core/services/db_service.dart';
 import 'package:days/features/home/di.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 
 final Map<Type, dynamic> _getIt = <Type, dynamic>{};
 
@@ -21,7 +19,6 @@ T $getIt<T>() {
 }
 
 Future<void> initDependencyInjection() async {
-
   final sharedPreferences = await SharedPreferences.getInstance();
 
   register<DbService>(DbService(sharedPreferences));
@@ -33,5 +30,4 @@ Future<void> initDependencyInjection() async {
   for (final module in modules) {
     module.builder();
   }
-
 }
