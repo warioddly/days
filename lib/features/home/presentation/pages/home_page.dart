@@ -1,7 +1,7 @@
 import 'package:days/core/services/locator_service.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
-import 'package:days/features/home/presentation/widgets/app_bar.dart';
-import 'package:days/features/home/presentation/widgets/control_bar.dart';
+import 'package:days/features/home/presentation/widgets/grid_type_status_bar.dart';
+import 'package:days/features/home/presentation/widgets/controlbar/controlbar.dart';
 import 'package:days/features/home/presentation/widgets/dot_list_body.dart';
 import 'package:days/shared/ui/widgets/background_blur.dart';
 import 'package:days/shared/ui/widgets/background_image.dart';
@@ -18,7 +18,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var left = 0;
   var todayScrollOffset = 0.0;
-  var _scrolling = false;
 
   final settingsBloc = getIt<SettingsBloc>();
   final scrollController = ScrollController();
@@ -46,13 +45,15 @@ class _HomePageState extends State<HomePage> {
                       child: CustomScrollView(
                         controller: scrollController,
                         slivers: const [
-                          HomeAppBar(),
                           DotListBody(),
                         ],
                       ),
                     ),
                   ],
                 ),
+              ),
+              GridTypeStatusBar(
+                scrollController: scrollController,
               ),
               ControlBar(
                 scrollController: scrollController,
@@ -62,20 +63,6 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
-  }
-
-  void scrollTo(double offset) {
-    if (_scrolling) {
-      return;
-    }
-    _scrolling = true;
-    scrollController
-        .animateTo(
-          offset,
-          duration: const Duration(milliseconds: 2000),
-          curve: Curves.easeInOutQuart,
-        )
-        .then((_) => _scrolling = false);
   }
 
   @override

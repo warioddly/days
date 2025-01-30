@@ -2,7 +2,7 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/core/extensions/string_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
-import 'package:days/shared/ui/widgets/headline.dart';
+import 'package:days/shared/ui/typography/headline.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
