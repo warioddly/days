@@ -26,8 +26,11 @@ class _DotListBodyState extends State<DotListBody> {
       builder: (context, state) {
         final eventState = state.state;
 
+        print('eventState $eventState');
+
         if (eventState is SettingsLoaded) {
           final settings = state.entity;
+          print("settings.gridType ${settings.gridType}");
           return DayGridBuilder(
             now: now,
             from: settings.birthday,
@@ -35,7 +38,7 @@ class _DotListBodyState extends State<DotListBody> {
             lengthCalculate: settings.gridType.calculation,
             dayCalculate: settings.gridType.calculationDay,
             padding: Dimensions.large.padding.copyWith(
-              top: Dimensions.empty,
+              top: (Dimensions.dotContainerSize * 3) - (Dimensions.dotSize * 3),
             ),
             blockSize: const Size.square(Dimensions.dotContainerSize),
             itemBuilder: _itemBuilder,

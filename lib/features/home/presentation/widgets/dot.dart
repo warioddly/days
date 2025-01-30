@@ -2,7 +2,7 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/shared/models/vector2.dart';
 import 'package:flutter/material.dart';
 
-class Dot extends StatelessWidget {
+class Dot extends StatefulWidget {
   final int? index;
   final Vector2 position;
   final DateTime? date;
@@ -47,24 +47,51 @@ class Dot extends StatelessWidget {
         );
 
   @override
+  State<Dot> createState() => _DotState();
+}
+
+class _DotState extends State<Dot> with SingleTickerProviderStateMixin {
+
+  late final _controller = AnimationController(
+    duration: const Duration(milliseconds: 250),
+    vsync: this,
+  );
+
+  @override
   Widget build(BuildContext context) {
-    return Tooltip(
-      message: date?.toIso8601String() ?? '',
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onTap: () {
-          if (date != null) {
-            print(date?.toIso8601String() ?? '');
-          }
-        },
-        child: SizedBox.square(
-          dimension: Dimensions.dotContainerSize,
-          child: Center(
+    return Listener(
+      behavior: HitTestBehavior.translucent,
+      onPointerHover: (details) {
+
+        if (widget.date != null) {
+          print(widget.date?.toIso8601String() ?? '');
+        }
+
+        if (_controller.isAnimating) {
+          return;
+        }
+
+        _controller.forward().then((value) => _controller.reverse());
+
+      },
+      child: SizedBox.square(
+        dimension: Dimensions.dotContainerSize,
+        child: Center(
+          child: AnimatedBuilder(
+            animation: _controller,
+            builder: (context, child) {
+              final value = _controller.value;
+              final scale = 1 - value;
+              return Transform.scale(
+                scale: scale,
+                child: child,
+              );
+            },
             child: Container(
               width: Dimensions.dotSize,
               height: Dimensions.dotSize,
               decoration: BoxDecoration(
-                color: color,
+                color: widget.color,
                 shape: BoxShape.circle,
                 boxShadow: const [
                   BoxShadow(
