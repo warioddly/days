@@ -3,15 +3,19 @@ import 'package:days/shared/models/vector2.dart';
 import 'package:flutter/material.dart';
 
 class Dot extends StatelessWidget {
+  final int? index;
   final Vector2 position;
   final DateTime? date;
+  final DateTime? now;
   final Color? color;
   final bool isBefore;
 
   const Dot(
     this.position, {
+    this.index,
     super.key,
     this.date,
+    this.now,
     this.color,
     this.isBefore = false,
   });
@@ -62,9 +66,9 @@ class Dot extends StatelessWidget {
               decoration: BoxDecoration(
                 color: color,
                 shape: BoxShape.circle,
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
-                    color: isBefore ? Colors.black12 : Colors.white,
+                    color: Colors.white,
                     blurRadius: 3,
                     spreadRadius: .2,
                   ),

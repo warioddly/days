@@ -34,7 +34,9 @@ class _DotListBodyState extends State<DotListBody> {
             to: settings.endDateTime,
             lengthCalculate: settings.gridType.calculation,
             dayCalculate: settings.gridType.calculationDay,
-            padding: Dimensions.large.paddingHorizontal,
+            padding: Dimensions.large.padding.copyWith(
+              top: Dimensions.empty,
+            ),
             blockSize: const Size.square(Dimensions.dotContainerSize),
             itemBuilder: _itemBuilder,
           );
@@ -61,11 +63,17 @@ class _DotListBodyState extends State<DotListBody> {
   }
 
   Widget _itemBuilder(int index, DateTime day, Vector2 position) {
-    final isBefore = day.isBefore(now);
-    return Dot(
+
+    if (day.isBefore(now)) {
+      return Dot.before(
+        position,
+        date: day,
+      );
+    }
+
+    return Dot.after(
       position,
       date: day,
-      color: isBefore ? Colors.white : Colors.white12,
     );
   }
 

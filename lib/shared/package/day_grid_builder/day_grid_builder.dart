@@ -49,8 +49,14 @@ class _DayGridBuilderState extends State<DayGridBuilder> {
   @override
   void initState() {
     super.initState();
-    calculate();
-    blocks = buildItems();
+
+    Future.delayed(Duration.zero, () {
+      calculate();
+      blocks = buildItems();
+      if (mounted) {
+        setState(() {});
+      }
+    });
   }
 
   @override
