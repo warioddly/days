@@ -47,15 +47,15 @@ class _DayGridBuilderState extends State<DayGridBuilder> {
   var blocks = <List<Widget>>[];
 
   @override
+  void initState() {
+    super.initState();
+    init();
+  }
+
+  @override
   void didUpdateWidget(covariant DayGridBuilder oldWidget) {
     super.didUpdateWidget(oldWidget);
-    Future.delayed(Duration.zero, () {
-      calculate();
-      blocks = buildItems();
-      if (mounted) {
-        setState(() {});
-      }
-    });
+    init();
   }
 
   @override
@@ -74,6 +74,16 @@ class _DayGridBuilderState extends State<DayGridBuilder> {
         ),
       ),
     );
+  }
+
+  void init() {
+    Future.delayed(Duration.zero, () {
+      calculate();
+      blocks = buildItems();
+      if (mounted) {
+        setState(() {});
+      }
+    });
   }
 
   void calculate() {
