@@ -6,7 +6,7 @@ typedef LengthCalculate = int Function(DateTime from, DateTime to);
 typedef DayCalculate = DateTime Function(DateTime start, int compensation);
 
 typedef ItemBuilder = Widget Function(
-    int index, DateTime day, Vector2 position);
+    int index, DateTime date, Vector2 position);
 
 typedef OnBuildComplete = Widget Function(double currentDayOffset);
 
@@ -47,9 +47,8 @@ class _DayGridBuilderState extends State<DayGridBuilder> {
   var blocks = <List<Widget>>[];
 
   @override
-  void initState() {
-    super.initState();
-
+  void didUpdateWidget(covariant DayGridBuilder oldWidget) {
+    super.didUpdateWidget(oldWidget);
     Future.delayed(Duration.zero, () {
       calculate();
       blocks = buildItems();

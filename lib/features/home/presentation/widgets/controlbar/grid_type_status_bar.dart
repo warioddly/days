@@ -47,54 +47,56 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
     final bloc = context.read<SettingsBloc>();
     return Align(
       alignment: Alignment.topCenter,
-      child: GestureDetector(
-        onTap: () {
-          widget.scrollController.animateTo(
-            0,
-            duration: const Duration(milliseconds: 2500),
-            curve: Curves.easeInOutQuart,
-          );
-        },
-        child: BlurHider(
-          controller: _appbarVisibleController,
-          child: CardContainer(
-            margin: Dimensions.large.padding.copyWith(bottom: Dimensions.small),
-            child: BlocListener<SettingsBloc, SettingsModelState>(
-              bloc: bloc,
-              listenWhen: (previous, current) => true,
-              listener: (context, state) {
-                if (state.state is SettingsLoaded &&
-                    gridType != state.entity.gridType) {
-                  _appGridTypeChangeController
-                      .forward(from: 0.0)
-                      .then((value) => _appGridTypeChangeController.reverse());
-                  gridType = state.entity.gridType;
-                }
-              },
-              child: AnimatedBuilder(
-                animation: _appGridTypeChangeController,
-                builder: (context, child) {
-                  final value = _appGridTypeChangeController.value;
-                  final gridName = gridType.name;
-
-                  if (title.isEmpty) {
-                    title = gridName;
+      child: SafeArea(
+        child: GestureDetector(
+          onTap: () {
+            widget.scrollController.animateTo(
+              0,
+              duration: const Duration(milliseconds: 2500),
+              curve: Curves.easeInOutQuart,
+            );
+          },
+          child: BlurHider(
+            controller: _appbarVisibleController,
+            child: CardContainer(
+              margin: Dimensions.large.padding.copyWith(bottom: Dimensions.small),
+              child: BlocListener<SettingsBloc, SettingsModelState>(
+                bloc: bloc,
+                listenWhen: (previous, current) => true,
+                listener: (context, state) {
+                  if (state.state is SettingsLoaded &&
+                      gridType != state.entity.gridType) {
+                    _appGridTypeChangeController
+                        .forward(from: 0.0)
+                        .then((value) => _appGridTypeChangeController.reverse());
+                    gridType = state.entity.gridType;
                   }
-
-                  if (value > .5) {
-                    title = gridName;
-                  }
-
-                  return ImageFiltered(
-                    imageFilter: ImageFilter.blur(
-                      sigmaX: value * 10,
-                      sigmaY: value * 5,
-                    ),
-                    child: Paragraph(
-                      title.capitalize,
-                    ),
-                  );
                 },
+                child: AnimatedBuilder(
+                  animation: _appGridTypeChangeController,
+                  builder: (context, child) {
+                    final value = _appGridTypeChangeController.value;
+                    final gridName = gridType.name;
+        
+                    if (title.isEmpty) {
+                      title = gridName;
+                    }
+        
+                    if (value > .5) {
+                      title = gridName;
+                    }
+        
+                    return ImageFiltered(
+                      imageFilter: ImageFilter.blur(
+                        sigmaX: value * 10,
+                        sigmaY: value * 5,
+                      ),
+                      child: Paragraph(
+                        title.capitalize,
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
           ),
@@ -121,6 +123,7 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
   @override
   void dispose() {
     _appGridTypeChangeController.dispose();
+    _appbarVisibleController.dispose();
     super.dispose();
   }
 }

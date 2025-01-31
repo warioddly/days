@@ -2,7 +2,6 @@ import 'package:days/core/utils/datetime_utils.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 
 extension GridTypeExtension on GridType {
-
   int calculation(DateTime start, DateTime end) {
     return switch (this) {
       GridType.days => DateTimeUtils.getDaysFrom(start, end),
@@ -14,8 +13,10 @@ extension GridTypeExtension on GridType {
 
   DateTime calculationDay(DateTime start, int compensation) {
     return switch (this) {
-      GridType.days => DateTime(start.year, 1, 0).add(Duration(days: compensation)),
-      GridType.weeks => DateTime(start.year, 1, 0).add(Duration(days: compensation * 7)),
+      GridType.days =>
+        DateTime(start.year, 1, 0).add(Duration(days: compensation)),
+      GridType.weeks =>
+        DateTime(start.year, 1, 0).add(Duration(days: compensation * 7)),
       GridType.months => DateTime(start.year, start.month + compensation, 0),
       GridType.years => DateTime(start.year + compensation, 1, 0)
     };
@@ -29,5 +30,4 @@ extension GridTypeExtension on GridType {
       GridType.years => DateTimeUtils.isSameYear(a, b),
     };
   }
-
 }

@@ -2,6 +2,7 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/core/utils/scroll_utils.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
+import 'package:days/features/home/presentation/utils/extensions/grid_type_extension.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/contoller.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/grid_type_control_bar.dart';
 import 'package:days/shared/ui/animation/blurhider.dart';
@@ -22,10 +23,7 @@ class ControlBar extends StatefulWidget {
 }
 
 class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
-  
   late final BarController controller;
-  
-  bool showGridType = false;
 
   @override
   void initState() {
@@ -41,7 +39,7 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
         vsync: this,
       )..forward(),
     );
-    
+
     widget.scrollController.addListener(onScroll);
   }
 
@@ -79,9 +77,7 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
                       ),
                       Flexible(
                         child: GestureDetector(
-                          onTap: () {
-                            // scrollTo(todayScrollOffset);
-                          },
+                          onTap: scrollToToDay,
                           child: const Paragraph('Tøday'),
                         ),
                       ),
@@ -91,16 +87,22 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
                           child: BlocBuilder<SettingsBloc, SettingsModelState>(
                             builder: (context, state) {
                               if (state.state is SettingsLoaded) {
+                                final entity = state.entity;
                                 return RichText(
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
-                                        text: 'left'.toString(),
-                                        style:
-                                            Theme.of(context).textTheme.bodyMedium,
+                                        text: '${entity.gridType.calculation(
+                                          entity.birthday,
+                                          DateTime.now(),
+                                        )}'
+                                            .toString(),
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyMedium,
                                       ),
                                       TextSpan(
-                                        text: ' left ${state.entity.gridType.name}',
+                                        text: '  ${state.entity.gridType.name}',
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodyMedium
@@ -113,7 +115,7 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
                                   textAlign: TextAlign.right,
                                 );
                               }
-          
+
                               return const SizedBox();
                             },
                           ),
@@ -131,12 +133,12 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
   }
 
   void onTapGridSettings() async {
-    if (showGridType) {
+    if (controller.showGridType) {
       controller.gridType.forward();
     } else {
       controller.gridType.reverse();
     }
-    showGridType = !showGridType;
+    controller.showGridType = !controller.showGridType;
   }
 
   void onTapDateTimeSettings() async {
@@ -157,7 +159,6 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
       ),
     ).then((value) {
       if (value != null && mounted) {
-
         if (value.start.isAfter(value.end)) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
@@ -168,16 +169,15 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
         }
 
         context.read<SettingsBloc>().add(
-          SetSettings(
-            entity.copyWith(
-              birthday: value.start,
-              endDateTime: value.end,
-            ),
-          ),
-        );
+              SetSettings(
+                entity.copyWith(
+                  birthday: value.start,
+                  endDateTime: value.end,
+                ),
+              ),
+            );
       }
     });
-
   }
 
   void onScroll() {
@@ -192,12 +192,46 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
       },
       onScrollDown: () {
         controller.bar.forward();
-        if (showGridType) {
+        if (controller.showGridType) {
           onTapGridSettings();
         }
       },
     );
-
   }
 
+  void scrollToToDay() {
+    final entity = context.read<SettingsBloc>().state.entity;
+
+    if (entity.birthday.isAfter(DateTime.now())) {
+      return;
+    }
+
+    final size = MediaQuery.of(context).size;
+    const blockSize = Size.square(Dimensions.dotContainerSize);
+    final length = entity.gridType.calculation(entity.birthday, DateTime.now());
+    final itemsPerRow = ((size.width -
+            (blockSize.width / 2 + Dimensions.large.padding.horizontal) * 2) ~/
+        blockSize.width);
+    final rowIndex = length ~/ itemsPerRow;
+    final scrollOffset = rowIndex * blockSize.height;
+
+    final safeAreaPaddingTop = MediaQuery.paddingOf(context).top;
+    final compensation = (Dimensions.dotContainerSize * 3) -
+        (Dimensions.dotSize * 3) +
+        safeAreaPaddingTop;
+
+    if ((widget.scrollController.offset - scrollOffset).abs() > 1) {
+      widget.scrollController.animateTo(
+        (scrollOffset + compensation).toDouble(),
+        duration: const Duration(milliseconds: 2500),
+        curve: Curves.easeInOutQuart,
+      );
+    }
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 }
