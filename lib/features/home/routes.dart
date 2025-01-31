@@ -7,7 +7,6 @@ class HomeRoutes extends GoRoute {
   HomeRoutes() : super(
     path: '/',
     builder: (context, state) => const HomePage(),
-    routes: <RouteBase>[],
   );
 
 }

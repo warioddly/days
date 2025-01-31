@@ -2,27 +2,26 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/core/extensions/string_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
-import 'package:days/shared/ui/widgets/headline.dart';
+import 'package:days/shared/ui/typography/headline.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingBottomSheetContent extends StatefulWidget {
-  const SettingBottomSheetContent({super.key, required this.entity});
+  const SettingBottomSheetContent({required this.entity, super.key});
 
   final SettingsEntity entity;
 
   @override
-  State<SettingBottomSheetContent> createState() => _SettingBottomSheetContentState();
+  State<SettingBottomSheetContent> createState() =>
+      _SettingBottomSheetContentState();
 }
 
 class _SettingBottomSheetContentState extends State<SettingBottomSheetContent>
     with SingleTickerProviderStateMixin {
-
   late final gridTypes = ValueNotifier<GridType>(widget.entity.gridType);
 
   @override
   Widget build(BuildContext context) {
-
     SettingsEntity entity = widget.entity.copyWith();
 
     return SingleChildScrollView(
@@ -31,12 +30,11 @@ class _SettingBottomSheetContentState extends State<SettingBottomSheetContent>
         spacing: Dimensions.large,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
           Column(
             spacing: Dimensions.large,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Headline('Select your grid type'),
+              const Headline('Select your grid type'),
               SizedBox(
                 height: 40,
                 child: ListView.separated(
@@ -54,7 +52,9 @@ class _SettingBottomSheetContentState extends State<SettingBottomSheetContent>
                             gridTypes.value = type;
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: entity.gridType == type ? Colors.blue : Colors.transparent,
+                            backgroundColor: entity.gridType == type
+                                ? Colors.blue
+                                : Colors.transparent,
                           ),
                           child: Text(
                             type.name.capitalize,
@@ -68,12 +68,11 @@ class _SettingBottomSheetContentState extends State<SettingBottomSheetContent>
               ),
             ],
           ),
-
           Column(
             spacing: Dimensions.large,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Headline('Select your birthday'),
+              const Headline('Select your birthday'),
               SizedBox(
                 height: 65,
                 child: CupertinoDatePicker(
@@ -87,12 +86,11 @@ class _SettingBottomSheetContentState extends State<SettingBottomSheetContent>
               ),
             ],
           ),
-
           Column(
             spacing: Dimensions.large,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Headline('Select grid end date'),
+              const Headline('Select grid end date'),
               SizedBox(
                 height: 65,
                 child: CupertinoDatePicker(
@@ -106,7 +104,6 @@ class _SettingBottomSheetContentState extends State<SettingBottomSheetContent>
               ),
             ],
           ),
-
           Padding(
             padding: Dimensions.large.paddingVertical,
             child: SizedBox(
@@ -116,7 +113,6 @@ class _SettingBottomSheetContentState extends State<SettingBottomSheetContent>
                   backgroundColor: Colors.blue,
                 ),
                 onPressed: () {
-
                   Navigator.of(context).pop(
                     entity.copyWith(
                       birthday: entity.birthday,
@@ -124,16 +120,13 @@ class _SettingBottomSheetContentState extends State<SettingBottomSheetContent>
                       gridType: entity.gridType,
                     ),
                   );
-
                 },
                 child: const Text('Save'),
               ),
-            )
+            ),
           ),
-
         ],
       ),
     );
   }
-
 }
