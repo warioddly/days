@@ -11,11 +11,10 @@ import 'package:days/shared/ui/layout/card_container.dart';
 import 'package:days/shared/ui/typography/paragraph.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 class GridTypeStatusBar extends StatefulWidget {
-  const GridTypeStatusBar({required this.scrollController, super.key});
-
-  final ScrollController scrollController;
+  const GridTypeStatusBar({super.key});
 
   @override
   State<GridTypeStatusBar> createState() => _GridTypeStatusBarState();
@@ -23,8 +22,11 @@ class GridTypeStatusBar extends StatefulWidget {
 
 class _GridTypeStatusBarState extends State<GridTypeStatusBar>
     with TickerProviderStateMixin {
+
   late final AnimationController _appGridTypeChangeController;
   late final AnimationController _appbarVisibleController;
+  late final ScrollController scrollController;
+
   var title = '';
   var gridType = GridType.months;
 
@@ -39,7 +41,11 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
       duration: const Duration(milliseconds: 250),
       vsync: this,
     );
-    widget.scrollController.addListener(onScroll);
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      scrollController = Provider.of<ScrollController>(context, listen: false)
+        ..addListener(onScroll);
+    });
   }
 
   @override
@@ -50,7 +56,7 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
       child: SafeArea(
         child: GestureDetector(
           onTap: () {
-            widget.scrollController.animateTo(
+            scrollController.animateTo(
               0,
               duration: const Duration(milliseconds: 2500),
               curve: Curves.easeInOutQuart,
@@ -110,7 +116,7 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
       return;
     }
     ScrollUtils.onScroll(
-      widget.scrollController,
+      scrollController,
       onScrollUp: () {
         _appbarVisibleController.reverse();
       },
@@ -124,6 +130,7 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
   void dispose() {
     _appGridTypeChangeController.dispose();
     _appbarVisibleController.dispose();
+    scrollController.removeListener(onScroll);
     super.dispose();
   }
 }

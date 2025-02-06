@@ -7,6 +7,7 @@ import 'package:days/shared/ui/widgets/background_blur.dart';
 import 'package:days/shared/ui/widgets/background_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,8 +17,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var left = 0;
-  var todayScrollOffset = 0.0;
 
   final settingsBloc = getIt<SettingsBloc>();
   final scrollController = ScrollController();
@@ -34,19 +33,16 @@ class _HomePageState extends State<HomePage> {
       body: Background(
         child: BlocProvider(
           create: (context) => settingsBloc,
-          child: Stack(
-            children: [
-              const BackgroundBlur(),
-              DotListBody(
-                scrollController: scrollController
-              ),
-              GridTypeStatusBar(
-                scrollController: scrollController,
-              ),
-              ControlBar(
-                scrollController: scrollController,
-              ),
-            ],
+          child: ChangeNotifierProvider.value(
+            value: scrollController,
+            child: const Stack(
+              children: [
+                BackgroundBlur(),
+                GridListBody(),
+                GridTypeStatusBar(),
+                ControlBar(),
+              ],
+            ),
           ),
         ),
       ),
@@ -55,7 +51,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
+    settingsBloc.close();
     scrollController.dispose();
     super.dispose();
   }
+
 }

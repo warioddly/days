@@ -14,9 +14,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 class ControlBar extends StatefulWidget {
-  const ControlBar({required this.scrollController, super.key});
-
-  final ScrollController scrollController;
+  const ControlBar({super.key});
 
   @override
   State<ControlBar> createState() => _ControlBarState();
@@ -24,6 +22,7 @@ class ControlBar extends StatefulWidget {
 
 class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
   late final BarController controller;
+  late final ScrollController scrollController;
 
   @override
   void initState() {
@@ -40,7 +39,10 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
       )..forward(),
     );
 
-    widget.scrollController.addListener(onScroll);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      scrollController = Provider.of<ScrollController>(context, listen: false)
+        ..addListener(onScroll);
+    });
   }
 
   @override
@@ -147,8 +149,8 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
       CupertinoPageRoute(
         builder: (context) {
           return DateRangePickerDialog(
-            firstDate: DateTime(1900),
-            lastDate: DateTime(3100),
+            firstDate: DateTime(1000),
+            lastDate: DateTime(4000),
             initialDateRange: DateTimeRange(
               start: entity.birthday,
               end: entity.endDateTime,
@@ -186,7 +188,7 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
     }
 
     ScrollUtils.onScroll(
-      widget.scrollController,
+      scrollController,
       onScrollUp: () {
         controller.bar.reverse();
       },
@@ -220,8 +222,8 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
         (Dimensions.dotSize * 3) +
         safeAreaPaddingTop;
 
-    if ((widget.scrollController.offset - scrollOffset).abs() > 1) {
-      widget.scrollController.animateTo(
+    if ((scrollController.offset - scrollOffset).abs() > 1) {
+      scrollController.animateTo(
         (scrollOffset + compensation).toDouble(),
         duration: const Duration(milliseconds: 2500),
         curve: Curves.easeInOutQuart,
@@ -232,6 +234,7 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
   @override
   void dispose() {
     controller.dispose();
+    scrollController.removeListener(onScroll);
     super.dispose();
   }
 }

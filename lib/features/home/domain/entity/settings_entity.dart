@@ -24,7 +24,7 @@ class SettingsEntity {
     gridType: GridType.months,
   );
 
-  copyWith({
+  SettingsEntity copyWith({
     DateTime? birthday,
     DateTime? endDateTime,
     GridType? gridType,

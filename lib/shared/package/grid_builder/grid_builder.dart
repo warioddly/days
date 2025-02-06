@@ -10,8 +10,8 @@ typedef ItemBuilder = Widget Function(
 
 typedef OnBuildComplete = Widget Function(double currentDayOffset);
 
-class DayGridBuilder extends StatefulWidget {
-  const DayGridBuilder({
+class GridBuilder extends StatefulWidget {
+  const GridBuilder({
     required this.now,
     required this.from,
     required this.to,
@@ -37,10 +37,10 @@ class DayGridBuilder extends StatefulWidget {
   final EdgeInsets padding;
 
   @override
-  State<DayGridBuilder> createState() => _DayGridBuilderState();
+  State<GridBuilder> createState() => _GridBuilderState();
 }
 
-class _DayGridBuilderState extends State<DayGridBuilder> {
+class _GridBuilderState extends State<GridBuilder> {
   int itemsPerRow = 0;
   int itemsPerColumn = 0;
   int length = 0;
@@ -53,7 +53,7 @@ class _DayGridBuilderState extends State<DayGridBuilder> {
   }
 
   @override
-  void didUpdateWidget(covariant DayGridBuilder oldWidget) {
+  void didUpdateWidget(covariant GridBuilder oldWidget) {
     super.didUpdateWidget(oldWidget);
     init();
   }

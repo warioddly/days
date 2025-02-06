@@ -5,21 +5,21 @@ import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart
 import 'package:days/features/home/presentation/utils/extensions/grid_type_extension.dart';
 import 'package:days/shared/models/vector2.dart';
 import 'package:days/features/home/presentation/widgets/dot/dot.dart';
-import 'package:days/shared/package/day_grid_builder/day_grid_builder.dart';
+import 'package:days/shared/package/grid_builder/grid_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
-class DotListBody extends StatefulWidget {
-  const DotListBody({required this.scrollController, super.key});
-
-  final ScrollController scrollController;
+class GridListBody extends StatefulWidget {
+  const GridListBody({super.key});
 
   @override
-  State<DotListBody> createState() => _DotListBodyState();
+  State<GridListBody> createState() => _GridListBodyState();
 }
 
-class _DotListBodyState extends State<DotListBody> {
+class _GridListBodyState extends State<GridListBody> {
+
   var now = DateTime.now();
 
   @override
@@ -28,7 +28,7 @@ class _DotListBodyState extends State<DotListBody> {
       children: [
         Expanded(
           child: CustomScrollView(
-            controller: widget.scrollController,
+            controller: Provider.of<ScrollController>(context, listen: false),
             slivers: [
               BlocBuilder<SettingsBloc, SettingsModelState>(
                 builder: (context, state) {
@@ -36,10 +36,11 @@ class _DotListBodyState extends State<DotListBody> {
 
                   if (eventState is SettingsLoaded) {
                     final settings = state.entity;
+
                     now = DateTime.now();
-                    final safeAreaPaddingTop =
-                        MediaQuery.paddingOf(context).top;
-                    return DayGridBuilder(
+                    final safeAreaPaddingTop = MediaQuery.paddingOf(context).top;
+
+                    return GridBuilder(
                       now: now,
                       from: settings.birthday,
                       to: settings.endDateTime,
@@ -47,12 +48,10 @@ class _DotListBodyState extends State<DotListBody> {
                       dayCalculate: settings.gridType.calculationDay,
                       padding: Dimensions.large.padding.copyWith(
                         top: (Dimensions.dotContainerSize * 3) -
-                            (Dimensions.dotSize * 3) +
-                            safeAreaPaddingTop,
+                            (Dimensions.dotSize * 3) + safeAreaPaddingTop,
                       ),
                       blockSize: const Size.square(Dimensions.dotContainerSize),
-                      itemBuilder:
-                          (int index, DateTime date, Vector2 position) {
+                      itemBuilder: (int index, DateTime date, Vector2 position) {
                         return _itemBuilder(
                             index, date, position, settings.gridType);
                       },
@@ -62,9 +61,10 @@ class _DotListBodyState extends State<DotListBody> {
                   if (eventState is SettingsError) {
                     return SliverToBoxAdapter(
                         child: Text(
-                      eventState.message.toString(),
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ));
+                          eventState.message.toString(),
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                    );
                   }
 
                   return SliverToBoxAdapter(
@@ -93,7 +93,6 @@ class _DotListBodyState extends State<DotListBody> {
         date: date,
       );
     }
-
     if (date.isBefore(now)) {
       return Dot.before(
         key: UniqueKey(),
@@ -101,7 +100,6 @@ class _DotListBodyState extends State<DotListBody> {
         date: date,
       );
     }
-
     return Dot.after(
       key: UniqueKey(),
       position,

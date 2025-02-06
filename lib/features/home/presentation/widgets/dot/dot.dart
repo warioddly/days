@@ -3,20 +3,16 @@ import 'package:days/shared/models/vector2.dart';
 import 'package:flutter/material.dart';
 
 class Dot extends StatefulWidget {
-  final int? index;
   final Vector2 position;
   final DateTime? date;
-  final DateTime? now;
   final Color? color;
   final bool showBoxShadow;
   final bool pulse;
 
   const Dot(
     this.position, {
-    this.index,
     super.key,
     this.date,
-    this.now,
     this.color,
     this.showBoxShadow = false,
     this.pulse = false,
@@ -89,7 +85,6 @@ class _DotState extends State<Dot> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Listener(
-      behavior: HitTestBehavior.translucent,
       onPointerHover: _animate,
       onPointerDown: _animate,
       child: SizedBox.square(
@@ -97,34 +92,37 @@ class _DotState extends State<Dot> with SingleTickerProviderStateMixin {
         child: Center(
           child: AnimatedBuilder(
             animation: _controller,
-            builder: (context, child) {
-              final value = _controller.value;
-              final scale = 1 + value;
-              return Transform.scale(
-                scale: scale,
-                child: child,
-              );
-            },
-            child: Container(
-              width: Dimensions.dotSize,
-              height: Dimensions.dotSize,
-              decoration: BoxDecoration(
-                color: widget.color,
-                shape: BoxShape.circle,
-                boxShadow: widget.showBoxShadow
-                    ? const [
-                        BoxShadow(
-                          color: Colors.white,
-                          blurRadius: 3,
-                          spreadRadius: .2,
-                        ),
-                      ]
-                    : null,
+            builder: animatedBuilder,
+            child: SizedBox.square(
+              dimension: Dimensions.dotSize,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  color: widget.color,
+                  shape: BoxShape.circle,
+                  boxShadow: widget.showBoxShadow
+                      ? const [
+                          BoxShadow(
+                            color: Colors.white,
+                            blurRadius: 3,
+                            spreadRadius: .2,
+                          ),
+                        ]
+                      : null,
+                ),
               ),
             ),
           ),
         ),
       ),
+    );
+  }
+
+  Widget animatedBuilder(BuildContext context, Widget? child) {
+    final value = _controller.value;
+    final scale = 1 + value;
+    return Transform.scale(
+      scale: scale,
+      child: child,
     );
   }
 
