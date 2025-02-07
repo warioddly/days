@@ -85,6 +85,7 @@ class _DotState extends State<Dot> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Listener(
+      behavior: HitTestBehavior.translucent,
       onPointerHover: _animate,
       onPointerDown: _animate,
       child: SizedBox.square(
