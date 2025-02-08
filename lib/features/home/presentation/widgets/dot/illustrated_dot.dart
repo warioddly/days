@@ -149,6 +149,6 @@ class _IllustratedDotState extends State<IllustratedDot>
   }
 
   @override
-  bool get wantKeepAlive => true;
+  bool get wantKeepAlive => isActive;
 
 }
