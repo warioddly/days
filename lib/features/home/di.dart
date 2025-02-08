@@ -8,6 +8,7 @@ import 'package:days/features/home/data/repository/settings_repository_impl.dart
 import 'package:days/features/home/domain/repository/settings_repository.dart';
 import 'package:days/features/home/domain/usecase/get_settings_usecase.dart';
 import 'package:days/features/home/domain/usecase/set_settings_usecase.dart';
+import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 
 class HomeModule extends LocatorModule {
@@ -45,6 +46,10 @@ class HomeModule extends LocatorModule {
         setSettingsUseCase: getIt<SetSettingsUseCase>(),
         getSettingsUseCase: getIt<GetSettingsUseCase>(),
       ),
+    );
+
+    getIt.registerFactory(
+      () => DotsManagerBloc(),
     );
   }
 }

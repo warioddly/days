@@ -3,8 +3,8 @@ import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/features/home/presentation/utils/extensions/grid_type_extension.dart';
+import 'package:days/features/home/presentation/widgets/dot/illustrated_dot.dart';
 import 'package:days/shared/models/vector2.dart';
-import 'package:days/features/home/presentation/widgets/dot/dot.dart';
 import 'package:days/shared/package/grid_builder/grid_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,7 @@ class _GridListBodyState extends State<GridListBody> {
                       to: settings.endDateTime,
                       lengthCalculate: settings.gridType.calculation,
                       dayCalculate: settings.gridType.calculationDay,
-                      padding: Dimensions.large.padding.copyWith(
+                      padding: Dimensions.doubledNormal.padding.copyWith(
                         top: (Dimensions.dotContainerSize * 3) -
                             (Dimensions.dotSize * 3) + safeAreaPaddingTop,
                       ),
@@ -87,23 +87,33 @@ class _GridListBodyState extends State<GridListBody> {
   Widget _itemBuilder(
       int index, DateTime date, Vector2 position, GridType type) {
     if (type.sameWith(now, date)) {
-      return Dot.current(
+
+      return IllustratedDot.current(
         key: UniqueKey(),
         position,
         date: date,
       );
     }
+
     if (date.isBefore(now)) {
-      return Dot.before(
+      return RepaintBoundary(
+        child: IllustratedDot(
+          key: UniqueKey(),
+          position,
+          date: date,
+          isActive: true,
+          color: Colors.white,
+        ),
+      );
+    }
+
+    return RepaintBoundary(
+      child: IllustratedDot.after(
         key: UniqueKey(),
         position,
         date: date,
-      );
-    }
-    return Dot.after(
-      key: UniqueKey(),
-      position,
-      date: date,
+        isActive: false,
+      ),
     );
   }
 }

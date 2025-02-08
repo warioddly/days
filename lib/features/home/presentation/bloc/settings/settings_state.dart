@@ -15,8 +15,7 @@ final class SettingsModelState {
       entity: SettingsEntity.initial(),
   );
 
-
-  copyWith({
+  SettingsModelState copyWith({
     SettingsState? state,
     SettingsEntity? entity,
   }) {

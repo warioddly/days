@@ -1,10 +1,9 @@
 import 'package:days/core/services/locator_service.dart';
+import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/grid_type_status_bar.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/controlbar.dart';
 import 'package:days/features/home/presentation/widgets/dot/dot_list_body.dart';
-import 'package:days/shared/ui/widgets/background_blur.dart';
-import 'package:days/shared/ui/widgets/background_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -19,6 +18,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   final settingsBloc = getIt<SettingsBloc>();
+  final dotsManagerBloc = getIt<DotsManagerBloc>();
   final scrollController = ScrollController();
 
   @override
@@ -30,14 +30,25 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Background(
-        child: BlocProvider(
-          create: (context) => settingsBloc,
-          child: ChangeNotifierProvider.value(
-            value: scrollController,
+      body: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => settingsBloc,
+          ),
+          BlocProvider(
+            create: (context) => dotsManagerBloc,
+          ),
+        ],
+        child: ChangeNotifierProvider.value(
+          value: scrollController,
+          child: GestureDetector(
+            onTap: () {
+              FocusScope.of(context).unfocus();
+              dotsManagerBloc.add(DotsManagerUserOutsideClickEvent());
+            },
             child: const Stack(
               children: [
-                BackgroundBlur(),
+                // BackgroundBlur(),
                 GridListBody(),
                 GridTypeStatusBar(),
                 ControlBar(),
