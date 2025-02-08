@@ -71,7 +71,7 @@ class IllustratedDot extends StatefulWidget {
 }
 
 class _IllustratedDotState extends State<IllustratedDot>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
 
   bool isActive = false;
   Color color = Colors.white;
@@ -89,6 +89,7 @@ class _IllustratedDotState extends State<IllustratedDot>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocListener<DotsManagerBloc, DotsManagerModelState>(
       listener: _listener,
       child: Listener(
@@ -146,5 +147,8 @@ class _IllustratedDotState extends State<IllustratedDot>
       color: Colors.white,
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 
 }
