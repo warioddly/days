@@ -48,7 +48,7 @@ class _GridListBodyState extends State<GridListBody> {
                         to: settings.endDateTime,
                         lengthCalculate: settings.gridType.calculation,
                         dayCalculate: settings.gridType.calculationDay,
-                        padding: Dimensions.doubleNormal.padding.copyWith(
+                        padding: Dimensions.doubledNormal.padding.copyWith(
                           top: (Dimensions.dotContainerSize * 2) -
                               (Dimensions.dotSize * 2) + safeAreaPaddingTop,
                         ),
