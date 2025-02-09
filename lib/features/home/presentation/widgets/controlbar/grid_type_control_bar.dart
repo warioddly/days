@@ -10,23 +10,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class GridTypeControlBar extends StatefulWidget {
+class GridTypeControlBar extends StatelessWidget {
   const GridTypeControlBar({super.key});
 
-  @override
-  State<GridTypeControlBar> createState() => _GridTypeControlBarState();
-}
-
-class _GridTypeControlBarState extends State<GridTypeControlBar> {
   @override
   Widget build(BuildContext context) {
     final controller = context.read<BarController>();
     return BlurHider(
       controller: controller.gridType,
       child: CardContainer(
-        margin: Dimensions.large.padding.copyWith(
-          bottom: Dimensions.empty,
-        ),
+        margin: Dimensions.large.paddingHorizontal,
         child: BlocBuilder<SettingsBloc, SettingsModelState>(
           builder: (context, state) {
             return CupertinoSlidingSegmentedControl(
@@ -47,12 +40,12 @@ class _GridTypeControlBarState extends State<GridTypeControlBar> {
                   return;
                 }
                 context.read<SettingsBloc>().add(
-                      SetSettings(
-                        state.entity.copyWith(
-                          gridType: GridType.values[value],
-                        ),
-                      ),
-                    );
+                  SetSettings(
+                    state.entity.copyWith(
+                      gridType: GridType.values[value],
+                    ),
+                  ),
+                );
               },
             );
           },

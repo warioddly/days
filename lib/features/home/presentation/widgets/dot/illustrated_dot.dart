@@ -3,9 +3,9 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot/default_dot.dart';
 import 'package:days/shared/models/vector2.dart';
+import 'package:days/shared/ui/animation/utils/curves.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 
 class IllustratedDot extends StatefulWidget {
@@ -71,20 +71,22 @@ class IllustratedDot extends StatefulWidget {
 }
 
 class _IllustratedDotState extends State<IllustratedDot>
-    with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
+    with AutomaticKeepAliveClientMixin {
 
   bool isActive = false;
   Color color = Colors.white;
 
   final dot = const DefaultDot();
-  late Widget illustration;
+  late final illustration = Image.asset(
+    IllustrationAssets.getRandomIllustration(),
+    color: color,
+  );
 
   @override
   void initState() {
     super.initState();
     isActive = widget.isActive;
     color = widget.color ?? Colors.white;
-    illustration = _buildFlower();
   }
 
   @override
@@ -99,10 +101,10 @@ class _IllustratedDotState extends State<IllustratedDot>
         child: SizedBox.square(
           dimension: Dimensions.dotContainerSize,
           child: AnimatedSwitcher(
-            duration: const Duration(milliseconds: 350),
+            duration: const Duration(milliseconds: 450),
             reverseDuration: const Duration(milliseconds: 500),
-            switchInCurve: Curves.easeInOut,
-            switchOutCurve: Curves.easeInOut,
+            switchInCurve: SharedCurves.bounceAnimation,
+            switchOutCurve: Curves.fastEaseInToSlowEaseOut,
             transitionBuilder: (child, animation) => ScaleTransition(
               scale: animation,
               child: child,
@@ -139,13 +141,6 @@ class _IllustratedDotState extends State<IllustratedDot>
         setState(() { });
     }
 
-  }
-
-  Widget _buildFlower() {
-    return SvgPicture.asset(
-      IllustrationAssets.getRandomFlower(),
-      color: Colors.white,
-    );
   }
 
   @override

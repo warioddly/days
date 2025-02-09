@@ -24,63 +24,98 @@ class _GridListBodyState extends State<GridListBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: CustomScrollView(
-            controller: Provider.of<ScrollController>(context, listen: false),
-            slivers: [
-              BlocBuilder<SettingsBloc, SettingsModelState>(
-                builder: (context, state) {
-                  final eventState = state.state;
+    return Expanded(
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Positioned.fill(
+            child: CustomScrollView(
+              controller: Provider.of<ScrollController>(context, listen: false),
+              slivers: [
+                BlocBuilder<SettingsBloc, SettingsModelState>(
+                  builder: (context, state) {
+                    final eventState = state.state;
 
-                  if (eventState is SettingsLoaded) {
-                    final settings = state.entity;
+                    if (eventState is SettingsLoaded) {
+                      final settings = state.entity;
 
-                    now = DateTime.now();
-                    final safeAreaPaddingTop = MediaQuery.paddingOf(context).top;
+                      now = DateTime.now();
+                      final safeAreaPaddingTop = MediaQuery.paddingOf(context).top;
 
-                    return GridBuilder(
-                      now: now,
-                      from: settings.birthday,
-                      to: settings.endDateTime,
-                      lengthCalculate: settings.gridType.calculation,
-                      dayCalculate: settings.gridType.calculationDay,
-                      padding: Dimensions.doubledNormal.padding.copyWith(
-                        top: (Dimensions.dotContainerSize * 3) -
-                            (Dimensions.dotSize * 3) + safeAreaPaddingTop,
-                      ),
-                      blockSize: const Size.square(Dimensions.dotContainerSize),
-                      itemBuilder: (int index, DateTime date, Vector2 position) {
-                        return _itemBuilder(
-                            index, date, position, settings.gridType);
-                      },
-                    );
-                  }
+                      return GridBuilder(
+                        now: now,
+                        from: settings.birthday,
+                        to: settings.endDateTime,
+                        lengthCalculate: settings.gridType.calculation,
+                        dayCalculate: settings.gridType.calculationDay,
+                        padding: Dimensions.extra.padding.copyWith(
+                          top: (Dimensions.dotContainerSize * 2) -
+                              (Dimensions.dotSize * 2) + safeAreaPaddingTop,
+                        ),
+                        blockSize: const Size.square(Dimensions.dotContainerSize),
+                        itemBuilder: (int index, DateTime date, Vector2 position) {
+                          return _itemBuilder(
+                              index, date, position, settings.gridType);
+                        },
+                      );
+                    }
 
-                  if (eventState is SettingsError) {
-                    return SliverToBoxAdapter(
+                    if (eventState is SettingsError) {
+                      return SliverToBoxAdapter(
                         child: Text(
                           eventState.message.toString(),
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
-                    );
-                  }
+                      );
+                    }
 
-                  return SliverToBoxAdapter(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: const Center(
-                        child: CupertinoActivityIndicator(),
+                    return SliverToBoxAdapter(
+                      child: SizedBox(
+                        height: MediaQuery.of(context).size.height,
+                        child: const Center(
+                          child: CupertinoActivityIndicator(),
+                        ),
                       ),
-                    ),
-                  );
-                },
-              )
-            ],
+                    );
+                  },
+                )
+              ],
+            ),
           ),
-        ),
-      ],
+          Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+              height: 30,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.black,
+                    Colors.transparent,
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 30,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.transparent,
+                    Colors.black,
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -101,7 +136,7 @@ class _GridListBodyState extends State<GridListBody> {
           key: UniqueKey(),
           position,
           date: date,
-          isActive: true,
+          isActive: false,
           color: Colors.white,
         ),
       );

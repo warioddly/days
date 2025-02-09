@@ -5,7 +5,6 @@ import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart
 import 'package:days/features/home/presentation/utils/extensions/grid_type_extension.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/contoller.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/grid_type_control_bar.dart';
-import 'package:days/shared/ui/animation/blurhider.dart';
 import 'package:days/shared/ui/layout/card_container.dart';
 import 'package:days/shared/ui/typography/paragraph.dart';
 import 'package:flutter/cupertino.dart';
@@ -47,88 +46,82 @@ class _ControlBarState extends State<ControlBar> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(
-          maxWidth: 458,
-        ),
-        child: ChangeNotifierProvider(
-          create: (context) => controller,
-          child: BlurHider(
-            controller: controller.bar,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const GridTypeControlBar(),
-                CardContainer(
-                  padding: Dimensions.large.padding.copyWith(
-                    top: Dimensions.normal,
-                    bottom: Dimensions.normal,
+    return ConstrainedBox(
+      constraints: const BoxConstraints(
+        maxWidth: 458,
+      ),
+      child: ChangeNotifierProvider(
+        create: (context) => controller,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const GridTypeControlBar(),
+            CardContainer(
+              padding: Dimensions.large.padding.copyWith(
+                top: Dimensions.normal,
+                bottom: Dimensions.normal,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: onTapGridSettings,
+                      child: Text(
+                        DateTime.now().year.toString(),
+                      ),
+                    ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: onTapGridSettings,
-                          child: Text(
-                            DateTime.now().year.toString(),
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        child: GestureDetector(
-                          onTap: scrollToToDay,
-                          child: const Paragraph('Tøday'),
-                        ),
-                      ),
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: onTapDateTimeSettings,
-                          child: BlocBuilder<SettingsBloc, SettingsModelState>(
-                            builder: (context, state) {
-                              if (state.state is SettingsLoaded) {
-                                final entity = state.entity;
-                                return RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: '${entity.gridType.calculation(
-                                          entity.birthday,
-                                          DateTime.now(),
-                                        )}'
-                                            .toString(),
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium,
-                                      ),
-                                      TextSpan(
-                                        text: '  ${state.entity.gridType.name}',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(
-                                              color: Colors.white54,
-                                            ),
-                                      ),
-                                    ],
+                  Flexible(
+                    child: GestureDetector(
+                      onTap: scrollToToDay,
+                      child: const Paragraph('Tøday'),
+                    ),
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: onTapDateTimeSettings,
+                      child: BlocBuilder<SettingsBloc, SettingsModelState>(
+                        builder: (context, state) {
+                          if (state.state is SettingsLoaded) {
+                            final entity = state.entity;
+                            return RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '${entity.gridType.calculation(
+                                      entity.birthday,
+                                      DateTime.now(),
+                                    )}'
+                                        .toString(),
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium,
                                   ),
-                                  textAlign: TextAlign.right,
-                                );
-                              }
+                                  TextSpan(
+                                    text: '  ${state.entity.gridType.name}',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium
+                                        ?.copyWith(
+                                          color: Colors.white54,
+                                        ),
+                                  ),
+                                ],
+                              ),
+                              textAlign: TextAlign.right,
+                            );
+                          }
 
-                              return const SizedBox();
-                            },
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ],
+                          return const SizedBox();
+                        },
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );

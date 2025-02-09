@@ -42,15 +42,14 @@ class _HomePageState extends State<HomePage> {
         child: ChangeNotifierProvider.value(
           value: scrollController,
           child: GestureDetector(
-            onTap: () {
+            onLongPress: () {
               FocusScope.of(context).unfocus();
               dotsManagerBloc.add(DotsManagerUserOutsideClickEvent());
             },
-            child: const Stack(
+            child: const Column(
               children: [
-                // BackgroundBlur(),
-                GridListBody(),
                 GridTypeStatusBar(),
+                GridListBody(),
                 ControlBar(),
               ],
             ),
