@@ -33,7 +33,6 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
       duration: const Duration(milliseconds: 100),
       vsync: this,
     );
-
   }
 
   @override

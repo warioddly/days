@@ -13,7 +13,6 @@ final class IllustrationAssets {
     '$_assetPath/7.png',
     '$_assetPath/8.png',
     '$_assetPath/10.png',
-    '$_assetPath/11.png',
     '$_assetPath/12.png',
     '$_assetPath/13.png',
     '$_assetPath/14.png',

@@ -76,9 +76,11 @@ class _IllustratedDotState extends State<IllustratedDot>
   bool isActive = false;
   Color color = Colors.white;
 
+  final imo = IllustrationAssets.getRandomIllustration();
+
   final dot = const DefaultDot();
   late final illustration = Image.asset(
-    IllustrationAssets.getRandomIllustration(),
+    imo,
     color: color,
   );
 
@@ -117,6 +119,7 @@ class _IllustratedDotState extends State<IllustratedDot>
   }
 
   void _animate(_) {
+    print("imo $imo");
 
     if (widget.date != null) {
       print(widget.date?.toIso8601String() ?? '');

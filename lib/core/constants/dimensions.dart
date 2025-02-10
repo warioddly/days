@@ -6,8 +6,8 @@ class Dimensions {
   static const double small = 8.0;
 
   static const double empty = 0.0;
-  static const double dotSize = 5.0;
+  static const double dotSize = 3.0;
 
-  static const double dotContainerSize = 20.0;
+  static const double dotContainerSize = 18.0;
 
 }

@@ -1,6 +1,5 @@
+import 'package:days/core/constants/dimensions.dart';
 import 'package:flutter/material.dart';
-
-const _defaultDotSize = 3.0;
 
 class DefaultDot extends StatelessWidget {
   const DefaultDot({super.key});
@@ -8,7 +7,7 @@ class DefaultDot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox.square(
-      dimension: _defaultDotSize,
+      dimension: Dimensions.dotSize,
       child: DecoratedBox(
         decoration: BoxDecoration(
           color: Colors.white12,
@@ -18,3 +17,4 @@ class DefaultDot extends StatelessWidget {
     );
   }
 }
+
