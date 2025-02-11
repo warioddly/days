@@ -7,8 +7,6 @@ class SettingsModelMapper extends Mapper<SettingsModel, SettingsEntity> {
   @override
   SettingsModel mapFrom(SettingsEntity output) {
     return SettingsModel(
-      birthday: output.birthday,
-      endDateTime: output.endDateTime,
       gridType: output.gridType,
     );
   }
@@ -16,8 +14,6 @@ class SettingsModelMapper extends Mapper<SettingsModel, SettingsEntity> {
   @override
   SettingsEntity mapTo(SettingsModel input) {
     return SettingsEntity(
-      birthday: input.birthday,
-      endDateTime: input.endDateTime,
       gridType: input.gridType,
     );
   }

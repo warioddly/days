@@ -126,7 +126,6 @@ final class IllustrationAssets {
     '$_assetPath/Moon.png',
     '$_assetPath/Moon-1.png',
     '$_assetPath/Palm Tree.png',
-    '$_assetPath/People.png',
     '$_assetPath/Perfume.png',
     '$_assetPath/Pizza.png',
     '$_assetPath/Pizza-1.png',

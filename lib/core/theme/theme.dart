@@ -7,7 +7,7 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       fontFamily: 'ChakraPetch',
-      colorScheme: ColorScheme(
+      colorScheme: const ColorScheme(
         primary: Colors.white,
         onPrimary: Colors.black,
         secondary: Colors.black,

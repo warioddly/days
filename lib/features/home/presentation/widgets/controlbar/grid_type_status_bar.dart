@@ -8,7 +8,6 @@ import 'package:days/shared/ui/layout/card_container.dart';
 import 'package:days/shared/ui/typography/paragraph.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 
 class GridTypeStatusBar extends StatefulWidget {
   const GridTypeStatusBar({super.key});
@@ -21,10 +20,8 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
     with TickerProviderStateMixin {
 
   late final AnimationController _appGridTypeChangeController;
-  late final ScrollController scrollController;
-
   var title = '';
-  var gridType = GridType.months;
+  var gridType = GridType.days;
 
   @override
   void initState() {
@@ -41,10 +38,8 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
     return SafeArea(
       child: GestureDetector(
         onTap: () {
-          scrollController.animateTo(
-            0,
-            duration: const Duration(milliseconds: 2500),
-            curve: Curves.easeInOutQuart,
+          bloc.add(
+            SetSettings(bloc.state.entity.copyWith(gridType: gridType)),
           );
         },
         child: CardContainer(

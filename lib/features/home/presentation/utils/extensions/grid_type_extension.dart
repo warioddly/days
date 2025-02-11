@@ -7,18 +7,17 @@ extension GridTypeExtension on GridType {
       GridType.days => DateTimeUtils.getDaysFrom(start, end),
       GridType.weeks => DateTimeUtils.getWeeksFrom(start, end),
       GridType.months => DateTimeUtils.getMonthsFrom(start, end),
-      GridType.years => DateTimeUtils.getYearsFrom(start, end)
+      // GridType.years => DateTimeUtils.getYearsFrom(start, end)
     };
   }
 
   DateTime calculationDay(DateTime start, int compensation) {
     return switch (this) {
-      GridType.days =>
-        DateTime(start.year, 1, 0).add(Duration(days: compensation)),
+      GridType.days => DateTime(start.year).add(Duration(days: compensation)),
       GridType.weeks =>
-        DateTime(start.year, 1, 0).add(Duration(days: compensation * 7)),
-      GridType.months => DateTime(start.year, start.month + compensation, 0),
-      GridType.years => DateTime(start.year + compensation, 1, 0)
+        DateTime(start.year).add(Duration(days: compensation * 7)),
+      GridType.months => DateTime(start.year, start.month + compensation, 1),
+      // GridType.years => DateTime(start.year + compensation, 1, 0)
     };
   }
 
@@ -27,7 +26,7 @@ extension GridTypeExtension on GridType {
       GridType.days => DateTimeUtils.isSameDay(a, b),
       GridType.weeks => DateTimeUtils.isSameWeek(a, b),
       GridType.months => DateTimeUtils.isSameMonth(a, b),
-      GridType.years => DateTimeUtils.isSameYear(a, b),
+      // GridType.years => DateTimeUtils.isSameYear(a, b),
     };
   }
 }

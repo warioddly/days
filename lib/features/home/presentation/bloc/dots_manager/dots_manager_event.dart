@@ -4,3 +4,5 @@ part of 'dots_manager_bloc.dart';
 sealed class DotsManagerEvent {}
 
 final class DotsManagerUserOutsideClickEvent extends DotsManagerEvent {}
+
+final class DotsManagerUserHoveredEvent extends DotsManagerEvent {}

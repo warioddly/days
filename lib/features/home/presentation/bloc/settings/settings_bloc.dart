@@ -41,8 +41,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
         state: SettingsLoaded(),
       ));
 
-    } catch (e, stackTrace) {
-      print("Error: $e StackTrace: $stackTrace");
+    } catch (e) {
       emit(state.copyWith(
         state: SettingsError(e),
       ));
@@ -69,8 +68,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
 
       add(GetSettings());
 
-    } catch (e, stackTrace) {
-      print("Error: $e StackTrace: $stackTrace");
+    } catch (e) {
       emit(state.copyWith(
         state: SettingsError(e),
       ));

@@ -1,12 +1,14 @@
+import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/services/locator_service.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/grid_type_status_bar.dart';
-import 'package:days/features/home/presentation/widgets/controlbar/controlbar.dart';
-import 'package:days/features/home/presentation/widgets/dot/dot_list_body.dart';
+import 'package:days/features/home/presentation/widgets/dot/dot_grid_body.dart';
+import 'package:days/features/home/presentation/widgets/tooltip/orbit_tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,7 +21,7 @@ class _HomePageState extends State<HomePage> {
 
   final settingsBloc = getIt<SettingsBloc>();
   final dotsManagerBloc = getIt<DotsManagerBloc>();
-  final scrollController = ScrollController();
+  final orbitTooltipNotifier = OrbitTooltipNotifier();
 
   @override
   void initState() {
@@ -38,20 +40,37 @@ class _HomePageState extends State<HomePage> {
           BlocProvider(
             create: (context) => dotsManagerBloc,
           ),
+          ChangeNotifierProvider(
+              create: (context) => orbitTooltipNotifier,
+          ),
         ],
-        child: ChangeNotifierProvider.value(
-          value: scrollController,
-          child: GestureDetector(
-            onLongPress: () {
-              FocusScope.of(context).unfocus();
-              dotsManagerBloc.add(DotsManagerUserOutsideClickEvent());
-            },
-            child: const Column(
-              children: [
-                GridTypeStatusBar(),
-                GridListBody(),
-                ControlBar(),
-              ],
+        child: GestureDetector(
+          onLongPress: () {
+            FocusScope.of(context).unfocus();
+            dotsManagerBloc.add(DotsManagerUserOutsideClickEvent());
+          },
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                maxWidth: Dimensions.maxViewWidthSize,
+              ),
+              child: const Stack(
+                children: [
+                  Positioned.fill(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GridTypeStatusBar(),
+                        Spacer(),
+                        DotGridBody(),
+                        Spacer(),
+                        // ControlBar(),
+                      ],
+                    ),
+                  ),
+                  OrbitTooltip(),
+                ],
+              ),
             ),
           ),
         ),
@@ -62,7 +81,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     settingsBloc.close();
-    scrollController.dispose();
     super.dispose();
   }
 

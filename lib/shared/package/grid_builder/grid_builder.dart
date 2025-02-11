@@ -8,8 +8,6 @@ typedef DayCalculate = DateTime Function(DateTime start, int compensation);
 typedef ItemBuilder = Widget Function(
     int index, DateTime date, Vector2 position);
 
-typedef OnBuildComplete = Widget Function(double currentDayOffset);
-
 class GridBuilder extends StatefulWidget {
   const GridBuilder({
     required this.now,
@@ -33,7 +31,7 @@ class GridBuilder extends StatefulWidget {
   final LengthCalculate lengthCalculate;
   final DayCalculate dayCalculate;
   final ItemBuilder itemBuilder;
-  final OnBuildComplete? onBuildComplete;
+  final VoidCallback? onBuildComplete;
   final EdgeInsets padding;
 
   @override
@@ -41,8 +39,8 @@ class GridBuilder extends StatefulWidget {
 }
 
 class _GridBuilderState extends State<GridBuilder> {
+
   int itemsPerRow = 0;
-  int itemsPerColumn = 0;
   int length = 0;
   var blocks = <List<Widget>>[];
 
@@ -60,19 +58,18 @@ class _GridBuilderState extends State<GridBuilder> {
 
   @override
   Widget build(BuildContext context) {
-    return SliverPadding(
-      padding: widget.padding,
-      sliver: SliverList(
-        delegate: SliverChildBuilderDelegate(
-          (_, index) {
-            return Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[for (final block in blocks[index]) block],
-            );
-          },
-          childCount: blocks.length,
-        ),
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        for (var i = 0; i < blocks.length; i++)
+          _itemBuilder(context, i),
+      ],
+    );
+  }
+
+  Widget _itemBuilder(BuildContext context, int index) {
+    return Row(
+      children: <Widget>[for (final block in blocks[index]) block],
     );
   }
 
@@ -89,42 +86,36 @@ class _GridBuilderState extends State<GridBuilder> {
   void calculate() {
     final size = widget.viewSize ?? MediaQuery.of(context).size;
     final blockSize = widget.blockSize;
-
     length = widget.lengthCalculate(widget.from, widget.to);
     itemsPerRow =
-        ((size.width - (blockSize.width / 2 + widget.padding.horizontal) * 2) ~/
-            blockSize.width);
-    itemsPerColumn = size.height ~/ blockSize.height;
+    (((size.width - (blockSize.width / 2 + widget.padding.horizontal)) ~/
+        blockSize.width));
   }
 
   List<List<Widget>> buildItems() {
     final blocks = <List<Widget>>[];
-    var currentDayOffset = 0.0;
 
-    for (var i = 0; i < length / itemsPerRow; i++) {
-      final children = <Widget>[];
+    var index = 0;
 
-      for (var j = 0; j < itemsPerRow; j++) {
-        int index = i * itemsPerRow + j;
+    for (var i = 0; i < length; i++) {
+      final date = widget.dayCalculate(widget.from, i);
+      final position = Vector2(
+        (index % itemsPerRow).toDouble(),
+        (index ~/ itemsPerRow).toDouble(),
+      );
 
-        final day = widget.dayCalculate(widget.from, index);
-        final position = Vector2(j.toDouble(), i.toDouble());
-        final isBefore = day.isBefore(widget.now);
-
-        if (isBefore) {
-          currentDayOffset = (i * widget.blockSize.height) + itemsPerColumn;
-        }
-
-        final item = widget.itemBuilder.call(index, day, position);
-
-        children.add(item);
+      if (position.x == 0) {
+        blocks.add(<Widget>[]);
       }
 
-      blocks.add(children);
+      blocks.last.add(widget.itemBuilder(index, date, position));
+
+      index++;
     }
 
-    widget.onBuildComplete?.call(currentDayOffset);
+    widget.onBuildComplete?.call();
 
     return blocks;
   }
+
 }

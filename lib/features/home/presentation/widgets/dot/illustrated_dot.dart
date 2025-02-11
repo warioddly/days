@@ -76,11 +76,10 @@ class _IllustratedDotState extends State<IllustratedDot>
   bool isActive = false;
   Color color = Colors.white;
 
-  final imo = IllustrationAssets.getRandomIllustration();
-
   final dot = const DefaultDot();
+  final illustrationImagePath = IllustrationAssets.getRandomIllustration();
   late final illustration = Image.asset(
-    imo,
+    illustrationImagePath,
     color: color,
   );
 
@@ -94,12 +93,10 @@ class _IllustratedDotState extends State<IllustratedDot>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return BlocListener<DotsManagerBloc, DotsManagerModelState>(
-      listener: _listener,
-      child: Listener(
-        behavior: HitTestBehavior.translucent,
-        onPointerHover: _animate,
-        onPointerDown: _animate,
+    return Listener(
+      onPointerHover: _animate,
+      child: BlocListener<DotsManagerBloc, DotsManagerModelState>(
+        listener: _listener,
         child: SizedBox.square(
           dimension: Dimensions.dotContainerSize,
           child: AnimatedSwitcher(
@@ -118,8 +115,9 @@ class _IllustratedDotState extends State<IllustratedDot>
     );
   }
 
-  void _animate(_) {
-    print("imo $imo");
+  void _animate(event) {
+    print('illustrationImagePath $illustrationImagePath');
+
 
     if (widget.date != null) {
       print(widget.date?.toIso8601String() ?? '');
@@ -132,6 +130,8 @@ class _IllustratedDotState extends State<IllustratedDot>
     isActive = !isActive;
     color = Colors.white;
 
+    context.read<DotsManagerBloc>().add(DotsManagerUserHoveredEvent());
+
     setState(() {});
   }
 
@@ -140,10 +140,18 @@ class _IllustratedDotState extends State<IllustratedDot>
     final eventState = state.state;
 
     if (eventState is DotsManagerUserOutsideClicked) {
+      if (!widget.isActive) {
         isActive = false;
         setState(() { });
+      }
     }
 
+  }
+
+  String? getTooltipMessage() {
+    return widget.date != null
+        ? '${widget.date?.day}/${widget.date?.month}/${widget.date?.year}'
+        : null;
   }
 
   @override
