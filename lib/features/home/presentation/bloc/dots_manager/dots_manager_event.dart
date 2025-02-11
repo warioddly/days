@@ -6,8 +6,3 @@ sealed class DotsManagerEvent {}
 final class DotsManagerUserOutsideClickEvent extends DotsManagerEvent {}
 
 final class DotsManagerUserHoveredEvent extends DotsManagerEvent {}
-
-final class DotsManagerUserHoverEvent extends DotsManagerEvent {
-  final Offset position;
-  DotsManagerUserHoverEvent({required this.position});
-}

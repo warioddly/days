@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:ui';
-import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -17,10 +15,6 @@ class DotsManagerBloc extends Bloc<DotsManagerEvent, DotsManagerModelState> {
     on<DotsManagerUserOutsideClickEvent>(_onUserOutsideClick);
     on<DotsManagerUserHoveredEvent>(
         _onDeActiveHoveredDotsUpdateResetTimer,
-    );
-    on<DotsManagerUserHoverEvent>(
-        _onUserHoverEvent,
-      transformer: droppable()
     );
   }
 
@@ -50,16 +44,5 @@ class DotsManagerBloc extends Bloc<DotsManagerEvent, DotsManagerModelState> {
     });
 
   }
-
-
-  void _onUserHoverEvent(
-      DotsManagerUserHoverEvent event,
-      Emitter<DotsManagerModelState> emit,
-  ) {
-    emit(state.copyWith(
-      state: DotsManagerUserHovered(event.position),
-    ));
-  }
-
 
 }
