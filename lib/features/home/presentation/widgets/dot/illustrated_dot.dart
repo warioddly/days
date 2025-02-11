@@ -64,8 +64,7 @@ class IllustratedDot extends Dot {
 
 }
 
-class IllustratedDotState extends DotState<IllustratedDot>
-    with AutomaticKeepAliveClientMixin {
+class IllustratedDotState extends DotState<IllustratedDot> {
 
   bool isActive = false;
   Color color = Colors.white;
@@ -85,7 +84,6 @@ class IllustratedDotState extends DotState<IllustratedDot>
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
     return RepaintBoundary(
       child: BlocListener<DotsManagerBloc, DotsManagerModelState>(
         listenWhen: (previous, current) => previous.state != current.state,
@@ -139,8 +137,5 @@ class IllustratedDotState extends DotState<IllustratedDot>
     }
 
   }
-
-  @override
-  bool get wantKeepAlive => isActive;
 
 }

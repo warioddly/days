@@ -21,7 +21,7 @@ class _DotGridBodyState extends State<DotGridBody> {
   var now = DateTime.now();
   var _lastUpdateTime =  Duration.zero;
   final keys = <GlobalKey<DotState>>[];
-  final fps = const Duration(milliseconds: 1000 ~/ 16);
+  final fps = const Duration(milliseconds: 1000 ~/ 120);
 
   @override
   Widget build(BuildContext context) {
