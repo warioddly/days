@@ -2,48 +2,43 @@ import 'package:days/core/assets/illustration_assets.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot/default_dot.dart';
-import 'package:days/shared/models/vector2.dart';
+import 'package:days/features/home/presentation/widgets/dot/dot.dart';
 import 'package:days/shared/ui/animation/utils/curves.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 
-class IllustratedDot extends StatefulWidget {
-  final Vector2 position;
-  final DateTime? date;
-  final Color? color;
-  final bool showBoxShadow;
-  final bool isActive;
+class IllustratedDot extends Dot {
 
-  const IllustratedDot(this.position, {
+  final bool showBoxShadow;
+
+  const IllustratedDot({
     super.key,
-    this.date,
-    this.color,
+    super.date,
+    super.color,
     this.showBoxShadow = false,
-    this.isActive = true,
+    super.isActive = true,
   });
 
-  const IllustratedDot.before(Vector2 position, {
+  const IllustratedDot.before(Offset position, {
     Key? key,
     DateTime? date,
     bool showBoxShadow = false,
-    bool bloomed = false,
+    bool isActive = false,
   }) : this(
-    position,
     date: date,
     color: Colors.white,
     showBoxShadow: showBoxShadow,
-    isActive: bloomed,
+    isActive: isActive,
     key: key,
   );
 
-  const IllustratedDot.after(Vector2 position, {
+  const IllustratedDot.after({
     Key? key,
     DateTime? date,
     bool showBoxShadow = true,
     bool isActive = true,
   }) : this(
-    position,
     date: date,
     color: Colors.white12,
     showBoxShadow: showBoxShadow,
@@ -51,14 +46,12 @@ class IllustratedDot extends StatefulWidget {
     key: key,
   );
 
-  const IllustratedDot.current(Vector2 position, {
+  const IllustratedDot.current({
     Key? key,
     DateTime? date,
     bool showBoxShadow = true,
-    bool pulse = true,
     bool isActive = true,
   }) : this(
-    position,
     date: date,
     color: Colors.tealAccent,
     showBoxShadow: showBoxShadow,
@@ -67,19 +60,19 @@ class IllustratedDot extends StatefulWidget {
   );
 
   @override
-  State<IllustratedDot> createState() => _IllustratedDotState();
+  State<Dot> createState() => IllustratedDotState();
+
 }
 
-class _IllustratedDotState extends State<IllustratedDot>
+class IllustratedDotState extends DotState<IllustratedDot>
     with AutomaticKeepAliveClientMixin {
 
   bool isActive = false;
   Color color = Colors.white;
 
   final dot = const DefaultDot();
-  final illustrationImagePath = IllustrationAssets.getRandomIllustration();
   late final illustration = Image.asset(
-    illustrationImagePath,
+    IllustrationAssets.getRandomIllustration(),
     color: color,
   );
 
@@ -93,9 +86,9 @@ class _IllustratedDotState extends State<IllustratedDot>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Listener(
-      onPointerHover: _animate,
+    return RepaintBoundary(
       child: BlocListener<DotsManagerBloc, DotsManagerModelState>(
+        listenWhen: (previous, current) => previous.state != current.state,
         listener: _listener,
         child: SizedBox.square(
           dimension: Dimensions.dotContainerSize,
@@ -115,9 +108,8 @@ class _IllustratedDotState extends State<IllustratedDot>
     );
   }
 
-  void _animate(event) {
-    print('illustrationImagePath $illustrationImagePath');
-
+  @override
+  void enable() {
 
     if (widget.date != null) {
       print(widget.date?.toIso8601String() ?? '');
@@ -146,12 +138,6 @@ class _IllustratedDotState extends State<IllustratedDot>
       }
     }
 
-  }
-
-  String? getTooltipMessage() {
-    return widget.date != null
-        ? '${widget.date?.day}/${widget.date?.month}/${widget.date?.year}'
-        : null;
   }
 
   @override

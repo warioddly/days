@@ -1,29 +1,13 @@
-import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/features/home/presentation/utils/extensions/grid_type_extension.dart';
+import 'package:days/features/home/presentation/widgets/dot/dot.dart';
+import 'package:days/features/home/presentation/widgets/dot/dot_grid_body_builder.dart';
 import 'package:days/features/home/presentation/widgets/dot/illustrated_dot.dart';
-import 'package:days/shared/models/vector2.dart';
-import 'package:days/shared/package/grid_builder/grid_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:flutter/material.dart'
-    show
-    StatelessWidget,
-    Widget,
-    BuildContext,
-    RawGestureDetector,
-    GestureRecognizerFactory,
-    GestureRecognizerFactoryWithHandlers;
-import 'package:flutter/gestures.dart'
-    show
-    OneSequenceGestureRecognizer,
-    PointerDownEvent,
-    GestureDisposition,
-    PointerEvent;
 
 class DotGridBody extends StatefulWidget {
   const DotGridBody({super.key});
@@ -35,144 +19,75 @@ class DotGridBody extends StatefulWidget {
 class _DotGridBodyState extends State<DotGridBody> {
 
   var now = DateTime.now();
+  var _lastUpdateTime =  Duration.zero;
+  final keys = <GlobalKey<DotState>>[];
+  final fps = const Duration(milliseconds: 1000 ~/ 16);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 5,
-      child: Center(
-        child: BlocBuilder<SettingsBloc, SettingsModelState>(
-          builder: (context, state) {
-            final eventState = state.state;
-
-            if (eventState is SettingsLoaded) {
-              final settings = state.entity;
-
-              now = DateTime.now();
-              final mediaQuerySize = MediaQuery.sizeOf(context);
-
-              final viewSize = mediaQuerySize.width > Dimensions.maxViewWidthSize
-                  ? Dimensions.maxViewWidthSize
-                  : mediaQuerySize.width;
-
-              return GridBuilder(
-                now: now,
-                from: DateTime(now.year),
-                to: DateTime(now.year).add(const Duration(days: 365)),
-                lengthCalculate: settings.gridType.calculation,
-                dayCalculate: settings.gridType.calculationDay,
-                padding: Dimensions.doubledNormal.padding,
-                blockSize: const Size.square(Dimensions.dotContainerSize),
-                viewSize: Size(viewSize, mediaQuerySize.height),
-                itemBuilder: (int index, DateTime date, Vector2 position) {
-                  return _itemBuilder(
-                    index,
-                    date,
-                    position,
-                    settings.gridType,
-                  );
-                },
-              );
-            }
-
-            if (eventState is SettingsError) {
-              return Text(
-                eventState.message.toString(),
-                style: Theme.of(context).textTheme.bodySmall,
-              );
-            }
-
-            return const Center(
-              child: CupertinoActivityIndicator(),
-            );
-          },
-        ),
-      ),
+    final entity = context.read<SettingsBloc>().state.entity;
+    return DotGridBodyBuilder(
+      now: now,
+      throttlePanUpdate: _throttlePanUpdate,
+      onPanUpdate: _onPanUpdate,
+      itemBuilder: (index, date) => _itemBuilder(index, date, entity.gridType),
     );
   }
 
-  Widget _itemBuilder(int index, DateTime date, Vector2 position, GridType type) {
+  Widget _itemBuilder(int index, DateTime date, GridType type) {
+    late final Widget dot;
+    final key = GlobalKey<IllustratedDotState>();
+    keys.add(key);
 
     if (type.sameWith(now, date)) {
-      return IllustratedDot.current(
-        key: UniqueKey(),
-        position,
+      dot = IllustratedDot.current(
+        key: key,
         date: date,
       );
     }
-
-    if (date.isBefore(now)) {
-      return RepaintBoundary(
-        child: IllustratedDot(
-          key: UniqueKey(),
-          position,
-          date: date,
-          isActive: true,
-        ),
+    else if (date.isBefore(now)) {
+      dot = IllustratedDot(
+        key: key,
+        date: date,
+        isActive: true,
       );
     }
-
-    return RepaintBoundary(
-      child: IllustratedDot.after(
-        key: UniqueKey(),
-        position,
+    else {
+      dot = IllustratedDot.after(
+        key: key,
         date: date,
         isActive: false,
-      ),
-    );
+      );
+    }
+
+    return dot;
   }
-}
 
+  void _throttlePanUpdate(Offset globalPosition) {
+    for (final key in keys) {
 
-class SinglePointerRecognizer extends OneSequenceGestureRecognizer {
-  int _p = 0;
+      final box = key.currentContext?.findRenderObject() as RenderBox?;
 
-  @override
-  void addPointer(PointerDownEvent event) {
-    startTrackingPointer(event.pointer);
+      if (box != null) {
+        final local = box.globalToLocal(globalPosition);
+        final isInside = box.paintBounds.contains(local);
 
-    print('object');
-    if (_p == 0) {
-      resolve(GestureDisposition.rejected);
-      _p = event.pointer;
-    } else {
-      resolve(GestureDisposition.accepted);
+        if (isInside) {
+          key.currentState?.enable();
+          break;
+        }
+      }
+
     }
   }
 
-  @override
-  String get debugDescription => 'only one pointer recognizer';
-
-  @override
-  void didStopTrackingLastPointer(int pointer) {}
-
-  @override
-  void handleEvent(PointerEvent event) {
-    if (!event.down && event.pointer == _p) {
-      _p = 0;
+  void _onPanUpdate(Offset globalPosition) {
+    final currentTime = SchedulerBinding.instance.currentSystemFrameTimeStamp;
+    if (currentTime - _lastUpdateTime < fps) {
+      return;
     }
+    _lastUpdateTime = currentTime;
+    _throttlePanUpdate(globalPosition);
   }
-}
 
-class SinglePointerRecognizerWidget extends StatelessWidget {
-  /// Ignores multi touch gestures on a widget
-  const SinglePointerRecognizerWidget({super.key, this.child});
-
-  final Widget? child;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawGestureDetector(
-      gestures: <Type, GestureRecognizerFactory>{
-        SinglePointerRecognizer:
-        GestureRecognizerFactoryWithHandlers<SinglePointerRecognizer>(
-              () => SinglePointerRecognizer(),
-              (SinglePointerRecognizer instance) {
-                print('SinglePointerRecognizer');
-              },
-        )
-      },
-      child: child,
-    );
-  }
 }

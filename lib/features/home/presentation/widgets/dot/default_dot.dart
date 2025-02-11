@@ -10,7 +10,7 @@ class DefaultDot extends StatelessWidget {
       dimension: Dimensions.dotSize,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          color: Colors.white12,
+          color: Colors.white,
           shape: BoxShape.circle,
         ),
       ),

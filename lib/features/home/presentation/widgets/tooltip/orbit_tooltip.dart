@@ -1,12 +1,10 @@
-
-import 'package:days/shared/models/vector2.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 
 class OrbitTooltipNotifier extends ChangeNotifier {
 
-  Vector2? _position;
+  Offset? _position;
   String? _text;
 
   bool _isVisible = false;
@@ -23,7 +21,7 @@ class OrbitTooltipNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setPosition(Vector2 position) {
+  void setPosition(Offset position) {
     _position = position;
     notifyListeners();
   }
@@ -45,8 +43,8 @@ class OrbitTooltip extends StatelessWidget {
         return AnimatedPositioned(
           duration: const Duration(milliseconds: 100),
           curve: Curves.linear,
-          left: notifier._position?.x ?? 0,
-          top: notifier._position?.y ?? 0,
+          left: notifier._position?.dx ?? 0,
+          top: notifier._position?.dy ?? 0,
           child: IgnorePointer(
             child: AnimatedOpacity(
               duration: const Duration(milliseconds: 200),

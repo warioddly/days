@@ -8,8 +8,8 @@ class Dimensions {
   static const double empty = 0.0;
   static const double dotSize = 3.0;
 
-  static const double dotContainerSize = 22.0;
+  static const double dotContainerSize = 22.3;
 
-  static const double maxViewWidthSize = 425.0;
+  static const double maxViewWidthSize = 414.0;
 
 }

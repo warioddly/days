@@ -33,3 +33,8 @@ sealed class DotsManagerState {}
 final class DotsManagerInitial extends DotsManagerState {}
 
 final class DotsManagerUserOutsideClicked extends DotsManagerState {}
+
+final class DotsManagerUserHovered extends DotsManagerState {
+  final Offset position;
+  DotsManagerUserHovered(this.position);
+}
