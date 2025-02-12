@@ -1,13 +1,20 @@
+import 'package:days/core/utils/frame_rate_utils.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
-import 'package:days/features/home/presentation/utils/extensions/grid_type_extension.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body_builder.dart';
+import 'package:days/features/home/presentation/widgets/dot_grid/dots/doted_dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/illustrated_dot.dart';
+import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_disable_animation.dart';
+import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_followers_animation.dart';
+import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_hover_animation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+
+typedef ItemBuilder = Widget Function(int index, DateTime date, DateTime now);
 
 class DotGridBody extends StatefulWidget {
   const DotGridBody({super.key});
@@ -18,32 +25,121 @@ class DotGridBody extends StatefulWidget {
 
 class _DotGridBodyState extends State<DotGridBody> {
 
-  var now = DateTime.now();
-  var _lastUpdateTime = Duration.zero;
   final keys = <GlobalKey<DotState>>[];
-  final fps = const Duration(milliseconds: 1000 ~/ 120);
+  final framer = Framer();
 
   @override
   Widget build(BuildContext context) {
-    final entity = context.read<SettingsBloc>().state.entity;
     return BlocListener<DotsManagerBloc, DotsManagerModelState>(
-      listener: _listener,
-      child: DotGridBodyBuilder(
-        now: now,
-        throttlePanUpdate: _throttlePanUpdate,
-        onPanUpdate: _onPanUpdate,
-        itemBuilder: (index, date) =>
-            _itemBuilder(index, date, entity.gridType),
+      listener: _dotsManagerListener,
+      child: BlocConsumer<SettingsBloc, SettingsModelState>(
+        listener: _settingsListener,
+        builder: (context, state) {
+          final eventState = state.state;
+
+          if (eventState is SettingsLoaded) {
+            final gridType = state.entity.gridType;
+            return DotGridBodyBuilder(
+              now: DateTime.now(),
+              onPanUpdate: onPanUpdate(gridType),
+              itemBuilder: itemBuilder(gridType),
+            );
+          }
+
+          if (eventState is SettingsLoading) {
+            return const Center(
+              child: CupertinoActivityIndicator(),
+            );
+          }
+
+          return const SizedBox();
+        },
       ),
     );
   }
 
-  Widget _itemBuilder(int index, DateTime date, GridType type) {
+  ItemBuilder itemBuilder(GridType gridType) {
+    return switch(gridType) {
+      GridType.doted => _dotedItemBuilder,
+      GridType.illustrated => _illustratedItemBuilder,
+    };
+  }
+
+  void Function(Offset globalPosition) onPanUpdate(GridType gridType) {
+
+    void onAnimationComplete() {
+      context.read<DotsManagerBloc>().add(DotsManagerUserHoveredEvent());
+    }
+
+    return switch(gridType) {
+      GridType.doted => (Offset globalPosition) => framer.throttle(
+        () => DotFollowersAnimation(
+          keys: keys,
+          globalPosition: globalPosition,
+          onComplete: onAnimationComplete,
+        ),
+      ),
+      GridType.illustrated => (Offset globalPosition) => framer.throttle(
+        () => DotHoverAnimation(
+          keys: keys,
+          globalPosition: globalPosition,
+          onComplete: onAnimationComplete,
+        ),
+      ),
+    };
+  }
+
+  void _dotsManagerListener(BuildContext context, DotsManagerModelState state) {
+    final eventState = state.state;
+
+    if (eventState is DotsManagerUserOutsideClicked) {
+      DotDisableAnimation(keys: keys, globalPosition: Offset.zero);
+    }
+  }
+
+  void _settingsListener(BuildContext context, SettingsModelState state) {
+    if (state.state is SettingsLoading) {
+      keys.clear();
+    }
+  }
+
+  Widget _dotedItemBuilder(int index, DateTime date, DateTime now) {
     late final Widget dot;
+
     final key = GlobalKey<DotState>();
     keys.add(key);
 
-    if (type.sameWith(now, date)) {
+    if (DateUtils.isSameDay(now, date)) {
+      dot = DotedDot.current(
+        key: key,
+        date: date,
+      );
+    }
+    else if (date.isBefore(now)) {
+      dot = DotedDot(
+        key: key,
+        date: date,
+        isActive: true,
+      );
+    }
+    else {
+      dot = DotedDot(
+        key: key,
+        date: date,
+        isActive: false,
+      );
+    }
+
+    return dot;
+  }
+
+  Widget _illustratedItemBuilder(int index, DateTime date, DateTime now) {
+    late final Widget dot;
+
+    final key = GlobalKey<DotState>();
+    keys.add(key);
+
+    if (DateUtils.isSameDay(now, date)) {
       dot = IllustratedDot.current(
         key: key,
         date: date,
@@ -54,7 +150,6 @@ class _DotGridBodyState extends State<DotGridBody> {
         key: key,
         date: date,
         isActive: true,
-        color: Colors.red,
       );
     }
     else {
@@ -62,109 +157,10 @@ class _DotGridBodyState extends State<DotGridBody> {
         key: key,
         date: date,
         isActive: false,
-        color: Colors.red,
       );
     }
 
     return dot;
-  }
-
-  void _throttlePanUpdate(Offset globalPosition) {
-    _animation1(
-      context,
-      keys,
-      globalPosition,
-      () {
-        context.read<DotsManagerBloc>().add(DotsManagerUserHoveredEvent());
-      },
-    );
-  }
-
-  void _onPanUpdate(Offset globalPosition) {
-    final currentTime = SchedulerBinding.instance.currentSystemFrameTimeStamp;
-    if (currentTime - _lastUpdateTime < fps) {
-      return;
-    }
-    _lastUpdateTime = currentTime;
-    _throttlePanUpdate(globalPosition);
-  }
-
-  void _listener(BuildContext context, DotsManagerModelState state) {
-
-    final eventState = state.state;
-
-    if (eventState is DotsManagerUserOutsideClicked) {
-
-      for (final key in keys) {
-        final widget = key.currentState;
-        if (widget != null && !widget.widget.isActive) {
-          widget.disable();
-        }
-      }
-
-    }
-
-  }
-
-}
-
-void _animation1(
-  BuildContext context,
-  List<GlobalKey<DotState>> keys,
-  Offset globalPosition,
-  VoidCallback onComplete,
-) {
-  for (final key in keys) {
-    final box = key.currentContext?.findRenderObject() as RenderBox?;
-
-    if (box != null) {
-      final local = box.globalToLocal(globalPosition);
-      final isInside = box.paintBounds.contains(local);
-
-      if (isInside) {
-        key.currentState?.enable();
-        onComplete();
-        break;
-      }
-    }
-  }
-}
-
-void _animation2(
-  BuildContext context,
-  List<GlobalKey<DotState>> keys,
-  Offset globalPosition,
-  VoidCallback onComplete,
-) {
-
-  for (int i = 0; i < keys.length; i++) {
-    final key = keys[i];
-    final box = key.currentContext?.findRenderObject() as RenderBox?;
-
-    if (box != null) {
-      key.currentState?.disable();
-    }
-  }
-
-  for (int i = 0; i < keys.length; i++) {
-    final key = keys[i];
-    final box = key.currentContext?.findRenderObject() as RenderBox?;
-
-    if (box != null) {
-      final local = box.globalToLocal(globalPosition);
-      final isInside = box.paintBounds.contains(local);
-
-      if (isInside) {
-
-        for (int j = 0; j <= i; j++) {
-          keys[j].currentState?..disable()..enable();
-        }
-
-        onComplete();
-        break;
-
-      }
-    }
   }
 
 }

@@ -12,7 +12,7 @@ abstract class Dot extends StatefulWidget {
 
 abstract class DotState<T extends Dot> extends State<T> {
   void enable() {}
-  void disable() {}
+  void disable([bool shouldDisableActive = false]) {}
 }
 
 // class Dot extends StatefulWidget {

@@ -32,4 +32,8 @@ class DateTimeUtils {
   static bool isSameYear(DateTime a, DateTime b) {
     return a.year == b.year;
   }
+
+  static DateTime addDays(DateTime start, int days) {
+    return start.add(Duration(days: days));
+  }
 }

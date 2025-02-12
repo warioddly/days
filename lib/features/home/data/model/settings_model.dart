@@ -12,7 +12,7 @@ class SettingsModel extends SettingsEntity {
     return SettingsModel(
       gridType: GridType.values.firstWhere(
           (e) => e.name == json['gridType'],
-          orElse: () => GridType.days,
+          orElse: () => GridType.illustrated,
       ),
     );
   }

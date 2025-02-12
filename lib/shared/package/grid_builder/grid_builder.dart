@@ -4,7 +4,7 @@ typedef LengthCalculate = int Function(DateTime from, DateTime to);
 
 typedef DayCalculate = DateTime Function(DateTime start, int compensation);
 
-typedef GridItemBuilder = Widget Function(int index, DateTime date);
+typedef GridItemBuilder = Widget Function(int index, DateTime date, DateTime now);
 
 class GridBuilder extends StatefulWidget {
   const GridBuilder({
@@ -113,7 +113,7 @@ class _GridBuilderState extends State<GridBuilder> {
         blocks.add(<Widget>[]);
       }
 
-      blocks.last.add(widget.itemBuilder(index, date));
+      blocks.last.add(widget.itemBuilder(index, date, widget.now));
 
       index++;
     }

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:days/core/assets/illustration_assets.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
@@ -67,8 +69,13 @@ class IllustratedDotState extends DotState<IllustratedDot> {
   bool isActive = false;
   Color color = Colors.white;
 
-  final dot = const DefaultDot();
-  late final illustration = Image.asset(
+  late final dot = Padding(
+    padding: _randomPadding(),
+    child: const DefaultDot(
+      size: 1.5,
+    ),
+  );
+  late final activeDot = Image.asset(
     IllustrationAssets.getRandomIllustration(),
     color: color,
   );
@@ -94,7 +101,7 @@ class IllustratedDotState extends DotState<IllustratedDot> {
             scale: animation,
             child: child,
           ),
-          child: isActive ? illustration : dot,
+          child: isActive ? activeDot : dot,
         ),
       ),
     );
@@ -102,11 +109,6 @@ class IllustratedDotState extends DotState<IllustratedDot> {
 
   @override
   void enable() {
-
-    if (widget.date != null) {
-      print(widget.date?.toIso8601String() ?? '');
-    }
-
     if (isActive) {
       return;
     }
@@ -118,8 +120,8 @@ class IllustratedDotState extends DotState<IllustratedDot> {
   }
 
   @override
-  void disable() {
-    if (!isActive) {
+  void disable([bool shouldDisableActive = false]) {
+    if (!isActive || (shouldDisableActive && widget.isActive)) {
       return;
     }
     isActive = false;
@@ -127,5 +129,15 @@ class IllustratedDotState extends DotState<IllustratedDot> {
     setState(() { });
   }
 
+  EdgeInsets _randomPadding() {
+    return EdgeInsets.only(
+      top: _randomSize(),
+      left: _randomSize(),
+      right: _randomSize(),
+      bottom: _randomSize(),
+    );
+  }
+
+  double _randomSize() => Random().nextDouble() * 6;
 
 }

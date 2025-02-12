@@ -1,8 +1,7 @@
 
 enum GridType {
-  days,
-  weeks,
-  months,
+  illustrated,
+  doted,
 }
 
 class SettingsEntity {
@@ -14,7 +13,7 @@ class SettingsEntity {
   });
 
   SettingsEntity.initial() : this(
-    gridType: GridType.days,
+    gridType: GridType.illustrated,
   );
 
   SettingsEntity copyWith({GridType? gridType}) {
