@@ -36,11 +36,20 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
                   value: state.activeDotsCount,
                   duration: const Duration(seconds: 2),
                   curve: Curves.linearToEaseOut,
+                  textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700
+                  )
                 );
               },
             ),
             Dimensions.small.verticalBox,
-            const Text('more days of growth'),
+            Text(
+                'more days of growth',
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  color: Colors.white24,
+                )
+            ),
           ],
         )
       ),
