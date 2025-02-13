@@ -11,13 +11,16 @@ final class DotFollowersAnimation extends DotAnimation {
 
   @override
   void animate(
-    List<GlobalKey<DotState<Dot>>> keys,
-    Offset globalPosition,
-    [VoidCallback? onComplete]
-  ) {
+    List<GlobalKey<DotState>> keys,
+    Offset globalPosition, {
+    VoidCallback? onComplete,
+    VoidCallback? onEnable,
+    VoidCallback? onDisable,
+  }) {
     for (int i = 0; i < keys.length; i++) {
       if (keyRenderBox(keys[i]) != null) {
         disableKey(keys[i]);
+        onDisable?.call();
       }
     }
 
@@ -26,6 +29,7 @@ final class DotFollowersAnimation extends DotAnimation {
       if (box != null && isInside(box, globalPosition)) {
         for (int j = 0; j <= i; j++) {
           enableKey(keys[j]);
+          onEnable?.call();
         }
 
         onComplete?.call();

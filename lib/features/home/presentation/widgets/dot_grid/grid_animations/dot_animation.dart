@@ -7,13 +7,17 @@ abstract class DotAnimation {
     required Offset globalPosition,
     VoidCallback? onComplete,
   }) {
-    animate(keys, globalPosition, onComplete);
+    animate(
+      keys,
+      globalPosition,
+      onComplete: onComplete,
+    );
   }
 
   void animate(
     List<GlobalKey<DotState>> keys,
     Offset globalPosition,
-    [VoidCallback? onComplete]
+    { VoidCallback? onComplete }
   );
 
   RenderBox? keyRenderBox(GlobalKey<DotState> key) {

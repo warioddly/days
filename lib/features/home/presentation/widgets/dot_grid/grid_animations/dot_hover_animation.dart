@@ -11,10 +11,10 @@ final class DotHoverAnimation extends DotAnimation {
 
   @override
   void animate(
-    List<GlobalKey<DotState<Dot>>> keys,
-    Offset globalPosition,
-    [VoidCallback? onComplete]
-  ) {
+    List<GlobalKey<DotState>> keys,
+    Offset globalPosition, {
+    VoidCallback? onComplete,
+  }) {
     for (final key in keys) {
       final box = keyRenderBox(key);
       if (box != null && isInside(box, globalPosition)) {

@@ -16,46 +16,9 @@ class DotedDot extends Dot {
     super.color,
     this.showBoxShadow = false,
     super.isActive = true,
+    super.onEnable,
+    super.onDisable,
   });
-
-  const DotedDot.before(Offset position, {
-    Key? key,
-    DateTime? date,
-    bool showBoxShadow = false,
-    bool isActive = false,
-  }) : this(
-    date: date,
-    color: Colors.white,
-    showBoxShadow: showBoxShadow,
-    isActive: isActive,
-    key: key,
-  );
-
-  const DotedDot.after({
-    Key? key,
-    DateTime? date,
-    bool showBoxShadow = true,
-    bool isActive = true,
-  }) : this(
-    date: date,
-    color: Colors.white12,
-    showBoxShadow: showBoxShadow,
-    isActive: isActive,
-    key: key,
-  );
-
-  const DotedDot.current({
-    Key? key,
-    DateTime? date,
-    bool showBoxShadow = true,
-    bool isActive = true,
-  }) : this(
-    date: date,
-    color: Colors.tealAccent,
-    showBoxShadow: showBoxShadow,
-    key: key,
-    isActive: isActive,
-  );
 
   @override
   State<DotedDot> createState() => IllustratedDotState();
@@ -82,6 +45,9 @@ class IllustratedDotState extends DotState<DotedDot> {
     super.initState();
     isActive = widget.isActive;
     color = widget.color ?? Colors.white;
+    if (widget.isActive) {
+      widget.onEnable?.call();
+    }
   }
 
   @override
@@ -112,7 +78,7 @@ class IllustratedDotState extends DotState<DotedDot> {
 
     isActive = !isActive;
     color = widget.color ?? Colors.white;
-
+    widget.onEnable?.call();
     setState(() {});
   }
 
@@ -123,6 +89,7 @@ class IllustratedDotState extends DotState<DotedDot> {
     }
     isActive = false;
     color = widget.color ?? Colors.white;
+    widget.onDisable?.call();
     setState(() { });
   }
 

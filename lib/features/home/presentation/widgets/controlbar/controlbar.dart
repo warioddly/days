@@ -30,7 +30,7 @@ class _ControlBarState extends State<ControlBar> {
             return CupertinoSlidingSegmentedControl<GridType>(
               padding: Dimensions.small.padding,
               backgroundColor: Colors.white10,
-              thumbColor: const Color(0xFF2C3E50),
+              thumbColor: Colors.black,
               groupValue: state.entity.gridType,
               onValueChanged: (GridType? value) {
                 if (value == null || value == state.entity.gridType) {

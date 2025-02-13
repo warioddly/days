@@ -100,6 +100,7 @@ class _DotGridBodyState extends State<DotGridBody> {
   void _settingsListener(BuildContext context, SettingsModelState state) {
     if (state.state is SettingsLoading) {
       keys.clear();
+      context.read<DotsManagerBloc>().add(DotsManagerActiveDotsCountResetEvent());
     }
   }
 
@@ -110,9 +111,13 @@ class _DotGridBodyState extends State<DotGridBody> {
     keys.add(key);
 
     if (DateUtils.isSameDay(now, date)) {
-      dot = DotedDot.current(
+      dot = DotedDot(
         key: key,
         date: date,
+        color: Colors.tealAccent,
+        isActive: true,
+        onEnable: onDotEnable,
+        onDisable: onDotDisable,
       );
     }
     else if (date.isBefore(now)) {
@@ -120,6 +125,8 @@ class _DotGridBodyState extends State<DotGridBody> {
         key: key,
         date: date,
         isActive: true,
+        onEnable: onDotEnable,
+        onDisable: onDotDisable,
       );
     }
     else {
@@ -127,6 +134,8 @@ class _DotGridBodyState extends State<DotGridBody> {
         key: key,
         date: date,
         isActive: false,
+        onEnable: onDotEnable,
+        onDisable: onDotDisable,
       );
     }
 
@@ -140,9 +149,13 @@ class _DotGridBodyState extends State<DotGridBody> {
     keys.add(key);
 
     if (DateUtils.isSameDay(now, date)) {
-      dot = IllustratedDot.current(
+      dot = IllustratedDot(
         key: key,
         date: date,
+        color: Colors.tealAccent,
+        isActive: true,
+        onEnable: onDotEnable,
+        onDisable: onDotDisable,
       );
     }
     else if (date.isBefore(now)) {
@@ -150,6 +163,8 @@ class _DotGridBodyState extends State<DotGridBody> {
         key: key,
         date: date,
         isActive: true,
+        onEnable: onDotEnable,
+        onDisable: onDotDisable,
       );
     }
     else {
@@ -157,10 +172,20 @@ class _DotGridBodyState extends State<DotGridBody> {
         key: key,
         date: date,
         isActive: false,
+        onEnable: onDotEnable,
+        onDisable: onDotDisable,
       );
     }
 
     return dot;
+  }
+
+  void onDotEnable() {
+    context.read<DotsManagerBloc>().add(DotsManagerActiveDotsIncrementEvent());
+  }
+
+  void onDotDisable() {
+    context.read<DotsManagerBloc>().add(DotsManagerActiveDotsDecrementEvent());
   }
 
 }

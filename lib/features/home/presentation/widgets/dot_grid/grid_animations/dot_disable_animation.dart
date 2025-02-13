@@ -11,10 +11,10 @@ final class DotDisableAnimation extends DotAnimation {
 
   @override
   void animate(
-    List<GlobalKey<DotState<Dot>>> keys,
-    Offset globalPosition,
-    [VoidCallback? onComplete]
-  ) {
+    List<GlobalKey<DotState>> keys,
+    Offset globalPosition, {
+    VoidCallback? onComplete,
+  }) {
     for (int i = 0; i < keys.length; i++) {
       if (keyRenderBox(keys[i]) != null) {
         disableOldDaysKey(keys[i]);
