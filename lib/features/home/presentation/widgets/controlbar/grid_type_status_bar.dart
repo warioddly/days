@@ -45,10 +45,10 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
             ),
             Dimensions.small.verticalBox,
             Text(
-                'more days of growth',
-                style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: Colors.white24,
-                )
+              'more days of growth',
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                color: Colors.white24,
+              )
             ),
           ],
         )

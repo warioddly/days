@@ -17,21 +17,30 @@ final class DotFollowersAnimation extends DotAnimation {
     VoidCallback? onEnable,
     VoidCallback? onDisable,
   }) {
-    for (int i = 0; i < keys.length; i++) {
-      if (keyRenderBox(keys[i]) != null) {
-        disableKey(keys[i]);
-        onDisable?.call();
-      }
-    }
+
+
 
     for (int i = 0; i < keys.length; i++) {
       final box = keyRenderBox(keys[i]);
       if (box != null && isInside(box, globalPosition)) {
+
+        final reversedKeys = keys.reversed.toList();
+        for (int j = 0; j < reversedKeys.length; j++) {
+
+          if (reversedKeys[j] == keys[i]) {
+            break;
+          }
+
+          if (keyRenderBox(reversedKeys[j]) != null) {
+            disableKey(reversedKeys[j]);
+            onDisable?.call();
+          }
+        }
+
         for (int j = 0; j <= i; j++) {
           enableKey(keys[j]);
           onEnable?.call();
         }
-
         onComplete?.call();
         break;
       }
