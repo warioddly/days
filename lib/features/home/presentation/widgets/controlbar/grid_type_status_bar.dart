@@ -24,15 +24,14 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      bottom: false,
-      child: Padding(
-        padding: Dimensions.doubledNormal.padding,
-        child: Column(
-          children: [
-            BlocBuilder<DotsManagerBloc, DotsManagerModelState>(
-              builder: (context, state) {
-                return AnimatedFlipCounter(
+    return Padding(
+      padding: Dimensions.doubledNormal.padding,
+      child: Column(
+        children: [
+          BlocBuilder<DotsManagerBloc, DotsManagerModelState>(
+            builder: (context, state) {
+              return RepaintBoundary(
+                child: AnimatedFlipCounter(
                   value: state.activeDotsCount,
                   duration: const Duration(seconds: 2),
                   curve: Curves.linearToEaseOut,
@@ -40,19 +39,19 @@ class _GridTypeStatusBarState extends State<GridTypeStatusBar>
                     color: Colors.white,
                     fontWeight: FontWeight.w700
                   )
-                );
-              },
-            ),
-            Dimensions.small.verticalBox,
-            Text(
-              'more days of growth',
-              style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                color: Colors.white24,
-              )
-            ),
-          ],
-        )
-      ),
+                ),
+              );
+            },
+          ),
+          Dimensions.small.verticalBox,
+          Text(
+            'more days of growth',
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: Colors.white24,
+            )
+          ),
+        ],
+      )
     );
   }
 

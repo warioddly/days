@@ -1,12 +1,13 @@
 import 'package:days/core/configs/routes.dart';
 import 'package:days/core/services/locator_service.dart';
 import 'package:days/core/theme/theme.dart';
+import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
 
   SystemChrome.setPreferredOrientations([
@@ -24,16 +25,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Days',
-      restorationScopeId: 'app',
-      theme: AppTheme.theme,
-      debugShowCheckedModeBanner: false,
-      scrollBehavior: const CupertinoScrollBehavior(),
-      routerDelegate: AppRouter.router.routerDelegate,
-      routeInformationParser: AppRouter.router.routeInformationParser,
-      routeInformationProvider: AppRouter.router.routeInformationProvider,
-      backButtonDispatcher: RootBackButtonDispatcher(),
+    return MultiBlocProvider(
+      providers: [
+
+        BlocProvider(create: (_) => getIt<ThemeBloc>()),
+
+      ],
+      child: BlocBuilder<ThemeBloc, ThemeState>(
+        builder: (context, themeBrightness) {
+          return MaterialApp.router(
+            title: 'Days',
+            restorationScopeId: 'app',
+            theme: AppTheme.getTheme(themeBrightness),
+            debugShowCheckedModeBanner: false,
+            scrollBehavior: const CupertinoScrollBehavior(),
+            routerDelegate: AppRouter.router.routerDelegate,
+            routeInformationParser: AppRouter.router.routeInformationParser,
+            routeInformationProvider: AppRouter.router.routeInformationProvider,
+            backButtonDispatcher: RootBackButtonDispatcher(),
+          );
+        },
+      ),
     );
   }
 }

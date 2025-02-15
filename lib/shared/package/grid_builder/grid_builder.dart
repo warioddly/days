@@ -39,6 +39,7 @@ class _GridBuilderState extends State<GridBuilder> {
   int itemsPerRow = 0;
   int length = 0;
   var blocks = <List<Widget>>[];
+  bool building = false;
 
   @override
   void initState() {
@@ -49,7 +50,12 @@ class _GridBuilderState extends State<GridBuilder> {
   @override
   void didUpdateWidget(covariant GridBuilder oldWidget) {
     super.didUpdateWidget(oldWidget);
-    init();
+    if (oldWidget.viewSize != widget.viewSize
+        || widget.from != oldWidget.from
+        || widget.to != oldWidget.to
+    ) {
+      init();
+    }
   }
 
   @override
@@ -80,13 +86,11 @@ class _GridBuilderState extends State<GridBuilder> {
   }
 
   void init() {
-    Future.delayed(Duration.zero, () {
-      calculate();
-      blocks = buildItems();
-      if (mounted) {
-        setState(() {});
-      }
-    });
+    calculate();
+    blocks = buildItems();
+    if (mounted) {
+      setState(() {});
+    }
   }
 
   void calculate() {

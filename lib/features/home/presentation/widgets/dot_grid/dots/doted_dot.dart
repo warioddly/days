@@ -56,8 +56,8 @@ class IllustratedDotState extends DotState<DotedDot> {
       child: SizedBox.square(
         dimension: Dimensions.dotContainerSize,
         child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 450),
-          reverseDuration: const Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 250),
+          reverseDuration: const Duration(milliseconds: 250),
           switchInCurve: SharedCurves.bounceAnimation,
           switchOutCurve: Curves.fastEaseInToSlowEaseOut,
           transitionBuilder: (child, animation) => ScaleTransition(

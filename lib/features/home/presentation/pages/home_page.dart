@@ -5,6 +5,7 @@ import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart
 import 'package:days/features/home/presentation/widgets/controlbar/controlbar.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/grid_type_status_bar.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body.dart';
+import 'package:days/features/home/presentation/widgets/footer/footer.dart';
 import 'package:days/features/home/presentation/widgets/tooltip/orbit_tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,26 +46,29 @@ class _HomePageState extends State<HomePage> {
               create: (context) => orbitTooltipNotifier,
           ),
         ],
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: Dimensions.maxViewWidthSize,
-            ),
-            child: const Stack(
-              children: [
-                Positioned.fill(
-                  child: Column(
-                    children: [
-                      GridTypeStatusBar(),
-                      Spacer(),
-                      DotGridBody(),
-                      Spacer(),
-                      ControlBar(),
-                    ],
+        child: SafeArea(
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                maxWidth: Dimensions.maxViewWidthSize,
+              ),
+              child: const Stack(
+                children: [
+                  Positioned.fill(
+                    child: Column(
+                      children: [
+                        GridTypeStatusBar(),
+                        Spacer(),
+                        DotGridBody(),
+                        Spacer(),
+                        ControlBar(),
+                        Footer(),
+                      ],
+                    ),
                   ),
-                ),
-                OrbitTooltip(),
-              ],
+                  OrbitTooltip(),
+                ],
+              ),
             ),
           ),
         ),

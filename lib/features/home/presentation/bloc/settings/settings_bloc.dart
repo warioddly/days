@@ -34,7 +34,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
         state: SettingsLoading(),
       ));
 
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(milliseconds: 350));
       final entity = await getSettingsUseCase(null);
 
       emit(state.copyWith(

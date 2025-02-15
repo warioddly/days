@@ -2,8 +2,8 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
+import 'package:days/shared/ui/widgets/sliding_segment_control.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ControlBar extends StatefulWidget {
@@ -22,15 +22,12 @@ class _ControlBarState extends State<ControlBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: Dimensions.doubledNormal.padding,
+    return Padding(
+      padding: Dimensions.normal.padding,
       child: Center(
         child: BlocBuilder<SettingsBloc, SettingsModelState>(
           builder: (context, state) {
-            return CupertinoSlidingSegmentedControl<GridType>(
-              padding: Dimensions.small.padding,
-              backgroundColor: Colors.white10,
-              thumbColor: Colors.black,
+            return SlidingSegmentControl<GridType>(
               groupValue: state.entity.gridType,
               onValueChanged: (GridType? value) {
                 if (value == null || value == state.entity.gridType) {
