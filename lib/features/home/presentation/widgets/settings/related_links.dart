@@ -16,15 +16,20 @@ class RelatedLinks extends StatelessWidget {
 
         GestureDetector(
           onTap: () => launchUrlString(AppConstants.sourceCodeUrl),
-          child: const Text(
-            'github',
+          child: Text(
+              'github',
+              style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
-        const DefaultDot(size: Dimensions.dotSeparatorSize),
+        DefaultDot(
+          size: Dimensions.dotSeparatorSize,
+          color: Theme.of(context).colorScheme.onPrimary,
+        ),
         GestureDetector(
           onTap: () => launchUrlString(AppConstants.privacyUrl),
-          child: const Text(
-            'privacy',
+          child: Text(
+              'privacy',
+              style: Theme.of(context).textTheme.bodyMedium
           ),
         ),
 

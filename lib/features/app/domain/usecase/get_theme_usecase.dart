@@ -1,20 +1,19 @@
-
+import 'dart:ui' show Brightness;
 import 'package:days/core/interfaces/usecase_interface.dart';
 import 'package:days/features/app/domain/repository/theme_repository.dart';
-import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
 
-class GetThemeUseCase extends UseCase<void, ThemeState> {
+class GetThemeUseCase extends UseCase<void, Brightness> {
 
   final ThemeRepository repository;
 
   GetThemeUseCase({required this.repository});
 
   @override
-  Future<ThemeState> call(void params) async {
+  Future<Brightness> call(void params) async {
     return switch(await repository.getTheme()) {
-      'light' => ThemeState.light,
-      'dark' => ThemeState.dark,
-      _ => ThemeState.system,
+      'light' => Brightness.light,
+      'dark' => Brightness.dark,
+      _ => Brightness.light,
     };
   }
 

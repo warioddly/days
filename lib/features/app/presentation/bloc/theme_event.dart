@@ -4,7 +4,7 @@ part of 'theme_bloc.dart';
 sealed class ThemeEvent {}
 
 class SetTheme extends ThemeEvent {
-  final ThemeState themeBrightness;
+  final Brightness themeBrightness;
 
   SetTheme(this.themeBrightness);
 }

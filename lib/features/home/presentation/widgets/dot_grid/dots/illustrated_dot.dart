@@ -10,13 +10,10 @@ import 'package:flutter/material.dart';
 
 class IllustratedDot extends Dot {
 
-  final bool showBoxShadow;
-
   const IllustratedDot({
     super.key,
     super.date,
     super.color,
-    this.showBoxShadow = false,
     super.isActive = true,
     super.onEnable,
     super.onDisable,
@@ -31,13 +28,18 @@ class IllustratedDotState extends DotState<IllustratedDot> {
 
   bool isActive = false;
 
+  late final colorScheme = Theme.of(context).colorScheme;
+
   late final dot = Padding(
     padding: _randomPadding(),
-    child: DefaultDot(size: 1.5, color: Theme.of(context).colorScheme.onPrimary),
+    child: DefaultDot(
+       size: 1.5,
+       color: colorScheme.onPrimary,
+    ),
   );
   late final activeDot = Image.asset(
     IllustrationAssets.getRandomIllustration(),
-    color: Theme.of(context).colorScheme.onPrimary,
+    color: colorScheme.onPrimary,
   );
 
   @override
@@ -50,20 +52,12 @@ class IllustratedDotState extends DotState<IllustratedDot> {
   }
 
   @override
-  void didUpdateWidget(covariant IllustratedDot oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (oldWidget.color != widget.color) {
-      setState(() { });
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
     return RepaintBoundary(
       child: SizedBox.square(
         dimension: Dimensions.dotContainerSize,
         child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 450),
+          duration: const Duration(milliseconds: 400),
           reverseDuration: const Duration(milliseconds: 500),
           switchInCurve: SharedCurves.bounceAnimation,
           switchOutCurve: Curves.fastEaseInToSlowEaseOut,

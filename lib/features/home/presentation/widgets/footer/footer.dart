@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:days/core/constants/dimensions.dart';
+import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/settings/settings.dart';
@@ -10,17 +13,22 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      spacing: Dimensions.small,
-      children: [
-        text(context, 'SETTINGS', () => _onSettingsTap(context)),
-        DefaultDot(
+    return Padding(
+      padding: Dimensions.normal.padding.copyWith(
+        top: Dimensions.empty,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        spacing: Dimensions.small,
+        children: [
+          text(context, 'SETTINGS', () => _onSettingsTap(context)),
+          DefaultDot(
             size: Dimensions.dotSeparatorSize,
-          color: Theme.of(context).colorScheme.onPrimary,
-        ),
-        text(context, 'ABOUT', () => _onAboutTap(context)),
-      ],
+            color: Theme.of(context).colorScheme.onPrimary,
+          ),
+          text(context, 'ABOUT', () => _onAboutTap(context)),
+        ],
+      ),
     );
   }
 
@@ -39,6 +47,7 @@ class Footer extends StatelessWidget {
   void _onSettingsTap(BuildContext context) {
     showCupertinoModalPopup<void>(
       context: context,
+      barrierColor: Colors.transparent,
       builder: (_) => const AppSettings() ,
     );
   }

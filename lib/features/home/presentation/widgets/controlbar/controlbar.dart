@@ -29,17 +29,15 @@ class ControlBar extends StatelessWidget {
                   ),
                 );
               },
-              children: {
+              children: const {
                 GridType.illustrated: Padding(
-                  padding: EdgeInsets.all(8),
+                  padding: EdgeInsets.all(Dimensions.small),
                   child: Icon(
                     CupertinoIcons.circle_grid_hex,
-                    color: state.entity.gridType == GridType.illustrated ? Colors.white : Theme.of(context).colorScheme.onPrimary
                   ),
                 ),
                 GridType.doted: Icon(
                   CupertinoIcons.circle_grid_3x3,
-                  color: state.entity.gridType == GridType.doted ? Colors.white : Theme.of(context).colorScheme.onPrimary,
                 ),
               },
             );

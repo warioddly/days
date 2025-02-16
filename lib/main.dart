@@ -2,6 +2,7 @@ import 'package:days/core/configs/routes.dart';
 import 'package:days/core/services/locator_service.dart';
 import 'package:days/core/theme/theme.dart';
 import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
+import 'package:days/features/app/presentation/page/main_wrapper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -31,18 +32,20 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => getIt<ThemeBloc>()..add(GetTheme()))
 
       ],
-      child: BlocBuilder<ThemeBloc, ThemeState>(
+      child: BlocBuilder<ThemeBloc, Brightness>(
         builder: (context, themeBrightness) {
-          return MaterialApp.router(
-            title: 'Days',
-            restorationScopeId: 'app',
-            theme: AppTheme.getTheme(context, themeBrightness),
-            debugShowCheckedModeBanner: false,
-            scrollBehavior: const CupertinoScrollBehavior(),
-            routerDelegate: AppRouter.router.routerDelegate,
-            routeInformationParser: AppRouter.router.routeInformationParser,
-            routeInformationProvider: AppRouter.router.routeInformationProvider,
-            backButtonDispatcher: RootBackButtonDispatcher(),
+          return MainWrapper(
+            child: MaterialApp.router(
+              title: 'Days',
+              restorationScopeId: 'app',
+              theme: AppTheme.getTheme(context, themeBrightness),
+              debugShowCheckedModeBanner: false,
+              scrollBehavior: const CupertinoScrollBehavior(),
+              routerDelegate: AppRouter.router.routerDelegate,
+              routeInformationParser: AppRouter.router.routeInformationParser,
+              routeInformationProvider: AppRouter.router.routeInformationProvider,
+              backButtonDispatcher: RootBackButtonDispatcher(),
+            ),
           );
         },
       ),
