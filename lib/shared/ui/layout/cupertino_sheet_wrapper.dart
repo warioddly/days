@@ -1,6 +1,5 @@
 
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class CupertinoSheetWrapper extends StatelessWidget {
@@ -16,12 +15,9 @@ class CupertinoSheetWrapper extends StatelessWidget {
         child: Container(
           constraints: BoxConstraints(
             maxWidth: Dimensions.maxViewWidthSize,
-            maxHeight: MediaQuery.of(context).size.height * 0.9,
+            maxHeight: MediaQuery.of(context).size.height * 0.8,
           ),
-          child: Padding(
-            padding: Dimensions.normal.padding,
-            child: child,
-          ),
+          child: child,
         ),
       ),
     );

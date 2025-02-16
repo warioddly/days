@@ -30,26 +30,30 @@ class IllustratedDot extends Dot {
 class IllustratedDotState extends DotState<IllustratedDot> {
 
   bool isActive = false;
-  Color color = Colors.white;
 
   late final dot = Padding(
     padding: _randomPadding(),
-    child: const DefaultDot(
-      size: 1.5,
-    ),
+    child: DefaultDot(size: 1.5, color: Theme.of(context).colorScheme.onPrimary),
   );
   late final activeDot = Image.asset(
     IllustrationAssets.getRandomIllustration(),
-    color: color,
+    color: Theme.of(context).colorScheme.onPrimary,
   );
 
   @override
   void initState() {
     super.initState();
     isActive = widget.isActive;
-    color = widget.color ?? Colors.white;
     if (widget.isActive) {
       widget.onEnable?.call();
+    }
+  }
+
+  @override
+  void didUpdateWidget(covariant IllustratedDot oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.color != widget.color) {
+      setState(() { });
     }
   }
 
@@ -78,9 +82,7 @@ class IllustratedDotState extends DotState<IllustratedDot> {
     if (isActive) {
       return;
     }
-
     isActive = !isActive;
-    color = Colors.white;
     widget.onEnable?.call();
     setState(() {});
   }
@@ -91,7 +93,6 @@ class IllustratedDotState extends DotState<IllustratedDot> {
       return;
     }
     isActive = false;
-    color = widget.color ?? Colors.white;
     widget.onDisable?.call();
     setState(() { });
   }

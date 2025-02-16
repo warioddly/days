@@ -30,13 +30,13 @@ class IllustratedDotState extends DotState<DotedDot> {
   bool isActive = false;
   Color color = Colors.white;
 
-  final dot = const DefaultDot(
-    color: Colors.white12,
+  late final dot = DefaultDot(
+    color: Theme.of(context).colorScheme.onPrimary,
     size: _dotSize,
   );
   late final activeDot = DefaultDot(
     key: ObjectKey(widget.date?.toIso8601String() ?? ''),
-    color: Colors.white,
+    color: color,
     size: _dotSize,
   );
 
@@ -77,7 +77,6 @@ class IllustratedDotState extends DotState<DotedDot> {
     }
 
     isActive = !isActive;
-    color = widget.color ?? Colors.white;
     widget.onEnable?.call();
     setState(() {});
   }
@@ -88,7 +87,6 @@ class IllustratedDotState extends DotState<DotedDot> {
       return;
     }
     isActive = false;
-    color = widget.color ?? Colors.white;
     widget.onDisable?.call();
     setState(() { });
   }

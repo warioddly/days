@@ -105,79 +105,31 @@ class _DotGridBodyState extends State<DotGridBody> {
   }
 
   Widget _dotedItemBuilder(int index, DateTime date, DateTime now) {
-    late final Widget dot;
-
-    final key = GlobalKey<DotState>();
-    keys.add(key);
-
-    if (DateUtils.isSameDay(now, date)) {
-      dot = DotedDot(
-        key: key,
-        date: date,
-        color: Colors.tealAccent,
-        isActive: true,
-        onEnable: onDotEnable,
-        onDisable: onDotDisable,
-      );
-    }
-    else if (date.isBefore(now)) {
-      dot = DotedDot(
-        key: key,
-        date: date,
-        isActive: true,
-        onEnable: onDotEnable,
-        onDisable: onDotDisable,
-      );
-    }
-    else {
-      dot = DotedDot(
-        key: key,
-        date: date,
-        isActive: false,
-        onEnable: onDotEnable,
-        onDisable: onDotDisable,
-      );
-    }
-
-    return dot;
+    return DotedDot(
+      key: createAndStoreDotKey(),
+      date: date,
+      isActive: DateUtils.isSameDay(now, date) || date.isBefore(now),
+      onEnable: onDotEnable,
+      onDisable: onDotDisable,
+      color: Theme.of(context).colorScheme.onPrimary,
+    );
   }
 
   Widget _illustratedItemBuilder(int index, DateTime date, DateTime now) {
-    late final Widget dot;
+    return IllustratedDot(
+      key: createAndStoreDotKey(),
+      date: date,
+      isActive: DateUtils.isSameDay(now, date) || date.isBefore(now),
+      onEnable: onDotEnable,
+      onDisable: onDotDisable,
+      color: Theme.of(context).colorScheme.onPrimary,
+    );
+  }
 
+  GlobalKey<DotState> createAndStoreDotKey() {
     final key = GlobalKey<DotState>();
     keys.add(key);
-
-    if (DateUtils.isSameDay(now, date)) {
-      dot = IllustratedDot(
-        key: key,
-        date: date,
-        color: Colors.tealAccent,
-        isActive: true,
-        onEnable: onDotEnable,
-        onDisable: onDotDisable,
-      );
-    }
-    else if (date.isBefore(now)) {
-      dot = IllustratedDot(
-        key: key,
-        date: date,
-        isActive: true,
-        onEnable: onDotEnable,
-        onDisable: onDotDisable,
-      );
-    }
-    else {
-      dot = IllustratedDot(
-        key: key,
-        date: date,
-        isActive: false,
-        onEnable: onDotEnable,
-        onDisable: onDotDisable,
-      );
-    }
-
-    return dot;
+    return key;
   }
 
   void onDotEnable() {

@@ -1,5 +1,4 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/settings/settings.dart';
@@ -11,20 +10,17 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: Dimensions.small.padding,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          spacing: Dimensions.small,
-          children: [
-            text(context, 'SETTINGS', () => _onSettingsTap(context)),
-            const DefaultDot(size: Dimensions.dotSeparatorSize),
-            text(context, 'ABOUT', () => _onAboutTap(context)),
-          ],
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      spacing: Dimensions.small,
+      children: [
+        text(context, 'SETTINGS', () => _onSettingsTap(context)),
+        DefaultDot(
+            size: Dimensions.dotSeparatorSize,
+          color: Theme.of(context).colorScheme.onPrimary,
         ),
-      ),
+        text(context, 'ABOUT', () => _onAboutTap(context)),
+      ],
     );
   }
 
@@ -33,7 +29,9 @@ class Footer extends StatelessWidget {
       onTap: onTap,
       child: Text(
         text,
-        style: Theme.of(context).textTheme.bodySmall,
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+          color: Theme.of(context).colorScheme.onPrimary,
+        )
       ),
     );
   }
@@ -48,7 +46,7 @@ class Footer extends StatelessWidget {
   void _onAboutTap(BuildContext context) {
 
     if (MediaQuery.sizeOf(context).width >= 768) {
-      showDialog(
+      showAdaptiveDialog(
         context: context,
         useSafeArea: true,
         builder: (context) {
@@ -62,7 +60,7 @@ class Footer extends StatelessWidget {
 
     showCupertinoSheet(
       context: context,
-      pageBuilder: (_) => const AboutAppInformation(),
+      pageBuilder: (_) =>  const AboutAppInformation(),
     );
   }
 

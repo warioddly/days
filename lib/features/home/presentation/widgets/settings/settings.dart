@@ -1,32 +1,33 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
+import 'package:days/features/home/presentation/widgets/settings/related_links.dart';
 import 'package:days/shared/ui/widgets/sliding_segment_control.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AppSettings extends StatelessWidget {
+class AppSettings extends StatefulWidget {
   const AppSettings({super.key});
 
   @override
+  State<AppSettings> createState() => _AppSettingsState();
+}
+
+class _AppSettingsState extends State<AppSettings> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 116,
-      margin: EdgeInsets.only(bottom: MediaQuery
-          .of(context)
-          .viewInsets
-          .bottom),
-      color: CupertinoColors.systemBackground.resolveFrom(context),
-      child: SafeArea(
-        top: false,
-        child: Scaffold(
-          body: Center(
-            child: Container(
-              constraints: const BoxConstraints(
-                maxWidth: Dimensions.maxViewWidthSize,
-              ),
-              padding: Dimensions.normal.padding,
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        maxHeight: MediaQuery.of(context).size.height * 0.2,
+        maxWidth: Dimensions.maxViewWidthSize,
+      ),
+      child: Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: Dimensions.large.padding,
               child: BlocBuilder<ThemeBloc, ThemeState>(
                 builder: (context, state) {
                   return SlidingSegmentControl<ThemeState>(
@@ -35,7 +36,7 @@ class AppSettings extends StatelessWidget {
                       if (value == null || value == state) {
                         return;
                       }
-                      context.read<ThemeBloc>().add(SetTheme(value));
+                        context.read<ThemeBloc>().add(SetTheme(value));
                     },
                     children: const {
                       ThemeState.system: Padding(
@@ -55,7 +56,9 @@ class AppSettings extends StatelessWidget {
                 },
               ),
             ),
-          ),
+            const RelatedLinks(),
+            Dimensions.small.verticalBox,
+          ],
         ),
       ),
     );

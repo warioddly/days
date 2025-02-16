@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart' show Brightness, BuildContext;
-import 'package:flutter/material.dart' show Color, Theme;
+import 'package:flutter/material.dart' show Color, Colors, Theme;
 
 abstract class DesignColors {
 
@@ -21,158 +21,52 @@ abstract class DesignColors {
 
   Color get onSecondary;
 
-  Color get error;
-
-  Color get onError;
-
-  Color get surface;
-
-  Color get onSurface;
-
   Color get background;
 
   Color get onBackground;
-
-  Color get scaffoldBackground;
-
-  Color get bottomSheetBackground;
-
-  Color get bottomSheetOnBackground;
-
-  Color get bottomSheetSurface;
-
-  Color get bottomSheetOnSurface;
-
 
 }
 
 final class DarkDesignColors extends DesignColors {
 
   @override
-  // TODO: implement background
-  Color get background => throw UnimplementedError();
+  Color get background => Colors.black;
 
   @override
-  // TODO: implement bottomSheetBackground
-  Color get bottomSheetBackground => throw UnimplementedError();
+  Color get onBackground => onPrimary;
 
   @override
-  // TODO: implement bottomSheetOnBackground
-  Color get bottomSheetOnBackground => throw UnimplementedError();
+  Color get onPrimary => Colors.white;
 
   @override
-  // TODO: implement bottomSheetOnSurface
-  Color get bottomSheetOnSurface => throw UnimplementedError();
+  Color get onSecondary => Colors.white;
 
   @override
-  // TODO: implement bottomSheetSurface
-  Color get bottomSheetSurface => throw UnimplementedError();
+  Color get primary => Colors.black;
 
   @override
-  // TODO: implement error
-  Color get error => throw UnimplementedError();
-
-  @override
-  // TODO: implement onBackground
-  Color get onBackground => throw UnimplementedError();
-
-  @override
-  // TODO: implement onError
-  Color get onError => throw UnimplementedError();
-
-  @override
-  // TODO: implement onPrimary
-  Color get onPrimary => throw UnimplementedError();
-
-  @override
-  // TODO: implement onSecondary
-  Color get onSecondary => throw UnimplementedError();
-
-  @override
-  // TODO: implement onSurface
-  Color get onSurface => throw UnimplementedError();
-
-  @override
-  Color get primary => const Color(0xFF121212);
-
-  @override
-  // TODO: implement scaffoldBackground
-  Color get scaffoldBackground => throw UnimplementedError();
-
-  @override
-  // TODO: implement secondary
-  Color get secondary => throw UnimplementedError();
-
-  @override
-  // TODO: implement surface
-  Color get surface => throw UnimplementedError();
-
-
+  Color get secondary => Colors.white;
 
 }
 
 final class LightDesignColors extends DesignColors {
+  @override
+  Color get background => Colors.white;
 
   @override
-  // TODO: implement background
-  Color get background => throw UnimplementedError();
+  Color get onBackground => onPrimary;
 
   @override
-  // TODO: implement bottomSheetBackground
-  Color get bottomSheetBackground => throw UnimplementedError();
+  Color get onPrimary => const Color(0xFF0047AB);
 
   @override
-  // TODO: implement bottomSheetOnBackground
-  Color get bottomSheetOnBackground => throw UnimplementedError();
+  Color get onSecondary => Colors.white;
 
   @override
-  // TODO: implement bottomSheetOnSurface
-  Color get bottomSheetOnSurface => throw UnimplementedError();
+  Color get primary => Colors.white;
 
   @override
-  // TODO: implement bottomSheetSurface
-  Color get bottomSheetSurface => throw UnimplementedError();
-
-  @override
-  // TODO: implement error
-  Color get error => throw UnimplementedError();
-
-  @override
-  // TODO: implement onBackground
-  Color get onBackground => throw UnimplementedError();
-
-  @override
-  // TODO: implement onError
-  Color get onError => throw UnimplementedError();
-
-  @override
-  // TODO: implement onPrimary
-  Color get onPrimary => throw UnimplementedError();
-
-  @override
-  // TODO: implement onSecondary
-  Color get onSecondary => throw UnimplementedError();
-
-  @override
-  // TODO: implement onSurface
-  Color get onSurface => throw UnimplementedError();
-
-  @override
-  // TODO: implement primary
-  Color get primary => const Color(0xFFFFFFFF);
-
-  @override
-  // TODO: implement scaffoldBackground
-  Color get scaffoldBackground => throw UnimplementedError();
-
-  @override
-  // TODO: implement secondary
-  Color get secondary => throw UnimplementedError();
-
-  @override
-  // TODO: implement surface
-  Color get surface => throw UnimplementedError();
-
+  Color get secondary => const Color(0xFF0047AB);
 
 }
 

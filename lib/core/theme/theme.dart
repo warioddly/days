@@ -1,28 +1,34 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
+import 'package:days/core/theme/design_colors.dart';
 import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
 
-  static ThemeData getTheme(ThemeState themeBrightness) {
+  static ThemeData getTheme(BuildContext context, ThemeState themeBrightness) {
     final systemBrightness = WidgetsBinding.instance.window.platformBrightness;
-    if (themeBrightness == ThemeState.system) {
-      return systemBrightness == Brightness.light ? lightTheme : darkTheme;
-    }
-    return themeBrightness == ThemeState.light ? lightTheme : darkTheme;
+
+    ThemeData getTheme(bool light) => light
+        ? lightTheme(context)
+        : darkTheme(context);
+
+    return themeBrightness == ThemeState.system
+        ? getTheme(systemBrightness == Brightness.light)
+        : getTheme(themeBrightness == ThemeState.light);
   }
 
-  static ThemeData get darkTheme {
+  static ThemeData darkTheme(BuildContext context) {
+    final colors = DarkDesignColors();
     return ThemeData(
       useMaterial3: true,
       fontFamily: 'ChakraPetch',
       brightness: Brightness.dark,
-      colorScheme: const ColorScheme(
-        primary: Colors.white,
-        onPrimary: Colors.black,
-        secondary: Colors.black,
-        onSecondary: Colors.white,
+      colorScheme: ColorScheme(
+        primary: colors.primary,
+        onPrimary: colors.onPrimary,
+        secondary: colors.secondary,
+        onSecondary: colors.onSecondary,
         brightness: Brightness.dark,
         error: Colors.red,
         onError: Colors.white,
@@ -39,16 +45,17 @@ class AppTheme {
     );
   }
 
-  static ThemeData get lightTheme {
+  static ThemeData lightTheme(BuildContext context) {
+    final colors = LightDesignColors();
     return ThemeData(
       useMaterial3: true,
       fontFamily: 'ChakraPetch',
       brightness: Brightness.light,
-      colorScheme: const ColorScheme(
-        primary: Colors.black,
-        onPrimary: Colors.black12,
-        secondary: Colors.white,
-        onSecondary: Colors.black,
+      colorScheme: ColorScheme(
+        primary: colors.primary,
+        onPrimary: colors.onPrimary,
+        secondary: colors.secondary,
+        onSecondary: colors.onSecondary,
         brightness: Brightness.light,
         error: Colors.red,
         onError: Colors.white,

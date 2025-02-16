@@ -4,8 +4,8 @@ import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_do
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-class AboutAppInformationFooter extends StatelessWidget {
-  const AboutAppInformationFooter({super.key});
+class RelatedLinks extends StatelessWidget {
+  const RelatedLinks({super.key});
 
   @override
   Widget build(BuildContext context) {

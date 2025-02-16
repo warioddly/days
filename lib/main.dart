@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
 
-        BlocProvider(create: (_) => getIt<ThemeBloc>()),
+        BlocProvider(create: (_) => getIt<ThemeBloc>()..add(GetTheme()))
 
       ],
       child: BlocBuilder<ThemeBloc, ThemeState>(
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp.router(
             title: 'Days',
             restorationScopeId: 'app',
-            theme: AppTheme.getTheme(themeBrightness),
+            theme: AppTheme.getTheme(context, themeBrightness),
             debugShowCheckedModeBanner: false,
             scrollBehavior: const CupertinoScrollBehavior(),
             routerDelegate: AppRouter.router.routerDelegate,

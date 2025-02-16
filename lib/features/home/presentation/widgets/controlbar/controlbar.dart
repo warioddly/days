@@ -4,26 +4,16 @@ import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/shared/ui/widgets/sliding_segment_control.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ControlBar extends StatefulWidget {
+class ControlBar extends StatelessWidget {
   const ControlBar({super.key});
-
-  @override
-  State<ControlBar> createState() => _ControlBarState();
-}
-
-class _ControlBarState extends State<ControlBar> {
-
-  final Map<GridType, Color> skyColors = const <GridType, Color>{
-    GridType.illustrated: Color(0xFF2C3E50),
-    GridType.doted: Color(0xFF2C3E50),
-  };
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: Dimensions.normal.padding,
+      padding: Dimensions.large.padding,
       child: Center(
         child: BlocBuilder<SettingsBloc, SettingsModelState>(
           builder: (context, state) {
@@ -39,15 +29,17 @@ class _ControlBarState extends State<ControlBar> {
                   ),
                 );
               },
-              children: const {
+              children: {
                 GridType.illustrated: Padding(
                   padding: EdgeInsets.all(8),
                   child: Icon(
                     CupertinoIcons.circle_grid_hex,
+                    color: state.entity.gridType == GridType.illustrated ? Colors.white : Theme.of(context).colorScheme.onPrimary
                   ),
                 ),
                 GridType.doted: Icon(
                   CupertinoIcons.circle_grid_3x3,
+                  color: state.entity.gridType == GridType.doted ? Colors.white : Theme.of(context).colorScheme.onPrimary,
                 ),
               },
             );

@@ -9,4 +9,5 @@ class SetTheme extends ThemeEvent {
   SetTheme(this.themeBrightness);
 }
 
+class GetTheme extends ThemeEvent {}
 
