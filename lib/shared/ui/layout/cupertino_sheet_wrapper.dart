@@ -10,16 +10,18 @@ class CupertinoSheetWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      heightFactor: 1,
-      child: Container(
-        constraints: BoxConstraints(
-          maxWidth: Dimensions.maxViewWidthSize,
-          maxHeight: MediaQuery.of(context).size.height * 0.92,
-        ),
-        child: Padding(
-          padding: Dimensions.normal.padding,
-          child: child,
+    return SafeArea(
+      child: Center(
+        heightFactor: 1,
+        child: Container(
+          constraints: BoxConstraints(
+            maxWidth: Dimensions.maxViewWidthSize,
+            maxHeight: MediaQuery.of(context).size.height * 0.9,
+          ),
+          child: Padding(
+            padding: Dimensions.normal.padding,
+            child: child,
+          ),
         ),
       ),
     );

@@ -47,25 +47,22 @@ class Footer extends StatelessWidget {
 
   void _onAboutTap(BuildContext context) {
 
-    // if (!kIsWeb && MediaQueryUtils.getScreenWidth > 800) {
-    //   showDialog(
-    //     context: context,
-    //     useSafeArea: true,
-    //     builder: (context) {
-    //       return AlertDialog(
-    //         content: content,
-    //       );
-    //     },
-    //   );
-    //   return;
-    // }
-
+    if (MediaQuery.sizeOf(context).width >= 768) {
+      showDialog(
+        context: context,
+        useSafeArea: true,
+        builder: (context) {
+          return const AlertDialog(
+            content: AboutAppInformation(),
+          );
+        },
+      );
+      return;
+    }
 
     showCupertinoSheet(
       context: context,
-      pageBuilder: (_) => const Scaffold(
-        body: AboutAppInformation(),
-      ),
+      pageBuilder: (_) => const AboutAppInformation(),
     );
   }
 
