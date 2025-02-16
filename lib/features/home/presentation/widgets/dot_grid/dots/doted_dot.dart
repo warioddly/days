@@ -1,21 +1,20 @@
 import 'package:days/core/constants/dimensions.dart';
+import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
 import 'package:days/shared/ui/animation/utils/curves.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 const _dotSize = 5.0;
 
 class DotedDot extends Dot {
 
-  final bool showBoxShadow;
-
   const DotedDot({
     super.key,
     super.date,
     super.color,
-    this.showBoxShadow = false,
     super.isActive = true,
     super.onEnable,
     super.onDisable,
@@ -34,11 +33,6 @@ class IllustratedDotState extends DotState<DotedDot> {
     color: CupertinoColors.tertiarySystemFill.darkHighContrastColor,
     size: _dotSize,
   );
-  late final activeDot = DefaultDot(
-    key: ObjectKey(widget.date?.toIso8601String() ?? ''),
-    color: widget.color ?? Colors.white,
-    size: _dotSize,
-  );
 
   @override
   void initState() {
@@ -52,19 +46,27 @@ class IllustratedDotState extends DotState<DotedDot> {
   @override
   Widget build(BuildContext context) {
     return RepaintBoundary(
-      child: SizedBox.square(
-        dimension: Dimensions.dotContainerSize,
-        child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 250),
-          reverseDuration: const Duration(milliseconds: 250),
-          switchInCurve: SharedCurves.bounceAnimation,
-          switchOutCurve: Curves.fastEaseInToSlowEaseOut,
-          transitionBuilder: (child, animation) => ScaleTransition(
-            scale: animation,
-            child: child,
-          ),
-          child: isActive ? activeDot : dot,
-        ),
+      child: BlocBuilder<ThemeBloc, Brightness>(
+        builder: (context, state) {
+          return SizedBox.square(
+            dimension: Dimensions.dotContainerSize,
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 250),
+              reverseDuration: const Duration(milliseconds: 250),
+              switchInCurve: SharedCurves.bounceAnimation,
+              switchOutCurve: Curves.fastEaseInToSlowEaseOut,
+              transitionBuilder: (child, animation) => ScaleTransition(
+                scale: animation,
+                child: child,
+              ),
+              child: isActive ? DefaultDot(
+                key: ObjectKey(widget.date?.toIso8601String() ?? ''),
+                color: Theme.of(context).colorScheme.onPrimary,
+                size: _dotSize,
+              ) : dot,
+            ),
+          );
+        },
       ),
     );
   }
@@ -86,7 +88,7 @@ class IllustratedDotState extends DotState<DotedDot> {
     }
     isActive = false;
     widget.onDisable?.call();
-    setState(() { });
+    setState(() {});
   }
 
 }

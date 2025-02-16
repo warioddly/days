@@ -24,7 +24,9 @@ class GridTypeStatusBar extends StatelessWidget {
                   value: state.activeDotsCount,
                   duration: const Duration(seconds: 2),
                   curve: Curves.linearToEaseOut,
-                  textStyle: Theme.of(context).textTheme.bodyMedium
+                  textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  )
                 ),
               );
             },
@@ -45,7 +47,7 @@ class GridTypeStatusBar extends StatelessWidget {
               return Text(
                 title,
                 style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: CupertinoColors.tertiarySystemFill.darkHighContrastColor
+                  color: CupertinoColors.tertiarySystemFill.darkHighContrastColor,
                 )
               );
             },

@@ -1,4 +1,5 @@
 import 'package:days/core/utils/frame_rate_utils.dart';
+import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
@@ -111,7 +112,6 @@ class _DotGridBodyState extends State<DotGridBody> {
       isActive: DateUtils.isSameDay(now, date) || date.isBefore(now),
       onEnable: onDotEnable,
       onDisable: onDotDisable,
-      color: Theme.of(context).colorScheme.onPrimary,
     );
   }
 
@@ -122,7 +122,6 @@ class _DotGridBodyState extends State<DotGridBody> {
       isActive: DateUtils.isSameDay(now, date) || date.isBefore(now),
       onEnable: onDotEnable,
       onDisable: onDotDisable,
-      color: Theme.of(context).colorScheme.onPrimary,
     );
   }
 

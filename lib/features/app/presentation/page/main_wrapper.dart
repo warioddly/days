@@ -22,9 +22,9 @@ class _MainWrapperState extends State<MainWrapper> with WidgetsBindingObserver {
 
   @override
   void didChangePlatformBrightness() {
-    var brightness = MediaQuery.platformBrightnessOf(context);
-    context.read<ThemeBloc>().add(SetTheme(brightness));
     super.didChangePlatformBrightness();
+    var brightness = WidgetsBinding.instance.window.platformBrightness;
+    context.read<ThemeBloc>().add(SetTheme(brightness));
   }
 
   @override

@@ -33,12 +33,12 @@ class MyApp extends StatelessWidget {
 
       ],
       child: BlocBuilder<ThemeBloc, Brightness>(
-        builder: (context, themeBrightness) {
+        builder: (context, theme) {
           return MainWrapper(
             child: MaterialApp.router(
               title: 'Days',
               restorationScopeId: 'app',
-              theme: AppTheme.getTheme(context, themeBrightness),
+              theme: AppTheme.getTheme(context, theme),
               debugShowCheckedModeBanner: false,
               scrollBehavior: const CupertinoScrollBehavior(),
               routerDelegate: AppRouter.router.routerDelegate,
