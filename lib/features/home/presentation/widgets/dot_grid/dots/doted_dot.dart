@@ -2,6 +2,7 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
 import 'package:days/shared/ui/animation/utils/curves.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const _dotSize = 5.0;
@@ -28,15 +29,14 @@ class DotedDot extends Dot {
 class IllustratedDotState extends DotState<DotedDot> {
 
   bool isActive = false;
-  Color color = Colors.white;
 
-  final dot = const DefaultDot(
-    color: Colors.white12,
+  final dot = DefaultDot(
+    color: CupertinoColors.tertiarySystemFill.darkHighContrastColor,
     size: _dotSize,
   );
   late final activeDot = DefaultDot(
     key: ObjectKey(widget.date?.toIso8601String() ?? ''),
-    color: Colors.white,
+    color: widget.color ?? Colors.white,
     size: _dotSize,
   );
 
@@ -44,7 +44,6 @@ class IllustratedDotState extends DotState<DotedDot> {
   void initState() {
     super.initState();
     isActive = widget.isActive;
-    color = widget.color ?? Colors.white;
     if (widget.isActive) {
       widget.onEnable?.call();
     }
@@ -75,9 +74,7 @@ class IllustratedDotState extends DotState<DotedDot> {
     if (isActive) {
       return;
     }
-
     isActive = !isActive;
-    color = widget.color ?? Colors.white;
     widget.onEnable?.call();
     setState(() {});
   }
@@ -88,7 +85,6 @@ class IllustratedDotState extends DotState<DotedDot> {
       return;
     }
     isActive = false;
-    color = widget.color ?? Colors.white;
     widget.onDisable?.call();
     setState(() { });
   }

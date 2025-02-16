@@ -4,8 +4,8 @@ import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_do
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-class AboutAppInformationFooter extends StatelessWidget {
-  const AboutAppInformationFooter({super.key});
+class RelatedLinks extends StatelessWidget {
+  const RelatedLinks({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +16,20 @@ class AboutAppInformationFooter extends StatelessWidget {
 
         GestureDetector(
           onTap: () => launchUrlString(AppConstants.sourceCodeUrl),
-          child: const Text(
-            'github',
+          child: Text(
+              'github',
+              style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
-        const DefaultDot(size: Dimensions.dotSeparatorSize),
+        DefaultDot(
+          size: Dimensions.dotSeparatorSize,
+          color: Theme.of(context).colorScheme.onPrimary,
+        ),
         GestureDetector(
           onTap: () => launchUrlString(AppConstants.privacyUrl),
-          child: const Text(
-            'privacy',
+          child: Text(
+              'privacy',
+              style: Theme.of(context).textTheme.bodyMedium
           ),
         ),
 

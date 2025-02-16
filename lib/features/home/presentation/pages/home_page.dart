@@ -79,6 +79,8 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     settingsBloc.close();
+    dotsManagerBloc.close();
+    orbitTooltipNotifier.dispose();
     super.dispose();
   }
 

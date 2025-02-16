@@ -10,13 +10,10 @@ import 'package:flutter/material.dart';
 
 class IllustratedDot extends Dot {
 
-  final bool showBoxShadow;
-
   const IllustratedDot({
     super.key,
     super.date,
     super.color,
-    this.showBoxShadow = false,
     super.isActive = true,
     super.onEnable,
     super.onDisable,
@@ -30,24 +27,25 @@ class IllustratedDot extends Dot {
 class IllustratedDotState extends DotState<IllustratedDot> {
 
   bool isActive = false;
-  Color color = Colors.white;
+
+  late final colorScheme = Theme.of(context).colorScheme;
 
   late final dot = Padding(
     padding: _randomPadding(),
-    child: const DefaultDot(
-      size: 1.5,
+    child: DefaultDot(
+       size: 1.5,
+       color: colorScheme.onPrimary,
     ),
   );
   late final activeDot = Image.asset(
     IllustrationAssets.getRandomIllustration(),
-    color: color,
+    color: colorScheme.onPrimary,
   );
 
   @override
   void initState() {
     super.initState();
     isActive = widget.isActive;
-    color = widget.color ?? Colors.white;
     if (widget.isActive) {
       widget.onEnable?.call();
     }
@@ -59,7 +57,7 @@ class IllustratedDotState extends DotState<IllustratedDot> {
       child: SizedBox.square(
         dimension: Dimensions.dotContainerSize,
         child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 450),
+          duration: const Duration(milliseconds: 400),
           reverseDuration: const Duration(milliseconds: 500),
           switchInCurve: SharedCurves.bounceAnimation,
           switchOutCurve: Curves.fastEaseInToSlowEaseOut,
@@ -78,9 +76,7 @@ class IllustratedDotState extends DotState<IllustratedDot> {
     if (isActive) {
       return;
     }
-
     isActive = !isActive;
-    color = Colors.white;
     widget.onEnable?.call();
     setState(() {});
   }
@@ -91,7 +87,6 @@ class IllustratedDotState extends DotState<IllustratedDot> {
       return;
     }
     isActive = false;
-    color = widget.color ?? Colors.white;
     widget.onDisable?.call();
     setState(() { });
   }

@@ -37,17 +37,15 @@ class DotGridBodyBuilder extends StatelessWidget {
         onPanUpdate: (details) => onPanUpdate(
           details.globalPosition,
         ),
-        child: RepaintBoundary(
-          child: GridBuilder(
-            now: now,
-            from: DateTime(now.year),
-            to: DateTime(now.year).add(const Duration(days: 365)),
-            lengthCalculate: DateTimeUtils.getDaysFrom,
-            dayCalculate: DateTimeUtils.addDays,
-            blockSize: const Size.square(Dimensions.dotContainerSize),
-            viewSize: Size(viewSize, mediaQuerySize.height),
-            itemBuilder: itemBuilder,
-          ),
+        child: GridBuilder(
+          now: now,
+          from: DateTime(now.year),
+          to: DateTime(now.year).add(const Duration(days: 365)),
+          lengthCalculate: DateTimeUtils.getDaysFrom,
+          dayCalculate: DateTimeUtils.addDays,
+          blockSize: const Size.square(Dimensions.dotContainerSize),
+          viewSize: Size(viewSize, mediaQuerySize.height),
+          itemBuilder: itemBuilder,
         ),
       ),
     );
