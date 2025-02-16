@@ -4,8 +4,8 @@ import 'package:days/core/theme/design_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static ThemeData getTheme(BuildContext context, Brightness themeBrightness) {
-    return themeBrightness == Brightness.light ? lightTheme() : darkTheme();
+  static ThemeData getTheme(BuildContext context, Brightness brightness) {
+    return brightness == Brightness.light ? lightTheme() : darkTheme();
   }
 
   static ThemeData darkTheme() {

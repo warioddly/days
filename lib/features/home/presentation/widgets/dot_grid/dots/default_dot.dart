@@ -8,7 +8,7 @@ class DefaultDot extends StatelessWidget {
     this.size = Dimensions.dotSize,
   });
 
-  final Color color;
+  final Color? color;
   final double size;
 
   @override

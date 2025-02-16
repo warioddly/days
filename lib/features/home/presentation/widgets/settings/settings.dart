@@ -15,7 +15,7 @@ class AppSettings extends StatelessWidget {
     return SafeArea(
       child: ConstrainedBox(
         constraints: BoxConstraints(
-          maxHeight: MediaQuery.of(context).size.height * 0.1,
+          maxHeight: MediaQuery.of(context).size.height * 0.15,
           maxWidth: Dimensions.maxViewWidthSize,
         ),
         child: Scaffold(

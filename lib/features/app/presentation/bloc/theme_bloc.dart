@@ -16,7 +16,7 @@ class ThemeBloc extends Bloc<ThemeEvent, Brightness> {
   ThemeBloc({
     required this.getThemeUseCase,
     required this.setThemeUseCase,
-  }) : super(Brightness.light) {
+  }) : super(Brightness.dark) {
     on<SetTheme>(_setTheme);
     on<GetTheme>(_getTheme);
   }
@@ -25,16 +25,15 @@ class ThemeBloc extends Bloc<ThemeEvent, Brightness> {
       SetTheme event,
       Emitter<Brightness> emit,
   ) async {
-    await setThemeUseCase(event.themeBrightness.name);
     emit(event.themeBrightness);
+    await setThemeUseCase(event.themeBrightness.name);
   }
 
   void _getTheme(
     GetTheme event,
     Emitter<Brightness> emit,
   ) async {
-    final theme = await getThemeUseCase(null);
-    emit(theme);
+    emit(await getThemeUseCase(null));
   }
 
 }
