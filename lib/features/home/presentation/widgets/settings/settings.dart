@@ -19,39 +19,43 @@ class AppSettings extends StatelessWidget {
           maxWidth: Dimensions.maxViewWidthSize,
         ),
         child: Scaffold(
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: Dimensions.large.padding,
-                child: BlocBuilder<ThemeBloc, Brightness>(
-                  builder: (context, state) {
-                    return SlidingSegmentControl<Brightness>(
-                      groupValue: state,
-                      onValueChanged: (Brightness? value) {
-                        if (value == null || value == state) {
-                          return;
-                        }
-                        context.read<ThemeBloc>().add(SetTheme(value));
-                      },
-                      children: const {
-                        Brightness.light: Padding(
-                          padding: EdgeInsets.all(Dimensions.small),
-                          child: Icon(
-                            CupertinoIcons.sun_max_fill,
+          body: Padding(
+            padding: Dimensions.normal.padding,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: Dimensions.large.padding.copyWith(
+                    top: Dimensions.empty,
+                  ),
+                  child: BlocBuilder<ThemeBloc, Brightness>(
+                    builder: (context, state) {
+                      return SlidingSegmentControl<Brightness>(
+                        groupValue: state,
+                        onValueChanged: (Brightness? value) {
+                          if (value == null || value == state) {
+                            return;
+                          }
+                          context.read<ThemeBloc>().add(SetTheme(value));
+                        },
+                        children: const {
+                          Brightness.light: Padding(
+                            padding: EdgeInsets.all(Dimensions.small),
+                            child: Icon(
+                              CupertinoIcons.sun_max_fill,
+                            ),
                           ),
-                        ),
-                        Brightness.dark: Icon(
-                          CupertinoIcons.moon_stars_fill,
-                        ),
-                      },
-                    );
-                  },
+                          Brightness.dark: Icon(
+                            CupertinoIcons.moon_stars_fill,
+                          ),
+                        },
+                      );
+                    },
+                  ),
                 ),
-              ),
-              const RelatedLinks(),
-              Dimensions.small.verticalBox,
-            ],
+                const RelatedLinks(),
+              ],
+            ),
           ),
         ),
       ),

@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -43,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             create: (context) => dotsManagerBloc,
           ),
           ChangeNotifierProvider(
-              create: (context) => orbitTooltipNotifier,
+            create: (context) => orbitTooltipNotifier,
           ),
         ],
         child: SafeArea(
