@@ -18,8 +18,6 @@ final class DotFollowersAnimation extends DotAnimation {
     VoidCallback? onDisable,
   }) {
 
-
-
     for (int i = 0; i < keys.length; i++) {
       final box = keyRenderBox(keys[i]);
       if (box != null && isInside(box, globalPosition)) {

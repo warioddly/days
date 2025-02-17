@@ -13,12 +13,11 @@ class RelatedLinks extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       spacing: Dimensions.small,
       children: [
-
         GestureDetector(
           onTap: () => launchUrlString(AppConstants.sourceCodeUrl),
           child: Text(
-              'github',
-              style: Theme.of(context).textTheme.bodyMedium,
+            'GITHUB',
+            style: Theme.of(context).textTheme.bodySmall,
           ),
         ),
         DefaultDot(
@@ -28,11 +27,10 @@ class RelatedLinks extends StatelessWidget {
         GestureDetector(
           onTap: () => launchUrlString(AppConstants.privacyUrl),
           child: Text(
-              'privacy',
-              style: Theme.of(context).textTheme.bodyMedium
+            'PRIVACY',
+            style: Theme.of(context).textTheme.bodySmall
           ),
         ),
-
       ],
     );
   }

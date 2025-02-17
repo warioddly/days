@@ -49,10 +49,6 @@ class Footer extends StatelessWidget {
       context: context,
       isScrollControlled: true,
       barrierColor: Colors.transparent,
-      constraints: BoxConstraints(
-        maxHeight: MediaQuery.of(context).size.height * 0.9,
-        maxWidth: MediaQuery.of(context).size.width,
-      ),
       builder: (_) => const AppSettings() ,
     );
   }

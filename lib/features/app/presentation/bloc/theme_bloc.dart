@@ -6,7 +6,6 @@ import 'package:days/features/app/domain/usecase/set_theme_usecase.dart';
 import 'package:meta/meta.dart';
 
 part 'theme_event.dart';
-part 'theme_state.dart';
 
 class ThemeBloc extends Bloc<ThemeEvent, Brightness> {
 

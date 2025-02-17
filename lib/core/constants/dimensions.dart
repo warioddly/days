@@ -1,4 +1,5 @@
-class Dimensions {
+
+final class Dimensions {
   static const double extra = 60.0;
   static const double large = 20.0;
   static const double doubledNormal = 32.0;
