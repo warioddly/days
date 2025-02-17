@@ -10,4 +10,5 @@ class AppConstants {
 
   static const String privacyUrl = 'https://warioddly.github.io/privacy/days';
 
+  static const deactivateDotDurationInMilliseconds = 3000;
 }

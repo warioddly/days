@@ -11,6 +11,6 @@ class ThemeLocalDataSourceImpl implements ThemeDataSource {
   void setTheme(String params) => db.set('theme', params);
 
   @override
-  Future<String> getTheme() async => db.get('theme');
+  Future<String?> getTheme() async => db.get('theme');
 
 }
