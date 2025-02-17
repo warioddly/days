@@ -1,4 +1,4 @@
-![ - DAYS](https://github.com/user-attachments/assets/372ec812-016a-41da-8eb7-63a17ee18b1a)
+![ - DAYS](/assets/images/logo/logo.png)
 
 ## Your life in Days, Weeks, Months and Years
 
