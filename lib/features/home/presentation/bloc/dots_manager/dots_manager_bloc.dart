@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:days/core/constants/app_constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -16,12 +17,10 @@ class DotsManagerBloc extends Bloc<DotsManagerEvent, DotsManagerModelState> {
     on<DotsManagerActiveDotsIncrementEvent>(_onActiveDotsIncrement);
     on<DotsManagerActiveDotsDecrementEvent>(_onActiveDotsDecrement);
     on<DotsManagerActiveDotsCountResetEvent>(_onActiveDotsCountReset);
-    on<DotsManagerUserHoveredEvent>(
-        _onDeActiveHoveredDotsUpdateResetTimer,
-    );
+    on<DotsManagerUserHoveredEvent>(_onDeActiveHoveredDotsUpdateResetTimer);
   }
 
-  Timer? _resetHoverActiveDotsTimer;
+  Timer? _resetHoverActivatedDotsTimer;
 
   void _onUserOutsideClick(
       DotsManagerUserOutsideClickEvent event,
@@ -38,13 +37,16 @@ class DotsManagerBloc extends Bloc<DotsManagerEvent, DotsManagerModelState> {
       Emitter<DotsManagerModelState> emit,
   ) {
 
-    if (_resetHoverActiveDotsTimer != null) {
-      _resetHoverActiveDotsTimer!.cancel();
+    if (_resetHoverActivatedDotsTimer != null) {
+      _resetHoverActivatedDotsTimer!.cancel();
     }
 
-    _resetHoverActiveDotsTimer = Timer(const Duration(seconds: 3), () {
-      add(DotsManagerUserOutsideClickEvent());
-    });
+    _resetHoverActivatedDotsTimer = Timer(
+      const Duration(
+        milliseconds: AppConstants.deactivateDotDurationInMilliseconds,
+      ),
+      () => add(DotsManagerUserOutsideClickEvent()),
+    );
 
   }
 

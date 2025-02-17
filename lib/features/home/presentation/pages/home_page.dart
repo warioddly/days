@@ -33,19 +33,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => settingsBloc,
-          ),
-          BlocProvider(
-            create: (context) => dotsManagerBloc,
-          ),
-          ChangeNotifierProvider(
-            create: (context) => orbitTooltipNotifier,
-          ),
-        ],
-        child: SafeArea(
+      body: SafeArea(
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => settingsBloc,
+            ),
+            BlocProvider(
+              create: (context) => dotsManagerBloc,
+            ),
+            ChangeNotifierProvider(
+              create: (context) => orbitTooltipNotifier,
+            ),
+          ],
           child: Center(
             child: ConstrainedBox(
               constraints: const BoxConstraints(

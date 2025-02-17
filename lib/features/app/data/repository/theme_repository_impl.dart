@@ -13,6 +13,6 @@ class ThemeRepositoryImpl implements ThemeRepository {
   void setTheme(String theme) => localDataSource.setTheme(theme);
 
   @override
-  Future<String> getTheme() async => localDataSource.getTheme();
+  Future<String?> getTheme() async => localDataSource.getTheme();
 
 }

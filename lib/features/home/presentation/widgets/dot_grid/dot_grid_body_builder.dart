@@ -10,11 +10,13 @@ class DotGridBodyBuilder extends StatelessWidget {
     required this.now,
     required this.onPanUpdate,
     required this.itemBuilder,
+    this.onBuildComplete,
     super.key,
   });
 
   final DateTime now;
   final Function(Offset) onPanUpdate;
+  final VoidCallback? onBuildComplete;
   final GridItemBuilder itemBuilder;
 
   @override
@@ -46,6 +48,7 @@ class DotGridBodyBuilder extends StatelessWidget {
           blockSize: const Size.square(Dimensions.dotContainerSize),
           viewSize: Size(viewSize, mediaQuerySize.height),
           itemBuilder: itemBuilder,
+          onBuildComplete: onBuildComplete,
         ),
       ),
     );
