@@ -26,6 +26,7 @@ class _DotedGridBuilderState extends DotGridState<DotedGridBuilder> {
 
   @override
   void onPanUpdate(Offset position) {
+    super.onPanUpdate(position);
     framer.throttle(
       () => DotFollowersAnimation(
         keys: keys,

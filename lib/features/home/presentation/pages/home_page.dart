@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
 
   final settingsBloc = getIt<SettingsBloc>();
   final dotsManagerBloc = getIt<DotsManagerBloc>();
-  final orbitTooltipNotifier = OrbitTooltipNotifier();
+  final orbitTooltip = OrbitTooltipNotifier();
 
   @override
   void initState() {
@@ -43,18 +43,18 @@ class _HomePageState extends State<HomePage> {
               create: (context) => dotsManagerBloc,
             ),
             ChangeNotifierProvider(
-              create: (context) => orbitTooltipNotifier,
+              create: (context) => orbitTooltip,
             ),
           ],
-          child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(
-                maxWidth: Dimensions.maxViewWidthSize,
-              ),
-              child: const Stack(
-                children: [
-                  Positioned.fill(
-                    child: Column(
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                      maxWidth: Dimensions.maxViewWidthSize,
+                    ),
+                    child: const Column(
                       children: [
                         GridTypeStatusBar(),
                         Spacer(),
@@ -65,10 +65,10 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  OrbitTooltip(),
-                ],
+                ),
               ),
-            ),
+              const OrbitTooltip(),
+            ],
           ),
         ),
       ),
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
   void dispose() {
     settingsBloc.close();
     dotsManagerBloc.close();
-    orbitTooltipNotifier.dispose();
+    orbitTooltip.dispose();
     super.dispose();
   }
 

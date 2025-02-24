@@ -36,4 +36,9 @@ class DateTimeUtils {
   static DateTime addDays(DateTime start, int days) {
     return start.add(Duration(days: days));
   }
+
+  static String format(DateTime date) {
+    return '${date.day}/${date.month}/${date.year}';
+  }
+
 }

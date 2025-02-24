@@ -2,6 +2,7 @@ import 'package:days/core/utils/frame_rate_utils.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body_builder.dart' show DotGridBodyBuilder;
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
+import 'package:days/features/home/presentation/widgets/tooltip/orbit_tooltip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,7 +20,9 @@ abstract class DotGridBuilder extends StatefulWidget {
 
 abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
 
-  final Framer framer = Framer();
+  final framer = Framer();
+
+  late final tooltip = context.read<OrbitTooltipNotifier>();
 
   late final dotKeyManager  = context.read<DotKeyManager>();
 
@@ -37,7 +40,10 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
     );
   }
 
-  void onPanUpdate(Offset position);
+  @mustCallSuper
+  void onPanUpdate(Offset position) {
+    tooltip.setPosition(position - const Offset(40, 50.0));
+  }
 
   Widget itemBuilder(int index, DateTime date, DateTime now);
 

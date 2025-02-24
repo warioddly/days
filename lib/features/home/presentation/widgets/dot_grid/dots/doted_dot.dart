@@ -24,7 +24,6 @@ class DotedDot extends Dot {
 }
 
 class IllustratedDotState extends DotState<DotedDot> {
-  late final DotController _controller;
 
   final dot = DefaultDot(
     color: CupertinoColors.tertiarySystemFill.darkHighContrastColor,
@@ -34,7 +33,6 @@ class IllustratedDotState extends DotState<DotedDot> {
   @override
   void initState() {
     super.initState();
-    _controller = DotController(widget.isActive);
     if (widget.isActive) {
       widget.onEnable?.call();
     }
@@ -47,7 +45,7 @@ class IllustratedDotState extends DotState<DotedDot> {
       child: BlocBuilder<ThemeBloc, Brightness>(
         builder: (context, state) {
           return ListenableBuilder(
-            listenable: _controller,
+            listenable: controller,
             builder: (context, _) {
               return AnimatedSwitcher(
                 duration: const Duration(milliseconds: 250),
@@ -56,7 +54,7 @@ class IllustratedDotState extends DotState<DotedDot> {
                 switchOutCurve: Curves.fastEaseInToSlowEaseOut,
                 transitionBuilder: (child, animation) =>
                         ScaleTransition(scale: animation, child: child),
-                child: _controller.isActive
+                child: isActive
                         ? DefaultDot(
                           key: ObjectKey(widget.date?.toIso8601String() ?? ''),
                           color: Theme.of(context).colorScheme.onPrimary,
@@ -72,25 +70,26 @@ class IllustratedDotState extends DotState<DotedDot> {
 
   @override
   void enable() {
-    if (_controller.isActive) {
+    if (isActive) {
       return;
     }
-    _controller.setActive(true);
+
+    tooltip
+      ..show()
+      ..setContent(widget.date.toString());
+
+    controller.setActive(true);
     widget.onEnable?.call();
   }
 
   @override
   void disable([bool shouldDisableActive = false]) {
-    if (!_controller.isActive || (shouldDisableActive && widget.isActive)) {
+    if (!isActive || (shouldDisableActive && widget.isActive)) {
       return;
     }
-    _controller.setActive(false);
+    controller.setActive(false);
     widget.onDisable?.call();
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+
 }

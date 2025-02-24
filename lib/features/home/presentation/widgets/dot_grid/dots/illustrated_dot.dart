@@ -28,8 +28,6 @@ class IllustratedDot extends Dot {
 
 class IllustratedDotState extends DotState<IllustratedDot> {
 
-  late final DotController _controller;
-
   final image = IllustrationAssets.getRandomIllustration();
   late final padding = _randomPadding();
   late final colorScheme = Theme.of(context).colorScheme;
@@ -37,7 +35,6 @@ class IllustratedDotState extends DotState<IllustratedDot> {
   @override
   void initState() {
     super.initState();
-    _controller = DotController(widget.isActive);
     if (widget.isActive) {
       widget.onEnable?.call();
     }
@@ -50,7 +47,7 @@ class IllustratedDotState extends DotState<IllustratedDot> {
       child: BlocBuilder<ThemeBloc, Brightness>(
         builder: (context, state) {
           return ListenableBuilder(
-            listenable: _controller,
+            listenable: controller,
             builder: (context, _) {
               return AnimatedSwitcher(
                 duration: const Duration(milliseconds: 400),
@@ -61,7 +58,7 @@ class IllustratedDotState extends DotState<IllustratedDot> {
                   scale: animation,
                   child: child,
                 ),
-                child: _controller.isActive ? Image.asset(
+                child: isActive ? Image.asset(
                   image,
                   color: Theme.of(context).colorScheme.onPrimary,
                 ) : Padding(
@@ -82,19 +79,23 @@ class IllustratedDotState extends DotState<IllustratedDot> {
 
   @override
   void enable() {
-    if (_controller.isActive) {
+    if (isActive) {
       return;
     }
-    _controller.setActive(true);
+    tooltip
+      ..show()
+      ..setContent(widget.date.toString());
+
+    controller.setActive(true);
     widget.onEnable?.call();
   }
 
   @override
   void disable([bool shouldDisableActive = false]) {
-    if (!_controller.isActive || (shouldDisableActive && widget.isActive)) {
+    if (!isActive || (shouldDisableActive && widget.isActive)) {
       return;
     }
-    _controller.setActive(false);
+    controller.setActive(false);
     widget.onDisable?.call();
   }
 
