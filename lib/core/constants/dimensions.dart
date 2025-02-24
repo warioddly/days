@@ -5,8 +5,10 @@ final class Dimensions {
   static const double doubledNormal = 32.0;
   static const double normal = 16.0;
   static const double small = 8.0;
-
+  static const double half = 4.0;
+  static const double tiny = 2.0;
   static const double empty = 0.0;
+
   static const double dotSize = 3.0;
   static const double dotSeparatorSize = 6.0;
 

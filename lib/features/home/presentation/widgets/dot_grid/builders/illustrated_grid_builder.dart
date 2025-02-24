@@ -27,6 +27,7 @@ class _DotedGridBuilderState extends DotGridState<IllustratedGridBuilder> {
 
   @override
   void onPanUpdate(Offset position) {
+    super.onPanUpdate(position);
     framer.throttle(
       () => DotHoverAnimation(
         keys: keys,
