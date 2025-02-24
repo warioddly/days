@@ -48,7 +48,7 @@ class OrbitTooltip extends StatelessWidget {
         );
 
         return AnimatedPositioned(
-          duration: const Duration(milliseconds: 100),
+          duration: const Duration(milliseconds: 50),
           curve: Curves.linear,
           left: notifier._position.dx,
           top: notifier._position.dy,
