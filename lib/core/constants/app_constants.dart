@@ -1,4 +1,3 @@
-
 class AppConstants {
   static const String appName = 'days';
 
@@ -11,4 +10,14 @@ class AppConstants {
   static const String privacyUrl = 'https://warioddly.github.io/privacy/days';
 
   static const deactivateDotDurationInMilliseconds = 3000;
+
+  static const homeWidgetAppGroupId = 'group.daysHomeScreenApp';
+
+  static const iosHomeWidgetName = 'DaysHomeWidget';
+
+  static const daysHomeWidgetName = 'DaysHomeWidget';
+
+  static const androidHomeWidgetName = 'DaysHomeWidget';
+
+  static const homeWidgetDaysDataKey = 'daysHomeWidgetDays';
 }
