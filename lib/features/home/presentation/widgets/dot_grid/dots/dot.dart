@@ -1,5 +1,22 @@
 import 'package:flutter/material.dart';
 
+
+final class DotController extends ChangeNotifier {
+
+  DotController(bool isActive) : _isActive = isActive;
+
+  bool _isActive = false;
+
+  bool get isActive => _isActive;
+
+  void setActive(bool active) {
+    _isActive = active;
+    notifyListeners();
+  }
+
+}
+
+
 abstract class Dot extends StatefulWidget {
   const Dot({
     this.isActive = false,

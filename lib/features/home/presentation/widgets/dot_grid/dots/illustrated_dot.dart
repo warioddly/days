@@ -28,7 +28,7 @@ class IllustratedDot extends Dot {
 
 class IllustratedDotState extends DotState<IllustratedDot> {
 
-  bool isActive = false;
+  late final DotController _controller;
 
   final image = IllustrationAssets.getRandomIllustration();
   late final padding = _randomPadding();
@@ -37,7 +37,7 @@ class IllustratedDotState extends DotState<IllustratedDot> {
   @override
   void initState() {
     super.initState();
-    isActive = widget.isActive;
+    _controller = DotController(widget.isActive);
     if (widget.isActive) {
       widget.onEnable?.call();
     }
@@ -45,32 +45,35 @@ class IllustratedDotState extends DotState<IllustratedDot> {
 
   @override
   Widget build(BuildContext context) {
-    return RepaintBoundary(
+    return SizedBox.square(
+      dimension: Dimensions.dotContainerSize,
       child: BlocBuilder<ThemeBloc, Brightness>(
         builder: (context, state) {
-          return SizedBox.square(
-            dimension: Dimensions.dotContainerSize,
-            child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 400),
-              reverseDuration: const Duration(milliseconds: 500),
-              switchInCurve: SharedCurves.bounceAnimation,
-              switchOutCurve: Curves.fastEaseInToSlowEaseOut,
-              transitionBuilder: (child, animation) => ScaleTransition(
-                scale: animation,
-                child: child,
-              ),
-              child: isActive ? Image.asset(
-                image,
-                color: Theme.of(context).colorScheme.onPrimary,
-              ) : Padding(
-                key: UniqueKey(),
-                padding: padding,
-                child: DefaultDot(
-                  size: 1.5,
-                  color: Theme.of(context).colorScheme.onPrimary,
+          return ListenableBuilder(
+            listenable: _controller,
+            builder: (context, _) {
+              return AnimatedSwitcher(
+                duration: const Duration(milliseconds: 400),
+                reverseDuration: const Duration(milliseconds: 500),
+                switchInCurve: SharedCurves.bounceAnimation,
+                switchOutCurve: Curves.fastEaseInToSlowEaseOut,
+                transitionBuilder: (child, animation) => ScaleTransition(
+                  scale: animation,
+                  child: child,
                 ),
-              ),
-            ),
+                child: _controller.isActive ? Image.asset(
+                  image,
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ) : Padding(
+                  key: UniqueKey(),
+                  padding: padding,
+                  child: DefaultDot(
+                    size: 1.5,
+                    color: Theme.of(context).colorScheme.onPrimary,
+                  ),
+                ),
+              );
+            }
           );
         },
       ),
@@ -79,22 +82,20 @@ class IllustratedDotState extends DotState<IllustratedDot> {
 
   @override
   void enable() {
-    if (isActive) {
+    if (_controller.isActive) {
       return;
     }
-    isActive = !isActive;
+    _controller.setActive(true);
     widget.onEnable?.call();
-    setState(() {});
   }
 
   @override
   void disable([bool shouldDisableActive = false]) {
-    if (!isActive || (shouldDisableActive && widget.isActive)) {
+    if (!_controller.isActive || (shouldDisableActive && widget.isActive)) {
       return;
     }
-    isActive = false;
+    _controller.setActive(false);
     widget.onDisable?.call();
-    setState(() {});
   }
 
   EdgeInsets _randomPadding() {

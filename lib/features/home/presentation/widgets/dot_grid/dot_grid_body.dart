@@ -42,10 +42,12 @@ class _DotGridBodyState extends State<DotGridBody> {
           final eventState = state.state;
 
           if (eventState is SettingsLoaded) {
-            return switch(state.entity.gridType) {
-              GridType.doted => const DotedGridBuilder(),
-              GridType.illustrated => const IllustratedGridBuilder(),
-            };
+            return RepaintBoundary(
+              child: switch(state.entity.gridType) {
+                GridType.doted => const DotedGridBuilder(),
+                GridType.illustrated => const IllustratedGridBuilder(),
+              },
+            );
           }
 
           if (eventState is SettingsLoading) {
