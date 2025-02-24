@@ -10,7 +10,5 @@ import SwiftUI
 struct DaysHomeWidgetBundle: WidgetBundle {
     var body: some Widget {
         DaysHomeWidget()
-    //    DaysHomeWidgetControl()
-    //    DaysHomeWidgetLiveActivity()
     }
 }
