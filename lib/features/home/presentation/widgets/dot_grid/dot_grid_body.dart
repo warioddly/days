@@ -5,7 +5,7 @@ import 'package:days/features/home/presentation/widgets/dot_grid/builders/doted_
 import 'package:days/features/home/presentation/widgets/dot_grid/builders/dot_grid_builder.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/builders/illustrated_grid_builder.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_disable_animation.dart';
-import 'package:days/features/home/presentation/widgets/tooltip/orbit_tooltip.dart' show OrbitTooltipNotifier;
+import 'package:days/features/home/presentation/widgets/tooltip/tooltip_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -67,8 +67,8 @@ class _DotGridBodyState extends State<DotGridBody> {
     final eventState = state.state;
 
     if (eventState is DotsManagerUserOutsideClicked) {
-      DotDisableAnimation(keys: dotKeyManager.keys, globalPosition: Offset.zero);
-      context.read<OrbitTooltipNotifier>().hide();
+      DotDisableAnimation(keys: dotKeyManager.keys, position: Offset.zero);
+      context.read<TooltipController>().hide();
     }
   }
 
@@ -77,7 +77,7 @@ class _DotGridBodyState extends State<DotGridBody> {
 
     if (eventState is SettingsLoading) {
       dotKeyManager.clear();
-      context.read<OrbitTooltipNotifier>().hide();
+      context.read<TooltipController>().hide();
       context.read<DotsManagerBloc>().add(
         DotsManagerActiveDotsCountResetEvent(),
       );

@@ -26,12 +26,12 @@ class _DotedGridBuilderState extends DotGridState<DotedGridBuilder> {
 
   @override
   void onPanUpdate(Offset position) {
-    super.onPanUpdate(position);
     framer.throttle(
       () => DotFollowersAnimation(
         keys: keys,
-        globalPosition: position,
+        position: position,
         onComplete: () => onAnimationComplete(context),
+        onOverlapping: onOverlapping
       ),
     );
   }

@@ -3,7 +3,6 @@ import 'dart:ui' show Brightness;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:days/features/app/domain/usecase/get_theme_usecase.dart';
 import 'package:days/features/app/domain/usecase/set_theme_usecase.dart';
-import 'package:meta/meta.dart';
 
 part 'theme_event.dart';
 

@@ -1,3 +1,5 @@
+// ignore_for_file: always_put_required_named_parameters_first, use_super_parameters, unnecessary_import, deprecated_member_use
+
 import 'dart:math' as math;
 import 'dart:ui' show FontFeature;
 

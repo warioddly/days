@@ -82,10 +82,6 @@ class IllustratedDotState extends DotState<IllustratedDot> {
     if (isActive) {
       return;
     }
-    tooltip
-      ..show()
-      ..setContent(widget.date.toString());
-
     controller.setActive(true);
     widget.onEnable?.call();
   }

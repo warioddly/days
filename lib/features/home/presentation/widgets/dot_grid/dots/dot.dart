@@ -1,7 +1,4 @@
-import 'package:days/features/home/presentation/widgets/tooltip/orbit_tooltip.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 final class DotController extends ChangeNotifier {
 
@@ -39,8 +36,6 @@ abstract class Dot extends StatefulWidget {
 abstract class DotState<T extends Dot> extends State<T> {
 
   late final DotController controller;
-
-  late final tooltip = context.read<OrbitTooltipNotifier>();
 
   bool get isActive => controller.isActive;
 

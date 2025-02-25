@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';

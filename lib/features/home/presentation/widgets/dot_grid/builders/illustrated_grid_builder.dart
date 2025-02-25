@@ -9,10 +9,10 @@ class IllustratedGridBuilder extends DotGridBuilder {
   const IllustratedGridBuilder({super.key});
 
   @override
-  State<IllustratedGridBuilder> createState() => _DotedGridBuilderState();
+  State<IllustratedGridBuilder> createState() => _IllustratedGridBuilderState();
 }
 
-class _DotedGridBuilderState extends DotGridState<IllustratedGridBuilder> {
+class _IllustratedGridBuilderState extends DotGridState<IllustratedGridBuilder> {
 
   @override
   Widget itemBuilder(int index, DateTime date, DateTime now) {
@@ -27,12 +27,12 @@ class _DotedGridBuilderState extends DotGridState<IllustratedGridBuilder> {
 
   @override
   void onPanUpdate(Offset position) {
-    super.onPanUpdate(position);
     framer.throttle(
       () => DotHoverAnimation(
         keys: keys,
-        globalPosition: position,
+        position: position,
         onComplete: () => onAnimationComplete(context),
+        onOverlapping: onOverlapping
       ),
     );
   }

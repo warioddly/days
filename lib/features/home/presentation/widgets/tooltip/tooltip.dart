@@ -1,62 +1,32 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/core/utils/datetime_utils.dart';
+import 'package:days/features/home/presentation/widgets/tooltip/tooltip_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-final class OrbitTooltipNotifier extends ChangeNotifier {
 
-  Offset _position = Offset.zero;
-  String _content = DateTime.now().toIso8601String();
-
-  bool _isVisible = false;
-
-  bool get isVisible => _isVisible;
-
-  void show() {
-    _isVisible = true;
-    notifyListeners();
-  }
-
-  void hide() {
-    _isVisible = false;
-    notifyListeners();
-  }
-
-  void setPosition(Offset position) {
-    _position = position;
-    notifyListeners();
-  }
-
-  void setContent(String content) {
-    _content = content;
-    notifyListeners();
-  }
-}
-
-class OrbitTooltip extends StatelessWidget {
-  const OrbitTooltip({super.key});
+class Tooltip extends StatelessWidget {
+  const Tooltip({super.key});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Consumer<OrbitTooltipNotifier>(
-      builder: (context, notifier, child) {
+    return Consumer<TooltipController>(
+      builder: (context, value, child) {
 
-        final content = DateTimeUtils.format(
-          DateTime.parse(notifier._content),
-        );
+        final content = DateTimeUtils.format(value.content);
 
         return AnimatedPositioned(
           duration: const Duration(milliseconds: 50),
           curve: Curves.linear,
-          left: notifier._position.dx,
-          top: notifier._position.dy,
+          left: value.position.dx,
+          top: value.position.dy,
           child: IgnorePointer(
             child: AnimatedOpacity(
               duration: const Duration(milliseconds: 200),
               curve: Curves.easeInOut,
-              opacity: notifier.isVisible ? 1 : 0,
+              opacity: value.isVisible ? 1 : 0,
               child: Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: Dimensions.small,

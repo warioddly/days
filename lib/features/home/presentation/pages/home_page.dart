@@ -6,8 +6,9 @@ import 'package:days/features/home/presentation/widgets/controlbar/controlbar.da
 import 'package:days/features/home/presentation/widgets/controlbar/grid_type_status_bar.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body.dart';
 import 'package:days/features/home/presentation/widgets/footer/footer.dart';
-import 'package:days/features/home/presentation/widgets/tooltip/orbit_tooltip.dart';
-import 'package:flutter/material.dart';
+import 'package:days/features/home/presentation/widgets/tooltip/tooltip.dart';
+import 'package:days/features/home/presentation/widgets/tooltip/tooltip_controller.dart';
+import 'package:flutter/material.dart' hide Tooltip;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
 
   final settingsBloc = getIt<SettingsBloc>();
   final dotsManagerBloc = getIt<DotsManagerBloc>();
-  final orbitTooltip = OrbitTooltipNotifier();
+  final orbitTooltip = TooltipController();
 
   @override
   void initState() {
@@ -67,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const OrbitTooltip(),
+              const Tooltip(),
             ],
           ),
         ),
