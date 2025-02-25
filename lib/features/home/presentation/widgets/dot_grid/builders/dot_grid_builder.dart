@@ -70,7 +70,7 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
     tooltip
       ..show()
       ..setContent(key.currentState!.widget.date!)
-      ..setPosition(position - const Offset(40, 50.0));
+      ..setPosition(position);
   }
 
 }
