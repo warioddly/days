@@ -4,7 +4,6 @@ import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/shared/ui/widgets/sliding_segment_control.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ControlBar extends StatelessWidget {

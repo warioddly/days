@@ -5,22 +5,22 @@ import 'package:flutter/cupertino.dart';
 final class DotFollowersAnimation extends DotAnimation {
   DotFollowersAnimation({
     required super.keys,
-    required super.globalPosition,
+    required super.position,
     super.onComplete,
+    super.onOverlapping
   });
 
   @override
   void animate(
     List<GlobalKey<DotState>> keys,
-    Offset globalPosition, {
+    Offset position, {
     VoidCallback? onComplete,
-    VoidCallback? onEnable,
-    VoidCallback? onDisable,
+    OnOverlapping? onOverlapping,
   }) {
 
     for (int i = 0; i < keys.length; i++) {
       final box = keyRenderBox(keys[i]);
-      if (box != null && isInside(box, globalPosition)) {
+      if (box != null && isInside(box, position)) {
 
         final reversedKeys = keys.reversed.toList();
         for (int j = 0; j < reversedKeys.length; j++) {
@@ -31,13 +31,13 @@ final class DotFollowersAnimation extends DotAnimation {
 
           if (keyRenderBox(reversedKeys[j]) != null) {
             disableKey(reversedKeys[j]);
-            onDisable?.call();
           }
         }
 
         for (int j = 0; j <= i; j++) {
-          enableKey(keys[j]);
-          onEnable?.call();
+          final key = keys[j];
+          onOverlapping?.call(key, position);
+          enableKey(key);
         }
         onComplete?.call();
         break;

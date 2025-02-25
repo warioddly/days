@@ -23,6 +23,7 @@ class _MainWrapperState extends State<MainWrapper> with WidgetsBindingObserver {
   @override
   void didChangePlatformBrightness() {
     super.didChangePlatformBrightness();
+    // ignore: deprecated_member_use
     var brightness = WidgetsBinding.instance.window.platformBrightness;
     context.read<ThemeBloc>().add(SetTheme(brightness));
   }

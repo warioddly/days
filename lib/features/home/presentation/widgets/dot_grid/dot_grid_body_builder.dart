@@ -33,12 +33,8 @@ class DotGridBodyBuilder extends StatelessWidget {
       padding: padding.paddingHorizontal,
       child: GestureDetector(
         behavior: HitTestBehavior.translucent,
-        onPanStart: (details) => onPanUpdate(
-          details.globalPosition,
-        ),
-        onPanUpdate: (details) => onPanUpdate(
-          details.globalPosition,
-        ),
+        onPanStart: (details) => onPanUpdate(details.globalPosition),
+        onPanUpdate: (details) => onPanUpdate(details.globalPosition),
         child: GridBuilder(
           now: now,
           from: DateTime(now.year),

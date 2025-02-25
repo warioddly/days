@@ -38,7 +38,7 @@ linter:
       file_names: true
       flutter_style_todos: true
       library_names: true
-      lines_longer_than_80_chars: true
+      lines_longer_than_80_chars: false
       prefer_const_declarations: true
       prefer_const_literals_to_create_immutables: true
       prefer_contains: true

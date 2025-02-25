@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:days/core/constants/app_constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
 
 part 'dots_manager_event.dart';
 part 'dots_manager_state.dart';

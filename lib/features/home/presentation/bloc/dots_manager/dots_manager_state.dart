@@ -32,7 +32,6 @@ final class DotsManagerModelState {
   }
 }
 
-@immutable
 sealed class DotsManagerState {}
 
 final class DotsManagerInitial extends DotsManagerState {}
