@@ -5,19 +5,22 @@ import 'package:flutter/cupertino.dart';
 final class DotHoverAnimation extends DotAnimation {
   DotHoverAnimation({
     required super.keys,
-    required super.globalPosition,
+    required super.position,
     super.onComplete,
+    super.onOverlapping,
   });
 
   @override
   void animate(
     List<GlobalKey<DotState>> keys,
-    Offset globalPosition, {
+    Offset position, {
     VoidCallback? onComplete,
+    OnOverlapping? onOverlapping,
   }) {
     for (final key in keys) {
       final box = keyRenderBox(key);
-      if (box != null && isInside(box, globalPosition)) {
+      if (box != null && isInside(box, position)) {
+        onOverlapping?.call(key, position);
         enableKey(key);
         onComplete?.call();
         break;

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';
@@ -49,10 +47,6 @@ class Footer extends StatelessWidget {
       context: context,
       isScrollControlled: true,
       barrierColor: Colors.transparent,
-      constraints: BoxConstraints(
-        maxHeight: MediaQuery.of(context).size.height * 0.9,
-        maxWidth: MediaQuery.of(context).size.width,
-      ),
       builder: (_) => const AppSettings() ,
     );
   }

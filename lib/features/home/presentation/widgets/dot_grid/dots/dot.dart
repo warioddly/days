@@ -1,5 +1,21 @@
 import 'package:flutter/material.dart';
 
+final class DotController extends ChangeNotifier {
+
+  DotController(bool isActive) : _isActive = isActive;
+
+  bool _isActive = false;
+
+  bool get isActive => _isActive;
+
+  void setActive(bool active) {
+    _isActive = active;
+    notifyListeners();
+  }
+
+}
+
+
 abstract class Dot extends StatefulWidget {
   const Dot({
     this.isActive = false,
@@ -18,6 +34,23 @@ abstract class Dot extends StatefulWidget {
 }
 
 abstract class DotState<T extends Dot> extends State<T> {
-  void enable() {}
-  void disable([bool shouldDisableActive = false]) {}
+
+  late final DotController controller;
+
+  bool get isActive => controller.isActive;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = DotController(widget.isActive);
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  void enable();
+  void disable([bool shouldDisableActive = false]);
 }

@@ -10,7 +10,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 const _dotSize = 5.0;
 
 class DotedDot extends Dot {
-
   const DotedDot({
     super.key,
     super.date,
@@ -22,12 +21,9 @@ class DotedDot extends Dot {
 
   @override
   State<DotedDot> createState() => IllustratedDotState();
-
 }
 
 class IllustratedDotState extends DotState<DotedDot> {
-
-  bool isActive = false;
 
   final dot = DefaultDot(
     color: CupertinoColors.tertiarySystemFill.darkHighContrastColor,
@@ -37,7 +33,6 @@ class IllustratedDotState extends DotState<DotedDot> {
   @override
   void initState() {
     super.initState();
-    isActive = widget.isActive;
     if (widget.isActive) {
       widget.onEnable?.call();
     }
@@ -45,26 +40,28 @@ class IllustratedDotState extends DotState<DotedDot> {
 
   @override
   Widget build(BuildContext context) {
-    return RepaintBoundary(
+    return SizedBox.square(
+      dimension: Dimensions.dotContainerSize,
       child: BlocBuilder<ThemeBloc, Brightness>(
         builder: (context, state) {
-          return SizedBox.square(
-            dimension: Dimensions.dotContainerSize,
-            child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 250),
-              reverseDuration: const Duration(milliseconds: 250),
-              switchInCurve: SharedCurves.bounceAnimation,
-              switchOutCurve: Curves.fastEaseInToSlowEaseOut,
-              transitionBuilder: (child, animation) => ScaleTransition(
-                scale: animation,
-                child: child,
-              ),
-              child: isActive ? DefaultDot(
-                key: ObjectKey(widget.date?.toIso8601String() ?? ''),
-                color: Theme.of(context).colorScheme.onPrimary,
-                size: _dotSize,
-              ) : dot,
-            ),
+          return ListenableBuilder(
+            listenable: controller,
+            builder: (context, _) {
+              return AnimatedSwitcher(
+                duration: const Duration(milliseconds: 250),
+                reverseDuration: const Duration(milliseconds: 250),
+                switchInCurve: SharedCurves.bounceAnimation,
+                switchOutCurve: Curves.fastEaseInToSlowEaseOut,
+                transitionBuilder: (child, animation) =>
+                        ScaleTransition(scale: animation, child: child),
+                child: isActive
+                        ? DefaultDot(
+                          key: ObjectKey(widget.date?.toIso8601String() ?? ''),
+                          color: Theme.of(context).colorScheme.onPrimary,
+                          size: _dotSize,
+                        ) : dot,
+              );
+            },
           );
         },
       ),
@@ -76,9 +73,8 @@ class IllustratedDotState extends DotState<DotedDot> {
     if (isActive) {
       return;
     }
-    isActive = !isActive;
+    controller.setActive(true);
     widget.onEnable?.call();
-    setState(() {});
   }
 
   @override
@@ -86,9 +82,9 @@ class IllustratedDotState extends DotState<DotedDot> {
     if (!isActive || (shouldDisableActive && widget.isActive)) {
       return;
     }
-    isActive = false;
+    controller.setActive(false);
     widget.onDisable?.call();
-    setState(() {});
   }
+
 
 }
