@@ -2,6 +2,7 @@ import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/core/utils/datetime_utils.dart';
 import 'package:days/features/home/presentation/widgets/tooltip/tooltip_controller.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,12 +17,13 @@ class Tooltip extends StatelessWidget {
       builder: (context, value, child) {
 
         final content = DateTimeUtils.format(value.content);
+        final position = value.position - getPositionCompensation();
 
         return AnimatedPositioned(
           duration: const Duration(milliseconds: 50),
           curve: Curves.linear,
-          left: value.position.dx,
-          top: value.position.dy,
+          left: position.dx,
+          top: position.dy,
           child: IgnorePointer(
             child: AnimatedOpacity(
               duration: const Duration(milliseconds: 200),
@@ -60,4 +62,14 @@ class Tooltip extends StatelessWidget {
       },
     );
   }
+
+
+  Offset getPositionCompensation() {
+    switch (defaultTargetPlatform) {
+      case TargetPlatform.iOS:
+      case TargetPlatform.android: return const Offset(40, 110);
+      default: return const Offset(40, 45);
+    }
+  }
+
 }
