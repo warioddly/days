@@ -1,5 +1,6 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/services/locator_service.dart';
+import 'package:days/core/utils/home_widget.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/controlbar.dart';
@@ -20,7 +21,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   final settingsBloc = getIt<SettingsBloc>();
   final dotsManagerBloc = getIt<DotsManagerBloc>();
   final orbitTooltip = TooltipController();
@@ -29,6 +29,9 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     settingsBloc.add(GetSettings());
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      updateHomeScreenWidget();
+    });
   }
 
   @override
@@ -37,15 +40,12 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: MultiBlocProvider(
           providers: [
-            BlocProvider(
-              create: (context) => settingsBloc,
-            ),
-            BlocProvider(
-              create: (context) => dotsManagerBloc,
-            ),
-            ChangeNotifierProvider(
-              create: (context) => orbitTooltip,
-            ),
+            BlocProvider(create: (context) => settingsBloc),
+            BlocProvider(create: (context) => dotsManagerBloc),
+            ChangeNotifierProvider(create: (context) => orbitTooltip),
+            BlocProvider(create: (context) => settingsBloc),
+            BlocProvider(create: (context) => dotsManagerBloc),
+            ChangeNotifierProvider(create: (context) => orbitTooltip),
           ],
           child: Stack(
             children: [
@@ -83,5 +83,4 @@ class _HomePageState extends State<HomePage> {
     orbitTooltip.dispose();
     super.dispose();
   }
-
 }
