@@ -3,7 +3,7 @@ import 'package:days/core/services/locator_service.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/features/home/presentation/widgets/controlbar/controlbar.dart';
-import 'package:days/features/home/presentation/widgets/controlbar/grid_type_status_bar.dart';
+import 'package:days/features/home/presentation/widgets/controlbar/days_left_status.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body.dart';
 import 'package:days/features/home/presentation/widgets/footer/footer.dart';
 import 'package:days/features/home/presentation/widgets/tooltip/tooltip.dart';
@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: const Column(
                       children: [
-                        GridTypeStatusBar(),
+                        DaysLeftStatus(),
                         Spacer(),
                         DotGridBody(),
                         Spacer(),
