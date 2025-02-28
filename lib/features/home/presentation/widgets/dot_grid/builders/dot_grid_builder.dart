@@ -3,6 +3,7 @@ import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_b
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body_builder.dart' show DotGridBodyBuilder;
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
 import 'package:days/features/home/presentation/widgets/tooltip/tooltip_controller.dart';
+import 'package:days/shared/package/haptic_feedback/haptic_feedback.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,6 +22,8 @@ abstract class DotGridBuilder extends StatefulWidget {
 abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
 
   final framer = Framer();
+
+  final haptic = HapticFeedback();
 
   late final tooltip = context.read<TooltipController>();
 
@@ -56,10 +59,12 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
   }
 
   void onDotEnable() {
+    haptic.soft();
     dotManagerBloc.add(DotsManagerActiveDotsIncrementEvent());
   }
 
   void onDotDisable() {
+    haptic.soft();
     dotManagerBloc.add(DotsManagerActiveDotsDecrementEvent());
   }
 
