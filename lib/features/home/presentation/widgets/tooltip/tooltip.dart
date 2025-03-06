@@ -17,7 +17,7 @@ class Tooltip extends StatelessWidget {
       builder: (context, value, child) {
 
         final content = DateTimeUtils.format(value.content);
-        final position = value.position - getPositionCompensation();
+        final position = value.position - getPositionCompensation(context);
 
         return AnimatedPositioned(
           duration: const Duration(milliseconds: 50),
@@ -64,7 +64,12 @@ class Tooltip extends StatelessWidget {
   }
 
 
-  Offset getPositionCompensation() {
+  Offset getPositionCompensation(BuildContext context) {
+
+    if (kIsWeb && MediaQuery.sizeOf(context).width < 600) {
+        return const Offset(40, 55);
+    }
+
     switch (defaultTargetPlatform) {
       case TargetPlatform.iOS:
       case TargetPlatform.android: return const Offset(40, 110);
