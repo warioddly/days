@@ -1,5 +1,5 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
+import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
 import 'package:days/shared/ui/animation/utils/curves.dart';

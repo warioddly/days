@@ -1,3 +1,4 @@
+import 'package:days/core/configs/localizations.dart' show l10n;
 import 'package:days/core/constants/app_constants.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
@@ -35,10 +36,7 @@ class AboutAppInformation extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "hey there!\n\ni created 'days' as a daily reminder that life is "
-                      'too short to spend doing things I am not excited about this.'
-                      "\n\ni hope every time you look at this app you're reminded"
-                      '\n\nevery day metters\n\nlove,',
+                  l10n.about_app,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: isLightTheme ? Colors.black : Colors.white,

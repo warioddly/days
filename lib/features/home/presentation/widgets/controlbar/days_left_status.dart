@@ -1,3 +1,4 @@
+import 'package:days/core/configs/localizations.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
@@ -39,9 +40,9 @@ class DaysLeftStatus extends StatelessWidget {
               var title = '';
 
               if (gridType == GridType.illustrated) {
-                title = 'more days of growth';
+                title = l10n.more_days_of_growth;
               } else {
-                title = 'days left in the year';
+                title = l10n.days_left_in_the_year;
               }
 
               return Text(

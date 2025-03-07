@@ -1,3 +1,4 @@
+import 'package:days/core/configs/localizations.dart' show l10n;
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';
@@ -19,12 +20,12 @@ class Footer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         spacing: Dimensions.small,
         children: [
-          text(context, 'SETTINGS', () => _onSettingsTap(context)),
+          text(context, l10n.settings, () => _onSettingsTap(context)),
           DefaultDot(
             size: Dimensions.dotSeparatorSize,
             color: Theme.of(context).colorScheme.onPrimary,
           ),
-          text(context, 'ABOUT', () => _onAboutTap(context)),
+          text(context, l10n.about, () => _onAboutTap(context)),
         ],
       ),
     );

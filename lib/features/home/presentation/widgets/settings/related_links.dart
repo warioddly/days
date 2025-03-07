@@ -1,3 +1,4 @@
+import 'package:days/core/configs/localizations.dart';
 import 'package:days/core/constants/app_constants.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
@@ -16,7 +17,7 @@ class RelatedLinks extends StatelessWidget {
         GestureDetector(
           onTap: () => launchUrlString(AppConstants.sourceCodeUrl),
           child: Text(
-            'GITHUB',
+            l10n.github,
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ),
@@ -27,7 +28,7 @@ class RelatedLinks extends StatelessWidget {
         GestureDetector(
           onTap: () => launchUrlString(AppConstants.privacyUrl),
           child: Text(
-            'PRIVACY',
+            l10n.privacy,
             style: Theme.of(context).textTheme.bodySmall
           ),
         ),

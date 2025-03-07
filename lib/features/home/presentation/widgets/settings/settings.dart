@@ -1,6 +1,6 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
-import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
+import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/features/home/presentation/widgets/settings/related_links.dart';
 import 'package:days/shared/ui/widgets/sliding_segment_control.dart';
 import 'package:flutter/cupertino.dart';
