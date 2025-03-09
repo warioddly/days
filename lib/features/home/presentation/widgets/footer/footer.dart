@@ -44,11 +44,18 @@ class Footer extends StatelessWidget {
   }
 
   void _onSettingsTap(BuildContext context) {
-    showModalBottomSheet<void>(
+    showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      useSafeArea: true,
       barrierColor: Colors.transparent,
-      builder: (_) => const AppSettings() ,
+      builder: (_) => DraggableScrollableSheet(
+        initialChildSize: 0.3,
+        minChildSize: 0.3,
+        maxChildSize: 1,
+        expand: false,
+        builder: (_, _) => const AppSettings(),
+      )
     );
   }
 
