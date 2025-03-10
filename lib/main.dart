@@ -1,15 +1,14 @@
-import 'package:days/core/configs/localizations.dart';
 import 'package:days/core/configs/routes.dart';
 import 'package:days/core/services/locator_service.dart';
 import 'package:days/core/theme/theme.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/features/app/presentation/page/main_wrapper.dart';
+import 'package:days/features/l10n/_locale.dart' show l10n;
+import 'package:days/features/l10n/generated/day_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,20 +40,15 @@ class MyApp extends StatelessWidget {
             child: MaterialApp.router(
               title: l10n.app_name,
               restorationScopeId: 'app',
-              theme: AppTheme.getTheme(context, theme),
               debugShowCheckedModeBanner: false,
+              theme: AppTheme.getTheme(context, theme),
               scrollBehavior: const CupertinoScrollBehavior(),
+              backButtonDispatcher: RootBackButtonDispatcher(),
               routerDelegate: AppRouter.router.routerDelegate,
               routeInformationParser: AppRouter.router.routeInformationParser,
               routeInformationProvider: AppRouter.router.routeInformationProvider,
-              backButtonDispatcher: RootBackButtonDispatcher(),
-              localizationsDelegates: const [
-                AppLocalizations.delegate, // Add this line
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              supportedLocales: supportedLocales,
+              localizationsDelegates: DayLocalizations.localizationsDelegates,
+              supportedLocales: DayLocalizations.supportedLocales,
             ),
           );
         },

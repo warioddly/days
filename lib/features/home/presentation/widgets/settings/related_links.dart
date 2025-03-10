@@ -1,7 +1,7 @@
-import 'package:days/core/configs/localizations.dart';
 import 'package:days/core/constants/app_constants.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
+import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 

@@ -1,9 +1,9 @@
-import 'package:days/core/configs/localizations.dart' show l10n;
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/settings/settings.dart';
+import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
