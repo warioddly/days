@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final getIt = GetIt.instance;
 
-Future<void> initDependencyInjection() async {
+Future<void> setupDependencyInjection() async {
 
   final sharedPreferences = await SharedPreferences.getInstance();
 

@@ -18,7 +18,7 @@ void main() async {
     DeviceOrientation.portraitDown
   ]);
 
-  await initDependencyInjection();
+  await setupDependencyInjection();
 
   runApp(const MyApp());
 }
