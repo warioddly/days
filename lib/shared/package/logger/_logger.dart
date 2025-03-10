@@ -21,7 +21,7 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.d(message);
+    _logger.d(message, time: time, error: error, stackTrace: stackTrace);
   }
 
   static void e(
@@ -30,7 +30,7 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.e(message);
+    _logger.e(message, time: time, error: error, stackTrace: stackTrace);
   }
 
   static void i(
@@ -39,7 +39,7 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.i(message);
+    _logger.i(message, time: time, error: error, stackTrace: stackTrace);
   }
 
   static void t(
@@ -48,7 +48,7 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.t(message);
+    _logger.t(message, time: time, error: error, stackTrace: stackTrace);
   }
 
   static void w(
@@ -57,7 +57,7 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.w(message);
+    _logger.w(message, time: time, error: error, stackTrace: stackTrace);
   }
 
   static void log(
@@ -67,7 +67,7 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.log(level, message);
+    _logger.log(level, message, time: time, error: error, stackTrace: stackTrace);
   }
 
 }
