@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:days/core/configs/routes.dart';
+import 'package:days/core/services/router.dart';
 import 'package:days/core/services/locator_service.dart';
 import 'package:days/core/theme/theme.dart';
 import 'package:days/features/app/presentation/bloc/theme_bloc.dart';
