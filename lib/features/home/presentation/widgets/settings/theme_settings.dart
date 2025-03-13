@@ -21,7 +21,7 @@ class ThemeSettings extends StatelessWidget {
           },
           children: const {
             Brightness.light: Padding(
-              padding: EdgeInsets.all(Dimensions.small),
+              padding: EdgeInsets.all(Dimensions.half),
               child: Icon(CupertinoIcons.sun_max_fill),
             ),
             Brightness.dark: Icon(CupertinoIcons.moon_stars_fill),

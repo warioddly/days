@@ -10,21 +10,23 @@ class AppSettings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: Dimensions.maxViewWidthSize),
-      child: Scaffold(
-        body: Padding(
-          padding: Dimensions.normal.padding,
-          child: const Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                spacing: Dimensions.normal,
-                children: [LocalizationSettings(), ThemeSettings()],
-              ),
-              RelatedLinks(),
-            ],
+    return SafeArea(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: Dimensions.maxViewWidthSize),
+        child: Scaffold(
+          body: Padding(
+            padding: Dimensions.normal.padding,
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  spacing: Dimensions.normal,
+                  children: [LocalizationSettings(), ThemeSettings()],
+                ),
+                RelatedLinks(),
+              ],
+            ),
           ),
         ),
       ),

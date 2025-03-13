@@ -32,7 +32,7 @@ class DaysLeftStatus extends StatelessWidget {
               );
             },
           ),
-          Dimensions.small.verticalBox,
+          Dimensions.half.verticalBox,
           BlocBuilder<SettingsBloc, SettingsModelState>(
             builder: (context, state) {
 

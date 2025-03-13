@@ -1,6 +1,12 @@
 part of 'locale_bloc.dart';
 
-@immutable
-sealed class LocaleState {}
+final class LocaleState {
+  final Locale locale;
 
-final class LocaleInitial extends LocaleState {}
+  LocaleState({
+    required this.locale,
+  });
+
+  LocaleState.initial() : locale = const Locale('en', 'US');
+
+}

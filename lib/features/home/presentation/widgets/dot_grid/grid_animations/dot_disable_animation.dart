@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 final class DotDisableAnimation extends DotAnimation {
   DotDisableAnimation({
     required super.keys,
-    required super.position,
+    super.position = Offset.zero,
     super.onComplete,
     super.onOverlapping,
   });

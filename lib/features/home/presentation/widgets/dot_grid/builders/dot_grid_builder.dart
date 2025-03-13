@@ -2,7 +2,7 @@ import 'package:days/core/utils/frame_rate_utils.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body_builder.dart' show DotGridBodyBuilder;
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
-import 'package:days/features/home/presentation/widgets/tooltip/tooltip_controller.dart';
+import 'package:days/features/home/presentation/widgets/tooltip/tooltip.dart' show TooltipOverlay;
 import 'package:days/shared/package/haptic_feedback/haptic_feedback.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,13 +22,10 @@ abstract class DotGridBuilder extends StatefulWidget {
 abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
 
   final framer = Framer();
-
   final haptic = HapticFeedback();
-
-  late final tooltip = context.read<TooltipController>();
+  final tooltip = TooltipOverlay();
 
   late final dotKeyManager  = context.read<DotKeyManager>();
-
   late final dotManagerBloc = context.read<DotsManagerBloc>();
 
   List<GlobalKey<DotState>> get keys => dotKeyManager.keys;
@@ -69,13 +66,18 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
   }
 
   void onOverlapping(GlobalKey<DotState> key, Offset position) {
-    if (key.currentState == null || key.currentState!.widget.date == null) {
+    final date = key.currentState?.widget.date;
+    if (date == null) {
       return;
     }
-    tooltip
-      ..show()
-      ..setContent(key.currentState!.widget.date!)
-      ..setPosition(position);
+    tooltip.update(context, position, date);
+  }
+
+  @mustCallSuper
+  @override
+  void dispose() {
+    tooltip.dispose();
+    super.dispose();
   }
 
 }

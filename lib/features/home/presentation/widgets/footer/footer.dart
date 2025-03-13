@@ -18,7 +18,7 @@ class Footer extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        spacing: Dimensions.small,
+        spacing: Dimensions.half,
         children: [
           text(context, l10n.settings, () => _onSettingsTap(context)),
           DefaultDot(
@@ -36,7 +36,7 @@ class Footer extends StatelessWidget {
       onTap: onTap,
       child: Text(
         text,
-        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
           color: Theme.of(context).colorScheme.onPrimary,
         )
       ),

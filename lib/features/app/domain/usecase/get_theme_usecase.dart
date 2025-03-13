@@ -10,11 +10,7 @@ class GetThemeUseCase extends UseCase<void, Brightness> {
 
   @override
   Future<Brightness> call(void params) async {
-    return switch(await repository.getTheme()) {
-      'light' => Brightness.light,
-      'dark' => Brightness.dark,
-      _ => Brightness.light,
-    };
+    return repository.getTheme();
   }
 
 }

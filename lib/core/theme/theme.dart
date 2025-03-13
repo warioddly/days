@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
 
-  static ThemeData getTheme(BuildContext context, Brightness brightness) {
+  static ThemeData resolve(Brightness brightness) {
     return brightness == Brightness.light ? lightTheme() : darkTheme();
   }
 

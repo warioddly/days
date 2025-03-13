@@ -4,9 +4,18 @@ import 'day_localizations.dart';
 
 // ignore_for_file: type=lint
 
-/// The translations for Kongo (`kg`).
-class DayLocalizationsKg extends DayLocalizations {
-  DayLocalizationsKg([String locale = 'kg']) : super(locale);
+/// The translations for Kirghiz Kyrgyz (`ky`).
+class DayLocalizationsKy extends DayLocalizations {
+  DayLocalizationsKy([String locale = 'ky']) : super(locale);
+
+  @override
+  String get en => 'English';
+
+  @override
+  String get ky => 'Кыргызча';
+
+  @override
+  String get ru => 'Русский';
 
   @override
   String get app_name => 'Days';

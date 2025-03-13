@@ -30,7 +30,7 @@ class ControlBar extends StatelessWidget {
               },
               children: const {
                 GridType.illustrated: Padding(
-                  padding: EdgeInsets.all(Dimensions.small),
+                  padding: EdgeInsets.all(Dimensions.half),
                   child: Icon(
                     CupertinoIcons.circle_grid_hex,
                   ),

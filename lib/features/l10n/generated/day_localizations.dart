@@ -6,7 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'day_localizations_en.dart';
-import 'day_localizations_kg.dart';
+import 'day_localizations_ky.dart';
 import 'day_localizations_ru.dart';
 
 // ignore_for_file: type=lint
@@ -93,9 +93,27 @@ abstract class DayLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('kg'),
+    Locale('ky'),
     Locale('ru')
   ];
+
+  /// No description provided for @en.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get en;
+
+  /// No description provided for @ky.
+  ///
+  /// In en, this message translates to:
+  /// **'Кыргызча'**
+  String get ky;
+
+  /// No description provided for @ru.
+  ///
+  /// In en, this message translates to:
+  /// **'Русский'**
+  String get ru;
 
   /// No description provided for @app_name.
   ///
@@ -155,7 +173,7 @@ class _DayLocalizationsDelegate extends LocalizationsDelegate<DayLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'kg', 'ru'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'ky', 'ru'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_DayLocalizationsDelegate old) => false;
@@ -167,7 +185,7 @@ DayLocalizations lookupDayLocalizations(Locale locale) {
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
     case 'en': return DayLocalizationsEn();
-    case 'kg': return DayLocalizationsKg();
+    case 'ky': return DayLocalizationsKy();
     case 'ru': return DayLocalizationsRu();
   }
 

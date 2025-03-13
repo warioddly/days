@@ -1,11 +1,10 @@
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
-import 'package:days/features/home/presentation/widgets/dot_grid/builders/doted_grid_builder.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/builders/dot_grid_builder.dart';
+import 'package:days/features/home/presentation/widgets/dot_grid/builders/doted_grid_builder.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/builders/illustrated_grid_builder.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_disable_animation.dart';
-import 'package:days/features/home/presentation/widgets/tooltip/tooltip_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -20,22 +19,16 @@ class DotGridBody extends StatefulWidget {
 }
 
 class _DotGridBodyState extends State<DotGridBody> {
-
   final dotKeyManager = DotKeyManager();
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocListener(
       listeners: [
-
         BlocListener<DotsManagerBloc, DotsManagerModelState>(
           listener: _dotsManagerListener,
         ),
-
-        ChangeNotifierProvider(
-          create: (_) => dotKeyManager,
-        ),
-
+        ChangeNotifierProvider(create: (_) => dotKeyManager),
       ],
       child: BlocConsumer<SettingsBloc, SettingsModelState>(
         listener: _settingsListener,
@@ -44,7 +37,7 @@ class _DotGridBodyState extends State<DotGridBody> {
 
           if (eventState is SettingsLoaded) {
             return RepaintBoundary(
-              child: switch(state.entity.gridType) {
+              child: switch (state.entity.gridType) {
                 GridType.doted => const DotedGridBuilder(),
                 GridType.illustrated => const IllustratedGridBuilder(),
               },
@@ -52,9 +45,7 @@ class _DotGridBodyState extends State<DotGridBody> {
           }
 
           if (eventState is SettingsLoading) {
-            return const Center(
-              child: CupertinoActivityIndicator(),
-            );
+            return const Center(child: CupertinoActivityIndicator());
           }
 
           return const SizedBox();
@@ -67,8 +58,7 @@ class _DotGridBodyState extends State<DotGridBody> {
     final eventState = state.state;
 
     if (eventState is DotsManagerUserOutsideClicked) {
-      DotDisableAnimation(keys: dotKeyManager.keys, position: Offset.zero);
-      context.read<TooltipController>().hide();
+      DotDisableAnimation(keys: dotKeyManager.keys);
     }
   }
 
@@ -77,11 +67,9 @@ class _DotGridBodyState extends State<DotGridBody> {
 
     if (eventState is SettingsLoading) {
       dotKeyManager.clear();
-      context.read<TooltipController>().hide();
       context.read<DotsManagerBloc>().add(
         DotsManagerActiveDotsCountResetEvent(),
       );
     }
   }
-
 }
