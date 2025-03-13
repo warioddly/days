@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:days/shared/package/logger/_logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DbService {
@@ -8,6 +9,7 @@ class DbService {
   DbService(this._preferences);
 
   void set(String key, dynamic value) {
+    Logger.d('[DbService] set: $key');
     if (value is String) {
       _preferences.setString(key, value);
     } else if (value is int) {
@@ -28,14 +30,17 @@ class DbService {
   }
 
   dynamic get(String key) {
+    Logger.d('[DbService] get: $key');
     return _preferences.get(key);
   }
 
   void remove(String key) {
+    Logger.d('[DbService] remove: $key');
     _preferences.remove(key);
   }
 
   void clear() {
+    Logger.d('[DbService] clear');
     _preferences.clear();
   }
 }
