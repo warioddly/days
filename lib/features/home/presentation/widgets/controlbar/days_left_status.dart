@@ -1,9 +1,9 @@
-import 'package:days/core/configs/localizations.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
+import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:days/shared/package/animated_flip_counter/animated_flip_counter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +32,7 @@ class DaysLeftStatus extends StatelessWidget {
               );
             },
           ),
-          Dimensions.small.verticalBox,
+          Dimensions.half.verticalBox,
           BlocBuilder<SettingsBloc, SettingsModelState>(
             builder: (context, state) {
 

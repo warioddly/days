@@ -6,11 +6,8 @@ import 'package:days/features/home/presentation/widgets/controlbar/controlbar.da
 import 'package:days/features/home/presentation/widgets/controlbar/days_left_status.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body.dart';
 import 'package:days/features/home/presentation/widgets/footer/footer.dart';
-import 'package:days/features/home/presentation/widgets/tooltip/tooltip.dart';
-import 'package:days/features/home/presentation/widgets/tooltip/tooltip_controller.dart';
 import 'package:flutter/material.dart' hide Tooltip;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,7 +20,6 @@ class _HomePageState extends State<HomePage> {
 
   final settingsBloc = getIt<SettingsBloc>();
   final dotsManagerBloc = getIt<DotsManagerBloc>();
-  final orbitTooltip = TooltipController();
 
   @override
   void initState() {
@@ -43,33 +39,23 @@ class _HomePageState extends State<HomePage> {
             BlocProvider(
               create: (context) => dotsManagerBloc,
             ),
-            ChangeNotifierProvider(
-              create: (context) => orbitTooltip,
-            ),
           ],
-          child: Stack(
-            children: [
-              Positioned.fill(
-                child: Center(
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(
-                      maxWidth: Dimensions.maxViewWidthSize,
-                    ),
-                    child: const Column(
-                      children: [
-                        DaysLeftStatus(),
-                        Spacer(),
-                        DotGridBody(),
-                        Spacer(),
-                        ControlBar(),
-                        Footer(),
-                      ],
-                    ),
-                  ),
-                ),
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                maxWidth: Dimensions.maxViewWidthSize,
               ),
-              const Tooltip(),
-            ],
+              child: const Column(
+                children: [
+                  DaysLeftStatus(),
+                  Spacer(),
+                  DotGridBody(),
+                  Spacer(),
+                  ControlBar(),
+                  Footer(),
+                ],
+              ),
+            ),
           ),
         ),
       ),
@@ -80,7 +66,6 @@ class _HomePageState extends State<HomePage> {
   void dispose() {
     settingsBloc.close();
     dotsManagerBloc.close();
-    orbitTooltip.dispose();
     super.dispose();
   }
 

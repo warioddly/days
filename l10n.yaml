@@ -1,3 +1,6 @@
-arb-dir: lib/features/l10n/
 template-arb-file: en.arb
-output-localization-file: app_localizations.dart
+synthetic-package: false
+arb-dir: lib/features/l10n/localizations/
+output-dir: lib/features/l10n/generated/
+output-localization-file: day_localizations.dart
+output-class: DayLocalizations

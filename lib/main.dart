@@ -1,25 +1,47 @@
-import 'package:days/core/configs/localizations.dart';
-import 'package:days/core/configs/routes.dart';
+import 'dart:async';
+
 import 'package:days/core/services/locator_service.dart';
-import 'package:days/core/theme/theme.dart';
+import 'package:days/features/app/presentation/bloc/locale/locale_bloc.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/features/app/presentation/page/main_wrapper.dart';
+import 'package:days/shared/package/logger/_logger.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart' show PlatformDispatcher, kDebugMode, kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() async {
+void main() {
+
+  Logger.i('Days started');
+
+  if (kDebugMode) {
+    Logger.w('Debug mode');
+    runner();
+    return;
+  }
+
+  runZonedGuarded(
+    runner,
+    (error, stackTrace) {
+      Logger.e(error, stackTrace: stackTrace);
+    },
+  );
+
+}
+
+void runner() async {
+
   WidgetsFlutterBinding.ensureInitialized();
 
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown
-  ]);
+  if (!kIsWeb) {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
-  await initDependencyInjection();
+  await setupDependencyInjection();
 
   runApp(const MyApp());
 }
@@ -29,36 +51,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final systemLocale = PlatformDispatcher.instance.locale;
     return MultiBlocProvider(
       providers: [
-
-        BlocProvider(create: (_) => getIt<ThemeBloc>()..add(GetTheme()))
-
+        BlocProvider(create: (_) => getIt<ThemeBloc>()..add(GetTheme())),
+        BlocProvider(create: (_) => getIt<LocaleBloc>()..add(LocaleSetInitialEvent(systemLocale))),
       ],
-      child: BlocBuilder<ThemeBloc, Brightness>(
-        builder: (context, theme) {
-          return MainWrapper(
-            child: MaterialApp.router(
-              title: l10n.app_name,
-              restorationScopeId: 'app',
-              theme: AppTheme.getTheme(context, theme),
-              debugShowCheckedModeBanner: false,
-              scrollBehavior: const CupertinoScrollBehavior(),
-              routerDelegate: AppRouter.router.routerDelegate,
-              routeInformationParser: AppRouter.router.routeInformationParser,
-              routeInformationProvider: AppRouter.router.routeInformationProvider,
-              backButtonDispatcher: RootBackButtonDispatcher(),
-              localizationsDelegates: const [
-                AppLocalizations.delegate, // Add this line
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              supportedLocales: supportedLocales,
-            ),
-          );
-        },
-      ),
+      child: const AppWrapper(),
     );
   }
 }

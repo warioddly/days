@@ -1,9 +1,9 @@
-import 'package:days/core/configs/localizations.dart' show l10n;
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/settings/settings.dart';
+import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class Footer extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        spacing: Dimensions.small,
+        spacing: Dimensions.half,
         children: [
           text(context, l10n.settings, () => _onSettingsTap(context)),
           DefaultDot(
@@ -36,7 +36,7 @@ class Footer extends StatelessWidget {
       onTap: onTap,
       child: Text(
         text,
-        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
           color: Theme.of(context).colorScheme.onPrimary,
         )
       ),
@@ -44,11 +44,18 @@ class Footer extends StatelessWidget {
   }
 
   void _onSettingsTap(BuildContext context) {
-    showModalBottomSheet<void>(
+    showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      useSafeArea: true,
       barrierColor: Colors.transparent,
-      builder: (_) => const AppSettings() ,
+      builder: (_) => DraggableScrollableSheet(
+        initialChildSize: 0.3,
+        minChildSize: 0.3,
+        maxChildSize: 1,
+        expand: false,
+        builder: (_, _) => const AppSettings(),
+      )
     );
   }
 

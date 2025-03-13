@@ -1,18 +1,23 @@
+import 'dart:ui';
 
+import 'package:days/core/services/router.dart';
+import 'package:days/core/theme/theme.dart' show AppTheme;
+import 'package:days/features/app/presentation/bloc/locale/locale_bloc.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
+import 'package:days/features/l10n/_locale.dart' show l10n;
+import 'package:days/features/l10n/generated/day_localizations.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class MainWrapper extends StatefulWidget {
-  const MainWrapper({required this.child, super.key});
-
-  final Widget child;
+class AppWrapper extends StatefulWidget {
+  const AppWrapper({super.key});
 
   @override
-  State<MainWrapper> createState() => _MainWrapperState();
+  State<AppWrapper> createState() => _AppWrapperState();
 }
 
-class _MainWrapperState extends State<MainWrapper> with WidgetsBindingObserver {
+class _AppWrapperState extends State<AppWrapper> with WidgetsBindingObserver {
 
   @override
   void initState() {
@@ -23,16 +28,36 @@ class _MainWrapperState extends State<MainWrapper> with WidgetsBindingObserver {
   @override
   void didChangePlatformBrightness() {
     super.didChangePlatformBrightness();
-    // ignore: deprecated_member_use
-    var brightness = WidgetsBinding.instance.window.platformBrightness;
+    final brightness = PlatformDispatcher.instance.platformBrightness;
     context.read<ThemeBloc>().add(SetTheme(brightness));
   }
 
   @override
   Widget build(BuildContext context) {
-    return widget.child;
+    return BlocBuilder<ThemeBloc, Brightness>(
+      builder: (context, theme) {
+        return BlocBuilder<LocaleBloc, LocaleState>(
+          builder: (context, locale) {
+            l10n = lookupDayLocalizations(locale.locale);
+            return MaterialApp.router(
+              title: l10n.app_name,
+              restorationScopeId: 'app',
+              debugShowCheckedModeBanner: false,
+              theme: AppTheme.resolve(theme),
+              locale: locale.locale,
+              scrollBehavior: const CupertinoScrollBehavior(),
+              backButtonDispatcher: RootBackButtonDispatcher(),
+              routerDelegate: AppRouter.router.routerDelegate,
+              routeInformationParser: AppRouter.router.routeInformationParser,
+              routeInformationProvider: AppRouter.router.routeInformationProvider,
+              localizationsDelegates: DayLocalizations.localizationsDelegates,
+              supportedLocales: DayLocalizations.supportedLocales,
+            );
+          },
+        );
+      },
+    );
   }
-
 
   @override
   void dispose() {

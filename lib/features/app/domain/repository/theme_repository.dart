@@ -1,8 +1,7 @@
 
+import 'dart:ui';
+
 abstract class ThemeRepository {
-
   void setTheme(String theme);
-
-  Future<String?> getTheme();
-
+  Future<Brightness> getTheme();
 }
