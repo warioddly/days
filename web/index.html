@@ -32,12 +32,21 @@
   <title>days</title>
   <link rel="manifest" href="manifest.json">
   <style>
-    body {
-        padding-bottom: env(safe-area-inset-bottom);
+    html {
+      height: 100vh;
+      width: 100vw;
     }
   </style>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+  <script>
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      get: () => window.innerHeight,
+    });
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      get: () => window.innerWidth,
+    });
+  </script>
 </body>
 </html>
