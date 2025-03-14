@@ -9,15 +9,6 @@ class DayLocalizationsEn extends DayLocalizations {
   DayLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get en => 'English';
-
-  @override
-  String get ky => 'Кыргызча';
-
-  @override
-  String get ru => 'Русский';
-
-  @override
   String get app_name => 'Days';
 
   @override

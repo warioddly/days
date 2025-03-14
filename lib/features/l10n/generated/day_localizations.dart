@@ -97,24 +97,6 @@ abstract class DayLocalizations {
     Locale('ru')
   ];
 
-  /// No description provided for @en.
-  ///
-  /// In en, this message translates to:
-  /// **'English'**
-  String get en;
-
-  /// No description provided for @ky.
-  ///
-  /// In en, this message translates to:
-  /// **'Кыргызча'**
-  String get ky;
-
-  /// No description provided for @ru.
-  ///
-  /// In en, this message translates to:
-  /// **'Русский'**
-  String get ru;
-
   /// No description provided for @app_name.
   ///
   /// In en, this message translates to:
