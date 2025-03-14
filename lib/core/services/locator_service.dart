@@ -1,6 +1,6 @@
 import 'package:days/core/interfaces/locator_module_interface.dart';
 import 'package:days/core/services/db_service.dart';
-import 'package:days/features/app/presentation/di.dart';
+import 'package:days/features/app/di.dart';
 import 'package:days/features/home/di.dart';
 import 'package:days/shared/package/logger/_logger.dart' show Logger;
 import 'package:get_it/get_it.dart';
