@@ -1,4 +1,4 @@
-.PHONY: help run profile release build build_release build_ios build_ios_simulator reset reset_ios gen_locale r p rl b br bi bis rs rsi gl
+.PHONY: help run profile release build build_release build_ios build_ios_simulator reset reset_ios gen_locale r p rl b br bi bis rs rsi gl d
 
 # Project setup
 run: ## Run the app
@@ -13,8 +13,11 @@ release: ## Run the app in release mode
 build: ## Build the app
 	@flutter build apk
 
-build_release: ## Build the app in release mode
+build_release_apk: ## Build the app in release mode
 	@flutter build apk --release
+
+build_release_aab: ## Build the app in aab format
+	@flutter build appbundle --release
 
 build_ios: ## Build the app for iOS
 	@flutter build ios
@@ -39,7 +42,8 @@ r: run ## Alias for run
 p: profile ## Alias for profile
 rl: release ## Alias for release
 b: build ## Alias for build
-br: build_release ## Alias for build_release
+bra: build_release_apk ## Alias for build_release
+brb: build_release_aab ## Alias for build_release_aab
 bi: build_ios ## Alias for build_ios
 bis: build_ios_simulator ## Alias for build_ios_simulator
 rs: reset ## Alias for reset
