@@ -1,3 +1,4 @@
+import 'package:days/core/constants/breakpoints.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
@@ -8,8 +9,6 @@ import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-
-typedef ItemBuilder = Widget Function(int index, DateTime date, DateTime now);
 
 class DotGridBody extends StatefulWidget {
   const DotGridBody({super.key});
@@ -25,31 +24,32 @@ class _DotGridBodyState extends State<DotGridBody> {
   Widget build(BuildContext context) {
     return MultiBlocListener(
       listeners: [
-        BlocListener<DotsManagerBloc, DotsManagerModelState>(
-          listener: _dotsManagerListener,
-        ),
-        ChangeNotifierProvider(create: (_) => dotKeyManager),
+        BlocListener<DotsManagerBloc, DotsManagerModelState>(listener: _dotsManagerListener),
+        ChangeNotifierProvider.value(value: dotKeyManager),
       ],
-      child: BlocConsumer<SettingsBloc, SettingsModelState>(
-        listener: _settingsListener,
-        builder: (context, state) {
-          final eventState = state.state;
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: Breakpoints.maxViewWidthSize),
+        child: BlocConsumer<SettingsBloc, SettingsState>(
+          listener: _settingsListener,
+          builder: (context, state) {
+            final eventState = state.state;
 
-          if (eventState is SettingsLoaded) {
-            return RepaintBoundary(
-              child: switch (state.entity.gridType) {
-                GridType.doted => const DotedGridBuilder(),
-                GridType.illustrated => const IllustratedGridBuilder(),
-              },
-            );
-          }
+            if (eventState is SettingsLoaded) {
+              return RepaintBoundary(
+                child: switch (state.entity.gridType) {
+                  GridType.doted => const DotedGridBuilder(),
+                  GridType.illustrated => const IllustratedGridBuilder(),
+                },
+              );
+            }
 
-          if (eventState is SettingsLoading) {
-            return const Center(child: CupertinoActivityIndicator());
-          }
+            if (eventState is SettingsLoading) {
+              return const Center(child: CupertinoActivityIndicator());
+            }
 
-          return const SizedBox();
-        },
+            return const SizedBox.shrink();
+          },
+        ),
       ),
     );
   }
@@ -62,10 +62,8 @@ class _DotGridBodyState extends State<DotGridBody> {
     }
   }
 
-  void _settingsListener(BuildContext context, SettingsModelState state) {
-    final eventState = state.state;
-
-    if (eventState is SettingsLoading) {
+  void _settingsListener(BuildContext context, SettingsState state) {
+    if (state.state is SettingsLoading) {
       dotKeyManager.clear();
       context.read<DotsManagerBloc>().add(
         DotsManagerActiveDotsCountResetEvent(),

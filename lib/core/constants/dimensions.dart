@@ -18,6 +18,5 @@ final class Dimensions {
   static const double dotSize = 3.0;
   static const double dotSeparatorSize = 6.0;
   static const double dotContainerSize = 20.0;
-  static const double maxViewWidthSize = 414.0;
 
 }

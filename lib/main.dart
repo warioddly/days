@@ -12,11 +12,10 @@ Future<void> runner() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-  if (!kIsWeb) {
-    await setupSystemUI();
-  }
-
-  await setupDependencyInjection();
+  await Future.wait([
+    if (!kIsWeb) setupSystemUI(),
+    setupDependencyInjection(),
+  ]);
 
   runApp(const MyApp());
 }

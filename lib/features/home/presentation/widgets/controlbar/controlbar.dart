@@ -11,9 +11,9 @@ class ControlBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: Insets.large,
+      padding: Insets.largeHorizontal,
       child: Center(
-        child: BlocBuilder<SettingsBloc, SettingsModelState>(
+        child: BlocBuilder<SettingsBloc, SettingsState>(
           builder: (context, state) {
             return SlidingSegmentControl<GridType>(
               groupValue: state.entity.gridType,

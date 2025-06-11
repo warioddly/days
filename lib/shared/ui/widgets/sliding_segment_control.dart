@@ -1,6 +1,6 @@
 import 'package:days/core/constants/dimensions.dart';
+import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class SlidingSegmentControl<T extends Object> extends StatelessWidget {
   const SlidingSegmentControl({
@@ -18,7 +18,7 @@ class SlidingSegmentControl<T extends Object> extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoSlidingSegmentedControl<T>(
       padding: Insets.quarter,
-      thumbColor: Theme.of(context).colorScheme.primary,
+      thumbColor: context.colorScheme.primary,
       groupValue: groupValue,
       onValueChanged: onValueChanged,
       children: children,

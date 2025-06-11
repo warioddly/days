@@ -40,7 +40,6 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
     );
   }
 
-  @mustCallSuper
   void onPanUpdate(Offset position);
 
   Widget itemBuilder(int index, DateTime date, DateTime now);
@@ -73,7 +72,6 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
     tooltip.update(context, position, date);
   }
 
-  @mustCallSuper
   @override
   void dispose() {
     tooltip.dispose();

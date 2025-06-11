@@ -1,8 +1,9 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';
-import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/settings/settings.dart';
 import 'package:days/features/l10n/_locale.dart' show l10n;
+import 'package:days/shared/ui/widgets/dot_separator.dart';
+import 'package:days/shared/ui/widgets/linked_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,31 +12,21 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: Insets.normal.copyWith(top: Dimensions.empty),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        spacing: Dimensions.half,
-        children: [
-          text(context, l10n.settings, () => _onSettingsTap(context)),
-          DefaultDot(
-            size: Dimensions.dotSeparatorSize,
-            color: Theme.of(context).colorScheme.onPrimary,
-          ),
-          text(context, l10n.about, () => _onAboutTap(context)),
-        ],
-      ),
-    );
-  }
-
-  Widget text(BuildContext context, String text, VoidCallback onTap) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Text(
-        text,
-        style: Theme.of(
-          context,
-        ).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+    return SafeArea(
+      child: Padding(
+        padding: Insets.normal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: Dimensions.half,
+          children: [
+            LinkedText(
+              title: l10n.settings,
+              onPressed: () => _onSettingsTap(context),
+            ),
+            const DotSeparator(),
+            LinkedText(title: l10n.about, onPressed: () => _onAboutTap(context)),
+          ],
+        ),
       ),
     );
   }
@@ -57,6 +48,9 @@ class Footer extends StatelessWidget {
   }
 
   void _onAboutTap(BuildContext context) {
-    showCupertinoSheet(context: context, pageBuilder: (_) => const AboutAppInformation());
+    showCupertinoSheet(
+      context: context,
+      pageBuilder: (_) => const AboutAppInformation(),
+    );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:days/core/constants/breakpoints.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/utils/datetime_utils.dart';
 import 'package:days/shared/package/grid_builder/grid_builder.dart';
@@ -14,7 +15,7 @@ class DotGridBodyBuilder extends StatelessWidget {
   });
 
   final DateTime now;
-  final Function(Offset) onPanUpdate;
+  final ValueChanged<Offset> onPanUpdate;
   final VoidCallback? onBuildComplete;
   final GridItemBuilder itemBuilder;
 
@@ -22,8 +23,8 @@ class DotGridBodyBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final mediaQuerySize = MediaQuery.sizeOf(context);
-    final viewSize = (mediaQuerySize.width > Dimensions.maxViewWidthSize
-        ? Dimensions.maxViewWidthSize
+    final viewSize = (mediaQuerySize.width > Breakpoints.maxViewWidthSize
+        ? Breakpoints.maxViewWidthSize
         : mediaQuerySize.width) -
         (Dimensions.doubledNormal * 2);
 

@@ -7,7 +7,6 @@ part 'dots_manager_event.dart';
 part 'dots_manager_state.dart';
 
 class DotsManagerBloc extends Bloc<DotsManagerEvent, DotsManagerModelState> {
-
   DotsManagerBloc() : super(DotsManagerModelState.initial()) {
     _setup();
   }
@@ -23,20 +22,16 @@ class DotsManagerBloc extends Bloc<DotsManagerEvent, DotsManagerModelState> {
   Timer? _resetHoverActivatedDotsTimer;
 
   void _onUserOutsideClick(
-      DotsManagerUserOutsideClickEvent event,
-      Emitter<DotsManagerModelState> emit,
+    DotsManagerUserOutsideClickEvent event,
+    Emitter<DotsManagerModelState> emit,
   ) {
-    emit(state.copyWith(
-      state: DotsManagerUserOutsideClicked(),
-    ));
+    emit(state.copyWith(state: DotsManagerUserOutsideClicked()));
   }
 
-
   void _onDeActiveHoveredDotsUpdateResetTimer(
-      DotsManagerUserHoveredEvent event,
-      Emitter<DotsManagerModelState> emit,
+    DotsManagerUserHoveredEvent event,
+    Emitter<DotsManagerModelState> emit,
   ) {
-
     if (_resetHoverActivatedDotsTimer != null) {
       _resetHoverActivatedDotsTimer!.cancel();
     }
@@ -47,37 +42,41 @@ class DotsManagerBloc extends Bloc<DotsManagerEvent, DotsManagerModelState> {
       ),
       () => add(DotsManagerUserOutsideClickEvent()),
     );
-
   }
 
   void _onActiveDotsIncrement(
-      DotsManagerActiveDotsIncrementEvent event,
-      Emitter<DotsManagerModelState> emit,
+    DotsManagerActiveDotsIncrementEvent event,
+    Emitter<DotsManagerModelState> emit,
   ) {
-    emit(state.copyWith(
-      state: DotsManagerActiveDotsIncrement(),
-      activeDotsCount: state.activeDotsCount + 1,
-    ));
+    emit(
+      state.copyWith(
+        state: DotsManagerActiveDotsIncrement(),
+        activeDotsCount: state.activeDotsCount + 1,
+      ),
+    );
   }
 
   void _onActiveDotsDecrement(
-      DotsManagerActiveDotsDecrementEvent event,
-      Emitter<DotsManagerModelState> emit,
+    DotsManagerActiveDotsDecrementEvent event,
+    Emitter<DotsManagerModelState> emit,
   ) {
-    emit(state.copyWith(
-      state: DotsManagerActiveDotsDecrement(),
-      activeDotsCount: state.activeDotsCount - 1,
-    ));
+    emit(
+      state.copyWith(
+        state: DotsManagerActiveDotsDecrement(),
+        activeDotsCount: state.activeDotsCount - 1,
+      ),
+    );
   }
 
   void _onActiveDotsCountReset(
-      DotsManagerActiveDotsCountResetEvent event,
-      Emitter<DotsManagerModelState> emit,
+    DotsManagerActiveDotsCountResetEvent event,
+    Emitter<DotsManagerModelState> emit,
   ) {
-    emit(state.copyWith(
-      state: DotsManagerActiveDotsCountReset(),
-      activeDotsCount: 0,
-    ));
+    emit(
+      state.copyWith(
+        state: DotsManagerActiveDotsCountReset(),
+        activeDotsCount: 0,
+      ),
+    );
   }
-
 }

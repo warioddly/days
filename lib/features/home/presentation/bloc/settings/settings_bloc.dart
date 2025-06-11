@@ -6,15 +6,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'settings_event.dart';
 part 'settings_state.dart';
 
-class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
-
+class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
   final SetSettingsUseCase setSettingsUseCase;
   final GetSettingsUseCase getSettingsUseCase;
 
   SettingsBloc({
     required this.setSettingsUseCase,
     required this.getSettingsUseCase,
-  }) : super(SettingsModelState.initial()) {
+  }) : super(SettingsState.initial()) {
     _setup();
   }
 
@@ -24,56 +23,33 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsModelState>  {
   }
 
   Future<void> getSettings(
-      GetSettings event,
-      Emitter<SettingsModelState> emit,
+    GetSettings event,
+    Emitter<SettingsState> emit,
   ) async {
-
     try {
-      emit(state.copyWith(
-        state: SettingsLoading(),
-      ));
+      emit(state.copyWith(state: SettingsLoading()));
 
       await Future.delayed(const Duration(milliseconds: 350));
       final entity = await getSettingsUseCase(null);
 
-      emit(state.copyWith(
-        entity: entity,
-        state: SettingsLoaded(),
-      ));
-
+      emit(state.copyWith(entity: entity, state: SettingsLoaded()));
     } catch (e) {
-      emit(state.copyWith(
-        state: SettingsError(e),
-      ));
+      emit(state.copyWith(state: SettingsError(e)));
     }
-
   }
 
   Future<void> setSettings(
-      SetSettings event,
-      Emitter<SettingsModelState> emit,
+    SetSettings event,
+    Emitter<SettingsState> emit,
   ) async {
-
     try {
-
-      emit(state.copyWith(
-        state: SettingsLoading(),
-      ));
-
+      emit(state.copyWith(state: SettingsLoading()));
       await setSettingsUseCase(event.entity);
-
-      emit(state.copyWith(
-        entity: event.entity,
-      ));
+      emit(state.copyWith(entity: event.entity));
 
       add(GetSettings());
-
     } catch (e) {
-      emit(state.copyWith(
-        state: SettingsError(e),
-      ));
+      emit(state.copyWith(state: SettingsError(e)));
     }
-
   }
-
 }

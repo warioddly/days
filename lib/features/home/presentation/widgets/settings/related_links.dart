@@ -1,7 +1,8 @@
 import 'package:days/core/constants/app_constants.dart';
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/l10n/_locale.dart' show l10n;
+import 'package:days/shared/ui/widgets/dot_separator.dart';
+import 'package:days/shared/ui/widgets/linked_text.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -14,23 +15,14 @@ class RelatedLinks extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       spacing: Dimensions.half,
       children: [
-        GestureDetector(
-          onTap: () => launchUrlString(AppConstants.sourceCodeUrl),
-          child: Text(
-            l10n.github,
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
+        LinkedText(
+          title: l10n.github,
+          onPressed: () => launchUrlString(AppConstants.sourceCodeUrl),
         ),
-        DefaultDot(
-          size: Dimensions.dotSeparatorSize,
-          color: Theme.of(context).colorScheme.onPrimary,
-        ),
-        GestureDetector(
-          onTap: () => launchUrlString(AppConstants.privacyUrl),
-          child: Text(
-            l10n.privacy,
-            style: Theme.of(context).textTheme.bodyMedium
-          ),
+        const DotSeparator(),
+        LinkedText(
+          title: l10n.privacy,
+          onPressed: () => launchUrlString(AppConstants.privacyUrl),
         ),
       ],
     );

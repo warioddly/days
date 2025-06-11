@@ -1,10 +1,10 @@
 import 'package:days/core/constants/dimensions.dart';
+import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
 import 'package:days/shared/ui/animation/utils/curves.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 const _dotSize = 5.0;
@@ -57,7 +57,7 @@ class IllustratedDotState extends DotState<DotedDot> {
                 child: isActive
                         ? DefaultDot(
                           key: ObjectKey(widget.date?.toIso8601String() ?? ''),
-                          color: Theme.of(context).colorScheme.onPrimary,
+                          color: context.colorScheme.onPrimary,
                           size: _dotSize,
                         ) : dot,
               );

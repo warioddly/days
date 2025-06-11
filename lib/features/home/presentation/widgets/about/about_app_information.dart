@@ -1,4 +1,5 @@
 import 'package:days/core/constants/app_constants.dart';
+import 'package:days/core/constants/breakpoints.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class AboutAppInformation extends StatelessWidget {
       body: Center(
         heightFactor: 1,
         child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: Dimensions.maxViewWidthSize),
+          constraints: const BoxConstraints(maxWidth: Breakpoints.maxViewWidthSize),
           child: Padding(
             padding: Insets.doubledNormal,
             child: Column(

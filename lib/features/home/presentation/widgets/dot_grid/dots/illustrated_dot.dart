@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:days/core/assets/illustration_assets.dart';
 import 'package:days/core/constants/dimensions.dart';
+import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
@@ -30,7 +31,6 @@ class IllustratedDotState extends DotState<IllustratedDot> {
 
   final image = IllustrationAssets.getRandomIllustration();
   late final padding = _randomPadding();
-  late final colorScheme = Theme.of(context).colorScheme;
 
   @override
   void initState() {
@@ -60,13 +60,13 @@ class IllustratedDotState extends DotState<IllustratedDot> {
                 ),
                 child: isActive ? Image.asset(
                   image,
-                  color: Theme.of(context).colorScheme.onPrimary,
+                  color: context.colorScheme.onPrimary,
                 ) : Padding(
                   key: UniqueKey(),
                   padding: padding,
                   child: DefaultDot(
                     size: 1.5,
-                    color: Theme.of(context).colorScheme.onPrimary,
+                    color: context.colorScheme.onPrimary,
                   ),
                 ),
               );
