@@ -1,7 +1,6 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/dimensions_extensions.dart';
-import 'package:days/core/theme/_text_theme.dart';
 import 'package:days/core/theme/_colors.dart';
+import 'package:days/core/theme/_text_theme.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -37,9 +36,9 @@ class AppTheme {
       ),
       scaffoldBackgroundColor: Colors.black,
       iconTheme: const IconThemeData(color: Colors.white),
-      bottomSheetTheme: BottomSheetThemeData(
+      bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: Colors.black,
-        shape: RoundedRectangleBorder(borderRadius: Dimensions.large.topBorder),
+        shape: RoundedRectangleBorder(borderRadius: Borders.largeTop),
       ),
     );
   }
@@ -69,9 +68,9 @@ class AppTheme {
         bodyMedium: textTheme.bodyMedium.copyWith(color: colors.onPrimary),
         labelLarge: textTheme.labelLarge.copyWith(color: colors.onPrimary),
       ),
-      bottomSheetTheme: BottomSheetThemeData(
+      bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: Dimensions.large.topBorder),
+        shape: RoundedRectangleBorder(borderRadius: Borders.largeTop),
       ),
     );
   }

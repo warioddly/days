@@ -4,7 +4,6 @@ final class Logger {
 
   Logger._();
 
-
   static final logger.Logger _logger = logger.Logger(
     printer: logger.PrettyPrinter(
       methodCount: 0,

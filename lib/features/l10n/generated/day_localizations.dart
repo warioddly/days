@@ -63,7 +63,8 @@ import 'day_localizations_ru.dart';
 /// be consistent with the languages listed in the DayLocalizations.supportedLocales
 /// property.
 abstract class DayLocalizations {
-  DayLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  DayLocalizations(String locale)
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -71,7 +72,8 @@ abstract class DayLocalizations {
     return Localizations.of<DayLocalizations>(context, DayLocalizations);
   }
 
-  static const LocalizationsDelegate<DayLocalizations> delegate = _DayLocalizationsDelegate();
+  static const LocalizationsDelegate<DayLocalizations> delegate =
+      _DayLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -83,18 +85,19 @@ abstract class DayLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
     Locale('ky'),
-    Locale('ru')
+    Locale('ru'),
   ];
 
   /// No description provided for @app_name.
@@ -146,7 +149,8 @@ abstract class DayLocalizations {
   String get days_left_in_the_year;
 }
 
-class _DayLocalizationsDelegate extends LocalizationsDelegate<DayLocalizations> {
+class _DayLocalizationsDelegate
+    extends LocalizationsDelegate<DayLocalizations> {
   const _DayLocalizationsDelegate();
 
   @override
@@ -155,26 +159,28 @@ class _DayLocalizationsDelegate extends LocalizationsDelegate<DayLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'ky', 'ru'].contains(locale.languageCode);
+  bool isSupported(Locale locale) =>
+      <String>['en', 'ky', 'ru'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_DayLocalizationsDelegate old) => false;
 }
 
 DayLocalizations lookupDayLocalizations(Locale locale) {
-
-
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'en': return DayLocalizationsEn();
-    case 'ky': return DayLocalizationsKy();
-    case 'ru': return DayLocalizationsRu();
+    case 'en':
+      return DayLocalizationsEn();
+    case 'ky':
+      return DayLocalizationsKy();
+    case 'ru':
+      return DayLocalizationsRu();
   }
 
   throw FlutterError(
     'DayLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
     'an issue with the localizations generation tool. Please file an issue '
     'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
+    'that was used.',
   );
 }

@@ -1,5 +1,4 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
@@ -15,7 +14,7 @@ class DaysLeftStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: Dimensions.doubledNormal.padding,
+      padding: Insets.doubledNormal,
       child: Column(
         children: [
           BlocBuilder<DotsManagerBloc, DotsManagerModelState>(
@@ -32,21 +31,14 @@ class DaysLeftStatus extends StatelessWidget {
               );
             },
           ),
-          Dimensions.half.verticalBox,
+          Spaces.half,
           BlocBuilder<SettingsBloc, SettingsModelState>(
             builder: (context, state) {
-
-              final gridType = state.entity.gridType;
-              var title = '';
-
-              if (gridType == GridType.illustrated) {
-                title = l10n.more_days_of_growth;
-              } else {
-                title = l10n.days_left_in_the_year;
-              }
-
               return Text(
-                title,
+                switch(state.entity.gridType) {
+                  GridType.illustrated => l10n.more_days_of_growth,
+                  GridType.doted => l10n.days_left_in_the_year,
+                },
                 style: Theme.of(context).textTheme.labelLarge?.copyWith(
                   color: CupertinoColors.tertiarySystemFill.darkHighContrastColor,
                 )

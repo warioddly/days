@@ -1,5 +1,4 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:flutter/material.dart';
 
 class TooltipOverlayEntry extends StatelessWidget {
@@ -24,13 +23,10 @@ class TooltipOverlayEntry extends StatelessWidget {
       child: RepaintBoundary(
         child: IgnorePointer(
           child: Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: Dimensions.half,
-              vertical: Dimensions.quarter,
-            ),
+            padding: Insets.halfHorizontal + Insets.quarterVertical,
             decoration: BoxDecoration(
               color: theme.primaryColor,
-              borderRadius: Dimensions.half.allBorder,
+              borderRadius: Borders.half,
               border: Border.all(color: theme.colorScheme.onPrimary, width: 1),
               boxShadow: [
                 BoxShadow(

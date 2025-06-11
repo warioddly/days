@@ -1,5 +1,4 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/core/utils/datetime_utils.dart';
 import 'package:days/shared/package/grid_builder/grid_builder.dart';
 import 'package:flutter/cupertino.dart';
@@ -23,14 +22,13 @@ class DotGridBodyBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final mediaQuerySize = MediaQuery.sizeOf(context);
-    const padding = Dimensions.doubledNormal;
     final viewSize = (mediaQuerySize.width > Dimensions.maxViewWidthSize
         ? Dimensions.maxViewWidthSize
         : mediaQuerySize.width) -
-        (padding * 2);
+        (Dimensions.doubledNormal * 2);
 
     return Padding(
-      padding: padding.paddingHorizontal,
+      padding: Insets.doubledNormalHorizontal,
       child: GestureDetector(
         behavior: HitTestBehavior.translucent,
         onPanStart: (details) => onPanUpdate(details.globalPosition),

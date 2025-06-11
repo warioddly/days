@@ -12,7 +12,8 @@ class DayLocalizationsEn extends DayLocalizations {
   String get app_name => 'Days';
 
   @override
-  String get about_app => 'hey there!\n\ni created \'days\' as a daily reminder that life is\ntoo short to spend doing things I am not excited about this.\ni hope every time you look at this app you\'re reminded\n\n\nevery day matters\n\nlove,';
+  String get about_app =>
+      'hey there!\n\ni created \'days\' as a daily reminder that life is\ntoo short to spend doing things I am not excited about this.\ni hope every time you look at this app you\'re reminded\n\n\nevery day matters\n\nlove,';
 
   @override
   String get settings => 'Settings';

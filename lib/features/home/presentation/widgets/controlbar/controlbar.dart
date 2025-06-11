@@ -1,5 +1,4 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/dimensions_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/shared/ui/widgets/sliding_segment_control.dart';
@@ -12,7 +11,7 @@ class ControlBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: Dimensions.large.padding,
+      padding: Insets.large,
       child: Center(
         child: BlocBuilder<SettingsBloc, SettingsModelState>(
           builder: (context, state) {
@@ -30,7 +29,7 @@ class ControlBar extends StatelessWidget {
               },
               children: const {
                 GridType.illustrated: Padding(
-                  padding: EdgeInsets.all(Dimensions.half),
+                  padding: Insets.half,
                   child: Icon(
                     CupertinoIcons.circle_grid_hex,
                   ),

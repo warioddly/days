@@ -1,4 +1,4 @@
-// ignore_for_file: always_put_required_named_parameters_first, use_super_parameters, unnecessary_import, deprecated_member_use
+// ignore_for_file: always_put_required_named_parameters_first, use_super_parameters, unnecessary_import, deprecated_member_use, avoid_dynamic_calls
 
 import 'dart:math' as math;
 import 'dart:ui' show FontFeature;
@@ -129,11 +129,11 @@ class AnimatedFlipCounter extends StatelessWidget {
 
     // Find the text color (or red as warning). This is so we can avoid using
     // `Opacity` and `AnimatedOpacity` widget, for better performance.
-    final Color color = style.color ?? const Color(0xffff0000);
+    final color = style.color ?? const Color(0xffff0000);
 
     // Convert the decimal value to int. For example, if we want 2 decimal
     // places, we will convert 5.21 into 521.
-    final int value = (this.value * math.pow(10, fractionDigits)).round();
+    final value = (this.value * math.pow(10, fractionDigits)).round();
 
     // Split the integer value into separate digits.
     // For example, to draw 123, we split it into [1, 12, 123].
@@ -142,8 +142,8 @@ class AnimatedFlipCounter extends StatelessWidget {
     // more significant digits. For example, 123 add 10 becomes 133. In this
     // case, 1 stays the same, 2 flips into a 3, but 3 needs to flip 10 times
     // to reach 3 again, instead of staying static.
-    List<int> digits = value == 0 ? [0] : [];
-    int v = value.abs();
+    var digits = value == 0 ? [0] : [];
+    var v = value.abs();
     while (v > 0) {
       digits.add(v);
       v = v ~/ 10;
@@ -155,7 +155,7 @@ class AnimatedFlipCounter extends StatelessWidget {
 
     // Generate the widgets needed for digits before the decimal point.
     final integerWidgets = <Widget>[];
-    for (int i = 0; i < digits.length - fractionDigits; i++) {
+    for (var i = 0; i < digits.length - fractionDigits; i++) {
       final digit = _SingleDigitFlipCounter(
         key: ValueKey(digits.length - i),
         value: digits[i].toDouble(),
@@ -169,6 +169,7 @@ class AnimatedFlipCounter extends StatelessWidget {
         // split into [0, 5, 50, 500]. Since 50 and 500 are not 0, they are
         // always visible. But we should not show 0.48 as .48 so the last
         // zero before decimal point is always visible.
+        // ignore: avoid_bool_literals_in_conditional_expressions
         visible: hideLeadingZeroes
             ? digits[i] != 0 || i == digits.length - fractionDigits - 1
             : true,
@@ -185,7 +186,7 @@ class AnimatedFlipCounter extends StatelessWidget {
       // visible digit is the first "0", at index 0.
       // This is so we know when to stop inserting separators. We don't want
       // something like ",,,123,456" if leading zeroes are hidden.
-      int firstVisibleDigitIndex = 0;
+      var firstVisibleDigitIndex = 0;
       if (hideLeadingZeroes) {
         // Find the first digit that's not zero.
         firstVisibleDigitIndex = digits.indexWhere((d) => d != 0);
@@ -197,8 +198,8 @@ class AnimatedFlipCounter extends StatelessWidget {
       }
       // Insert a separator every 3 widgets counting backwards, until we reach
       // the first digit that's still visible.
-      int counter = 0;
-      for (int i = integerWidgets.length; i > firstVisibleDigitIndex; i--) {
+      var counter = 0;
+      for (var i = integerWidgets.length; i > firstVisibleDigitIndex; i--) {
         if (counter > 0 && counter % 3 == 0) {
           integerWidgets.insert(i, Text(thousandSeparator!));
         }

@@ -14,42 +14,25 @@ import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart
 class HomeModule extends LocatorModule {
   @override
   void builder() {
-    getIt.registerFactory<SettingsModelMapper>(() => SettingsModelMapper());
-
-    getIt.registerFactory<SettingsDataSource>(
-      () => SettingsLocalDataSourceImpl(
-        db: getIt<DbService>(),
-      ),
-    );
-
-    getIt.registerFactory<SettingsRepository>(
-      () => SettingsRepositoryImpl(
-        localDataSource: getIt<SettingsDataSource>(),
-        settingsModelMapper: getIt<SettingsModelMapper>(),
-      ),
-    );
-
-    getIt.registerFactory(
-      () => SetSettingsUseCase(
-        repository: getIt<SettingsRepository>(),
-      ),
-    );
-
-    getIt.registerFactory(
-      () => GetSettingsUseCase(
-        repository: getIt<SettingsRepository>(),
-      ),
-    );
-
-    getIt.registerFactory(
-      () => SettingsBloc(
-        setSettingsUseCase: getIt<SetSettingsUseCase>(),
-        getSettingsUseCase: getIt<GetSettingsUseCase>(),
-      ),
-    );
-
-    getIt.registerFactory(
-      () => DotsManagerBloc(),
-    );
+    getIt
+      ..registerFactory<SettingsModelMapper>(SettingsModelMapper.new)
+      ..registerFactory<SettingsDataSource>(
+        () => SettingsLocalDataSourceImpl(db: getIt<DbService>()),
+      )
+      ..registerFactory<SettingsRepository>(
+        () => SettingsRepositoryImpl(
+          localDataSource: getIt<SettingsDataSource>(),
+          settingsModelMapper: getIt<SettingsModelMapper>(),
+        ),
+      )
+      ..registerFactory(() => SetSettingsUseCase(repository: getIt<SettingsRepository>()))
+      ..registerFactory(() => GetSettingsUseCase(repository: getIt<SettingsRepository>()))
+      ..registerFactory(
+        () => SettingsBloc(
+          setSettingsUseCase: getIt<SetSettingsUseCase>(),
+          getSettingsUseCase: getIt<GetSettingsUseCase>(),
+        ),
+      )
+      ..registerFactory(DotsManagerBloc.new);
   }
 }

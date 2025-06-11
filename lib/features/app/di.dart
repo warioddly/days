@@ -15,54 +15,37 @@ import 'package:days/features/app/domain/usecase/set_locale_usecase.dart';
 import 'package:days/features/app/domain/usecase/set_theme_usecase.dart';
 import 'package:days/features/app/presentation/bloc/locale/locale_bloc.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart' show SharedPreferences;
 
 class AppModule extends LocatorModule {
   @override
-  void builder() {
-    getIt.registerFactory<ThemeDataSource>(
-      () => ThemeLocalDataSourceImpl(db: getIt<DbService>()),
-    );
-
-    getIt.registerFactory<ThemeRepository>(
-      () => ThemeRepositoryImpl(localDataSource: getIt<ThemeDataSource>()),
-    );
-
-    getIt.registerFactory(
-      () => SetThemeUseCase(repository: getIt<ThemeRepository>()),
-    );
-
-    getIt.registerFactory(
-      () => GetThemeUseCase(repository: getIt<ThemeRepository>()),
-    );
-
-    getIt.registerFactory(
-      () => ThemeBloc(
-        setThemeUseCase: getIt<SetThemeUseCase>(),
-        getThemeUseCase: getIt<GetThemeUseCase>(),
-      ),
-    );
-
-    getIt.registerFactory<LocaleDataSource>(
-      () => LocaleLocalDataSourceImpl(db: getIt<DbService>()),
-    );
-
-    getIt.registerFactory<LocaleRepository>(
-      () => LocaleRepositoryImpl(localDataSource: getIt<LocaleDataSource>()),
-    );
-
-    getIt.registerFactory(
-      () => SetLocaleUseCase(repository: getIt<LocaleRepository>()),
-    );
-
-    getIt.registerFactory(
-      () => GetLocaleUseCase(repository: getIt<LocaleRepository>()),
-    );
-
-    getIt.registerFactory(
-      () => LocaleBloc(
-        setLocaleUseCase: getIt<SetLocaleUseCase>(),
-        getLocaleUseCase: getIt<GetLocaleUseCase>(),
-      ),
-    );
+  Future<void> builder() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    getIt
+      ..registerLazySingleton<DbService>(() => DbService(sharedPreferences))
+      ..registerFactory<ThemeDataSource>(() => ThemeLocalDataSourceImpl(db: getIt<DbService>()))
+      ..registerFactory<ThemeRepository>(
+        () => ThemeRepositoryImpl(localDataSource: getIt<ThemeDataSource>()),
+      )
+      ..registerFactory(() => SetThemeUseCase(repository: getIt<ThemeRepository>()))
+      ..registerFactory(() => GetThemeUseCase(repository: getIt<ThemeRepository>()))
+      ..registerFactory(
+        () => ThemeBloc(
+          setThemeUseCase: getIt<SetThemeUseCase>(),
+          getThemeUseCase: getIt<GetThemeUseCase>(),
+        ),
+      )
+      ..registerFactory<LocaleDataSource>(() => LocaleLocalDataSourceImpl(db: getIt<DbService>()))
+      ..registerFactory<LocaleRepository>(
+        () => LocaleRepositoryImpl(localDataSource: getIt<LocaleDataSource>()),
+      )
+      ..registerFactory(() => SetLocaleUseCase(repository: getIt<LocaleRepository>()))
+      ..registerFactory(() => GetLocaleUseCase(repository: getIt<LocaleRepository>()))
+      ..registerFactory(
+        () => LocaleBloc(
+          setLocaleUseCase: getIt<SetLocaleUseCase>(),
+          getLocaleUseCase: getIt<GetLocaleUseCase>(),
+        ),
+      );
   }
 }

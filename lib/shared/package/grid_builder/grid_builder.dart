@@ -38,7 +38,7 @@ class _GridBuilderState extends State<GridBuilder> {
 
   int itemsPerRow = 0;
   int length = 0;
-  var blocks = <List<Widget>>[];
+  List<List<Widget>> blocks = <List<Widget>>[];
   bool building = false;
 
   @override

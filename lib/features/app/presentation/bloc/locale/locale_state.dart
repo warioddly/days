@@ -7,6 +7,6 @@ final class LocaleState {
     required this.locale,
   });
 
-  LocaleState.initial() : locale = const Locale('en', 'US');
+  LocaleState.initial() : locale = defaultLocale;
 
 }

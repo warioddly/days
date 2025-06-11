@@ -1,4 +1,9 @@
+import 'package:dimengen/dimengen.dart';
+import 'package:flutter/material.dart';
 
+part 'dimensions.g.dart';
+
+@Dimengen()
 final class Dimensions {
   static const double extra = 60.0;
   static const double large = 20.0;

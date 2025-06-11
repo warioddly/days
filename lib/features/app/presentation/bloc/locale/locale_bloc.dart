@@ -1,5 +1,6 @@
 import 'package:days/features/app/domain/usecase/get_locale_usecase.dart';
 import 'package:days/features/app/domain/usecase/set_locale_usecase.dart';
+import 'package:days/features/l10n/_locale.dart';
 import 'package:flutter/cupertino.dart' show Locale;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
@@ -17,12 +18,12 @@ class LocaleBloc extends Bloc<LocaleEvent, LocaleState> {
     on<LocaleSetInitialEvent>(_setInitialLocale);
   }
 
-  void _setLocale(LocaleSetEvent event, Emitter<LocaleState> emit) async {
+  Future<void> _setLocale(LocaleSetEvent event, Emitter<LocaleState> emit) async {
     emit(LocaleState(locale: event.locale));
     await setLocaleUseCase(event.locale);
   }
 
-  void _setInitialLocale(
+  Future<void> _setInitialLocale(
     LocaleSetInitialEvent event,
     Emitter<LocaleState> emit,
   ) async {

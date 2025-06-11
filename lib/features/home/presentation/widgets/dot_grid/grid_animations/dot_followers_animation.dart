@@ -18,12 +18,12 @@ final class DotFollowersAnimation extends DotAnimation {
     OnOverlapping? onOverlapping,
   }) {
 
-    for (int i = 0; i < keys.length; i++) {
+    for (var i = 0; i < keys.length; i++) {
       final box = keyRenderBox(keys[i]);
       if (box != null && isInside(box, position)) {
 
         final reversedKeys = keys.reversed.toList();
-        for (int j = 0; j < reversedKeys.length; j++) {
+        for (var j = 0; j < reversedKeys.length; j++) {
 
           if (reversedKeys[j] == keys[i]) {
             break;
@@ -34,7 +34,7 @@ final class DotFollowersAnimation extends DotAnimation {
           }
         }
 
-        for (int j = 0; j <= i; j++) {
+        for (var j = 0; j <= i; j++) {
           final key = keys[j];
           onOverlapping?.call(key, position);
           enableKey(key);

@@ -16,12 +16,12 @@ class ThemeBloc extends Bloc<ThemeEvent, Brightness> {
     on<GetTheme>(_getTheme);
   }
 
-  void _setTheme(SetTheme event, Emitter<Brightness> emit) async {
+  Future<void> _setTheme(SetTheme event, Emitter<Brightness> emit) async {
     emit(event.themeBrightness);
     await setThemeUseCase(event.themeBrightness.name);
   }
 
-  void _getTheme(GetTheme event, Emitter<Brightness> emit) async {
+  Future<void> _getTheme(GetTheme event, Emitter<Brightness> emit) async {
     emit(await getThemeUseCase(null));
   }
 }

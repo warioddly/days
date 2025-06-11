@@ -33,12 +33,8 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: MultiBlocProvider(
           providers: [
-            BlocProvider(
-              create: (context) => settingsBloc,
-            ),
-            BlocProvider(
-              create: (context) => dotsManagerBloc,
-            ),
+            BlocProvider.value(value: settingsBloc),
+            BlocProvider.value(value: dotsManagerBloc)
           ],
           child: Center(
             child: ConstrainedBox(

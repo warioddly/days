@@ -1,7 +1,7 @@
 import 'package:days/features/home/domain/entity/settings_entity.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:days/features/home/domain/usecase/get_settings_usecase.dart';
 import 'package:days/features/home/domain/usecase/set_settings_usecase.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'settings_event.dart';
 part 'settings_state.dart';

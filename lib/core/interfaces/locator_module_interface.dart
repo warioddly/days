@@ -1,3 +1,5 @@
+import 'dart:async';
+
 abstract class LocatorModule {
-  void builder();
+  FutureOr<void> builder();
 }

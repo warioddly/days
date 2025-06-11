@@ -23,6 +23,6 @@ class HapticFeedback extends haptic.HapticFeedback {
       return;
     }
 
-    Vibration.vibrate(duration: 20, amplitude: _hasAmplitudeControl ? 128 : -1);
+    await Vibration.vibrate(duration: 20, amplitude: _hasAmplitudeControl ? 128 : -1);
   }
 }
