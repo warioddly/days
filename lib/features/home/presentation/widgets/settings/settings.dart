@@ -15,8 +15,9 @@ class AppSettings extends StatelessWidget {
           body: Padding(
             padding: Insets.normal,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: Dimensions.normal,
               children: [
                 ThemeSettings(),
                 RelatedLinks(),

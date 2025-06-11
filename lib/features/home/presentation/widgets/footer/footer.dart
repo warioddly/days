@@ -47,8 +47,8 @@ class Footer extends StatelessWidget {
       useSafeArea: true,
       barrierColor: Colors.transparent,
       builder: (_) => DraggableScrollableSheet(
-        initialChildSize: 0.2,
-        minChildSize: 0.2,
+        initialChildSize: 0.18,
+        minChildSize: 0.18,
         maxChildSize: 1,
         expand: false,
         builder: (_, _) => const AppSettings(),
