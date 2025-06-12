@@ -80,9 +80,9 @@ extension ConfigurationAppIntent {
     }
 }
 
-#Preview(as: .systemSmall) {
-    DaysWidget()
-} timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
-}
+//#Preview(as: .systemSmall) {
+//    DaysWidget()
+//} timeline: {
+//    SimpleEntry(date: .now, configuration: .smiley)
+//    SimpleEntry(date: .now, configuration: .starEyes)
+//}
