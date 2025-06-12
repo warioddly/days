@@ -10,27 +10,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AppWrapper extends StatefulWidget {
+class AppWrapper extends StatelessWidget {
   const AppWrapper({super.key});
-
-  @override
-  State<AppWrapper> createState() => _AppWrapperState();
-}
-
-class _AppWrapperState extends State<AppWrapper> with WidgetsBindingObserver {
-
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addObserver(this);
-  }
-
-  @override
-  void didChangePlatformBrightness() {
-    super.didChangePlatformBrightness();
-    final brightness = PlatformDispatcher.instance.platformBrightness;
-    context.read<ThemeBloc>().add(SetTheme(brightness));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,11 +39,4 @@ class _AppWrapperState extends State<AppWrapper> with WidgetsBindingObserver {
       },
     );
   }
-
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-  }
-
 }
