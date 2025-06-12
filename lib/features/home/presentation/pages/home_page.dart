@@ -1,3 +1,4 @@
+import 'package:days/core/assets/illustration_assets.dart';
 import 'package:days/core/services/locator_service.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
@@ -5,6 +6,7 @@ import 'package:days/features/home/presentation/widgets/controlbar/controlbar.da
 import 'package:days/features/home/presentation/widgets/controlbar/days_left_status.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body.dart';
 import 'package:days/features/home/presentation/widgets/footer/footer.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide Tooltip;
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,6 +26,16 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     settingsBloc.add(GetSettings());
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (kIsWasm || kIsWeb) {
+      for (final path in IllustrationAssets.illustrations) {
+        precacheImage(AssetImage(path), context);
+      }
+    }
   }
 
   @override

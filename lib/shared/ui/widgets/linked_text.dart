@@ -1,5 +1,3 @@
-
-
 import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
 
