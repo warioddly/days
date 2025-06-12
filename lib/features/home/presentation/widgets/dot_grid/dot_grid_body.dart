@@ -18,7 +18,10 @@ class DotGridBody extends StatefulWidget {
 }
 
 class _DotGridBodyState extends State<DotGridBody> {
+
   final dotKeyManager = DotKeyManager();
+  final dotedGridBuilder = const DotedGridBuilder();
+  final illustratedGridBuilder = const IllustratedGridBuilder();
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +40,8 @@ class _DotGridBodyState extends State<DotGridBody> {
             if (eventState is SettingsLoaded) {
               return RepaintBoundary(
                 child: switch (state.entity.gridType) {
-                  GridType.doted => const DotedGridBuilder(),
-                  GridType.illustrated => const IllustratedGridBuilder(),
+                  GridType.doted => dotedGridBuilder,
+                  GridType.illustrated => illustratedGridBuilder,
                 },
               );
             }
