@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:days/core/services/router.dart';
 import 'package:days/core/theme/theme.dart' show AppTheme;
