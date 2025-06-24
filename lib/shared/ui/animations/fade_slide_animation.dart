@@ -5,7 +5,7 @@ class FadeSlideAnimation extends StatefulWidget {
   const FadeSlideAnimation({
     required this.beginOffset,
     this.fadeDuration = Durations.medium2,
-    this.slideDuration = Durations.extralong4,
+    this.slideDuration = Durations.extralong1,
     super.key,
     this.child,
   });

@@ -22,8 +22,6 @@ class DotGridBody extends StatefulWidget {
 class _DotGridBodyState extends State<DotGridBody> {
 
   final dotKeyManager = DotKeyManager();
-  final dotedGridBuilder = const DotedGridBuilder();
-  final illustratedGridBuilder = const IllustratedGridBuilder();
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +42,8 @@ class _DotGridBodyState extends State<DotGridBody> {
                 child: BlurredSwitcher(
                   duration: Durations.medium1,
                   child: switch (state.entity.gridType) {
-                    GridType.doted => dotedGridBuilder,
-                    GridType.illustrated => illustratedGridBuilder,
+                    GridType.doted => const DotedGridBuilder(),
+                    GridType.illustrated => const IllustratedGridBuilder(),
                   },
                 ),
               );

@@ -14,6 +14,9 @@ class IllustratedGridBuilder extends DotGridBuilder {
 
 class _IllustratedGridBuilderState
     extends DotGridState<IllustratedGridBuilder> {
+
+  final dots = <IllustratedDot>[];
+
   @override
   void initState() {
     super.initState();
@@ -22,23 +25,31 @@ class _IllustratedGridBuilderState
       for (final key in dotKeyManager.keys) {
         if (key.currentState?.widget.isActive ?? false) {
           Future.delayed(
-            Duration(milliseconds: Random().nextInt(1301) + 100),
+            Duration(milliseconds: Random().nextInt(1101) + 100),
             key.currentState?.enable,
           );
         }
       }
     });
+
   }
 
   @override
   Widget itemBuilder(int index, DateTime date, DateTime now) {
-    return IllustratedDot(
-      key: createAndStoreDotKey(),
-      date: date,
-      isActive: DateUtils.isSameDay(now, date) || date.isBefore(now),
-      onEnable: onDotEnable,
-      onDisable: onDotDisable,
+    if (dots.length > index) {
+      return dots[index];
+    }
+    dots.add(
+      IllustratedDot(
+        key: createAndStoreDotKey(),
+        date: date,
+        isActive: DateUtils.isSameDay(now, date) || date.isBefore(now),
+        onEnable: onDotEnable,
+        onDisable: onDotDisable,
+      ),
     );
+
+    return dots[index];
   }
 
   @override
