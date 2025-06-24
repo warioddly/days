@@ -3,7 +3,7 @@ import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
-import 'package:days/shared/ui/animation/utils/curves.dart';
+import 'package:days/shared/ui/animations/utils/curves.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,10 +20,10 @@ class DotedDot extends Dot {
   });
 
   @override
-  State<DotedDot> createState() => IllustratedDotState();
+  State<DotedDot> createState() => _DotedDotState();
 }
 
-class IllustratedDotState extends DotState<DotedDot> {
+class _DotedDotState extends DotState<DotedDot> {
 
   final dot = DefaultDot(
     color: CupertinoColors.tertiarySystemFill.darkHighContrastColor,
@@ -35,6 +35,7 @@ class IllustratedDotState extends DotState<DotedDot> {
     super.initState();
     if (widget.isActive) {
       widget.onEnable?.call();
+      controller.setActive(true);
     }
   }
 
@@ -70,7 +71,7 @@ class IllustratedDotState extends DotState<DotedDot> {
 
   @override
   void enable() {
-    if (isActive) {
+    if (isActive || !mounted) {
       return;
     }
     controller.setActive(true);

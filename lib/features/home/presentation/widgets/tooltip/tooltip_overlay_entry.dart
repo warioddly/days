@@ -1,4 +1,5 @@
 import 'package:days/core/constants/dimensions.dart';
+import 'package:days/shared/ui/animations/blurred_switcher.dart';
 import 'package:flutter/material.dart';
 
 class TooltipOverlayEntry extends StatelessWidget {
@@ -14,7 +15,7 @@ class TooltipOverlayEntry extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final position = this.position - const Offset(40, 53);
+    final position = this.position - const Offset(70, 53);
     return AnimatedPositioned(
       duration: const Duration(milliseconds: 50),
       curve: Curves.linear,
@@ -27,7 +28,7 @@ class TooltipOverlayEntry extends StatelessWidget {
             decoration: BoxDecoration(
               color: theme.primaryColor,
               borderRadius: Borders.half,
-              border: Border.all(color: theme.colorScheme.onPrimary, width: 1),
+              border: Border.all(color: theme.colorScheme.onPrimary, width: 0.3),
               boxShadow: [
                 BoxShadow(
                   color: theme.colorScheme.onPrimary.withAlpha(70),
@@ -36,10 +37,13 @@ class TooltipOverlayEntry extends StatelessWidget {
                 ),
               ],
             ),
-            child: Text(
-              content,
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onPrimary,
+            child: BlurredSwitcher(
+              child: Text(
+                content,
+                key: ValueKey(content),
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: theme.colorScheme.onPrimary,
+                ),
               ),
             ),
           ),
@@ -47,5 +51,4 @@ class TooltipOverlayEntry extends StatelessWidget {
       ),
     );
   }
-
 }

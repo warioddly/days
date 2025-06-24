@@ -6,7 +6,9 @@ import 'package:days/features/home/presentation/widgets/dot_grid/builders/dot_gr
 import 'package:days/features/home/presentation/widgets/dot_grid/builders/doted_grid_builder.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/builders/illustrated_grid_builder.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_disable_animation.dart';
+import 'package:days/shared/ui/animations/blurred_switcher.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
@@ -39,10 +41,13 @@ class _DotGridBodyState extends State<DotGridBody> {
 
             if (eventState is SettingsLoaded) {
               return RepaintBoundary(
-                child: switch (state.entity.gridType) {
-                  GridType.doted => dotedGridBuilder,
-                  GridType.illustrated => illustratedGridBuilder,
-                },
+                child: BlurredSwitcher(
+                  duration: Durations.medium1,
+                  child: switch (state.entity.gridType) {
+                    GridType.doted => dotedGridBuilder,
+                    GridType.illustrated => illustratedGridBuilder,
+                  },
+                ),
               );
             }
 

@@ -60,8 +60,9 @@ final class TooltipOverlay {
 
   void dispose() {
     _timer?.cancel();
+    _timer = null;
     if (_overlayEntry != null) {
-      _overlayEntry!.remove();
+      _overlayEntry?.remove();
       _overlayEntry = null;
     }
   }

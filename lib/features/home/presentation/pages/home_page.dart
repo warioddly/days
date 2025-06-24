@@ -18,7 +18,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   final settingsBloc = getIt<SettingsBloc>();
   final dotsManagerBloc = getIt<DotsManagerBloc>();
 
@@ -43,23 +42,23 @@ class _HomePageState extends State<HomePage> {
     return MultiBlocProvider(
       providers: [
         BlocProvider.value(value: settingsBloc),
-        BlocProvider.value(value: dotsManagerBloc)
+        BlocProvider.value(value: dotsManagerBloc),
       ],
       child: const Scaffold(
-          body: SafeArea(
-            child: Center(
-              child: Column(
-                children: [
-                  DaysLeftStatus(),
-                  Spacer(),
-                  DotGridBody(),
-                  Spacer(),
-                  ControlBar(),
-                ],
-              ),
+        body: SafeArea(
+          child: Center(
+            child: Column(
+              children: [
+                DaysLeftStatus(),
+                Spacer(),
+                DotGridBody(),
+                Spacer(),
+                ControlBar(),
+              ],
             ),
           ),
-          bottomNavigationBar: Footer()
+        ),
+        bottomNavigationBar: Footer(),
       ),
     );
   }
@@ -70,5 +69,4 @@ class _HomePageState extends State<HomePage> {
     dotsManagerBloc.close();
     super.dispose();
   }
-
 }

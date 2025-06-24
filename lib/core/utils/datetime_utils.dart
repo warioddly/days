@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class DateTimeUtils {
   static int getDaysFrom(DateTime start, DateTime end) {
@@ -38,7 +39,8 @@ class DateTimeUtils {
   }
 
   static String format(DateTime date) {
-    return '${date.day}/${date.month}/${date.year}';
+    final weekday = DateFormat('EEEE').format(date).toLowerCase(); // monday
+    final formattedDate = '${date.day}/${date.month}/${date.year}'; // 20/8/2025
+    return '$weekday, $formattedDate';
   }
-
 }

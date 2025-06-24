@@ -35,15 +35,9 @@ abstract class Dot extends StatefulWidget {
 
 abstract class DotState<T extends Dot> extends State<T> {
 
-  late final DotController controller;
+  final DotController controller = DotController(false);
 
   bool get isActive => controller.isActive;
-
-  @override
-  void initState() {
-    super.initState();
-    controller = DotController(widget.isActive);
-  }
 
   @override
   void dispose() {

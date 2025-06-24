@@ -6,13 +6,11 @@ import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
-import 'package:days/shared/ui/animation/utils/curves.dart';
+import 'package:days/shared/ui/animations/utils/curves.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 class IllustratedDot extends Dot {
-
   const IllustratedDot({
     super.key,
     super.date,
@@ -23,63 +21,55 @@ class IllustratedDot extends Dot {
   });
 
   @override
-  State<Dot> createState() => IllustratedDotState();
-
+  State<Dot> createState() => _IllustratedDotState();
 }
 
-class IllustratedDotState extends DotState<IllustratedDot> {
-
-  final image = IllustrationAssets.getRandomIllustration();
-  late final padding = _randomPadding();
-
-  @override
-  void initState() {
-    super.initState();
-    if (widget.isActive) {
-      widget.onEnable?.call();
-    }
-  }
+class _IllustratedDotState extends DotState<IllustratedDot> {
+  final _image = IllustrationAssets.getRandomIllustration();
+  late final _randomOffset = Offset(_randomSize(), _randomSize());
 
   @override
   Widget build(BuildContext context) {
     return SizedBox.square(
       dimension: Dimensions.dotContainerSize,
-      child: BlocBuilder<ThemeBloc, Brightness>(
-        builder: (context, state) {
-          return ListenableBuilder(
-            listenable: controller,
-            builder: (context, _) {
-              return AnimatedSwitcher(
-                duration: const Duration(milliseconds: 400),
-                reverseDuration: const Duration(milliseconds: 500),
-                switchInCurve: SharedCurves.bounceAnimation,
-                switchOutCurve: Curves.fastEaseInToSlowEaseOut,
-                transitionBuilder: (child, animation) => ScaleTransition(
-                  scale: animation,
-                  child: child,
-                ),
-                child: isActive ? Image.asset(
-                  image,
-                  color: context.colorScheme.onPrimary,
-                ) : Padding(
-                  key: UniqueKey(),
-                  padding: padding,
-                  child: DefaultDot(
-                    size: 1.5,
-                    color: context.colorScheme.onPrimary,
-                  ),
-                ),
-              );
-            }
-          );
-        },
+      child: Transform.translate(
+        offset: _randomOffset,
+        child: BlocBuilder<ThemeBloc, Brightness>(
+          builder: (context, state) {
+            return ListenableBuilder(
+              listenable: controller,
+              builder: (context, _) {
+                return AnimatedSwitcher(
+                  duration: Durations.medium3,
+                  reverseDuration: Durations.long3,
+                  switchInCurve: SharedCurves.bounceAnimation,
+                  switchOutCurve: Curves.fastEaseInToSlowEaseOut,
+                  transitionBuilder: (child, animation) =>
+                      ScaleTransition(scale: animation, child: child),
+                  child: isActive
+                      ? Image.asset(
+                          _image,
+                          color: context.colorScheme.onPrimary,
+                        )
+                      : DefaultDot(
+                          key: UniqueKey(),
+                          size: 1.5,
+                          color: widget.isActive
+                              ? Colors.transparent
+                              : context.colorScheme.onPrimary,
+                        ),
+                );
+              },
+            );
+          },
+        ),
       ),
     );
   }
 
   @override
   void enable() {
-    if (isActive) {
+    if (isActive || !mounted) {
       return;
     }
     controller.setActive(true);
@@ -95,15 +85,5 @@ class IllustratedDotState extends DotState<IllustratedDot> {
     widget.onDisable?.call();
   }
 
-  EdgeInsets _randomPadding() {
-    return EdgeInsets.only(
-      top: _randomSize(),
-      left: _randomSize(),
-      right: _randomSize(),
-      bottom: _randomSize(),
-    );
-  }
-
-  double _randomSize() => Random().nextDouble() * 6;
-
+  double _randomSize() => Random().nextDouble() * (widget.isActive ? 9 : 6);
 }
