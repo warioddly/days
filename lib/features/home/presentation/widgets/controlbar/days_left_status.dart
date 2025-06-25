@@ -21,7 +21,7 @@ class _DaysLeftStatusState extends State<DaysLeftStatus> {
   @override
   Widget build(BuildContext context) {
     return FadeSlideAnimation(
-      beginOffset: const Offset(0, -8),
+      beginOffset: const Offset(0, -.8),
       child: Padding(
         padding: Insets.doubledNormal,
         child: Column(
