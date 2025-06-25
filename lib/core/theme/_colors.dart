@@ -45,7 +45,7 @@ final class DarkDayColors extends DayColors {
   Color get primary => Colors.black;
 
   @override
-  Color get secondary => Colors.white;
+  Color get secondary => Colors.white.withAlpha(155);
 
 }
 
@@ -66,7 +66,7 @@ final class LightDayColors extends DayColors {
   Color get primary => Colors.white;
 
   @override
-  Color get secondary => const Color(0xFF0047AB);
+  Color get secondary => const Color(0xFF4B6AB1);
 
 }
 

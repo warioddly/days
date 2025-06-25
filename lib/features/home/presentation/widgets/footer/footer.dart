@@ -16,44 +16,38 @@ class Footer extends StatefulWidget {
 }
 
 class _FooterState extends State<Footer> {
-
   @override
   Widget build(BuildContext context) {
     return FadeSlideAnimation(
       beginOffset: const Offset(0, 0.8),
-      child: SafeArea(
-        child: Padding(
-          padding: Insets.normal,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            spacing: Dimensions.half,
-            children: [
-              LinkedText(
-                title: l10n.settings,
-                onPressed: () => _onSettingsTap(context),
-              ),
-              const DotSeparator(),
-              LinkedText(title: l10n.about, onPressed: () => _onAboutTap(context)),
-            ],
-          ),
+      child: Padding(
+        padding: Insets.normal + Insets.largeBottom,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: Dimensions.half,
+          children: [
+            LinkedText(
+              title: l10n.settings,
+              onPressed: () => _onSettingsTap(context),
+            ),
+            const DotSeparator(),
+            LinkedText(
+              title: l10n.about,
+              onPressed: () => _onAboutTap(context),
+            ),
+          ],
         ),
-      )
+      ),
     );
   }
 
   void _onSettingsTap(BuildContext context) {
     showModalBottomSheet(
       context: context,
-      isScrollControlled: true,
       useSafeArea: true,
-      barrierColor: Colors.transparent,
-      builder: (_) => DraggableScrollableSheet(
-        initialChildSize: 0.18,
-        minChildSize: 0.18,
-        maxChildSize: 1,
-        expand: false,
-        builder: (_, _) => const AppSettings(),
-      ),
+      useRootNavigator: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => const AppSettings(),
     );
   }
 

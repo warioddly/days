@@ -136,6 +136,12 @@ abstract class DayLocalizations {
   /// **'terms'**
   String get terms;
 
+  /// No description provided for @restore.
+  ///
+  /// In en, this message translates to:
+  /// **'restore'**
+  String get restore;
+
   /// No description provided for @github.
   ///
   /// In en, this message translates to:

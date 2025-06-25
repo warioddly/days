@@ -2,10 +2,11 @@ import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
 
 class LinkedText extends StatelessWidget {
-  const LinkedText({required this.title, super.key, this.onPressed});
+  const LinkedText({required this.title, super.key, this.onPressed, this.style});
 
   final VoidCallback? onPressed;
   final String title;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +14,7 @@ class LinkedText extends StatelessWidget {
       onTap: onPressed,
       child: Text(
         title,
-        style: context.textTheme.bodyMedium?.copyWith(
-          fontWeight: FontWeight.w600
-        )
+        style: style ?? context.textTheme.labelLarge
       ),
     );
   }

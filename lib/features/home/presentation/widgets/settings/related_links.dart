@@ -11,6 +11,7 @@ class RelatedLinks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final color = Theme.of(context).colorScheme.secondary;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       spacing: Dimensions.half,
@@ -18,11 +19,17 @@ class RelatedLinks extends StatelessWidget {
         LinkedText(
           title: l10n.terms,
           onPressed: () => launchUrlString(AppConstants.termsUrl),
+          style: Theme.of(context).textTheme.labelLarge?.copyWith(
+            color: color,
+          ),
         ),
-        const DotSeparator(),
+        DotSeparator(color: color),
         LinkedText(
           title: l10n.privacy,
           onPressed: () => launchUrlString(AppConstants.privacyUrl),
+          style: Theme.of(context).textTheme.labelLarge?.copyWith(
+            color: color,
+          ),
         ),
       ],
     );

@@ -28,6 +28,9 @@ class DayLocalizationsEn extends DayLocalizations {
   String get terms => 'terms';
 
   @override
+  String get restore => 'restore';
+
+  @override
   String get github => 'github';
 
   @override

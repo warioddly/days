@@ -1,6 +1,7 @@
 import 'package:days/core/constants/app_constants.dart';
 import 'package:days/core/constants/breakpoints.dart';
 import 'package:days/core/constants/dimensions.dart';
+import 'package:days/features/home/presentation/widgets/settings/related_links.dart';
 import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -35,7 +36,7 @@ class AboutAppInformation extends StatelessWidget {
                 Text(
                   l10n.about_app,
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: isLightTheme ? Colors.black : Colors.white, fontSize: 16),
+                  style: TextStyle(color: isLightTheme ? Colors.black : Colors.white, fontSize: 14),
                 ),
                 GestureDetector(
                   onTap: () => launchUrlString(AppConstants.portfolio),
@@ -47,6 +48,8 @@ class AboutAppInformation extends StatelessWidget {
                     ),
                   ),
                 ),
+                const Spacer(),
+                const RelatedLinks(),
               ],
             ),
           ),
