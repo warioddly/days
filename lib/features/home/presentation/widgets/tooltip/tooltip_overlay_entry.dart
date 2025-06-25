@@ -43,6 +43,7 @@ class TooltipOverlayEntry extends StatelessWidget {
                 key: ValueKey(content),
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: theme.colorScheme.onPrimary,
+                  fontWeight: FontWeight.w600
                 ),
               ),
             ),

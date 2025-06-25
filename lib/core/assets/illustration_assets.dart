@@ -46,7 +46,7 @@ final class IllustrationAssets {
     '$_assetPath/Cloud Rainbow-1.png',
     '$_assetPath/Cloud Sun.png',
     '$_assetPath/Cloud Sun-1.png',
-    '$_assetPath/Cloud-1.png',
+    // '$_assetPath/Cloud-1.png',
     '$_assetPath/Cloud-2.png',
     '$_assetPath/Cloud-3.png',
     // '$_assetPath/Cloud-4.png',

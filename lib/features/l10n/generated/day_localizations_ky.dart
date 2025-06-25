@@ -25,6 +25,9 @@ class DayLocalizationsKy extends DayLocalizations {
   String get about => 'Жөнүндө';
 
   @override
+  String get terms => 'terms';
+
+  @override
   String get github => 'Github';
 
   @override

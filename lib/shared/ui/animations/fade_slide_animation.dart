@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class FadeSlideAnimation extends StatefulWidget {
   const FadeSlideAnimation({
     required this.beginOffset,
-    this.fadeDuration = Durations.medium2,
-    this.slideDuration = Durations.extralong1,
+    this.fadeDuration = Durations.medium1,
+    this.slideDuration = Durations.extralong4,
     super.key,
     this.child,
   });

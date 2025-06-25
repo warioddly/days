@@ -115,25 +115,31 @@ abstract class DayLocalizations {
   /// No description provided for @settings.
   ///
   /// In en, this message translates to:
-  /// **'Settings'**
+  /// **'settings'**
   String get settings;
 
   /// No description provided for @privacy.
   ///
   /// In en, this message translates to:
-  /// **'Privacy'**
+  /// **'privacy'**
   String get privacy;
 
   /// No description provided for @about.
   ///
   /// In en, this message translates to:
-  /// **'About'**
+  /// **'about'**
   String get about;
+
+  /// No description provided for @terms.
+  ///
+  /// In en, this message translates to:
+  /// **'terms'**
+  String get terms;
 
   /// No description provided for @github.
   ///
   /// In en, this message translates to:
-  /// **'Github'**
+  /// **'github'**
   String get github;
 
   /// No description provided for @more_days_of_growth.

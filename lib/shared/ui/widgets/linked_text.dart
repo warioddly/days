@@ -13,7 +13,9 @@ class LinkedText extends StatelessWidget {
       onTap: onPressed,
       child: Text(
         title,
-        style: context.textTheme.bodyMedium
+        style: context.textTheme.bodyMedium?.copyWith(
+          fontWeight: FontWeight.w600
+        )
       ),
     );
   }

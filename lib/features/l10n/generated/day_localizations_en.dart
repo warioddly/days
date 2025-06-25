@@ -16,16 +16,19 @@ class DayLocalizationsEn extends DayLocalizations {
       'hey there!\n\ni created \'days\' as a daily reminder that life is\ntoo short to spend doing things I am not excited about this.\ni hope every time you look at this app you\'re reminded\n\n\nevery day matters\n\nlove,';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'settings';
 
   @override
-  String get privacy => 'Privacy';
+  String get privacy => 'privacy';
 
   @override
-  String get about => 'About';
+  String get about => 'about';
 
   @override
-  String get github => 'Github';
+  String get terms => 'terms';
+
+  @override
+  String get github => 'github';
 
   @override
   String get more_days_of_growth => 'more days of growth';

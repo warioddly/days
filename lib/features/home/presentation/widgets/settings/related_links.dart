@@ -16,8 +16,8 @@ class RelatedLinks extends StatelessWidget {
       spacing: Dimensions.half,
       children: [
         LinkedText(
-          title: l10n.github,
-          onPressed: () => launchUrlString(AppConstants.sourceCodeUrl),
+          title: l10n.terms,
+          onPressed: () => launchUrlString(AppConstants.termsUrl),
         ),
         const DotSeparator(),
         LinkedText(

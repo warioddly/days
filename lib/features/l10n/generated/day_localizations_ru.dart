@@ -25,6 +25,9 @@ class DayLocalizationsRu extends DayLocalizations {
   String get about => 'О нас';
 
   @override
+  String get terms => 'terms';
+
+  @override
   String get github => 'Github';
 
   @override

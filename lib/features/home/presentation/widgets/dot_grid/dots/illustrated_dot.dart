@@ -29,6 +29,18 @@ class _IllustratedDotState extends DotState<IllustratedDot> {
   late final _randomOffset = Offset(_randomSize(), _randomSize());
 
   @override
+  void initState() {
+    super.initState();
+
+    if (widget.isActive) {
+      Future.delayed(
+        Duration(milliseconds: Random().nextInt(901) + 100),
+        enable,
+      );
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SizedBox.square(
       dimension: Dimensions.dotContainerSize,

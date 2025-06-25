@@ -20,7 +20,7 @@ class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
     return FadeSlideAnimation(
-      beginOffset: const Offset(0, 0.6),
+      beginOffset: const Offset(0, 0.8),
       child: SafeArea(
         child: Padding(
           padding: Insets.normal,
