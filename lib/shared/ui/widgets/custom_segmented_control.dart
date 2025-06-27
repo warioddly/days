@@ -37,12 +37,14 @@ class _CustomSegmentedControlState extends State<CustomSegmentedControl>
     reverseDuration: const Duration(milliseconds: 180),
   );
 
-  final selectedIndex = ValueNotifier<int>(0);
+  late final selectedIndex = ValueNotifier<int>(widget.initialIndex);
 
   @override
-  void initState() {
-    super.initState();
-    selectedIndex.value = widget.initialIndex;
+  void didUpdateWidget(CustomSegmentedControl oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.initialIndex != selectedIndex.value) {
+      selectedIndex.value = widget.initialIndex;
+    }
   }
 
   @override
