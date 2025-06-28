@@ -115,7 +115,7 @@ struct DaysCalendarLockScreenEntryView: View {
                             )
                             .font(.caption)
                             .bold()
-                            
+
                             Spacer().frame(width: 12)
 
                             HStack {
@@ -155,8 +155,12 @@ struct DaysCalendarLockScreen: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            DaysCalendarLockScreenEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
+            if #available(iOS 17.0, *) {
+                DaysCalendarLockScreenEntryView(entry: entry)
+                    .containerBackground(.fill.tertiary, for: .widget)
+            } else {
+                DaysCalendarLockScreenEntryView(entry: entry)
+            }
         }
         .configurationDisplayName("A Day, A Flower")
         .description(
@@ -168,6 +172,7 @@ struct DaysCalendarLockScreen: Widget {
     }
 }
 
+@available(iOS 17.0, *)
 #Preview(as: .accessoryCircular) {
     DaysCalendarLockScreen()
 } timeline: {

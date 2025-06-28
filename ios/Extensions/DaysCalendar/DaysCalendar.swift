@@ -79,10 +79,13 @@ struct DaysCalendar: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            DaysCalendarEntryView(entry: entry).containerBackground(
-                .white,
-                for: .widget
-            )
+            if #available(iOS 17.0, *) {
+                DaysCalendarEntryView(entry: entry)
+                    .containerBackground(.white, for: .widget)
+            } else {
+                DaysCalendarEntryView(entry: entry)
+                    .background(.white)
+            }
         }
         .configurationDisplayName("Today’s Date & Flower")
         .description(
@@ -94,6 +97,7 @@ struct DaysCalendar: Widget {
     }
 }
 
+@available(iOS 17.0, *)
 #Preview(as: .systemSmall) {
     DaysCalendar()
 } timeline: {

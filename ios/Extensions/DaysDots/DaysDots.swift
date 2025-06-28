@@ -65,7 +65,7 @@ struct DaysDots: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(macOS 14.0, iOS 17.0, *) {
+            if #available(iOS 17.0, *) {
                 DaysDotsEntryView(entry: entry)
                     .containerBackground(.black, for: .widget)
             } else {
@@ -213,6 +213,7 @@ struct YearDotsBuilderView: View {
     }
 }
 
+@available(iOS 17.0, *)
 #Preview(as: .systemSmall) {
     DaysDots()
 } timeline: {
