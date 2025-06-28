@@ -85,7 +85,12 @@ struct DaysCalendar: Widget {
             )
         }
         .configurationDisplayName("Today’s Date & Flower")
-        .description("Every day blooms with a new flower and a reminder of time.")
+        .description(
+            "Every day blooms with a new flower and a reminder of time."
+        )
+        .supportedFamilies([
+            .systemSmall, .systemMedium,
+        ])
     }
 }
 

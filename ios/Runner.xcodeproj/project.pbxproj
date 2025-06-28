@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		318071BF07963C86AB823EA9 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C76E90B710F24D434E47A6 /* Pods_Runner.framework */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
+		5E22D1192E0F085C00395DC3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428812DFB321300A06909 /* WidgetKit.framework */; platformFilters = (ios, macos, ); };
+		5E22D11A2E0F085C00395DC3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428832DFB321300A06909 /* SwiftUI.framework */; };
+		5E22D1262E0F085E00395DC3 /* DaysDotsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E22D1182E0F085B00395DC3 /* DaysDotsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5E51EF832E0ED1D00003E7B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E51EF7D2E0ED1D00003E7B5 /* Assets.xcassets */; };
 		5E51EF972E0EE1A10003E7B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E51EF7D2E0ED1D00003E7B5 /* Assets.xcassets */; };
 		5EE240142E0EA26500871009 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428812DFB321300A06909 /* WidgetKit.framework */; platformFilters = (ios, macos, ); };
@@ -25,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5E22D1242E0F085E00395DC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E22D1172E0F085B00395DC3;
+			remoteInfo = DaysDotsExtension;
+		};
 		5EE240212E0EA26700871009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
@@ -49,6 +59,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				5EE240572E0EB33F00871009 /* DaysCalendarLockScreenExtension.appex in Embed Foundation Extensions */,
+				5E22D1262E0F085E00395DC3 /* DaysDotsExtension.appex in Embed Foundation Extensions */,
 				5EE240232E0EA26700871009 /* DaysCalendarExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -71,6 +82,7 @@
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		5E22D1182E0F085B00395DC3 /* DaysDotsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DaysDotsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E51EF7D2E0ED1D00003E7B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB428812DFB321300A06909 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		5EB428832DFB321300A06909 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -93,14 +105,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5EE240272E0EA26700871009 /* Exceptions for "DaysCalendar" folder in "DaysCalendarExtension" target */ = {
+		5E22D12A2E0F085E00395DC3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5E22D1172E0F085B00395DC3 /* DaysDotsExtension */;
+		};
+		5EE240272E0EA26700871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = 5EE240122E0EA26400871009 /* DaysCalendarExtension */;
 		};
-		5EE2405B2E0EB33F00871009 /* Exceptions for "DaysCalendarLockScreen" folder in "DaysCalendarLockScreenExtension" target */ = {
+		5EE2405B2E0EB33F00871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -110,44 +129,22 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5E51EF9B2E0EEAD90003E7B5 /* Utils */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		5EE240162E0EA26500871009 /* DaysCalendar */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5EE240272E0EA26700871009 /* Exceptions for "DaysCalendar" folder in "DaysCalendarExtension" target */,
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = DaysCalendar;
-			sourceTree = "<group>";
-		};
-		5EE240472E0EB33D00871009 /* DaysCalendarLockScreen */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5EE2405B2E0EB33F00871009 /* Exceptions for "DaysCalendarLockScreen" folder in "DaysCalendarLockScreenExtension" target */,
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = DaysCalendarLockScreen;
-			sourceTree = "<group>";
-		};
+		5E22D11B2E0F085C00395DC3 /* DaysDots */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5E22D12A2E0F085E00395DC3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysDots; sourceTree = "<group>"; };
+		5E51EF9B2E0EEAD90003E7B5 /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
+		5EE240162E0EA26500871009 /* DaysCalendar */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5EE240272E0EA26700871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysCalendar; sourceTree = "<group>"; };
+		5EE240472E0EB33D00871009 /* DaysCalendarLockScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5EE2405B2E0EB33F00871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysCalendarLockScreen; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5E22D1152E0F085B00395DC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E22D11A2E0F085C00395DC3 /* SwiftUI.framework in Frameworks */,
+				5E22D1192E0F085C00395DC3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5EE240102E0EA26400871009 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +192,7 @@
 				5EE240162E0EA26500871009 /* DaysCalendar */,
 				5EE240472E0EB33D00871009 /* DaysCalendarLockScreen */,
 				5E51EF7D2E0ED1D00003E7B5 /* Assets.xcassets */,
+				5E22D11B2E0F085C00395DC3 /* DaysDots */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +226,7 @@
 				97C146EE1CF9000F007C117D /* Runner.app */,
 				5EE240132E0EA26400871009 /* DaysCalendarExtension.appex */,
 				5EE240442E0EB33D00871009 /* DaysCalendarLockScreenExtension.appex */,
+				5E22D1182E0F085B00395DC3 /* DaysDotsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +259,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5E22D1172E0F085B00395DC3 /* DaysDotsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E22D12B2E0F085E00395DC3 /* Build configuration list for PBXNativeTarget "DaysDotsExtension" */;
+			buildPhases = (
+				5E22D1142E0F085B00395DC3 /* Sources */,
+				5E22D1152E0F085B00395DC3 /* Frameworks */,
+				5E22D1162E0F085B00395DC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5E22D11B2E0F085C00395DC3 /* DaysDots */,
+				5E51EF9B2E0EEAD90003E7B5 /* Utils */,
+			);
+			name = DaysDotsExtension;
+			packageProductDependencies = (
+			);
+			productName = DaysDotsExtension;
+			productReference = 5E22D1182E0F085B00395DC3 /* DaysDotsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5EE240122E0EA26400871009 /* DaysCalendarExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EE240282E0EA26700871009 /* Build configuration list for PBXNativeTarget "DaysCalendarExtension" */;
@@ -321,6 +343,7 @@
 			dependencies = (
 				5EE240222E0EA26700871009 /* PBXTargetDependency */,
 				5EE240562E0EB33F00871009 /* PBXTargetDependency */,
+				5E22D1252E0F085E00395DC3 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -338,6 +361,9 @@
 				LastUpgradeCheck = 1510;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
+					5E22D1172E0F085B00395DC3 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					5EE240122E0EA26400871009 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -366,11 +392,19 @@
 				97C146ED1CF9000F007C117D /* Runner */,
 				5EE240122E0EA26400871009 /* DaysCalendarExtension */,
 				5EE240432E0EB33D00871009 /* DaysCalendarLockScreenExtension */,
+				5E22D1172E0F085B00395DC3 /* DaysDotsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5E22D1162E0F085B00395DC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5EE240112E0EA26400871009 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,9 +496,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -474,6 +512,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5E22D1142E0F085B00395DC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5EE2400F2E0EA26400871009 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,6 +545,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5E22D1252E0F085E00395DC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E22D1172E0F085B00395DC3 /* DaysDotsExtension */;
+			targetProxy = 5E22D1242E0F085E00395DC3 /* PBXContainerItemProxy */;
+		};
 		5EE240222E0EA26700871009 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5EE240122E0EA26400871009 /* DaysCalendarExtension */;
@@ -600,7 +650,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.warioddly.days;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -610,6 +660,159 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Profile;
+		};
+		5E22D1272E0F085E00395DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Extensions/DaysDots/DaysDots.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X677Q66Q7S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extensions/DaysDots/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DaysDots;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warioddly.days.DaysDots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Debug;
+		};
+		5E22D1282E0F085E00395DC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Extensions/DaysDots/DaysDots.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X677Q66Q7S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extensions/DaysDots/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DaysDots;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warioddly.days.DaysDots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Release;
+		};
+		5E22D1292E0F085E00395DC3 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Extensions/DaysDots/DaysDots.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X677Q66Q7S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extensions/DaysDots/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DaysDots;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.warioddly.days.DaysDots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Profile;
 		};
@@ -1007,7 +1210,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.warioddly.days;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1037,7 +1240,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.warioddly.days;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1053,6 +1256,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5E22D12B2E0F085E00395DC3 /* Build configuration list for PBXNativeTarget "DaysDotsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E22D1272E0F085E00395DC3 /* Debug */,
+				5E22D1282E0F085E00395DC3 /* Release */,
+				5E22D1292E0F085E00395DC3 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5EE240282E0EA26700871009 /* Build configuration list for PBXNativeTarget "DaysCalendarExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

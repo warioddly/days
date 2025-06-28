@@ -59,15 +59,15 @@ struct DaysCalendarLockScreenEntryView: View {
     @Environment(\.widgetFamily) var widgetFamily
 
     var body: some View {
-        
+
         let imageHeight: CGFloat = {
             switch widgetFamily {
             case .accessoryInline: return 16
-            case .accessoryRectangular: return 48
+            case .accessoryRectangular: return 62
             default: return 42
             }
         }()
-        
+
         let image = Image(entry.flowerName)
             .renderingMode(Image.TemplateRenderingMode.template)
             .resizable()
@@ -99,8 +99,42 @@ struct DaysCalendarLockScreenEntryView: View {
                     VStack(alignment: .leading) {
                         date
                         Spacer().frame(height: 2)
-                        weekday
+
+                        let todayDayOfYear =
+                            Calendar.current.ordinality(
+                                of: .day,
+                                in: .year,
+                                for: entry.date
+                            )
+                            ?? 1
+
+                        VStack(alignment: .leading) {
+
+                            Text(
+                                formatter.string(from: entry.date).lowercased()
+                            )
+                            .font(.caption)
+                            .bold()
+                            
+                            Spacer().frame(width: 12)
+
+                            HStack {
+
+                                Text("\(todayDayOfYear)")
+                                    .foregroundColor(.white)
+                                    .fontWeight(.semibold)
+                                    .font(.caption)
+
+                                Text("days left")
+                                    .foregroundColor(Color.gray.opacity(0.4))
+                                    .fontWeight(.semibold)
+                                    .font(.caption)
+
+                            }
+                        }
+
                     }
+
                 }
             )
 
@@ -125,7 +159,9 @@ struct DaysCalendarLockScreen: Widget {
                 .containerBackground(.fill.tertiary, for: .widget)
         }
         .configurationDisplayName("A Day, A Flower")
-        .description("A minimal lock screen widget that shows today's date and a unique flower icon for each day.")
+        .description(
+            "A minimal lock screen widget that shows today's date and a unique flower icon for each day."
+        )
         .supportedFamilies([
             .accessoryCircular, .accessoryInline, .accessoryRectangular,
         ])
