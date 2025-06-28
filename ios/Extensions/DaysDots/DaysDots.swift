@@ -53,9 +53,9 @@ struct DaysDotsEntryView: View {
 
     var body: some View {
         switch widgetFamily {
-        case .systemLarge: AnyView(YearDotsLargeWidgetView(entry: entry))
+        case .systemSmall: AnyView(YearDotsSmallWidgetView(entry: entry))
         case .systemMedium: AnyView(YearDotsMediumWidgetView(entry: entry))
-        default: AnyView(YearDotsSmallWidgetView(entry: entry))
+        default: AnyView(YearDotsLargeWidgetView(entry: entry))
         }
     }
 }
@@ -70,7 +70,6 @@ struct DaysDots: Widget {
                     .containerBackground(.black, for: .widget)
             } else {
                 DaysDotsEntryView(entry: entry)
-                    .padding()
                     .background(.black)
             }
         }
@@ -90,8 +89,8 @@ struct YearDotsSmallWidgetView: View {
     var body: some View {
         YearDotsBuilderView(
             entry: entry,
-            spacing: 3.3,
-            gridItemSpacing: 1,
+            spacing: 2.6,
+            gridItemSpacing: 0.1,
             horizontalItemCount: 16
         )
     }
