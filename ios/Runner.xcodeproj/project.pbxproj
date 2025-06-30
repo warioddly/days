@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -105,21 +105,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5E22D12A2E0F085E00395DC3 /* Exceptions for "DaysDots" folder in "DaysDotsExtension" target */ = {
+		5E22D12A2E0F085E00395DC3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = 5E22D1172E0F085B00395DC3 /* DaysDotsExtension */;
 		};
-		5EE240272E0EA26700871009 /* Exceptions for "DaysCalendar" folder in "DaysCalendarExtension" target */ = {
+		5EE240272E0EA26700871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = 5EE240122E0EA26400871009 /* DaysCalendarExtension */;
 		};
-		5EE2405B2E0EB33F00871009 /* Exceptions for "DaysCalendarLockScreen" folder in "DaysCalendarLockScreenExtension" target */ = {
+		5EE2405B2E0EB33F00871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -129,53 +129,10 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5E22D11B2E0F085C00395DC3 /* DaysDots */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5E22D12A2E0F085E00395DC3 /* Exceptions for "DaysDots" folder in "DaysDotsExtension" target */,
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = DaysDots;
-			sourceTree = "<group>";
-		};
-		5E51EF9B2E0EEAD90003E7B5 /* Utils */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		5EE240162E0EA26500871009 /* DaysCalendar */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5EE240272E0EA26700871009 /* Exceptions for "DaysCalendar" folder in "DaysCalendarExtension" target */,
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = DaysCalendar;
-			sourceTree = "<group>";
-		};
-		5EE240472E0EB33D00871009 /* DaysCalendarLockScreen */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5EE2405B2E0EB33F00871009 /* Exceptions for "DaysCalendarLockScreen" folder in "DaysCalendarLockScreenExtension" target */,
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = DaysCalendarLockScreen;
-			sourceTree = "<group>";
-		};
+		5E22D11B2E0F085C00395DC3 /* DaysDots */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5E22D12A2E0F085E00395DC3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysDots; sourceTree = "<group>"; };
+		5E51EF9B2E0EEAD90003E7B5 /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
+		5EE240162E0EA26500871009 /* DaysCalendar */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5EE240272E0EA26700871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysCalendar; sourceTree = "<group>"; };
+		5EE240472E0EB33D00871009 /* DaysCalendarLockScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5EE2405B2E0EB33F00871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysCalendarLockScreen; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,9 +494,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

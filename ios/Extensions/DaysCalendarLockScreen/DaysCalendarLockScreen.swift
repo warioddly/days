@@ -34,20 +34,30 @@ struct Provider: TimelineProvider {
         let calendar = Calendar.current
         let currentDate = Date()
 
-        let entries: [SimpleEntry] = (0..<7).map { dayOffset in
-            let entryDate = calendar.date(
-                byAdding: .day,
-                value: dayOffset,
-                to: currentDate
-            )!
-            let startOfDay = calendar.startOfDay(for: entryDate)
-            let index = abs(startOfDay.hashValue) % flowerNames.count
+        let entries: [SimpleEntry] = (0..<7).compactMap { offset in
+            guard
+                let entryDate = calendar.date(
+                    byAdding: .day,
+                    value: offset,
+                    to: calendar.startOfDay(for: currentDate)
+                )
+            else {
+                return nil
+            }
+
+            let index = abs(entryDate.hashValue) % flowerNames.count
             let flowerName = flowerNames[index]
 
             return SimpleEntry(date: entryDate, flowerName: flowerName)
         }
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let nextMidnight = calendar.nextDate(
+            after: currentDate,
+            matching: DateComponents(hour: 0),
+            matchingPolicy: .strict
+        )!
+
+        let timeline = Timeline(entries: entries, policy: .after(nextMidnight))
         completion(timeline)
     }
 
