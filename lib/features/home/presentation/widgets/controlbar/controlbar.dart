@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
@@ -23,12 +21,11 @@ class _ControlBarState extends State<ControlBar> {
     return FadeSlideAnimation(
       beginOffset: const Offset(0, 0.8),
       child: Padding(
-        padding: Insets.largeHorizontal,
+        padding: Insets.mHorizontal,
         child: Center(
           child: BlocBuilder<SettingsBloc, SettingsState>(
             builder: (context, state) {
               final selectedIndex = state.entity.gridType.index;
-              log('selectedIndex ${selectedIndex}');
               return CustomSegmentedControl(
                 initialIndex: selectedIndex,
                 segments: [

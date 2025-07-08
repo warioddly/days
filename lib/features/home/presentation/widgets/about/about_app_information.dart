@@ -22,12 +22,12 @@ class AboutAppInformation extends StatelessWidget {
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: Breakpoints.maxViewWidthSize),
           child: Padding(
-            padding: Insets.doubledNormal,
+            padding: Insets.xl,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
-                  padding: Insets.largeBottom,
+                  padding: Insets.mBottom,
                   child: Image.asset(
                     _heartAssets,
                     color: isLightTheme ? Colors.black : Colors.white,
@@ -41,7 +41,7 @@ class AboutAppInformation extends StatelessWidget {
                 GestureDetector(
                   onTap: () => launchUrlString(AppConstants.portfolio),
                   child: Padding(
-                    padding: Insets.normalTop,
+                    padding: Insets.mTop,
                     child: MediaQuery(
                       data: MediaQuery.of(context).copyWith(invertColors: !isLightTheme),
                       child: Image.asset(_warioddlyImageAssets),

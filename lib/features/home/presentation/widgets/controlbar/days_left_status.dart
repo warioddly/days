@@ -23,7 +23,7 @@ class _DaysLeftStatusState extends State<DaysLeftStatus> {
     return FadeSlideAnimation(
       beginOffset: const Offset(0, -.8),
       child: Padding(
-        padding: Insets.doubledNormal,
+        padding: Insets.xl,
         child: Column(
           children: [
             BlocBuilder<DotsManagerBloc, DotsManagerModelState>(
@@ -40,7 +40,7 @@ class _DaysLeftStatusState extends State<DaysLeftStatus> {
                 );
               },
             ),
-            Spaces.half,
+            Spaces.xs,
             BlocBuilder<SettingsBloc, SettingsState>(
               builder: (context, state) {
                 return BlurredSwitcher(

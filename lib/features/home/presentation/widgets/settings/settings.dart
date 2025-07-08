@@ -10,20 +10,17 @@ class AppSettings extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(Dimensions.doubledNormal),
-          topRight: Radius.circular(Dimensions.doubledNormal),
-        ),
+        borderRadius: Borders.xlTop,
       ),
-      padding: Insets.normal,
+      padding: Insets.m,
       width: double.infinity,
       child: const SafeArea(
         child: Padding(
-          padding: Insets.normal,
+          padding: Insets.m,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
-            spacing: Dimensions.small,
+            spacing: Dimensions.sm,
             mainAxisSize: MainAxisSize.min,
             children: [
               ThemeSettings(),

@@ -1,8 +1,7 @@
 import 'dart:async';
-import 'dart:developer';
-
 import 'package:days/core/services/locator_service.dart';
-import 'package:days/features/app/presentation/page/app.dart';
+import 'package:days/core/utils/on_error.dart';
+import 'package:days/features/app/presentation/page/app_wrapper.dart';
 import 'package:days/shared/package/logger/_logger.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
@@ -12,25 +11,21 @@ Future<void> runner() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
+  Logger.i('Days app initializing', time: DateTime.now());
+
   await Future.wait([
     if (!kIsWeb) setupSystemUI(),
     setupDependencyInjection(),
   ]);
 
-  runApp(const MyApp());
+  Logger.i('Days app initialized', time: DateTime.now());
+
+  runApp(const DaysApp());
 }
 
 void main() {
-
-  Logger.i('Days app started');
-
-  runZonedGuarded(
-    runner,
-    (error, stackTrace) {
-      log('[ERROR]', error: error, stackTrace: stackTrace);
-    },
-  );
-
+  Logger.i('Days app started', time: DateTime.now());
+  runZonedGuarded(runner, onErrorLog);
 }
 
 Future<void> setupSystemUI() async {

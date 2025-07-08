@@ -14,7 +14,7 @@ class RelatedLinks extends StatelessWidget {
     final color = Theme.of(context).colorScheme.secondary;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      spacing: Dimensions.half,
+      spacing: Dimensions.s,
       children: [
         LinkedText(
           title: l10n.terms,

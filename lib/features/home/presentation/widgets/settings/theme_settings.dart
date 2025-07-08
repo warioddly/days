@@ -18,13 +18,13 @@ class ThemeSettings extends StatelessWidget {
           segments: [
             Icon(
                 CupertinoIcons.moon_stars_fill,
-                color: selectedThemeIndex != Brightness.light.index
+                color: selectedThemeIndex == Brightness.dark.index
                     ? context.colorScheme.onPrimary
                     : CupertinoColors.systemFill,
             ),
             Icon(
                 CupertinoIcons.sun_max_fill,
-              color: selectedThemeIndex != Brightness.dark.index
+              color: selectedThemeIndex == Brightness.light.index
                   ? context.colorScheme.onPrimary
                   : CupertinoColors.systemFill,
             ),

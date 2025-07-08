@@ -26,10 +26,10 @@ class DotGridBodyBuilder extends StatelessWidget {
     final viewSize = (mediaQuerySize.width > Breakpoints.maxViewWidthSize
         ? Breakpoints.maxViewWidthSize
         : mediaQuerySize.width) -
-        (Dimensions.doubledNormal * 2);
+        (Dimensions.xl * 2);
 
     return Padding(
-      padding: Insets.doubledNormalHorizontal,
+      padding: Insets.xlHorizontal,
       child: GestureDetector(
         behavior: HitTestBehavior.translucent,
         onPanStart: (details) => onPanUpdate(details.globalPosition),

@@ -19,7 +19,7 @@ class SlidingSegmentControl<T extends Object> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoSlidingSegmentedControl<T>(
-      padding: Insets.quarter,
+      padding: Insets.xs,
       thumbColor: context.colorScheme.primary,
       groupValue: groupValue,
       onValueChanged: onValueChanged,

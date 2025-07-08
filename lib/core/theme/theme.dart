@@ -5,11 +5,15 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
 
-  static ThemeData resolve(Brightness brightness) {
-    return brightness == Brightness.light ? lightTheme() : darkTheme();
+  static ThemeData resolveTheme(Brightness brightness) {
+    return brightness == Brightness.light ? _lightTheme : _darkTheme;
   }
 
   static const textTheme = DayTextTheme();
+
+  static final ThemeData _lightTheme = lightTheme();
+
+  static final ThemeData _darkTheme = darkTheme();
 
   static ThemeData darkTheme() {
     final colors = DarkDayColors();
@@ -38,7 +42,7 @@ class AppTheme {
       iconTheme: const IconThemeData(color: Colors.white),
       bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: Colors.black,
-        shape: RoundedRectangleBorder(borderRadius: Borders.largeTop),
+        shape: RoundedRectangleBorder(borderRadius: Borders.mlTop),
       ),
     );
   }
@@ -70,7 +74,7 @@ class AppTheme {
       ),
       bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: Borders.largeTop),
+        shape: RoundedRectangleBorder(borderRadius: Borders.mlTop),
       ),
     );
   }

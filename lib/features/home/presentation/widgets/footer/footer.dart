@@ -21,10 +21,10 @@ class _FooterState extends State<Footer> {
     return FadeSlideAnimation(
       beginOffset: const Offset(0, 0.8),
       child: Padding(
-        padding: Insets.normal + Insets.largeBottom,
+        padding: Insets.m + Insets.mlBottom,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          spacing: Dimensions.half,
+          spacing: Dimensions.s,
           children: [
             LinkedText(
               title: l10n.settings,

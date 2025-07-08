@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: use_named_constants
-
 part of 'dimensions.dart';
 
 // **************************************************************************
@@ -19,6 +17,2012 @@ part of 'dimensions.dart';
 abstract class Insets {
   const Insets._();
 
+  static const EdgeInsets zero = EdgeInsets.all(0.0);
+  static const EdgeInsets zeroTop = EdgeInsets.only(top: 0.0);
+  static const EdgeInsets zeroBottom = EdgeInsets.only(bottom: 0.0);
+  static const EdgeInsets zeroLeft = EdgeInsets.only(left: 0.0);
+  static const EdgeInsets zeroRight = EdgeInsets.only(right: 0.0);
+  static const EdgeInsets zeroVertical = EdgeInsets.symmetric(vertical: 0.0);
+  static const EdgeInsets zeroHorizontal = EdgeInsets.symmetric(
+    horizontal: 0.0,
+  );
+  static const EdgeInsets zeroTopXxsBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets zeroLeftXxsRight = EdgeInsets.only(
+    left: 0.0,
+    right: 2.0,
+  );
+  static const EdgeInsets zeroTopXxsLeft = EdgeInsets.only(top: 0.0, left: 2.0);
+  static const EdgeInsets zeroRightXxsBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets zeroTopXsBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets zeroLeftXsRight = EdgeInsets.only(
+    left: 0.0,
+    right: 4.0,
+  );
+  static const EdgeInsets zeroTopXsLeft = EdgeInsets.only(top: 0.0, left: 4.0);
+  static const EdgeInsets zeroRightXsBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets zeroTopSBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets zeroLeftSRight = EdgeInsets.only(
+    left: 0.0,
+    right: 8.0,
+  );
+  static const EdgeInsets zeroTopSLeft = EdgeInsets.only(top: 0.0, left: 8.0);
+  static const EdgeInsets zeroRightSBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets zeroTopMsBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets zeroLeftMsRight = EdgeInsets.only(
+    left: 0.0,
+    right: 10.0,
+  );
+  static const EdgeInsets zeroTopMsLeft = EdgeInsets.only(top: 0.0, left: 10.0);
+  static const EdgeInsets zeroRightMsBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets zeroTopSmBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets zeroLeftSmRight = EdgeInsets.only(
+    left: 0.0,
+    right: 12.0,
+  );
+  static const EdgeInsets zeroTopSmLeft = EdgeInsets.only(top: 0.0, left: 12.0);
+  static const EdgeInsets zeroRightSmBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets zeroTopMBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets zeroLeftMRight = EdgeInsets.only(
+    left: 0.0,
+    right: 16.0,
+  );
+  static const EdgeInsets zeroTopMLeft = EdgeInsets.only(top: 0.0, left: 16.0);
+  static const EdgeInsets zeroRightMBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets zeroTopMlBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets zeroLeftMlRight = EdgeInsets.only(
+    left: 0.0,
+    right: 20.0,
+  );
+  static const EdgeInsets zeroTopMlLeft = EdgeInsets.only(top: 0.0, left: 20.0);
+  static const EdgeInsets zeroRightMlBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets zeroTopLBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets zeroLeftLRight = EdgeInsets.only(
+    left: 0.0,
+    right: 24.0,
+  );
+  static const EdgeInsets zeroTopLLeft = EdgeInsets.only(top: 0.0, left: 24.0);
+  static const EdgeInsets zeroRightLBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets zeroTopXlBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets zeroLeftXlRight = EdgeInsets.only(
+    left: 0.0,
+    right: 32.0,
+  );
+  static const EdgeInsets zeroTopXlLeft = EdgeInsets.only(top: 0.0, left: 32.0);
+  static const EdgeInsets zeroRightXlBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets zeroTopXxlBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets zeroLeftXxlRight = EdgeInsets.only(
+    left: 0.0,
+    right: 48.0,
+  );
+  static const EdgeInsets zeroTopXxlLeft = EdgeInsets.only(
+    top: 0.0,
+    left: 48.0,
+  );
+  static const EdgeInsets zeroRightXxlBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets zeroTopExtraBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets zeroLeftExtraRight = EdgeInsets.only(
+    left: 0.0,
+    right: 60.0,
+  );
+  static const EdgeInsets zeroTopExtraLeft = EdgeInsets.only(
+    top: 0.0,
+    left: 60.0,
+  );
+  static const EdgeInsets zeroRightExtraBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets zeroTopDotSizeBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets zeroLeftDotSizeRight = EdgeInsets.only(
+    left: 0.0,
+    right: 3.0,
+  );
+  static const EdgeInsets zeroTopDotSizeLeft = EdgeInsets.only(
+    top: 0.0,
+    left: 3.0,
+  );
+  static const EdgeInsets zeroRightDotSizeBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets zeroTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 0.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets zeroLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 0.0,
+    right: 20.0,
+  );
+  static const EdgeInsets zeroTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 0.0,
+    left: 20.0,
+  );
+  static const EdgeInsets zeroRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 0.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xxs = EdgeInsets.all(2.0);
+  static const EdgeInsets xxsTop = EdgeInsets.only(top: 2.0);
+  static const EdgeInsets xxsBottom = EdgeInsets.only(bottom: 2.0);
+  static const EdgeInsets xxsLeft = EdgeInsets.only(left: 2.0);
+  static const EdgeInsets xxsRight = EdgeInsets.only(right: 2.0);
+  static const EdgeInsets xxsVertical = EdgeInsets.symmetric(vertical: 2.0);
+  static const EdgeInsets xxsHorizontal = EdgeInsets.symmetric(horizontal: 2.0);
+  static const EdgeInsets xxsTopZeroBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets xxsLeftZeroRight = EdgeInsets.only(
+    left: 2.0,
+    right: 0.0,
+  );
+  static const EdgeInsets xxsTopZeroLeft = EdgeInsets.only(top: 2.0, left: 0.0);
+  static const EdgeInsets xxsRightZeroBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets xxsTopXsBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets xxsLeftXsRight = EdgeInsets.only(
+    left: 2.0,
+    right: 4.0,
+  );
+  static const EdgeInsets xxsTopXsLeft = EdgeInsets.only(top: 2.0, left: 4.0);
+  static const EdgeInsets xxsRightXsBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets xxsTopSBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets xxsLeftSRight = EdgeInsets.only(
+    left: 2.0,
+    right: 8.0,
+  );
+  static const EdgeInsets xxsTopSLeft = EdgeInsets.only(top: 2.0, left: 8.0);
+  static const EdgeInsets xxsRightSBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets xxsTopMsBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets xxsLeftMsRight = EdgeInsets.only(
+    left: 2.0,
+    right: 10.0,
+  );
+  static const EdgeInsets xxsTopMsLeft = EdgeInsets.only(top: 2.0, left: 10.0);
+  static const EdgeInsets xxsRightMsBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets xxsTopSmBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets xxsLeftSmRight = EdgeInsets.only(
+    left: 2.0,
+    right: 12.0,
+  );
+  static const EdgeInsets xxsTopSmLeft = EdgeInsets.only(top: 2.0, left: 12.0);
+  static const EdgeInsets xxsRightSmBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets xxsTopMBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets xxsLeftMRight = EdgeInsets.only(
+    left: 2.0,
+    right: 16.0,
+  );
+  static const EdgeInsets xxsTopMLeft = EdgeInsets.only(top: 2.0, left: 16.0);
+  static const EdgeInsets xxsRightMBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets xxsTopMlBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xxsLeftMlRight = EdgeInsets.only(
+    left: 2.0,
+    right: 20.0,
+  );
+  static const EdgeInsets xxsTopMlLeft = EdgeInsets.only(top: 2.0, left: 20.0);
+  static const EdgeInsets xxsRightMlBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xxsTopLBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets xxsLeftLRight = EdgeInsets.only(
+    left: 2.0,
+    right: 24.0,
+  );
+  static const EdgeInsets xxsTopLLeft = EdgeInsets.only(top: 2.0, left: 24.0);
+  static const EdgeInsets xxsRightLBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets xxsTopXlBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets xxsLeftXlRight = EdgeInsets.only(
+    left: 2.0,
+    right: 32.0,
+  );
+  static const EdgeInsets xxsTopXlLeft = EdgeInsets.only(top: 2.0, left: 32.0);
+  static const EdgeInsets xxsRightXlBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets xxsTopXxlBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets xxsLeftXxlRight = EdgeInsets.only(
+    left: 2.0,
+    right: 48.0,
+  );
+  static const EdgeInsets xxsTopXxlLeft = EdgeInsets.only(top: 2.0, left: 48.0);
+  static const EdgeInsets xxsRightXxlBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets xxsTopExtraBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets xxsLeftExtraRight = EdgeInsets.only(
+    left: 2.0,
+    right: 60.0,
+  );
+  static const EdgeInsets xxsTopExtraLeft = EdgeInsets.only(
+    top: 2.0,
+    left: 60.0,
+  );
+  static const EdgeInsets xxsRightExtraBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets xxsTopDotSizeBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets xxsLeftDotSizeRight = EdgeInsets.only(
+    left: 2.0,
+    right: 3.0,
+  );
+  static const EdgeInsets xxsTopDotSizeLeft = EdgeInsets.only(
+    top: 2.0,
+    left: 3.0,
+  );
+  static const EdgeInsets xxsRightDotSizeBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets xxsTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 2.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xxsLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 2.0,
+    right: 20.0,
+  );
+  static const EdgeInsets xxsTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 2.0,
+    left: 20.0,
+  );
+  static const EdgeInsets xxsRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 2.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xs = EdgeInsets.all(4.0);
+  static const EdgeInsets xsTop = EdgeInsets.only(top: 4.0);
+  static const EdgeInsets xsBottom = EdgeInsets.only(bottom: 4.0);
+  static const EdgeInsets xsLeft = EdgeInsets.only(left: 4.0);
+  static const EdgeInsets xsRight = EdgeInsets.only(right: 4.0);
+  static const EdgeInsets xsVertical = EdgeInsets.symmetric(vertical: 4.0);
+  static const EdgeInsets xsHorizontal = EdgeInsets.symmetric(horizontal: 4.0);
+  static const EdgeInsets xsTopZeroBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets xsLeftZeroRight = EdgeInsets.only(
+    left: 4.0,
+    right: 0.0,
+  );
+  static const EdgeInsets xsTopZeroLeft = EdgeInsets.only(top: 4.0, left: 0.0);
+  static const EdgeInsets xsRightZeroBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets xsTopXxsBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets xsLeftXxsRight = EdgeInsets.only(
+    left: 4.0,
+    right: 2.0,
+  );
+  static const EdgeInsets xsTopXxsLeft = EdgeInsets.only(top: 4.0, left: 2.0);
+  static const EdgeInsets xsRightXxsBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets xsTopSBottom = EdgeInsets.only(top: 4.0, bottom: 8.0);
+  static const EdgeInsets xsLeftSRight = EdgeInsets.only(left: 4.0, right: 8.0);
+  static const EdgeInsets xsTopSLeft = EdgeInsets.only(top: 4.0, left: 8.0);
+  static const EdgeInsets xsRightSBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets xsTopMsBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets xsLeftMsRight = EdgeInsets.only(
+    left: 4.0,
+    right: 10.0,
+  );
+  static const EdgeInsets xsTopMsLeft = EdgeInsets.only(top: 4.0, left: 10.0);
+  static const EdgeInsets xsRightMsBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets xsTopSmBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets xsLeftSmRight = EdgeInsets.only(
+    left: 4.0,
+    right: 12.0,
+  );
+  static const EdgeInsets xsTopSmLeft = EdgeInsets.only(top: 4.0, left: 12.0);
+  static const EdgeInsets xsRightSmBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets xsTopMBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets xsLeftMRight = EdgeInsets.only(
+    left: 4.0,
+    right: 16.0,
+  );
+  static const EdgeInsets xsTopMLeft = EdgeInsets.only(top: 4.0, left: 16.0);
+  static const EdgeInsets xsRightMBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets xsTopMlBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xsLeftMlRight = EdgeInsets.only(
+    left: 4.0,
+    right: 20.0,
+  );
+  static const EdgeInsets xsTopMlLeft = EdgeInsets.only(top: 4.0, left: 20.0);
+  static const EdgeInsets xsRightMlBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xsTopLBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets xsLeftLRight = EdgeInsets.only(
+    left: 4.0,
+    right: 24.0,
+  );
+  static const EdgeInsets xsTopLLeft = EdgeInsets.only(top: 4.0, left: 24.0);
+  static const EdgeInsets xsRightLBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets xsTopXlBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets xsLeftXlRight = EdgeInsets.only(
+    left: 4.0,
+    right: 32.0,
+  );
+  static const EdgeInsets xsTopXlLeft = EdgeInsets.only(top: 4.0, left: 32.0);
+  static const EdgeInsets xsRightXlBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets xsTopXxlBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets xsLeftXxlRight = EdgeInsets.only(
+    left: 4.0,
+    right: 48.0,
+  );
+  static const EdgeInsets xsTopXxlLeft = EdgeInsets.only(top: 4.0, left: 48.0);
+  static const EdgeInsets xsRightXxlBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets xsTopExtraBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets xsLeftExtraRight = EdgeInsets.only(
+    left: 4.0,
+    right: 60.0,
+  );
+  static const EdgeInsets xsTopExtraLeft = EdgeInsets.only(
+    top: 4.0,
+    left: 60.0,
+  );
+  static const EdgeInsets xsRightExtraBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets xsTopDotSizeBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets xsLeftDotSizeRight = EdgeInsets.only(
+    left: 4.0,
+    right: 3.0,
+  );
+  static const EdgeInsets xsTopDotSizeLeft = EdgeInsets.only(
+    top: 4.0,
+    left: 3.0,
+  );
+  static const EdgeInsets xsRightDotSizeBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets xsTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 4.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xsLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 4.0,
+    right: 20.0,
+  );
+  static const EdgeInsets xsTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 4.0,
+    left: 20.0,
+  );
+  static const EdgeInsets xsRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 4.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets s = EdgeInsets.all(8.0);
+  static const EdgeInsets sTop = EdgeInsets.only(top: 8.0);
+  static const EdgeInsets sBottom = EdgeInsets.only(bottom: 8.0);
+  static const EdgeInsets sLeft = EdgeInsets.only(left: 8.0);
+  static const EdgeInsets sRight = EdgeInsets.only(right: 8.0);
+  static const EdgeInsets sVertical = EdgeInsets.symmetric(vertical: 8.0);
+  static const EdgeInsets sHorizontal = EdgeInsets.symmetric(horizontal: 8.0);
+  static const EdgeInsets sTopZeroBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets sLeftZeroRight = EdgeInsets.only(
+    left: 8.0,
+    right: 0.0,
+  );
+  static const EdgeInsets sTopZeroLeft = EdgeInsets.only(top: 8.0, left: 0.0);
+  static const EdgeInsets sRightZeroBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets sTopXxsBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets sLeftXxsRight = EdgeInsets.only(
+    left: 8.0,
+    right: 2.0,
+  );
+  static const EdgeInsets sTopXxsLeft = EdgeInsets.only(top: 8.0, left: 2.0);
+  static const EdgeInsets sRightXxsBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets sTopXsBottom = EdgeInsets.only(top: 8.0, bottom: 4.0);
+  static const EdgeInsets sLeftXsRight = EdgeInsets.only(left: 8.0, right: 4.0);
+  static const EdgeInsets sTopXsLeft = EdgeInsets.only(top: 8.0, left: 4.0);
+  static const EdgeInsets sRightXsBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets sTopMsBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets sLeftMsRight = EdgeInsets.only(
+    left: 8.0,
+    right: 10.0,
+  );
+  static const EdgeInsets sTopMsLeft = EdgeInsets.only(top: 8.0, left: 10.0);
+  static const EdgeInsets sRightMsBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets sTopSmBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets sLeftSmRight = EdgeInsets.only(
+    left: 8.0,
+    right: 12.0,
+  );
+  static const EdgeInsets sTopSmLeft = EdgeInsets.only(top: 8.0, left: 12.0);
+  static const EdgeInsets sRightSmBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets sTopMBottom = EdgeInsets.only(top: 8.0, bottom: 16.0);
+  static const EdgeInsets sLeftMRight = EdgeInsets.only(left: 8.0, right: 16.0);
+  static const EdgeInsets sTopMLeft = EdgeInsets.only(top: 8.0, left: 16.0);
+  static const EdgeInsets sRightMBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets sTopMlBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets sLeftMlRight = EdgeInsets.only(
+    left: 8.0,
+    right: 20.0,
+  );
+  static const EdgeInsets sTopMlLeft = EdgeInsets.only(top: 8.0, left: 20.0);
+  static const EdgeInsets sRightMlBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets sTopLBottom = EdgeInsets.only(top: 8.0, bottom: 24.0);
+  static const EdgeInsets sLeftLRight = EdgeInsets.only(left: 8.0, right: 24.0);
+  static const EdgeInsets sTopLLeft = EdgeInsets.only(top: 8.0, left: 24.0);
+  static const EdgeInsets sRightLBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets sTopXlBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets sLeftXlRight = EdgeInsets.only(
+    left: 8.0,
+    right: 32.0,
+  );
+  static const EdgeInsets sTopXlLeft = EdgeInsets.only(top: 8.0, left: 32.0);
+  static const EdgeInsets sRightXlBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets sTopXxlBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets sLeftXxlRight = EdgeInsets.only(
+    left: 8.0,
+    right: 48.0,
+  );
+  static const EdgeInsets sTopXxlLeft = EdgeInsets.only(top: 8.0, left: 48.0);
+  static const EdgeInsets sRightXxlBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets sTopExtraBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets sLeftExtraRight = EdgeInsets.only(
+    left: 8.0,
+    right: 60.0,
+  );
+  static const EdgeInsets sTopExtraLeft = EdgeInsets.only(top: 8.0, left: 60.0);
+  static const EdgeInsets sRightExtraBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets sTopDotSizeBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets sLeftDotSizeRight = EdgeInsets.only(
+    left: 8.0,
+    right: 3.0,
+  );
+  static const EdgeInsets sTopDotSizeLeft = EdgeInsets.only(
+    top: 8.0,
+    left: 3.0,
+  );
+  static const EdgeInsets sRightDotSizeBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets sTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 8.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets sLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 8.0,
+    right: 20.0,
+  );
+  static const EdgeInsets sTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 8.0,
+    left: 20.0,
+  );
+  static const EdgeInsets sRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 8.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets ms = EdgeInsets.all(10.0);
+  static const EdgeInsets msTop = EdgeInsets.only(top: 10.0);
+  static const EdgeInsets msBottom = EdgeInsets.only(bottom: 10.0);
+  static const EdgeInsets msLeft = EdgeInsets.only(left: 10.0);
+  static const EdgeInsets msRight = EdgeInsets.only(right: 10.0);
+  static const EdgeInsets msVertical = EdgeInsets.symmetric(vertical: 10.0);
+  static const EdgeInsets msHorizontal = EdgeInsets.symmetric(horizontal: 10.0);
+  static const EdgeInsets msTopZeroBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets msLeftZeroRight = EdgeInsets.only(
+    left: 10.0,
+    right: 0.0,
+  );
+  static const EdgeInsets msTopZeroLeft = EdgeInsets.only(top: 10.0, left: 0.0);
+  static const EdgeInsets msRightZeroBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets msTopXxsBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets msLeftXxsRight = EdgeInsets.only(
+    left: 10.0,
+    right: 2.0,
+  );
+  static const EdgeInsets msTopXxsLeft = EdgeInsets.only(top: 10.0, left: 2.0);
+  static const EdgeInsets msRightXxsBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets msTopXsBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets msLeftXsRight = EdgeInsets.only(
+    left: 10.0,
+    right: 4.0,
+  );
+  static const EdgeInsets msTopXsLeft = EdgeInsets.only(top: 10.0, left: 4.0);
+  static const EdgeInsets msRightXsBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets msTopSBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets msLeftSRight = EdgeInsets.only(
+    left: 10.0,
+    right: 8.0,
+  );
+  static const EdgeInsets msTopSLeft = EdgeInsets.only(top: 10.0, left: 8.0);
+  static const EdgeInsets msRightSBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets msTopSmBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets msLeftSmRight = EdgeInsets.only(
+    left: 10.0,
+    right: 12.0,
+  );
+  static const EdgeInsets msTopSmLeft = EdgeInsets.only(top: 10.0, left: 12.0);
+  static const EdgeInsets msRightSmBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets msTopMBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets msLeftMRight = EdgeInsets.only(
+    left: 10.0,
+    right: 16.0,
+  );
+  static const EdgeInsets msTopMLeft = EdgeInsets.only(top: 10.0, left: 16.0);
+  static const EdgeInsets msRightMBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets msTopMlBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets msLeftMlRight = EdgeInsets.only(
+    left: 10.0,
+    right: 20.0,
+  );
+  static const EdgeInsets msTopMlLeft = EdgeInsets.only(top: 10.0, left: 20.0);
+  static const EdgeInsets msRightMlBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets msTopLBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets msLeftLRight = EdgeInsets.only(
+    left: 10.0,
+    right: 24.0,
+  );
+  static const EdgeInsets msTopLLeft = EdgeInsets.only(top: 10.0, left: 24.0);
+  static const EdgeInsets msRightLBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets msTopXlBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets msLeftXlRight = EdgeInsets.only(
+    left: 10.0,
+    right: 32.0,
+  );
+  static const EdgeInsets msTopXlLeft = EdgeInsets.only(top: 10.0, left: 32.0);
+  static const EdgeInsets msRightXlBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets msTopXxlBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets msLeftXxlRight = EdgeInsets.only(
+    left: 10.0,
+    right: 48.0,
+  );
+  static const EdgeInsets msTopXxlLeft = EdgeInsets.only(top: 10.0, left: 48.0);
+  static const EdgeInsets msRightXxlBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets msTopExtraBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets msLeftExtraRight = EdgeInsets.only(
+    left: 10.0,
+    right: 60.0,
+  );
+  static const EdgeInsets msTopExtraLeft = EdgeInsets.only(
+    top: 10.0,
+    left: 60.0,
+  );
+  static const EdgeInsets msRightExtraBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets msTopDotSizeBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets msLeftDotSizeRight = EdgeInsets.only(
+    left: 10.0,
+    right: 3.0,
+  );
+  static const EdgeInsets msTopDotSizeLeft = EdgeInsets.only(
+    top: 10.0,
+    left: 3.0,
+  );
+  static const EdgeInsets msRightDotSizeBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets msTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 10.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets msLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 10.0,
+    right: 20.0,
+  );
+  static const EdgeInsets msTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 10.0,
+    left: 20.0,
+  );
+  static const EdgeInsets msRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 10.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets sm = EdgeInsets.all(12.0);
+  static const EdgeInsets smTop = EdgeInsets.only(top: 12.0);
+  static const EdgeInsets smBottom = EdgeInsets.only(bottom: 12.0);
+  static const EdgeInsets smLeft = EdgeInsets.only(left: 12.0);
+  static const EdgeInsets smRight = EdgeInsets.only(right: 12.0);
+  static const EdgeInsets smVertical = EdgeInsets.symmetric(vertical: 12.0);
+  static const EdgeInsets smHorizontal = EdgeInsets.symmetric(horizontal: 12.0);
+  static const EdgeInsets smTopZeroBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets smLeftZeroRight = EdgeInsets.only(
+    left: 12.0,
+    right: 0.0,
+  );
+  static const EdgeInsets smTopZeroLeft = EdgeInsets.only(top: 12.0, left: 0.0);
+  static const EdgeInsets smRightZeroBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets smTopXxsBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets smLeftXxsRight = EdgeInsets.only(
+    left: 12.0,
+    right: 2.0,
+  );
+  static const EdgeInsets smTopXxsLeft = EdgeInsets.only(top: 12.0, left: 2.0);
+  static const EdgeInsets smRightXxsBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets smTopXsBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets smLeftXsRight = EdgeInsets.only(
+    left: 12.0,
+    right: 4.0,
+  );
+  static const EdgeInsets smTopXsLeft = EdgeInsets.only(top: 12.0, left: 4.0);
+  static const EdgeInsets smRightXsBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets smTopSBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets smLeftSRight = EdgeInsets.only(
+    left: 12.0,
+    right: 8.0,
+  );
+  static const EdgeInsets smTopSLeft = EdgeInsets.only(top: 12.0, left: 8.0);
+  static const EdgeInsets smRightSBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets smTopMsBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets smLeftMsRight = EdgeInsets.only(
+    left: 12.0,
+    right: 10.0,
+  );
+  static const EdgeInsets smTopMsLeft = EdgeInsets.only(top: 12.0, left: 10.0);
+  static const EdgeInsets smRightMsBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets smTopMBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets smLeftMRight = EdgeInsets.only(
+    left: 12.0,
+    right: 16.0,
+  );
+  static const EdgeInsets smTopMLeft = EdgeInsets.only(top: 12.0, left: 16.0);
+  static const EdgeInsets smRightMBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets smTopMlBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets smLeftMlRight = EdgeInsets.only(
+    left: 12.0,
+    right: 20.0,
+  );
+  static const EdgeInsets smTopMlLeft = EdgeInsets.only(top: 12.0, left: 20.0);
+  static const EdgeInsets smRightMlBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets smTopLBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets smLeftLRight = EdgeInsets.only(
+    left: 12.0,
+    right: 24.0,
+  );
+  static const EdgeInsets smTopLLeft = EdgeInsets.only(top: 12.0, left: 24.0);
+  static const EdgeInsets smRightLBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets smTopXlBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets smLeftXlRight = EdgeInsets.only(
+    left: 12.0,
+    right: 32.0,
+  );
+  static const EdgeInsets smTopXlLeft = EdgeInsets.only(top: 12.0, left: 32.0);
+  static const EdgeInsets smRightXlBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets smTopXxlBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets smLeftXxlRight = EdgeInsets.only(
+    left: 12.0,
+    right: 48.0,
+  );
+  static const EdgeInsets smTopXxlLeft = EdgeInsets.only(top: 12.0, left: 48.0);
+  static const EdgeInsets smRightXxlBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets smTopExtraBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets smLeftExtraRight = EdgeInsets.only(
+    left: 12.0,
+    right: 60.0,
+  );
+  static const EdgeInsets smTopExtraLeft = EdgeInsets.only(
+    top: 12.0,
+    left: 60.0,
+  );
+  static const EdgeInsets smRightExtraBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets smTopDotSizeBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets smLeftDotSizeRight = EdgeInsets.only(
+    left: 12.0,
+    right: 3.0,
+  );
+  static const EdgeInsets smTopDotSizeLeft = EdgeInsets.only(
+    top: 12.0,
+    left: 3.0,
+  );
+  static const EdgeInsets smRightDotSizeBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets smTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 12.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets smLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 12.0,
+    right: 20.0,
+  );
+  static const EdgeInsets smTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 12.0,
+    left: 20.0,
+  );
+  static const EdgeInsets smRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 12.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets m = EdgeInsets.all(16.0);
+  static const EdgeInsets mTop = EdgeInsets.only(top: 16.0);
+  static const EdgeInsets mBottom = EdgeInsets.only(bottom: 16.0);
+  static const EdgeInsets mLeft = EdgeInsets.only(left: 16.0);
+  static const EdgeInsets mRight = EdgeInsets.only(right: 16.0);
+  static const EdgeInsets mVertical = EdgeInsets.symmetric(vertical: 16.0);
+  static const EdgeInsets mHorizontal = EdgeInsets.symmetric(horizontal: 16.0);
+  static const EdgeInsets mTopZeroBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets mLeftZeroRight = EdgeInsets.only(
+    left: 16.0,
+    right: 0.0,
+  );
+  static const EdgeInsets mTopZeroLeft = EdgeInsets.only(top: 16.0, left: 0.0);
+  static const EdgeInsets mRightZeroBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets mTopXxsBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets mLeftXxsRight = EdgeInsets.only(
+    left: 16.0,
+    right: 2.0,
+  );
+  static const EdgeInsets mTopXxsLeft = EdgeInsets.only(top: 16.0, left: 2.0);
+  static const EdgeInsets mRightXxsBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets mTopXsBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets mLeftXsRight = EdgeInsets.only(
+    left: 16.0,
+    right: 4.0,
+  );
+  static const EdgeInsets mTopXsLeft = EdgeInsets.only(top: 16.0, left: 4.0);
+  static const EdgeInsets mRightXsBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets mTopSBottom = EdgeInsets.only(top: 16.0, bottom: 8.0);
+  static const EdgeInsets mLeftSRight = EdgeInsets.only(left: 16.0, right: 8.0);
+  static const EdgeInsets mTopSLeft = EdgeInsets.only(top: 16.0, left: 8.0);
+  static const EdgeInsets mRightSBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets mTopMsBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets mLeftMsRight = EdgeInsets.only(
+    left: 16.0,
+    right: 10.0,
+  );
+  static const EdgeInsets mTopMsLeft = EdgeInsets.only(top: 16.0, left: 10.0);
+  static const EdgeInsets mRightMsBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets mTopSmBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets mLeftSmRight = EdgeInsets.only(
+    left: 16.0,
+    right: 12.0,
+  );
+  static const EdgeInsets mTopSmLeft = EdgeInsets.only(top: 16.0, left: 12.0);
+  static const EdgeInsets mRightSmBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets mTopMlBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets mLeftMlRight = EdgeInsets.only(
+    left: 16.0,
+    right: 20.0,
+  );
+  static const EdgeInsets mTopMlLeft = EdgeInsets.only(top: 16.0, left: 20.0);
+  static const EdgeInsets mRightMlBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets mTopLBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets mLeftLRight = EdgeInsets.only(
+    left: 16.0,
+    right: 24.0,
+  );
+  static const EdgeInsets mTopLLeft = EdgeInsets.only(top: 16.0, left: 24.0);
+  static const EdgeInsets mRightLBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets mTopXlBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets mLeftXlRight = EdgeInsets.only(
+    left: 16.0,
+    right: 32.0,
+  );
+  static const EdgeInsets mTopXlLeft = EdgeInsets.only(top: 16.0, left: 32.0);
+  static const EdgeInsets mRightXlBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets mTopXxlBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets mLeftXxlRight = EdgeInsets.only(
+    left: 16.0,
+    right: 48.0,
+  );
+  static const EdgeInsets mTopXxlLeft = EdgeInsets.only(top: 16.0, left: 48.0);
+  static const EdgeInsets mRightXxlBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets mTopExtraBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets mLeftExtraRight = EdgeInsets.only(
+    left: 16.0,
+    right: 60.0,
+  );
+  static const EdgeInsets mTopExtraLeft = EdgeInsets.only(
+    top: 16.0,
+    left: 60.0,
+  );
+  static const EdgeInsets mRightExtraBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets mTopDotSizeBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets mLeftDotSizeRight = EdgeInsets.only(
+    left: 16.0,
+    right: 3.0,
+  );
+  static const EdgeInsets mTopDotSizeLeft = EdgeInsets.only(
+    top: 16.0,
+    left: 3.0,
+  );
+  static const EdgeInsets mRightDotSizeBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets mTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 16.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets mLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 16.0,
+    right: 20.0,
+  );
+  static const EdgeInsets mTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 16.0,
+    left: 20.0,
+  );
+  static const EdgeInsets mRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 16.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets ml = EdgeInsets.all(20.0);
+  static const EdgeInsets mlTop = EdgeInsets.only(top: 20.0);
+  static const EdgeInsets mlBottom = EdgeInsets.only(bottom: 20.0);
+  static const EdgeInsets mlLeft = EdgeInsets.only(left: 20.0);
+  static const EdgeInsets mlRight = EdgeInsets.only(right: 20.0);
+  static const EdgeInsets mlVertical = EdgeInsets.symmetric(vertical: 20.0);
+  static const EdgeInsets mlHorizontal = EdgeInsets.symmetric(horizontal: 20.0);
+  static const EdgeInsets mlTopZeroBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets mlLeftZeroRight = EdgeInsets.only(
+    left: 20.0,
+    right: 0.0,
+  );
+  static const EdgeInsets mlTopZeroLeft = EdgeInsets.only(top: 20.0, left: 0.0);
+  static const EdgeInsets mlRightZeroBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets mlTopXxsBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets mlLeftXxsRight = EdgeInsets.only(
+    left: 20.0,
+    right: 2.0,
+  );
+  static const EdgeInsets mlTopXxsLeft = EdgeInsets.only(top: 20.0, left: 2.0);
+  static const EdgeInsets mlRightXxsBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets mlTopXsBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets mlLeftXsRight = EdgeInsets.only(
+    left: 20.0,
+    right: 4.0,
+  );
+  static const EdgeInsets mlTopXsLeft = EdgeInsets.only(top: 20.0, left: 4.0);
+  static const EdgeInsets mlRightXsBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets mlTopSBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets mlLeftSRight = EdgeInsets.only(
+    left: 20.0,
+    right: 8.0,
+  );
+  static const EdgeInsets mlTopSLeft = EdgeInsets.only(top: 20.0, left: 8.0);
+  static const EdgeInsets mlRightSBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets mlTopMsBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets mlLeftMsRight = EdgeInsets.only(
+    left: 20.0,
+    right: 10.0,
+  );
+  static const EdgeInsets mlTopMsLeft = EdgeInsets.only(top: 20.0, left: 10.0);
+  static const EdgeInsets mlRightMsBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets mlTopSmBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets mlLeftSmRight = EdgeInsets.only(
+    left: 20.0,
+    right: 12.0,
+  );
+  static const EdgeInsets mlTopSmLeft = EdgeInsets.only(top: 20.0, left: 12.0);
+  static const EdgeInsets mlRightSmBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets mlTopMBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets mlLeftMRight = EdgeInsets.only(
+    left: 20.0,
+    right: 16.0,
+  );
+  static const EdgeInsets mlTopMLeft = EdgeInsets.only(top: 20.0, left: 16.0);
+  static const EdgeInsets mlRightMBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets mlTopLBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets mlLeftLRight = EdgeInsets.only(
+    left: 20.0,
+    right: 24.0,
+  );
+  static const EdgeInsets mlTopLLeft = EdgeInsets.only(top: 20.0, left: 24.0);
+  static const EdgeInsets mlRightLBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets mlTopXlBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets mlLeftXlRight = EdgeInsets.only(
+    left: 20.0,
+    right: 32.0,
+  );
+  static const EdgeInsets mlTopXlLeft = EdgeInsets.only(top: 20.0, left: 32.0);
+  static const EdgeInsets mlRightXlBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets mlTopXxlBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets mlLeftXxlRight = EdgeInsets.only(
+    left: 20.0,
+    right: 48.0,
+  );
+  static const EdgeInsets mlTopXxlLeft = EdgeInsets.only(top: 20.0, left: 48.0);
+  static const EdgeInsets mlRightXxlBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets mlTopExtraBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets mlLeftExtraRight = EdgeInsets.only(
+    left: 20.0,
+    right: 60.0,
+  );
+  static const EdgeInsets mlTopExtraLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 60.0,
+  );
+  static const EdgeInsets mlRightExtraBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets mlTopDotSizeBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets mlLeftDotSizeRight = EdgeInsets.only(
+    left: 20.0,
+    right: 3.0,
+  );
+  static const EdgeInsets mlTopDotSizeLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 3.0,
+  );
+  static const EdgeInsets mlRightDotSizeBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets mlTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets mlLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 20.0,
+    right: 20.0,
+  );
+  static const EdgeInsets mlTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 20.0,
+  );
+  static const EdgeInsets mlRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets l = EdgeInsets.all(24.0);
+  static const EdgeInsets lTop = EdgeInsets.only(top: 24.0);
+  static const EdgeInsets lBottom = EdgeInsets.only(bottom: 24.0);
+  static const EdgeInsets lLeft = EdgeInsets.only(left: 24.0);
+  static const EdgeInsets lRight = EdgeInsets.only(right: 24.0);
+  static const EdgeInsets lVertical = EdgeInsets.symmetric(vertical: 24.0);
+  static const EdgeInsets lHorizontal = EdgeInsets.symmetric(horizontal: 24.0);
+  static const EdgeInsets lTopZeroBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets lLeftZeroRight = EdgeInsets.only(
+    left: 24.0,
+    right: 0.0,
+  );
+  static const EdgeInsets lTopZeroLeft = EdgeInsets.only(top: 24.0, left: 0.0);
+  static const EdgeInsets lRightZeroBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets lTopXxsBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets lLeftXxsRight = EdgeInsets.only(
+    left: 24.0,
+    right: 2.0,
+  );
+  static const EdgeInsets lTopXxsLeft = EdgeInsets.only(top: 24.0, left: 2.0);
+  static const EdgeInsets lRightXxsBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets lTopXsBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets lLeftXsRight = EdgeInsets.only(
+    left: 24.0,
+    right: 4.0,
+  );
+  static const EdgeInsets lTopXsLeft = EdgeInsets.only(top: 24.0, left: 4.0);
+  static const EdgeInsets lRightXsBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets lTopSBottom = EdgeInsets.only(top: 24.0, bottom: 8.0);
+  static const EdgeInsets lLeftSRight = EdgeInsets.only(left: 24.0, right: 8.0);
+  static const EdgeInsets lTopSLeft = EdgeInsets.only(top: 24.0, left: 8.0);
+  static const EdgeInsets lRightSBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets lTopMsBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets lLeftMsRight = EdgeInsets.only(
+    left: 24.0,
+    right: 10.0,
+  );
+  static const EdgeInsets lTopMsLeft = EdgeInsets.only(top: 24.0, left: 10.0);
+  static const EdgeInsets lRightMsBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets lTopSmBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets lLeftSmRight = EdgeInsets.only(
+    left: 24.0,
+    right: 12.0,
+  );
+  static const EdgeInsets lTopSmLeft = EdgeInsets.only(top: 24.0, left: 12.0);
+  static const EdgeInsets lRightSmBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets lTopMBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets lLeftMRight = EdgeInsets.only(
+    left: 24.0,
+    right: 16.0,
+  );
+  static const EdgeInsets lTopMLeft = EdgeInsets.only(top: 24.0, left: 16.0);
+  static const EdgeInsets lRightMBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets lTopMlBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets lLeftMlRight = EdgeInsets.only(
+    left: 24.0,
+    right: 20.0,
+  );
+  static const EdgeInsets lTopMlLeft = EdgeInsets.only(top: 24.0, left: 20.0);
+  static const EdgeInsets lRightMlBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets lTopXlBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets lLeftXlRight = EdgeInsets.only(
+    left: 24.0,
+    right: 32.0,
+  );
+  static const EdgeInsets lTopXlLeft = EdgeInsets.only(top: 24.0, left: 32.0);
+  static const EdgeInsets lRightXlBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets lTopXxlBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets lLeftXxlRight = EdgeInsets.only(
+    left: 24.0,
+    right: 48.0,
+  );
+  static const EdgeInsets lTopXxlLeft = EdgeInsets.only(top: 24.0, left: 48.0);
+  static const EdgeInsets lRightXxlBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets lTopExtraBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets lLeftExtraRight = EdgeInsets.only(
+    left: 24.0,
+    right: 60.0,
+  );
+  static const EdgeInsets lTopExtraLeft = EdgeInsets.only(
+    top: 24.0,
+    left: 60.0,
+  );
+  static const EdgeInsets lRightExtraBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets lTopDotSizeBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets lLeftDotSizeRight = EdgeInsets.only(
+    left: 24.0,
+    right: 3.0,
+  );
+  static const EdgeInsets lTopDotSizeLeft = EdgeInsets.only(
+    top: 24.0,
+    left: 3.0,
+  );
+  static const EdgeInsets lRightDotSizeBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets lTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 24.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets lLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 24.0,
+    right: 20.0,
+  );
+  static const EdgeInsets lTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 24.0,
+    left: 20.0,
+  );
+  static const EdgeInsets lRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 24.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xl = EdgeInsets.all(32.0);
+  static const EdgeInsets xlTop = EdgeInsets.only(top: 32.0);
+  static const EdgeInsets xlBottom = EdgeInsets.only(bottom: 32.0);
+  static const EdgeInsets xlLeft = EdgeInsets.only(left: 32.0);
+  static const EdgeInsets xlRight = EdgeInsets.only(right: 32.0);
+  static const EdgeInsets xlVertical = EdgeInsets.symmetric(vertical: 32.0);
+  static const EdgeInsets xlHorizontal = EdgeInsets.symmetric(horizontal: 32.0);
+  static const EdgeInsets xlTopZeroBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets xlLeftZeroRight = EdgeInsets.only(
+    left: 32.0,
+    right: 0.0,
+  );
+  static const EdgeInsets xlTopZeroLeft = EdgeInsets.only(top: 32.0, left: 0.0);
+  static const EdgeInsets xlRightZeroBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets xlTopXxsBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets xlLeftXxsRight = EdgeInsets.only(
+    left: 32.0,
+    right: 2.0,
+  );
+  static const EdgeInsets xlTopXxsLeft = EdgeInsets.only(top: 32.0, left: 2.0);
+  static const EdgeInsets xlRightXxsBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets xlTopXsBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets xlLeftXsRight = EdgeInsets.only(
+    left: 32.0,
+    right: 4.0,
+  );
+  static const EdgeInsets xlTopXsLeft = EdgeInsets.only(top: 32.0, left: 4.0);
+  static const EdgeInsets xlRightXsBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets xlTopSBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets xlLeftSRight = EdgeInsets.only(
+    left: 32.0,
+    right: 8.0,
+  );
+  static const EdgeInsets xlTopSLeft = EdgeInsets.only(top: 32.0, left: 8.0);
+  static const EdgeInsets xlRightSBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets xlTopMsBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets xlLeftMsRight = EdgeInsets.only(
+    left: 32.0,
+    right: 10.0,
+  );
+  static const EdgeInsets xlTopMsLeft = EdgeInsets.only(top: 32.0, left: 10.0);
+  static const EdgeInsets xlRightMsBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets xlTopSmBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets xlLeftSmRight = EdgeInsets.only(
+    left: 32.0,
+    right: 12.0,
+  );
+  static const EdgeInsets xlTopSmLeft = EdgeInsets.only(top: 32.0, left: 12.0);
+  static const EdgeInsets xlRightSmBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets xlTopMBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets xlLeftMRight = EdgeInsets.only(
+    left: 32.0,
+    right: 16.0,
+  );
+  static const EdgeInsets xlTopMLeft = EdgeInsets.only(top: 32.0, left: 16.0);
+  static const EdgeInsets xlRightMBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets xlTopMlBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xlLeftMlRight = EdgeInsets.only(
+    left: 32.0,
+    right: 20.0,
+  );
+  static const EdgeInsets xlTopMlLeft = EdgeInsets.only(top: 32.0, left: 20.0);
+  static const EdgeInsets xlRightMlBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xlTopLBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets xlLeftLRight = EdgeInsets.only(
+    left: 32.0,
+    right: 24.0,
+  );
+  static const EdgeInsets xlTopLLeft = EdgeInsets.only(top: 32.0, left: 24.0);
+  static const EdgeInsets xlRightLBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets xlTopXxlBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets xlLeftXxlRight = EdgeInsets.only(
+    left: 32.0,
+    right: 48.0,
+  );
+  static const EdgeInsets xlTopXxlLeft = EdgeInsets.only(top: 32.0, left: 48.0);
+  static const EdgeInsets xlRightXxlBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets xlTopExtraBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets xlLeftExtraRight = EdgeInsets.only(
+    left: 32.0,
+    right: 60.0,
+  );
+  static const EdgeInsets xlTopExtraLeft = EdgeInsets.only(
+    top: 32.0,
+    left: 60.0,
+  );
+  static const EdgeInsets xlRightExtraBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets xlTopDotSizeBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets xlLeftDotSizeRight = EdgeInsets.only(
+    left: 32.0,
+    right: 3.0,
+  );
+  static const EdgeInsets xlTopDotSizeLeft = EdgeInsets.only(
+    top: 32.0,
+    left: 3.0,
+  );
+  static const EdgeInsets xlRightDotSizeBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets xlTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 32.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xlLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 32.0,
+    right: 20.0,
+  );
+  static const EdgeInsets xlTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 32.0,
+    left: 20.0,
+  );
+  static const EdgeInsets xlRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 32.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xxl = EdgeInsets.all(48.0);
+  static const EdgeInsets xxlTop = EdgeInsets.only(top: 48.0);
+  static const EdgeInsets xxlBottom = EdgeInsets.only(bottom: 48.0);
+  static const EdgeInsets xxlLeft = EdgeInsets.only(left: 48.0);
+  static const EdgeInsets xxlRight = EdgeInsets.only(right: 48.0);
+  static const EdgeInsets xxlVertical = EdgeInsets.symmetric(vertical: 48.0);
+  static const EdgeInsets xxlHorizontal = EdgeInsets.symmetric(
+    horizontal: 48.0,
+  );
+  static const EdgeInsets xxlTopZeroBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets xxlLeftZeroRight = EdgeInsets.only(
+    left: 48.0,
+    right: 0.0,
+  );
+  static const EdgeInsets xxlTopZeroLeft = EdgeInsets.only(
+    top: 48.0,
+    left: 0.0,
+  );
+  static const EdgeInsets xxlRightZeroBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets xxlTopXxsBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets xxlLeftXxsRight = EdgeInsets.only(
+    left: 48.0,
+    right: 2.0,
+  );
+  static const EdgeInsets xxlTopXxsLeft = EdgeInsets.only(top: 48.0, left: 2.0);
+  static const EdgeInsets xxlRightXxsBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets xxlTopXsBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets xxlLeftXsRight = EdgeInsets.only(
+    left: 48.0,
+    right: 4.0,
+  );
+  static const EdgeInsets xxlTopXsLeft = EdgeInsets.only(top: 48.0, left: 4.0);
+  static const EdgeInsets xxlRightXsBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets xxlTopSBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets xxlLeftSRight = EdgeInsets.only(
+    left: 48.0,
+    right: 8.0,
+  );
+  static const EdgeInsets xxlTopSLeft = EdgeInsets.only(top: 48.0, left: 8.0);
+  static const EdgeInsets xxlRightSBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets xxlTopMsBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets xxlLeftMsRight = EdgeInsets.only(
+    left: 48.0,
+    right: 10.0,
+  );
+  static const EdgeInsets xxlTopMsLeft = EdgeInsets.only(top: 48.0, left: 10.0);
+  static const EdgeInsets xxlRightMsBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets xxlTopSmBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets xxlLeftSmRight = EdgeInsets.only(
+    left: 48.0,
+    right: 12.0,
+  );
+  static const EdgeInsets xxlTopSmLeft = EdgeInsets.only(top: 48.0, left: 12.0);
+  static const EdgeInsets xxlRightSmBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets xxlTopMBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets xxlLeftMRight = EdgeInsets.only(
+    left: 48.0,
+    right: 16.0,
+  );
+  static const EdgeInsets xxlTopMLeft = EdgeInsets.only(top: 48.0, left: 16.0);
+  static const EdgeInsets xxlRightMBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets xxlTopMlBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xxlLeftMlRight = EdgeInsets.only(
+    left: 48.0,
+    right: 20.0,
+  );
+  static const EdgeInsets xxlTopMlLeft = EdgeInsets.only(top: 48.0, left: 20.0);
+  static const EdgeInsets xxlRightMlBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xxlTopLBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets xxlLeftLRight = EdgeInsets.only(
+    left: 48.0,
+    right: 24.0,
+  );
+  static const EdgeInsets xxlTopLLeft = EdgeInsets.only(top: 48.0, left: 24.0);
+  static const EdgeInsets xxlRightLBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets xxlTopXlBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets xxlLeftXlRight = EdgeInsets.only(
+    left: 48.0,
+    right: 32.0,
+  );
+  static const EdgeInsets xxlTopXlLeft = EdgeInsets.only(top: 48.0, left: 32.0);
+  static const EdgeInsets xxlRightXlBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets xxlTopExtraBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets xxlLeftExtraRight = EdgeInsets.only(
+    left: 48.0,
+    right: 60.0,
+  );
+  static const EdgeInsets xxlTopExtraLeft = EdgeInsets.only(
+    top: 48.0,
+    left: 60.0,
+  );
+  static const EdgeInsets xxlRightExtraBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 60.0,
+  );
+  static const EdgeInsets xxlTopDotSizeBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets xxlLeftDotSizeRight = EdgeInsets.only(
+    left: 48.0,
+    right: 3.0,
+  );
+  static const EdgeInsets xxlTopDotSizeLeft = EdgeInsets.only(
+    top: 48.0,
+    left: 3.0,
+  );
+  static const EdgeInsets xxlRightDotSizeBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 3.0,
+  );
+  static const EdgeInsets xxlTopDotContainerSizeBottom = EdgeInsets.only(
+    top: 48.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets xxlLeftDotContainerSizeRight = EdgeInsets.only(
+    left: 48.0,
+    right: 20.0,
+  );
+  static const EdgeInsets xxlTopDotContainerSizeLeft = EdgeInsets.only(
+    top: 48.0,
+    left: 20.0,
+  );
+  static const EdgeInsets xxlRightDotContainerSizeBottom = EdgeInsets.only(
+    right: 48.0,
+    bottom: 20.0,
+  );
   static const EdgeInsets extra = EdgeInsets.all(60.0);
   static const EdgeInsets extraTop = EdgeInsets.only(top: 60.0);
   static const EdgeInsets extraBottom = EdgeInsets.only(bottom: 60.0);
@@ -28,133 +2032,178 @@ abstract class Insets {
   static const EdgeInsets extraHorizontal = EdgeInsets.symmetric(
     horizontal: 60.0,
   );
-  static const EdgeInsets extraTopLargeBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets extraLeftLargeRight = EdgeInsets.only(
-    left: 60.0,
-    right: 20.0,
-  );
-  static const EdgeInsets extraTopLargeLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 20.0,
-  );
-  static const EdgeInsets extraRightLargeBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets extraTopDoubledNormalBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets extraLeftDoubledNormalRight = EdgeInsets.only(
-    left: 60.0,
-    right: 32.0,
-  );
-  static const EdgeInsets extraTopDoubledNormalLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 32.0,
-  );
-  static const EdgeInsets extraRightDoubledNormalBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets extraTopNormalBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets extraLeftNormalRight = EdgeInsets.only(
-    left: 60.0,
-    right: 16.0,
-  );
-  static const EdgeInsets extraTopNormalLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 16.0,
-  );
-  static const EdgeInsets extraRightNormalBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets extraTopSmallBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets extraLeftSmallRight = EdgeInsets.only(
-    left: 60.0,
-    right: 12.0,
-  );
-  static const EdgeInsets extraTopSmallLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 12.0,
-  );
-  static const EdgeInsets extraRightSmallBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets extraTopHalfBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets extraLeftHalfRight = EdgeInsets.only(
-    left: 60.0,
-    right: 8.0,
-  );
-  static const EdgeInsets extraTopHalfLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 8.0,
-  );
-  static const EdgeInsets extraRightHalfBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets extraTopQuarterBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets extraLeftQuarterRight = EdgeInsets.only(
-    left: 60.0,
-    right: 4.0,
-  );
-  static const EdgeInsets extraTopQuarterLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 4.0,
-  );
-  static const EdgeInsets extraRightQuarterBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets extraTopTinyBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets extraLeftTinyRight = EdgeInsets.only(
-    left: 60.0,
-    right: 2.0,
-  );
-  static const EdgeInsets extraTopTinyLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 2.0,
-  );
-  static const EdgeInsets extraRightTinyBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets extraTopEmptyBottom = EdgeInsets.only(
+  static const EdgeInsets extraTopZeroBottom = EdgeInsets.only(
     top: 60.0,
     bottom: 0.0,
   );
-  static const EdgeInsets extraLeftEmptyRight = EdgeInsets.only(
+  static const EdgeInsets extraLeftZeroRight = EdgeInsets.only(
     left: 60.0,
     right: 0.0,
   );
-  static const EdgeInsets extraTopEmptyLeft = EdgeInsets.only(
+  static const EdgeInsets extraTopZeroLeft = EdgeInsets.only(
     top: 60.0,
     left: 0.0,
   );
-  static const EdgeInsets extraRightEmptyBottom = EdgeInsets.only(
+  static const EdgeInsets extraRightZeroBottom = EdgeInsets.only(
     right: 60.0,
     bottom: 0.0,
+  );
+  static const EdgeInsets extraTopXxsBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets extraLeftXxsRight = EdgeInsets.only(
+    left: 60.0,
+    right: 2.0,
+  );
+  static const EdgeInsets extraTopXxsLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 2.0,
+  );
+  static const EdgeInsets extraRightXxsBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets extraTopXsBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets extraLeftXsRight = EdgeInsets.only(
+    left: 60.0,
+    right: 4.0,
+  );
+  static const EdgeInsets extraTopXsLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 4.0,
+  );
+  static const EdgeInsets extraRightXsBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets extraTopSBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets extraLeftSRight = EdgeInsets.only(
+    left: 60.0,
+    right: 8.0,
+  );
+  static const EdgeInsets extraTopSLeft = EdgeInsets.only(top: 60.0, left: 8.0);
+  static const EdgeInsets extraRightSBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets extraTopMsBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets extraLeftMsRight = EdgeInsets.only(
+    left: 60.0,
+    right: 10.0,
+  );
+  static const EdgeInsets extraTopMsLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 10.0,
+  );
+  static const EdgeInsets extraRightMsBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets extraTopSmBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets extraLeftSmRight = EdgeInsets.only(
+    left: 60.0,
+    right: 12.0,
+  );
+  static const EdgeInsets extraTopSmLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 12.0,
+  );
+  static const EdgeInsets extraRightSmBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets extraTopMBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets extraLeftMRight = EdgeInsets.only(
+    left: 60.0,
+    right: 16.0,
+  );
+  static const EdgeInsets extraTopMLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 16.0,
+  );
+  static const EdgeInsets extraRightMBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets extraTopMlBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets extraLeftMlRight = EdgeInsets.only(
+    left: 60.0,
+    right: 20.0,
+  );
+  static const EdgeInsets extraTopMlLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 20.0,
+  );
+  static const EdgeInsets extraRightMlBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets extraTopLBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets extraLeftLRight = EdgeInsets.only(
+    left: 60.0,
+    right: 24.0,
+  );
+  static const EdgeInsets extraTopLLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 24.0,
+  );
+  static const EdgeInsets extraRightLBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets extraTopXlBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets extraLeftXlRight = EdgeInsets.only(
+    left: 60.0,
+    right: 32.0,
+  );
+  static const EdgeInsets extraTopXlLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 32.0,
+  );
+  static const EdgeInsets extraRightXlBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets extraTopXxlBottom = EdgeInsets.only(
+    top: 60.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets extraLeftXxlRight = EdgeInsets.only(
+    left: 60.0,
+    right: 48.0,
+  );
+  static const EdgeInsets extraTopXxlLeft = EdgeInsets.only(
+    top: 60.0,
+    left: 48.0,
+  );
+  static const EdgeInsets extraRightXxlBottom = EdgeInsets.only(
+    right: 60.0,
+    bottom: 48.0,
   );
   static const EdgeInsets extraTopDotSizeBottom = EdgeInsets.only(
     top: 60.0,
@@ -172,22 +2221,6 @@ abstract class Insets {
     right: 60.0,
     bottom: 3.0,
   );
-  static const EdgeInsets extraTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets extraLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 60.0,
-    right: 6.0,
-  );
-  static const EdgeInsets extraTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 6.0,
-  );
-  static const EdgeInsets extraRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 6.0,
-  );
   static const EdgeInsets extraTopDotContainerSizeBottom = EdgeInsets.only(
     top: 60.0,
     bottom: 20.0,
@@ -204,1608 +2237,6 @@ abstract class Insets {
     right: 60.0,
     bottom: 20.0,
   );
-  static const EdgeInsets extraTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 60.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets extraLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 60.0,
-    right: 414.0,
-  );
-  static const EdgeInsets extraTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 60.0,
-    left: 414.0,
-  );
-  static const EdgeInsets extraRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 60.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets large = EdgeInsets.all(20.0);
-  static const EdgeInsets largeTop = EdgeInsets.only(top: 20.0);
-  static const EdgeInsets largeBottom = EdgeInsets.only(bottom: 20.0);
-  static const EdgeInsets largeLeft = EdgeInsets.only(left: 20.0);
-  static const EdgeInsets largeRight = EdgeInsets.only(right: 20.0);
-  static const EdgeInsets largeVertical = EdgeInsets.symmetric(vertical: 20.0);
-  static const EdgeInsets largeHorizontal = EdgeInsets.symmetric(
-    horizontal: 20.0,
-  );
-  static const EdgeInsets largeTopExtraBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets largeLeftExtraRight = EdgeInsets.only(
-    left: 20.0,
-    right: 60.0,
-  );
-  static const EdgeInsets largeTopExtraLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 60.0,
-  );
-  static const EdgeInsets largeRightExtraBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets largeTopDoubledNormalBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets largeLeftDoubledNormalRight = EdgeInsets.only(
-    left: 20.0,
-    right: 32.0,
-  );
-  static const EdgeInsets largeTopDoubledNormalLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 32.0,
-  );
-  static const EdgeInsets largeRightDoubledNormalBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets largeTopNormalBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets largeLeftNormalRight = EdgeInsets.only(
-    left: 20.0,
-    right: 16.0,
-  );
-  static const EdgeInsets largeTopNormalLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 16.0,
-  );
-  static const EdgeInsets largeRightNormalBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets largeTopSmallBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets largeLeftSmallRight = EdgeInsets.only(
-    left: 20.0,
-    right: 12.0,
-  );
-  static const EdgeInsets largeTopSmallLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 12.0,
-  );
-  static const EdgeInsets largeRightSmallBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets largeTopHalfBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets largeLeftHalfRight = EdgeInsets.only(
-    left: 20.0,
-    right: 8.0,
-  );
-  static const EdgeInsets largeTopHalfLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 8.0,
-  );
-  static const EdgeInsets largeRightHalfBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets largeTopQuarterBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets largeLeftQuarterRight = EdgeInsets.only(
-    left: 20.0,
-    right: 4.0,
-  );
-  static const EdgeInsets largeTopQuarterLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 4.0,
-  );
-  static const EdgeInsets largeRightQuarterBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets largeTopTinyBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets largeLeftTinyRight = EdgeInsets.only(
-    left: 20.0,
-    right: 2.0,
-  );
-  static const EdgeInsets largeTopTinyLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 2.0,
-  );
-  static const EdgeInsets largeRightTinyBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets largeTopEmptyBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets largeLeftEmptyRight = EdgeInsets.only(
-    left: 20.0,
-    right: 0.0,
-  );
-  static const EdgeInsets largeTopEmptyLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 0.0,
-  );
-  static const EdgeInsets largeRightEmptyBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets largeTopDotSizeBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets largeLeftDotSizeRight = EdgeInsets.only(
-    left: 20.0,
-    right: 3.0,
-  );
-  static const EdgeInsets largeTopDotSizeLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 3.0,
-  );
-  static const EdgeInsets largeRightDotSizeBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets largeTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets largeLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 20.0,
-    right: 6.0,
-  );
-  static const EdgeInsets largeTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 6.0,
-  );
-  static const EdgeInsets largeRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets largeTopDotContainerSizeBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets largeLeftDotContainerSizeRight = EdgeInsets.only(
-    left: 20.0,
-    right: 20.0,
-  );
-  static const EdgeInsets largeTopDotContainerSizeLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 20.0,
-  );
-  static const EdgeInsets largeRightDotContainerSizeBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets largeTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets largeLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 20.0,
-    right: 414.0,
-  );
-  static const EdgeInsets largeTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 414.0,
-  );
-  static const EdgeInsets largeRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets doubledNormal = EdgeInsets.all(32.0);
-  static const EdgeInsets doubledNormalTop = EdgeInsets.only(top: 32.0);
-  static const EdgeInsets doubledNormalBottom = EdgeInsets.only(bottom: 32.0);
-  static const EdgeInsets doubledNormalLeft = EdgeInsets.only(left: 32.0);
-  static const EdgeInsets doubledNormalRight = EdgeInsets.only(right: 32.0);
-  static const EdgeInsets doubledNormalVertical = EdgeInsets.symmetric(
-    vertical: 32.0,
-  );
-  static const EdgeInsets doubledNormalHorizontal = EdgeInsets.symmetric(
-    horizontal: 32.0,
-  );
-  static const EdgeInsets doubledNormalTopExtraBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets doubledNormalLeftExtraRight = EdgeInsets.only(
-    left: 32.0,
-    right: 60.0,
-  );
-  static const EdgeInsets doubledNormalTopExtraLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 60.0,
-  );
-  static const EdgeInsets doubledNormalRightExtraBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets doubledNormalTopLargeBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets doubledNormalLeftLargeRight = EdgeInsets.only(
-    left: 32.0,
-    right: 20.0,
-  );
-  static const EdgeInsets doubledNormalTopLargeLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 20.0,
-  );
-  static const EdgeInsets doubledNormalRightLargeBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets doubledNormalTopNormalBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets doubledNormalLeftNormalRight = EdgeInsets.only(
-    left: 32.0,
-    right: 16.0,
-  );
-  static const EdgeInsets doubledNormalTopNormalLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 16.0,
-  );
-  static const EdgeInsets doubledNormalRightNormalBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets doubledNormalTopSmallBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets doubledNormalLeftSmallRight = EdgeInsets.only(
-    left: 32.0,
-    right: 12.0,
-  );
-  static const EdgeInsets doubledNormalTopSmallLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 12.0,
-  );
-  static const EdgeInsets doubledNormalRightSmallBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets doubledNormalTopHalfBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets doubledNormalLeftHalfRight = EdgeInsets.only(
-    left: 32.0,
-    right: 8.0,
-  );
-  static const EdgeInsets doubledNormalTopHalfLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 8.0,
-  );
-  static const EdgeInsets doubledNormalRightHalfBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets doubledNormalTopQuarterBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets doubledNormalLeftQuarterRight = EdgeInsets.only(
-    left: 32.0,
-    right: 4.0,
-  );
-  static const EdgeInsets doubledNormalTopQuarterLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 4.0,
-  );
-  static const EdgeInsets doubledNormalRightQuarterBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets doubledNormalTopTinyBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets doubledNormalLeftTinyRight = EdgeInsets.only(
-    left: 32.0,
-    right: 2.0,
-  );
-  static const EdgeInsets doubledNormalTopTinyLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 2.0,
-  );
-  static const EdgeInsets doubledNormalRightTinyBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets doubledNormalTopEmptyBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets doubledNormalLeftEmptyRight = EdgeInsets.only(
-    left: 32.0,
-    right: 0.0,
-  );
-  static const EdgeInsets doubledNormalTopEmptyLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 0.0,
-  );
-  static const EdgeInsets doubledNormalRightEmptyBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets doubledNormalTopDotSizeBottom = EdgeInsets.only(
-    top: 32.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets doubledNormalLeftDotSizeRight = EdgeInsets.only(
-    left: 32.0,
-    right: 3.0,
-  );
-  static const EdgeInsets doubledNormalTopDotSizeLeft = EdgeInsets.only(
-    top: 32.0,
-    left: 3.0,
-  );
-  static const EdgeInsets doubledNormalRightDotSizeBottom = EdgeInsets.only(
-    right: 32.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets doubledNormalTopDotSeparatorSizeBottom =
-      EdgeInsets.only(top: 32.0, bottom: 6.0);
-  static const EdgeInsets doubledNormalLeftDotSeparatorSizeRight =
-      EdgeInsets.only(left: 32.0, right: 6.0);
-  static const EdgeInsets doubledNormalTopDotSeparatorSizeLeft =
-      EdgeInsets.only(top: 32.0, left: 6.0);
-  static const EdgeInsets doubledNormalRightDotSeparatorSizeBottom =
-      EdgeInsets.only(right: 32.0, bottom: 6.0);
-  static const EdgeInsets doubledNormalTopDotContainerSizeBottom =
-      EdgeInsets.only(top: 32.0, bottom: 20.0);
-  static const EdgeInsets doubledNormalLeftDotContainerSizeRight =
-      EdgeInsets.only(left: 32.0, right: 20.0);
-  static const EdgeInsets doubledNormalTopDotContainerSizeLeft =
-      EdgeInsets.only(top: 32.0, left: 20.0);
-  static const EdgeInsets doubledNormalRightDotContainerSizeBottom =
-      EdgeInsets.only(right: 32.0, bottom: 20.0);
-  static const EdgeInsets doubledNormalTopMaxViewWidthSizeBottom =
-      EdgeInsets.only(top: 32.0, bottom: 414.0);
-  static const EdgeInsets doubledNormalLeftMaxViewWidthSizeRight =
-      EdgeInsets.only(left: 32.0, right: 414.0);
-  static const EdgeInsets doubledNormalTopMaxViewWidthSizeLeft =
-      EdgeInsets.only(top: 32.0, left: 414.0);
-  static const EdgeInsets doubledNormalRightMaxViewWidthSizeBottom =
-      EdgeInsets.only(right: 32.0, bottom: 414.0);
-  static const EdgeInsets normal = EdgeInsets.all(16.0);
-  static const EdgeInsets normalTop = EdgeInsets.only(top: 16.0);
-  static const EdgeInsets normalBottom = EdgeInsets.only(bottom: 16.0);
-  static const EdgeInsets normalLeft = EdgeInsets.only(left: 16.0);
-  static const EdgeInsets normalRight = EdgeInsets.only(right: 16.0);
-  static const EdgeInsets normalVertical = EdgeInsets.symmetric(vertical: 16.0);
-  static const EdgeInsets normalHorizontal = EdgeInsets.symmetric(
-    horizontal: 16.0,
-  );
-  static const EdgeInsets normalTopExtraBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets normalLeftExtraRight = EdgeInsets.only(
-    left: 16.0,
-    right: 60.0,
-  );
-  static const EdgeInsets normalTopExtraLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 60.0,
-  );
-  static const EdgeInsets normalRightExtraBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets normalTopLargeBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets normalLeftLargeRight = EdgeInsets.only(
-    left: 16.0,
-    right: 20.0,
-  );
-  static const EdgeInsets normalTopLargeLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 20.0,
-  );
-  static const EdgeInsets normalRightLargeBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets normalTopDoubledNormalBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets normalLeftDoubledNormalRight = EdgeInsets.only(
-    left: 16.0,
-    right: 32.0,
-  );
-  static const EdgeInsets normalTopDoubledNormalLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 32.0,
-  );
-  static const EdgeInsets normalRightDoubledNormalBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets normalTopSmallBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets normalLeftSmallRight = EdgeInsets.only(
-    left: 16.0,
-    right: 12.0,
-  );
-  static const EdgeInsets normalTopSmallLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 12.0,
-  );
-  static const EdgeInsets normalRightSmallBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets normalTopHalfBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets normalLeftHalfRight = EdgeInsets.only(
-    left: 16.0,
-    right: 8.0,
-  );
-  static const EdgeInsets normalTopHalfLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 8.0,
-  );
-  static const EdgeInsets normalRightHalfBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets normalTopQuarterBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets normalLeftQuarterRight = EdgeInsets.only(
-    left: 16.0,
-    right: 4.0,
-  );
-  static const EdgeInsets normalTopQuarterLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 4.0,
-  );
-  static const EdgeInsets normalRightQuarterBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets normalTopTinyBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets normalLeftTinyRight = EdgeInsets.only(
-    left: 16.0,
-    right: 2.0,
-  );
-  static const EdgeInsets normalTopTinyLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 2.0,
-  );
-  static const EdgeInsets normalRightTinyBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets normalTopEmptyBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets normalLeftEmptyRight = EdgeInsets.only(
-    left: 16.0,
-    right: 0.0,
-  );
-  static const EdgeInsets normalTopEmptyLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 0.0,
-  );
-  static const EdgeInsets normalRightEmptyBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets normalTopDotSizeBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets normalLeftDotSizeRight = EdgeInsets.only(
-    left: 16.0,
-    right: 3.0,
-  );
-  static const EdgeInsets normalTopDotSizeLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 3.0,
-  );
-  static const EdgeInsets normalRightDotSizeBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets normalTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets normalLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 16.0,
-    right: 6.0,
-  );
-  static const EdgeInsets normalTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 6.0,
-  );
-  static const EdgeInsets normalRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets normalTopDotContainerSizeBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets normalLeftDotContainerSizeRight = EdgeInsets.only(
-    left: 16.0,
-    right: 20.0,
-  );
-  static const EdgeInsets normalTopDotContainerSizeLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 20.0,
-  );
-  static const EdgeInsets normalRightDotContainerSizeBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets normalTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 16.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets normalLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 16.0,
-    right: 414.0,
-  );
-  static const EdgeInsets normalTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 16.0,
-    left: 414.0,
-  );
-  static const EdgeInsets normalRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 16.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets small = EdgeInsets.all(12.0);
-  static const EdgeInsets smallTop = EdgeInsets.only(top: 12.0);
-  static const EdgeInsets smallBottom = EdgeInsets.only(bottom: 12.0);
-  static const EdgeInsets smallLeft = EdgeInsets.only(left: 12.0);
-  static const EdgeInsets smallRight = EdgeInsets.only(right: 12.0);
-  static const EdgeInsets smallVertical = EdgeInsets.symmetric(vertical: 12.0);
-  static const EdgeInsets smallHorizontal = EdgeInsets.symmetric(
-    horizontal: 12.0,
-  );
-  static const EdgeInsets smallTopExtraBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets smallLeftExtraRight = EdgeInsets.only(
-    left: 12.0,
-    right: 60.0,
-  );
-  static const EdgeInsets smallTopExtraLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 60.0,
-  );
-  static const EdgeInsets smallRightExtraBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets smallTopLargeBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets smallLeftLargeRight = EdgeInsets.only(
-    left: 12.0,
-    right: 20.0,
-  );
-  static const EdgeInsets smallTopLargeLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 20.0,
-  );
-  static const EdgeInsets smallRightLargeBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets smallTopDoubledNormalBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets smallLeftDoubledNormalRight = EdgeInsets.only(
-    left: 12.0,
-    right: 32.0,
-  );
-  static const EdgeInsets smallTopDoubledNormalLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 32.0,
-  );
-  static const EdgeInsets smallRightDoubledNormalBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets smallTopNormalBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets smallLeftNormalRight = EdgeInsets.only(
-    left: 12.0,
-    right: 16.0,
-  );
-  static const EdgeInsets smallTopNormalLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 16.0,
-  );
-  static const EdgeInsets smallRightNormalBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets smallTopHalfBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets smallLeftHalfRight = EdgeInsets.only(
-    left: 12.0,
-    right: 8.0,
-  );
-  static const EdgeInsets smallTopHalfLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 8.0,
-  );
-  static const EdgeInsets smallRightHalfBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets smallTopQuarterBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets smallLeftQuarterRight = EdgeInsets.only(
-    left: 12.0,
-    right: 4.0,
-  );
-  static const EdgeInsets smallTopQuarterLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 4.0,
-  );
-  static const EdgeInsets smallRightQuarterBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets smallTopTinyBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets smallLeftTinyRight = EdgeInsets.only(
-    left: 12.0,
-    right: 2.0,
-  );
-  static const EdgeInsets smallTopTinyLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 2.0,
-  );
-  static const EdgeInsets smallRightTinyBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets smallTopEmptyBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets smallLeftEmptyRight = EdgeInsets.only(
-    left: 12.0,
-    right: 0.0,
-  );
-  static const EdgeInsets smallTopEmptyLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 0.0,
-  );
-  static const EdgeInsets smallRightEmptyBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets smallTopDotSizeBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets smallLeftDotSizeRight = EdgeInsets.only(
-    left: 12.0,
-    right: 3.0,
-  );
-  static const EdgeInsets smallTopDotSizeLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 3.0,
-  );
-  static const EdgeInsets smallRightDotSizeBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets smallTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets smallLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 12.0,
-    right: 6.0,
-  );
-  static const EdgeInsets smallTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 6.0,
-  );
-  static const EdgeInsets smallRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets smallTopDotContainerSizeBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets smallLeftDotContainerSizeRight = EdgeInsets.only(
-    left: 12.0,
-    right: 20.0,
-  );
-  static const EdgeInsets smallTopDotContainerSizeLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 20.0,
-  );
-  static const EdgeInsets smallRightDotContainerSizeBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets smallTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 12.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets smallLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 12.0,
-    right: 414.0,
-  );
-  static const EdgeInsets smallTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 12.0,
-    left: 414.0,
-  );
-  static const EdgeInsets smallRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 12.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets half = EdgeInsets.all(8.0);
-  static const EdgeInsets halfTop = EdgeInsets.only(top: 8.0);
-  static const EdgeInsets halfBottom = EdgeInsets.only(bottom: 8.0);
-  static const EdgeInsets halfLeft = EdgeInsets.only(left: 8.0);
-  static const EdgeInsets halfRight = EdgeInsets.only(right: 8.0);
-  static const EdgeInsets halfVertical = EdgeInsets.symmetric(vertical: 8.0);
-  static const EdgeInsets halfHorizontal = EdgeInsets.symmetric(
-    horizontal: 8.0,
-  );
-  static const EdgeInsets halfTopExtraBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets halfLeftExtraRight = EdgeInsets.only(
-    left: 8.0,
-    right: 60.0,
-  );
-  static const EdgeInsets halfTopExtraLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 60.0,
-  );
-  static const EdgeInsets halfRightExtraBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets halfTopLargeBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets halfLeftLargeRight = EdgeInsets.only(
-    left: 8.0,
-    right: 20.0,
-  );
-  static const EdgeInsets halfTopLargeLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 20.0,
-  );
-  static const EdgeInsets halfRightLargeBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets halfTopDoubledNormalBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets halfLeftDoubledNormalRight = EdgeInsets.only(
-    left: 8.0,
-    right: 32.0,
-  );
-  static const EdgeInsets halfTopDoubledNormalLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 32.0,
-  );
-  static const EdgeInsets halfRightDoubledNormalBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets halfTopNormalBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets halfLeftNormalRight = EdgeInsets.only(
-    left: 8.0,
-    right: 16.0,
-  );
-  static const EdgeInsets halfTopNormalLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 16.0,
-  );
-  static const EdgeInsets halfRightNormalBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets halfTopSmallBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets halfLeftSmallRight = EdgeInsets.only(
-    left: 8.0,
-    right: 12.0,
-  );
-  static const EdgeInsets halfTopSmallLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 12.0,
-  );
-  static const EdgeInsets halfRightSmallBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets halfTopQuarterBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets halfLeftQuarterRight = EdgeInsets.only(
-    left: 8.0,
-    right: 4.0,
-  );
-  static const EdgeInsets halfTopQuarterLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 4.0,
-  );
-  static const EdgeInsets halfRightQuarterBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets halfTopTinyBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets halfLeftTinyRight = EdgeInsets.only(
-    left: 8.0,
-    right: 2.0,
-  );
-  static const EdgeInsets halfTopTinyLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 2.0,
-  );
-  static const EdgeInsets halfRightTinyBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets halfTopEmptyBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets halfLeftEmptyRight = EdgeInsets.only(
-    left: 8.0,
-    right: 0.0,
-  );
-  static const EdgeInsets halfTopEmptyLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 0.0,
-  );
-  static const EdgeInsets halfRightEmptyBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets halfTopDotSizeBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets halfLeftDotSizeRight = EdgeInsets.only(
-    left: 8.0,
-    right: 3.0,
-  );
-  static const EdgeInsets halfTopDotSizeLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 3.0,
-  );
-  static const EdgeInsets halfRightDotSizeBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets halfTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets halfLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 8.0,
-    right: 6.0,
-  );
-  static const EdgeInsets halfTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 6.0,
-  );
-  static const EdgeInsets halfRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets halfTopDotContainerSizeBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets halfLeftDotContainerSizeRight = EdgeInsets.only(
-    left: 8.0,
-    right: 20.0,
-  );
-  static const EdgeInsets halfTopDotContainerSizeLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 20.0,
-  );
-  static const EdgeInsets halfRightDotContainerSizeBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets halfTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 8.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets halfLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 8.0,
-    right: 414.0,
-  );
-  static const EdgeInsets halfTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 8.0,
-    left: 414.0,
-  );
-  static const EdgeInsets halfRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 8.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets quarter = EdgeInsets.all(4.0);
-  static const EdgeInsets quarterTop = EdgeInsets.only(top: 4.0);
-  static const EdgeInsets quarterBottom = EdgeInsets.only(bottom: 4.0);
-  static const EdgeInsets quarterLeft = EdgeInsets.only(left: 4.0);
-  static const EdgeInsets quarterRight = EdgeInsets.only(right: 4.0);
-  static const EdgeInsets quarterVertical = EdgeInsets.symmetric(vertical: 4.0);
-  static const EdgeInsets quarterHorizontal = EdgeInsets.symmetric(
-    horizontal: 4.0,
-  );
-  static const EdgeInsets quarterTopExtraBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets quarterLeftExtraRight = EdgeInsets.only(
-    left: 4.0,
-    right: 60.0,
-  );
-  static const EdgeInsets quarterTopExtraLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 60.0,
-  );
-  static const EdgeInsets quarterRightExtraBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets quarterTopLargeBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets quarterLeftLargeRight = EdgeInsets.only(
-    left: 4.0,
-    right: 20.0,
-  );
-  static const EdgeInsets quarterTopLargeLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 20.0,
-  );
-  static const EdgeInsets quarterRightLargeBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets quarterTopDoubledNormalBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets quarterLeftDoubledNormalRight = EdgeInsets.only(
-    left: 4.0,
-    right: 32.0,
-  );
-  static const EdgeInsets quarterTopDoubledNormalLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 32.0,
-  );
-  static const EdgeInsets quarterRightDoubledNormalBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets quarterTopNormalBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets quarterLeftNormalRight = EdgeInsets.only(
-    left: 4.0,
-    right: 16.0,
-  );
-  static const EdgeInsets quarterTopNormalLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 16.0,
-  );
-  static const EdgeInsets quarterRightNormalBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets quarterTopSmallBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets quarterLeftSmallRight = EdgeInsets.only(
-    left: 4.0,
-    right: 12.0,
-  );
-  static const EdgeInsets quarterTopSmallLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 12.0,
-  );
-  static const EdgeInsets quarterRightSmallBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets quarterTopHalfBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets quarterLeftHalfRight = EdgeInsets.only(
-    left: 4.0,
-    right: 8.0,
-  );
-  static const EdgeInsets quarterTopHalfLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 8.0,
-  );
-  static const EdgeInsets quarterRightHalfBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets quarterTopTinyBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets quarterLeftTinyRight = EdgeInsets.only(
-    left: 4.0,
-    right: 2.0,
-  );
-  static const EdgeInsets quarterTopTinyLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 2.0,
-  );
-  static const EdgeInsets quarterRightTinyBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets quarterTopEmptyBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets quarterLeftEmptyRight = EdgeInsets.only(
-    left: 4.0,
-    right: 0.0,
-  );
-  static const EdgeInsets quarterTopEmptyLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 0.0,
-  );
-  static const EdgeInsets quarterRightEmptyBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets quarterTopDotSizeBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets quarterLeftDotSizeRight = EdgeInsets.only(
-    left: 4.0,
-    right: 3.0,
-  );
-  static const EdgeInsets quarterTopDotSizeLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 3.0,
-  );
-  static const EdgeInsets quarterRightDotSizeBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets quarterTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets quarterLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 4.0,
-    right: 6.0,
-  );
-  static const EdgeInsets quarterTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 6.0,
-  );
-  static const EdgeInsets quarterRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets quarterTopDotContainerSizeBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets quarterLeftDotContainerSizeRight = EdgeInsets.only(
-    left: 4.0,
-    right: 20.0,
-  );
-  static const EdgeInsets quarterTopDotContainerSizeLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 20.0,
-  );
-  static const EdgeInsets quarterRightDotContainerSizeBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets quarterTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 4.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets quarterLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 4.0,
-    right: 414.0,
-  );
-  static const EdgeInsets quarterTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 4.0,
-    left: 414.0,
-  );
-  static const EdgeInsets quarterRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 4.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets tiny = EdgeInsets.all(2.0);
-  static const EdgeInsets tinyTop = EdgeInsets.only(top: 2.0);
-  static const EdgeInsets tinyBottom = EdgeInsets.only(bottom: 2.0);
-  static const EdgeInsets tinyLeft = EdgeInsets.only(left: 2.0);
-  static const EdgeInsets tinyRight = EdgeInsets.only(right: 2.0);
-  static const EdgeInsets tinyVertical = EdgeInsets.symmetric(vertical: 2.0);
-  static const EdgeInsets tinyHorizontal = EdgeInsets.symmetric(
-    horizontal: 2.0,
-  );
-  static const EdgeInsets tinyTopExtraBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets tinyLeftExtraRight = EdgeInsets.only(
-    left: 2.0,
-    right: 60.0,
-  );
-  static const EdgeInsets tinyTopExtraLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 60.0,
-  );
-  static const EdgeInsets tinyRightExtraBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets tinyTopLargeBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets tinyLeftLargeRight = EdgeInsets.only(
-    left: 2.0,
-    right: 20.0,
-  );
-  static const EdgeInsets tinyTopLargeLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 20.0,
-  );
-  static const EdgeInsets tinyRightLargeBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets tinyTopDoubledNormalBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets tinyLeftDoubledNormalRight = EdgeInsets.only(
-    left: 2.0,
-    right: 32.0,
-  );
-  static const EdgeInsets tinyTopDoubledNormalLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 32.0,
-  );
-  static const EdgeInsets tinyRightDoubledNormalBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets tinyTopNormalBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets tinyLeftNormalRight = EdgeInsets.only(
-    left: 2.0,
-    right: 16.0,
-  );
-  static const EdgeInsets tinyTopNormalLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 16.0,
-  );
-  static const EdgeInsets tinyRightNormalBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets tinyTopSmallBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets tinyLeftSmallRight = EdgeInsets.only(
-    left: 2.0,
-    right: 12.0,
-  );
-  static const EdgeInsets tinyTopSmallLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 12.0,
-  );
-  static const EdgeInsets tinyRightSmallBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets tinyTopHalfBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets tinyLeftHalfRight = EdgeInsets.only(
-    left: 2.0,
-    right: 8.0,
-  );
-  static const EdgeInsets tinyTopHalfLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 8.0,
-  );
-  static const EdgeInsets tinyRightHalfBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets tinyTopQuarterBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets tinyLeftQuarterRight = EdgeInsets.only(
-    left: 2.0,
-    right: 4.0,
-  );
-  static const EdgeInsets tinyTopQuarterLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 4.0,
-  );
-  static const EdgeInsets tinyRightQuarterBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets tinyTopEmptyBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets tinyLeftEmptyRight = EdgeInsets.only(
-    left: 2.0,
-    right: 0.0,
-  );
-  static const EdgeInsets tinyTopEmptyLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 0.0,
-  );
-  static const EdgeInsets tinyRightEmptyBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets tinyTopDotSizeBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets tinyLeftDotSizeRight = EdgeInsets.only(
-    left: 2.0,
-    right: 3.0,
-  );
-  static const EdgeInsets tinyTopDotSizeLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 3.0,
-  );
-  static const EdgeInsets tinyRightDotSizeBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets tinyTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets tinyLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 2.0,
-    right: 6.0,
-  );
-  static const EdgeInsets tinyTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 6.0,
-  );
-  static const EdgeInsets tinyRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets tinyTopDotContainerSizeBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets tinyLeftDotContainerSizeRight = EdgeInsets.only(
-    left: 2.0,
-    right: 20.0,
-  );
-  static const EdgeInsets tinyTopDotContainerSizeLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 20.0,
-  );
-  static const EdgeInsets tinyRightDotContainerSizeBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets tinyTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 2.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets tinyLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 2.0,
-    right: 414.0,
-  );
-  static const EdgeInsets tinyTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 2.0,
-    left: 414.0,
-  );
-  static const EdgeInsets tinyRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 2.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets empty = EdgeInsets.all(0.0);
-  static const EdgeInsets emptyTop = EdgeInsets.only(top: 0.0);
-  static const EdgeInsets emptyBottom = EdgeInsets.only(bottom: 0.0);
-  static const EdgeInsets emptyLeft = EdgeInsets.only(left: 0.0);
-  static const EdgeInsets emptyRight = EdgeInsets.only(right: 0.0);
-  static const EdgeInsets emptyVertical = EdgeInsets.symmetric(vertical: 0.0);
-  static const EdgeInsets emptyHorizontal = EdgeInsets.symmetric(
-    horizontal: 0.0,
-  );
-  static const EdgeInsets emptyTopExtraBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets emptyLeftExtraRight = EdgeInsets.only(
-    left: 0.0,
-    right: 60.0,
-  );
-  static const EdgeInsets emptyTopExtraLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 60.0,
-  );
-  static const EdgeInsets emptyRightExtraBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets emptyTopLargeBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets emptyLeftLargeRight = EdgeInsets.only(
-    left: 0.0,
-    right: 20.0,
-  );
-  static const EdgeInsets emptyTopLargeLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 20.0,
-  );
-  static const EdgeInsets emptyRightLargeBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets emptyTopDoubledNormalBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets emptyLeftDoubledNormalRight = EdgeInsets.only(
-    left: 0.0,
-    right: 32.0,
-  );
-  static const EdgeInsets emptyTopDoubledNormalLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 32.0,
-  );
-  static const EdgeInsets emptyRightDoubledNormalBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets emptyTopNormalBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets emptyLeftNormalRight = EdgeInsets.only(
-    left: 0.0,
-    right: 16.0,
-  );
-  static const EdgeInsets emptyTopNormalLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 16.0,
-  );
-  static const EdgeInsets emptyRightNormalBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets emptyTopSmallBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets emptyLeftSmallRight = EdgeInsets.only(
-    left: 0.0,
-    right: 12.0,
-  );
-  static const EdgeInsets emptyTopSmallLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 12.0,
-  );
-  static const EdgeInsets emptyRightSmallBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets emptyTopHalfBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets emptyLeftHalfRight = EdgeInsets.only(
-    left: 0.0,
-    right: 8.0,
-  );
-  static const EdgeInsets emptyTopHalfLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 8.0,
-  );
-  static const EdgeInsets emptyRightHalfBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets emptyTopQuarterBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets emptyLeftQuarterRight = EdgeInsets.only(
-    left: 0.0,
-    right: 4.0,
-  );
-  static const EdgeInsets emptyTopQuarterLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 4.0,
-  );
-  static const EdgeInsets emptyRightQuarterBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets emptyTopTinyBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets emptyLeftTinyRight = EdgeInsets.only(
-    left: 0.0,
-    right: 2.0,
-  );
-  static const EdgeInsets emptyTopTinyLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 2.0,
-  );
-  static const EdgeInsets emptyRightTinyBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets emptyTopDotSizeBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets emptyLeftDotSizeRight = EdgeInsets.only(
-    left: 0.0,
-    right: 3.0,
-  );
-  static const EdgeInsets emptyTopDotSizeLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 3.0,
-  );
-  static const EdgeInsets emptyRightDotSizeBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets emptyTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets emptyLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 0.0,
-    right: 6.0,
-  );
-  static const EdgeInsets emptyTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 6.0,
-  );
-  static const EdgeInsets emptyRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets emptyTopDotContainerSizeBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets emptyLeftDotContainerSizeRight = EdgeInsets.only(
-    left: 0.0,
-    right: 20.0,
-  );
-  static const EdgeInsets emptyTopDotContainerSizeLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 20.0,
-  );
-  static const EdgeInsets emptyRightDotContainerSizeBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets emptyTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 0.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets emptyLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 0.0,
-    right: 414.0,
-  );
-  static const EdgeInsets emptyTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 0.0,
-    left: 414.0,
-  );
-  static const EdgeInsets emptyRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 0.0,
-    bottom: 414.0,
-  );
   static const EdgeInsets dotSize = EdgeInsets.all(3.0);
   static const EdgeInsets dotSizeTop = EdgeInsets.only(top: 3.0);
   static const EdgeInsets dotSizeBottom = EdgeInsets.only(bottom: 3.0);
@@ -1814,6 +2245,182 @@ abstract class Insets {
   static const EdgeInsets dotSizeVertical = EdgeInsets.symmetric(vertical: 3.0);
   static const EdgeInsets dotSizeHorizontal = EdgeInsets.symmetric(
     horizontal: 3.0,
+  );
+  static const EdgeInsets dotSizeTopZeroBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets dotSizeLeftZeroRight = EdgeInsets.only(
+    left: 3.0,
+    right: 0.0,
+  );
+  static const EdgeInsets dotSizeTopZeroLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 0.0,
+  );
+  static const EdgeInsets dotSizeRightZeroBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets dotSizeTopXxsBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets dotSizeLeftXxsRight = EdgeInsets.only(
+    left: 3.0,
+    right: 2.0,
+  );
+  static const EdgeInsets dotSizeTopXxsLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 2.0,
+  );
+  static const EdgeInsets dotSizeRightXxsBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets dotSizeTopXsBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets dotSizeLeftXsRight = EdgeInsets.only(
+    left: 3.0,
+    right: 4.0,
+  );
+  static const EdgeInsets dotSizeTopXsLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 4.0,
+  );
+  static const EdgeInsets dotSizeRightXsBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets dotSizeTopSBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets dotSizeLeftSRight = EdgeInsets.only(
+    left: 3.0,
+    right: 8.0,
+  );
+  static const EdgeInsets dotSizeTopSLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 8.0,
+  );
+  static const EdgeInsets dotSizeRightSBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets dotSizeTopMsBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets dotSizeLeftMsRight = EdgeInsets.only(
+    left: 3.0,
+    right: 10.0,
+  );
+  static const EdgeInsets dotSizeTopMsLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 10.0,
+  );
+  static const EdgeInsets dotSizeRightMsBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets dotSizeTopSmBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets dotSizeLeftSmRight = EdgeInsets.only(
+    left: 3.0,
+    right: 12.0,
+  );
+  static const EdgeInsets dotSizeTopSmLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 12.0,
+  );
+  static const EdgeInsets dotSizeRightSmBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets dotSizeTopMBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets dotSizeLeftMRight = EdgeInsets.only(
+    left: 3.0,
+    right: 16.0,
+  );
+  static const EdgeInsets dotSizeTopMLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 16.0,
+  );
+  static const EdgeInsets dotSizeRightMBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets dotSizeTopMlBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets dotSizeLeftMlRight = EdgeInsets.only(
+    left: 3.0,
+    right: 20.0,
+  );
+  static const EdgeInsets dotSizeTopMlLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 20.0,
+  );
+  static const EdgeInsets dotSizeRightMlBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets dotSizeTopLBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets dotSizeLeftLRight = EdgeInsets.only(
+    left: 3.0,
+    right: 24.0,
+  );
+  static const EdgeInsets dotSizeTopLLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 24.0,
+  );
+  static const EdgeInsets dotSizeRightLBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets dotSizeTopXlBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets dotSizeLeftXlRight = EdgeInsets.only(
+    left: 3.0,
+    right: 32.0,
+  );
+  static const EdgeInsets dotSizeTopXlLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 32.0,
+  );
+  static const EdgeInsets dotSizeRightXlBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets dotSizeTopXxlBottom = EdgeInsets.only(
+    top: 3.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets dotSizeLeftXxlRight = EdgeInsets.only(
+    left: 3.0,
+    right: 48.0,
+  );
+  static const EdgeInsets dotSizeTopXxlLeft = EdgeInsets.only(
+    top: 3.0,
+    left: 48.0,
+  );
+  static const EdgeInsets dotSizeRightXxlBottom = EdgeInsets.only(
+    right: 3.0,
+    bottom: 48.0,
   );
   static const EdgeInsets dotSizeTopExtraBottom = EdgeInsets.only(
     top: 3.0,
@@ -1831,150 +2438,6 @@ abstract class Insets {
     right: 3.0,
     bottom: 60.0,
   );
-  static const EdgeInsets dotSizeTopLargeBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets dotSizeLeftLargeRight = EdgeInsets.only(
-    left: 3.0,
-    right: 20.0,
-  );
-  static const EdgeInsets dotSizeTopLargeLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 20.0,
-  );
-  static const EdgeInsets dotSizeRightLargeBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets dotSizeTopDoubledNormalBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets dotSizeLeftDoubledNormalRight = EdgeInsets.only(
-    left: 3.0,
-    right: 32.0,
-  );
-  static const EdgeInsets dotSizeTopDoubledNormalLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 32.0,
-  );
-  static const EdgeInsets dotSizeRightDoubledNormalBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 32.0,
-  );
-  static const EdgeInsets dotSizeTopNormalBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets dotSizeLeftNormalRight = EdgeInsets.only(
-    left: 3.0,
-    right: 16.0,
-  );
-  static const EdgeInsets dotSizeTopNormalLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 16.0,
-  );
-  static const EdgeInsets dotSizeRightNormalBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets dotSizeTopSmallBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets dotSizeLeftSmallRight = EdgeInsets.only(
-    left: 3.0,
-    right: 12.0,
-  );
-  static const EdgeInsets dotSizeTopSmallLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 12.0,
-  );
-  static const EdgeInsets dotSizeRightSmallBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets dotSizeTopHalfBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets dotSizeLeftHalfRight = EdgeInsets.only(
-    left: 3.0,
-    right: 8.0,
-  );
-  static const EdgeInsets dotSizeTopHalfLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 8.0,
-  );
-  static const EdgeInsets dotSizeRightHalfBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets dotSizeTopQuarterBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets dotSizeLeftQuarterRight = EdgeInsets.only(
-    left: 3.0,
-    right: 4.0,
-  );
-  static const EdgeInsets dotSizeTopQuarterLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 4.0,
-  );
-  static const EdgeInsets dotSizeRightQuarterBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets dotSizeTopTinyBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets dotSizeLeftTinyRight = EdgeInsets.only(
-    left: 3.0,
-    right: 2.0,
-  );
-  static const EdgeInsets dotSizeTopTinyLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 2.0,
-  );
-  static const EdgeInsets dotSizeRightTinyBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets dotSizeTopEmptyBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets dotSizeLeftEmptyRight = EdgeInsets.only(
-    left: 3.0,
-    right: 0.0,
-  );
-  static const EdgeInsets dotSizeTopEmptyLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 0.0,
-  );
-  static const EdgeInsets dotSizeRightEmptyBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets dotSizeTopDotSeparatorSizeBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 6.0,
-  );
-  static const EdgeInsets dotSizeLeftDotSeparatorSizeRight = EdgeInsets.only(
-    left: 3.0,
-    right: 6.0,
-  );
-  static const EdgeInsets dotSizeTopDotSeparatorSizeLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 6.0,
-  );
-  static const EdgeInsets dotSizeRightDotSeparatorSizeBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 6.0,
-  );
   static const EdgeInsets dotSizeTopDotContainerSizeBottom = EdgeInsets.only(
     top: 3.0,
     bottom: 20.0,
@@ -1991,201 +2454,6 @@ abstract class Insets {
     right: 3.0,
     bottom: 20.0,
   );
-  static const EdgeInsets dotSizeTopMaxViewWidthSizeBottom = EdgeInsets.only(
-    top: 3.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets dotSizeLeftMaxViewWidthSizeRight = EdgeInsets.only(
-    left: 3.0,
-    right: 414.0,
-  );
-  static const EdgeInsets dotSizeTopMaxViewWidthSizeLeft = EdgeInsets.only(
-    top: 3.0,
-    left: 414.0,
-  );
-  static const EdgeInsets dotSizeRightMaxViewWidthSizeBottom = EdgeInsets.only(
-    right: 3.0,
-    bottom: 414.0,
-  );
-  static const EdgeInsets dotSeparatorSize = EdgeInsets.all(6.0);
-  static const EdgeInsets dotSeparatorSizeTop = EdgeInsets.only(top: 6.0);
-  static const EdgeInsets dotSeparatorSizeBottom = EdgeInsets.only(bottom: 6.0);
-  static const EdgeInsets dotSeparatorSizeLeft = EdgeInsets.only(left: 6.0);
-  static const EdgeInsets dotSeparatorSizeRight = EdgeInsets.only(right: 6.0);
-  static const EdgeInsets dotSeparatorSizeVertical = EdgeInsets.symmetric(
-    vertical: 6.0,
-  );
-  static const EdgeInsets dotSeparatorSizeHorizontal = EdgeInsets.symmetric(
-    horizontal: 6.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopExtraBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftExtraRight = EdgeInsets.only(
-    left: 6.0,
-    right: 60.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopExtraLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 60.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightExtraBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopLargeBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftLargeRight = EdgeInsets.only(
-    left: 6.0,
-    right: 20.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopLargeLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 20.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightLargeBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopDoubledNormalBottom =
-      EdgeInsets.only(top: 6.0, bottom: 32.0);
-  static const EdgeInsets dotSeparatorSizeLeftDoubledNormalRight =
-      EdgeInsets.only(left: 6.0, right: 32.0);
-  static const EdgeInsets dotSeparatorSizeTopDoubledNormalLeft =
-      EdgeInsets.only(top: 6.0, left: 32.0);
-  static const EdgeInsets dotSeparatorSizeRightDoubledNormalBottom =
-      EdgeInsets.only(right: 6.0, bottom: 32.0);
-  static const EdgeInsets dotSeparatorSizeTopNormalBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftNormalRight = EdgeInsets.only(
-    left: 6.0,
-    right: 16.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopNormalLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 16.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightNormalBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopSmallBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftSmallRight = EdgeInsets.only(
-    left: 6.0,
-    right: 12.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopSmallLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 12.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightSmallBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopHalfBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftHalfRight = EdgeInsets.only(
-    left: 6.0,
-    right: 8.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopHalfLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 8.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightHalfBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopQuarterBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftQuarterRight = EdgeInsets.only(
-    left: 6.0,
-    right: 4.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopQuarterLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 4.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightQuarterBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopTinyBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftTinyRight = EdgeInsets.only(
-    left: 6.0,
-    right: 2.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopTinyLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 2.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightTinyBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopEmptyBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftEmptyRight = EdgeInsets.only(
-    left: 6.0,
-    right: 0.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopEmptyLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 0.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightEmptyBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopDotSizeBottom = EdgeInsets.only(
-    top: 6.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets dotSeparatorSizeLeftDotSizeRight = EdgeInsets.only(
-    left: 6.0,
-    right: 3.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopDotSizeLeft = EdgeInsets.only(
-    top: 6.0,
-    left: 3.0,
-  );
-  static const EdgeInsets dotSeparatorSizeRightDotSizeBottom = EdgeInsets.only(
-    right: 6.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets dotSeparatorSizeTopDotContainerSizeBottom =
-      EdgeInsets.only(top: 6.0, bottom: 20.0);
-  static const EdgeInsets dotSeparatorSizeLeftDotContainerSizeRight =
-      EdgeInsets.only(left: 6.0, right: 20.0);
-  static const EdgeInsets dotSeparatorSizeTopDotContainerSizeLeft =
-      EdgeInsets.only(top: 6.0, left: 20.0);
-  static const EdgeInsets dotSeparatorSizeRightDotContainerSizeBottom =
-      EdgeInsets.only(right: 6.0, bottom: 20.0);
-  static const EdgeInsets dotSeparatorSizeTopMaxViewWidthSizeBottom =
-      EdgeInsets.only(top: 6.0, bottom: 414.0);
-  static const EdgeInsets dotSeparatorSizeLeftMaxViewWidthSizeRight =
-      EdgeInsets.only(left: 6.0, right: 414.0);
-  static const EdgeInsets dotSeparatorSizeTopMaxViewWidthSizeLeft =
-      EdgeInsets.only(top: 6.0, left: 414.0);
-  static const EdgeInsets dotSeparatorSizeRightMaxViewWidthSizeBottom =
-      EdgeInsets.only(right: 6.0, bottom: 414.0);
   static const EdgeInsets dotContainerSize = EdgeInsets.all(20.0);
   static const EdgeInsets dotContainerSizeTop = EdgeInsets.only(top: 20.0);
   static const EdgeInsets dotContainerSizeBottom = EdgeInsets.only(
@@ -2198,6 +2466,182 @@ abstract class Insets {
   );
   static const EdgeInsets dotContainerSizeHorizontal = EdgeInsets.symmetric(
     horizontal: 20.0,
+  );
+  static const EdgeInsets dotContainerSizeTopZeroBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftZeroRight = EdgeInsets.only(
+    left: 20.0,
+    right: 0.0,
+  );
+  static const EdgeInsets dotContainerSizeTopZeroLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 0.0,
+  );
+  static const EdgeInsets dotContainerSizeRightZeroBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 0.0,
+  );
+  static const EdgeInsets dotContainerSizeTopXxsBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftXxsRight = EdgeInsets.only(
+    left: 20.0,
+    right: 2.0,
+  );
+  static const EdgeInsets dotContainerSizeTopXxsLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 2.0,
+  );
+  static const EdgeInsets dotContainerSizeRightXxsBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 2.0,
+  );
+  static const EdgeInsets dotContainerSizeTopXsBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftXsRight = EdgeInsets.only(
+    left: 20.0,
+    right: 4.0,
+  );
+  static const EdgeInsets dotContainerSizeTopXsLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 4.0,
+  );
+  static const EdgeInsets dotContainerSizeRightXsBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 4.0,
+  );
+  static const EdgeInsets dotContainerSizeTopSBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftSRight = EdgeInsets.only(
+    left: 20.0,
+    right: 8.0,
+  );
+  static const EdgeInsets dotContainerSizeTopSLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 8.0,
+  );
+  static const EdgeInsets dotContainerSizeRightSBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 8.0,
+  );
+  static const EdgeInsets dotContainerSizeTopMsBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftMsRight = EdgeInsets.only(
+    left: 20.0,
+    right: 10.0,
+  );
+  static const EdgeInsets dotContainerSizeTopMsLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 10.0,
+  );
+  static const EdgeInsets dotContainerSizeRightMsBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 10.0,
+  );
+  static const EdgeInsets dotContainerSizeTopSmBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftSmRight = EdgeInsets.only(
+    left: 20.0,
+    right: 12.0,
+  );
+  static const EdgeInsets dotContainerSizeTopSmLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 12.0,
+  );
+  static const EdgeInsets dotContainerSizeRightSmBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 12.0,
+  );
+  static const EdgeInsets dotContainerSizeTopMBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftMRight = EdgeInsets.only(
+    left: 20.0,
+    right: 16.0,
+  );
+  static const EdgeInsets dotContainerSizeTopMLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 16.0,
+  );
+  static const EdgeInsets dotContainerSizeRightMBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 16.0,
+  );
+  static const EdgeInsets dotContainerSizeTopMlBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftMlRight = EdgeInsets.only(
+    left: 20.0,
+    right: 20.0,
+  );
+  static const EdgeInsets dotContainerSizeTopMlLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 20.0,
+  );
+  static const EdgeInsets dotContainerSizeRightMlBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 20.0,
+  );
+  static const EdgeInsets dotContainerSizeTopLBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftLRight = EdgeInsets.only(
+    left: 20.0,
+    right: 24.0,
+  );
+  static const EdgeInsets dotContainerSizeTopLLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 24.0,
+  );
+  static const EdgeInsets dotContainerSizeRightLBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 24.0,
+  );
+  static const EdgeInsets dotContainerSizeTopXlBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftXlRight = EdgeInsets.only(
+    left: 20.0,
+    right: 32.0,
+  );
+  static const EdgeInsets dotContainerSizeTopXlLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 32.0,
+  );
+  static const EdgeInsets dotContainerSizeRightXlBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 32.0,
+  );
+  static const EdgeInsets dotContainerSizeTopXxlBottom = EdgeInsets.only(
+    top: 20.0,
+    bottom: 48.0,
+  );
+  static const EdgeInsets dotContainerSizeLeftXxlRight = EdgeInsets.only(
+    left: 20.0,
+    right: 48.0,
+  );
+  static const EdgeInsets dotContainerSizeTopXxlLeft = EdgeInsets.only(
+    top: 20.0,
+    left: 48.0,
+  );
+  static const EdgeInsets dotContainerSizeRightXxlBottom = EdgeInsets.only(
+    right: 20.0,
+    bottom: 48.0,
   );
   static const EdgeInsets dotContainerSizeTopExtraBottom = EdgeInsets.only(
     top: 20.0,
@@ -2215,126 +2659,6 @@ abstract class Insets {
     right: 20.0,
     bottom: 60.0,
   );
-  static const EdgeInsets dotContainerSizeTopLargeBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets dotContainerSizeLeftLargeRight = EdgeInsets.only(
-    left: 20.0,
-    right: 20.0,
-  );
-  static const EdgeInsets dotContainerSizeTopLargeLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 20.0,
-  );
-  static const EdgeInsets dotContainerSizeRightLargeBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets dotContainerSizeTopDoubledNormalBottom =
-      EdgeInsets.only(top: 20.0, bottom: 32.0);
-  static const EdgeInsets dotContainerSizeLeftDoubledNormalRight =
-      EdgeInsets.only(left: 20.0, right: 32.0);
-  static const EdgeInsets dotContainerSizeTopDoubledNormalLeft =
-      EdgeInsets.only(top: 20.0, left: 32.0);
-  static const EdgeInsets dotContainerSizeRightDoubledNormalBottom =
-      EdgeInsets.only(right: 20.0, bottom: 32.0);
-  static const EdgeInsets dotContainerSizeTopNormalBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets dotContainerSizeLeftNormalRight = EdgeInsets.only(
-    left: 20.0,
-    right: 16.0,
-  );
-  static const EdgeInsets dotContainerSizeTopNormalLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 16.0,
-  );
-  static const EdgeInsets dotContainerSizeRightNormalBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets dotContainerSizeTopSmallBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets dotContainerSizeLeftSmallRight = EdgeInsets.only(
-    left: 20.0,
-    right: 12.0,
-  );
-  static const EdgeInsets dotContainerSizeTopSmallLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 12.0,
-  );
-  static const EdgeInsets dotContainerSizeRightSmallBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets dotContainerSizeTopHalfBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets dotContainerSizeLeftHalfRight = EdgeInsets.only(
-    left: 20.0,
-    right: 8.0,
-  );
-  static const EdgeInsets dotContainerSizeTopHalfLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 8.0,
-  );
-  static const EdgeInsets dotContainerSizeRightHalfBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets dotContainerSizeTopQuarterBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets dotContainerSizeLeftQuarterRight = EdgeInsets.only(
-    left: 20.0,
-    right: 4.0,
-  );
-  static const EdgeInsets dotContainerSizeTopQuarterLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 4.0,
-  );
-  static const EdgeInsets dotContainerSizeRightQuarterBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets dotContainerSizeTopTinyBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets dotContainerSizeLeftTinyRight = EdgeInsets.only(
-    left: 20.0,
-    right: 2.0,
-  );
-  static const EdgeInsets dotContainerSizeTopTinyLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 2.0,
-  );
-  static const EdgeInsets dotContainerSizeRightTinyBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets dotContainerSizeTopEmptyBottom = EdgeInsets.only(
-    top: 20.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets dotContainerSizeLeftEmptyRight = EdgeInsets.only(
-    left: 20.0,
-    right: 0.0,
-  );
-  static const EdgeInsets dotContainerSizeTopEmptyLeft = EdgeInsets.only(
-    top: 20.0,
-    left: 0.0,
-  );
-  static const EdgeInsets dotContainerSizeRightEmptyBottom = EdgeInsets.only(
-    right: 20.0,
-    bottom: 0.0,
-  );
   static const EdgeInsets dotContainerSizeTopDotSizeBottom = EdgeInsets.only(
     top: 20.0,
     bottom: 3.0,
@@ -2351,208 +2675,2795 @@ abstract class Insets {
     right: 20.0,
     bottom: 3.0,
   );
-  static const EdgeInsets dotContainerSizeTopDotSeparatorSizeBottom =
-      EdgeInsets.only(top: 20.0, bottom: 6.0);
-  static const EdgeInsets dotContainerSizeLeftDotSeparatorSizeRight =
-      EdgeInsets.only(left: 20.0, right: 6.0);
-  static const EdgeInsets dotContainerSizeTopDotSeparatorSizeLeft =
-      EdgeInsets.only(top: 20.0, left: 6.0);
-  static const EdgeInsets dotContainerSizeRightDotSeparatorSizeBottom =
-      EdgeInsets.only(right: 20.0, bottom: 6.0);
-  static const EdgeInsets dotContainerSizeTopMaxViewWidthSizeBottom =
-      EdgeInsets.only(top: 20.0, bottom: 414.0);
-  static const EdgeInsets dotContainerSizeLeftMaxViewWidthSizeRight =
-      EdgeInsets.only(left: 20.0, right: 414.0);
-  static const EdgeInsets dotContainerSizeTopMaxViewWidthSizeLeft =
-      EdgeInsets.only(top: 20.0, left: 414.0);
-  static const EdgeInsets dotContainerSizeRightMaxViewWidthSizeBottom =
-      EdgeInsets.only(right: 20.0, bottom: 414.0);
-  static const EdgeInsets maxViewWidthSize = EdgeInsets.all(414.0);
-  static const EdgeInsets maxViewWidthSizeTop = EdgeInsets.only(top: 414.0);
-  static const EdgeInsets maxViewWidthSizeBottom = EdgeInsets.only(
-    bottom: 414.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeft = EdgeInsets.only(left: 414.0);
-  static const EdgeInsets maxViewWidthSizeRight = EdgeInsets.only(right: 414.0);
-  static const EdgeInsets maxViewWidthSizeVertical = EdgeInsets.symmetric(
-    vertical: 414.0,
-  );
-  static const EdgeInsets maxViewWidthSizeHorizontal = EdgeInsets.symmetric(
-    horizontal: 414.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopExtraBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftExtraRight = EdgeInsets.only(
-    left: 414.0,
-    right: 60.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopExtraLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 60.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightExtraBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 60.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopLargeBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftLargeRight = EdgeInsets.only(
-    left: 414.0,
-    right: 20.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopLargeLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 20.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightLargeBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 20.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopDoubledNormalBottom =
-      EdgeInsets.only(top: 414.0, bottom: 32.0);
-  static const EdgeInsets maxViewWidthSizeLeftDoubledNormalRight =
-      EdgeInsets.only(left: 414.0, right: 32.0);
-  static const EdgeInsets maxViewWidthSizeTopDoubledNormalLeft =
-      EdgeInsets.only(top: 414.0, left: 32.0);
-  static const EdgeInsets maxViewWidthSizeRightDoubledNormalBottom =
-      EdgeInsets.only(right: 414.0, bottom: 32.0);
-  static const EdgeInsets maxViewWidthSizeTopNormalBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftNormalRight = EdgeInsets.only(
-    left: 414.0,
-    right: 16.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopNormalLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 16.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightNormalBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 16.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopSmallBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftSmallRight = EdgeInsets.only(
-    left: 414.0,
-    right: 12.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopSmallLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 12.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightSmallBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 12.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopHalfBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftHalfRight = EdgeInsets.only(
-    left: 414.0,
-    right: 8.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopHalfLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 8.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightHalfBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 8.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopQuarterBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftQuarterRight = EdgeInsets.only(
-    left: 414.0,
-    right: 4.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopQuarterLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 4.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightQuarterBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 4.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopTinyBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftTinyRight = EdgeInsets.only(
-    left: 414.0,
-    right: 2.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopTinyLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 2.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightTinyBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 2.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopEmptyBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftEmptyRight = EdgeInsets.only(
-    left: 414.0,
-    right: 0.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopEmptyLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 0.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightEmptyBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 0.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopDotSizeBottom = EdgeInsets.only(
-    top: 414.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets maxViewWidthSizeLeftDotSizeRight = EdgeInsets.only(
-    left: 414.0,
-    right: 3.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopDotSizeLeft = EdgeInsets.only(
-    top: 414.0,
-    left: 3.0,
-  );
-  static const EdgeInsets maxViewWidthSizeRightDotSizeBottom = EdgeInsets.only(
-    right: 414.0,
-    bottom: 3.0,
-  );
-  static const EdgeInsets maxViewWidthSizeTopDotSeparatorSizeBottom =
-      EdgeInsets.only(top: 414.0, bottom: 6.0);
-  static const EdgeInsets maxViewWidthSizeLeftDotSeparatorSizeRight =
-      EdgeInsets.only(left: 414.0, right: 6.0);
-  static const EdgeInsets maxViewWidthSizeTopDotSeparatorSizeLeft =
-      EdgeInsets.only(top: 414.0, left: 6.0);
-  static const EdgeInsets maxViewWidthSizeRightDotSeparatorSizeBottom =
-      EdgeInsets.only(right: 414.0, bottom: 6.0);
-  static const EdgeInsets maxViewWidthSizeTopDotContainerSizeBottom =
-      EdgeInsets.only(top: 414.0, bottom: 20.0);
-  static const EdgeInsets maxViewWidthSizeLeftDotContainerSizeRight =
-      EdgeInsets.only(left: 414.0, right: 20.0);
-  static const EdgeInsets maxViewWidthSizeTopDotContainerSizeLeft =
-      EdgeInsets.only(top: 414.0, left: 20.0);
-  static const EdgeInsets maxViewWidthSizeRightDotContainerSizeBottom =
-      EdgeInsets.only(right: 414.0, bottom: 20.0);
 }
 
 abstract class Borders {
   const Borders._();
 
+  static const BorderRadius zero = BorderRadius.all(Radius.circular(0.0));
+  static const BorderRadius zeroTop = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroRight = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroVertical = BorderRadius.vertical(
+    top: Radius.circular(0.0),
+    bottom: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(0.0),
+    right: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroTopRight = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius zeroTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius zeroRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius zeroTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius zeroBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius zeroTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius zeroRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius zeroTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius zeroBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius zeroTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius zeroRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius zeroTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius zeroBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius zeroTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius zeroRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius zeroTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius zeroBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius zeroTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius zeroRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius zeroTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius zeroBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius zeroTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius zeroRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius zeroTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius zeroBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius zeroTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius zeroRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius zeroTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius zeroBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius zeroTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius zeroRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius zeroTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius zeroBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius zeroTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius zeroRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius zeroTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius zeroBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius zeroTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius zeroRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius zeroTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius zeroBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius zeroTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius zeroRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius zeroTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius zeroBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius zeroTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius zeroRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius zeroTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius zeroBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius zeroTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius zeroRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(0.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius zeroTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(0.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius zeroBottomDotContainerSizeBottom =
+      BorderRadius.only(
+        bottomLeft: Radius.circular(0.0),
+        bottomRight: Radius.circular(20.0),
+      );
+  static const BorderRadius xxs = BorderRadius.all(Radius.circular(2.0));
+  static const BorderRadius xxsTop = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsRight = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsVertical = BorderRadius.vertical(
+    top: Radius.circular(2.0),
+    bottom: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(2.0),
+    right: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsTopRight = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius xxsTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xxsRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius xxsTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xxsBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xxsTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xxsRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius xxsTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xxsBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xxsTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xxsRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius xxsTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xxsBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xxsTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xxsRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius xxsTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xxsBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xxsTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xxsRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius xxsTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xxsBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xxsTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xxsRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius xxsTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xxsBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xxsTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxsRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius xxsTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxsBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxsTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xxsRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius xxsTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xxsBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xxsTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xxsRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius xxsTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xxsBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xxsTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxsRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius xxsTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxsBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxsTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xxsRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius xxsTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xxsBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xxsTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xxsRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius xxsTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xxsBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xxsTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxsRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(2.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius xxsTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxsBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(2.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xs = BorderRadius.all(Radius.circular(4.0));
+  static const BorderRadius xsTop = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xsLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius xsRight = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xsVertical = BorderRadius.vertical(
+    top: Radius.circular(4.0),
+    bottom: Radius.circular(4.0),
+  );
+  static const BorderRadius xsHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(4.0),
+    right: Radius.circular(4.0),
+  );
+  static const BorderRadius xsTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius xsTopRight = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xsBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius xsBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xsTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xsTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius xsTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xsRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius xsTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xsBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xsTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xsRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius xsTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xsBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xsTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xsRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius xsTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xsBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xsTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xsRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius xsTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xsBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xsTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xsRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius xsTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xsBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xsTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xsRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius xsTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xsBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xsTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xsRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius xsTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xsBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xsTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xsRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius xsTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xsBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xsTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xsRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius xsTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xsBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xsTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xsRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius xsTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xsBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xsTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xsRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius xsTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xsBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xsTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xsRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius xsTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xsBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xsTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xsRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(4.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius xsTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xsBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(4.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius s = BorderRadius.all(Radius.circular(8.0));
+  static const BorderRadius sTop = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius sBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius sLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius sRight = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius sVertical = BorderRadius.vertical(
+    top: Radius.circular(8.0),
+    bottom: Radius.circular(8.0),
+  );
+  static const BorderRadius sHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(8.0),
+    right: Radius.circular(8.0),
+  );
+  static const BorderRadius sTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius sTopRight = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius sBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius sBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius sTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius sTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius sTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius sRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius sTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius sBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius sTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius sRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius sTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius sBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius sTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius sRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius sTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius sBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius sTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius sRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius sTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius sBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius sTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius sRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius sTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius sBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius sTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius sRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius sTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius sBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius sTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius sRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius sTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius sBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius sTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius sRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius sTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius sBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius sTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius sRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius sTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius sBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius sTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius sRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius sTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius sBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius sTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius sRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius sTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius sBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius sTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius sRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius sTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius sBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius sTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius sRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(8.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius sTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius sBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(8.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius ms = BorderRadius.all(Radius.circular(10.0));
+  static const BorderRadius msTop = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius msBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius msLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius msRight = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius msVertical = BorderRadius.vertical(
+    top: Radius.circular(10.0),
+    bottom: Radius.circular(10.0),
+  );
+  static const BorderRadius msHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(10.0),
+    right: Radius.circular(10.0),
+  );
+  static const BorderRadius msTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius msTopRight = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius msBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius msBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius msTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius msTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius msTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius msRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius msTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius msBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius msTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius msRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius msTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius msBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius msTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius msRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius msTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius msBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius msTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius msRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius msTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius msBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius msTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius msRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius msTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius msBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius msTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius msRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius msTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius msBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius msTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius msRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius msTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius msBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius msTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius msRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius msTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius msBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius msTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius msRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius msTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius msBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius msTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius msRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius msTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius msBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius msTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius msRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius msTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius msBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius msTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius msRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius msTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius msBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius msTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius msRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius msTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius msBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(10.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius sm = BorderRadius.all(Radius.circular(12.0));
+  static const BorderRadius smTop = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius smBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius smLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius smRight = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius smVertical = BorderRadius.vertical(
+    top: Radius.circular(12.0),
+    bottom: Radius.circular(12.0),
+  );
+  static const BorderRadius smHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(12.0),
+    right: Radius.circular(12.0),
+  );
+  static const BorderRadius smTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius smTopRight = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius smBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius smBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius smTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius smTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius smTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius smRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius smTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius smBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius smTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius smRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius smTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius smBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius smTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius smRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius smTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius smBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius smTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius smRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius smTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius smBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius smTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius smRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius smTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius smBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius smTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius smRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius smTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius smBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius smTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius smRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius smTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius smBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius smTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius smRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius smTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius smBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius smTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius smRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius smTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius smBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius smTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius smRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius smTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius smBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius smTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius smRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius smTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius smBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius smTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius smRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius smTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius smBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius smTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius smRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(12.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius smTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius smBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(12.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius m = BorderRadius.all(Radius.circular(16.0));
+  static const BorderRadius mTop = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius mRight = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mVertical = BorderRadius.vertical(
+    top: Radius.circular(16.0),
+    bottom: Radius.circular(16.0),
+  );
+  static const BorderRadius mHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(16.0),
+    right: Radius.circular(16.0),
+  );
+  static const BorderRadius mTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius mTopRight = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius mBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius mTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius mRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius mTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius mBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius mTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius mRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius mTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius mBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius mTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius mRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius mTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius mBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius mTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius mRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius mTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius mBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius mTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius mRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius mTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius mBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius mTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius mRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius mTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius mBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius mTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius mTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius mRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius mTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius mBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius mTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius mRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius mTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius mBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius mTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius mRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius mTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius mBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius mTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius mRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius mTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius mBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius mTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius mRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius mTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius mBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius mTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(16.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius mTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(16.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius ml = BorderRadius.all(Radius.circular(20.0));
+  static const BorderRadius mlTop = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mlLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius mlRight = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mlVertical = BorderRadius.vertical(
+    top: Radius.circular(20.0),
+    bottom: Radius.circular(20.0),
+  );
+  static const BorderRadius mlHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(20.0),
+    right: Radius.circular(20.0),
+  );
+  static const BorderRadius mlTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius mlTopRight = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mlBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius mlBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mlTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mlTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius mlTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius mlRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius mlTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius mlBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius mlTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius mlRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius mlTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius mlBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius mlTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius mlRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius mlTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius mlBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius mlTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius mlRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius mlTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius mlBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius mlTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius mlRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius mlTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius mlBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius mlTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius mlRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius mlTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius mlBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius mlTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mlRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius mlTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mlBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius mlTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius mlRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius mlTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius mlBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius mlTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius mlRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius mlTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius mlBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius mlTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius mlRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius mlTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius mlBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius mlTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius mlRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius mlTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius mlBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius mlTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius mlRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius mlTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius mlBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius mlTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mlRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius mlTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius mlBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius l = BorderRadius.all(Radius.circular(24.0));
+  static const BorderRadius lTop = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius lBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius lLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius lRight = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius lVertical = BorderRadius.vertical(
+    top: Radius.circular(24.0),
+    bottom: Radius.circular(24.0),
+  );
+  static const BorderRadius lHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(24.0),
+    right: Radius.circular(24.0),
+  );
+  static const BorderRadius lTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius lTopRight = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius lBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius lBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius lTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius lTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius lTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius lRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius lTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius lBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius lTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius lRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius lTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius lBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius lTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius lRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius lTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius lBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius lTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius lRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius lTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius lBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius lTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius lRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius lTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius lBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius lTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius lRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius lTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius lBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius lTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius lRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius lTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius lBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius lTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius lRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius lTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius lBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius lTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius lRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius lTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius lBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius lTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius lRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius lTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius lBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius lTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius lRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius lTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius lBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius lTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius lRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius lTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius lBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius lTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius lRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(24.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius lTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius lBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(24.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xl = BorderRadius.all(Radius.circular(32.0));
+  static const BorderRadius xlTop = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xlLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius xlRight = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xlVertical = BorderRadius.vertical(
+    top: Radius.circular(32.0),
+    bottom: Radius.circular(32.0),
+  );
+  static const BorderRadius xlHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(32.0),
+    right: Radius.circular(32.0),
+  );
+  static const BorderRadius xlTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius xlTopRight = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xlBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius xlBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xlTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xlTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius xlTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xlRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius xlTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xlBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xlTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xlRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius xlTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xlBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xlTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xlRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius xlTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xlBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xlTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xlRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius xlTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xlBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xlTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xlRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius xlTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xlBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xlTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xlRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius xlTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xlBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xlTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xlRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius xlTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xlBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xlTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xlRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius xlTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xlBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xlTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xlRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius xlTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xlBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xlTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xlRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius xlTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xlBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xlTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xlRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius xlTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xlBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xlTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xlRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius xlTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xlBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xlTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xlRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(32.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius xlTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xlBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(32.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxl = BorderRadius.all(Radius.circular(48.0));
+  static const BorderRadius xxlTop = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlRight = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlVertical = BorderRadius.vertical(
+    top: Radius.circular(48.0),
+    bottom: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlHorizontal = BorderRadius.horizontal(
+    left: Radius.circular(48.0),
+    right: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlTopLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlTopRight = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlBottomLeft = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlBottomRight = BorderRadius.only(
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlTopLeftBottomRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlTopRightBottomLeft = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius xxlTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xxlRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius xxlTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xxlBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius xxlTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxlRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius xxlTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxlBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius xxlTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xxlRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius xxlTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xxlBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius xxlTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xxlRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius xxlTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xxlBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius xxlTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xxlRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius xxlTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xxlBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius xxlTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xxlRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius xxlTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xxlBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius xxlTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xxlRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius xxlTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xxlBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius xxlTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxlRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius xxlTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxlBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxlTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xxlRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius xxlTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xxlBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius xxlTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xxlRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius xxlTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xxlBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius xxlTopExtraLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xxlRightExtraBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(60.0),
+  );
+  static const BorderRadius xxlTopExtraRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xxlBottomExtraBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(60.0),
+  );
+  static const BorderRadius xxlTopDotSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xxlRightDotSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(3.0),
+  );
+  static const BorderRadius xxlTopDotSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xxlBottomDotSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(3.0),
+  );
+  static const BorderRadius xxlTopDotContainerSizeLeft = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxlRightDotContainerSizeBottom = BorderRadius.only(
+    topRight: Radius.circular(48.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius xxlTopDotContainerSizeRight = BorderRadius.only(
+    topLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius xxlBottomDotContainerSizeBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(48.0),
+    bottomRight: Radius.circular(20.0),
+  );
   static const BorderRadius extra = BorderRadius.all(Radius.circular(60.0));
   static const BorderRadius extraTop = BorderRadius.only(
     topLeft: Radius.circular(60.0),
@@ -2598,133 +5509,181 @@ abstract class Borders {
     topRight: Radius.circular(60.0),
     bottomLeft: Radius.circular(60.0),
   );
-  static const BorderRadius extraTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius extraRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(60.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius extraTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius extraBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius extraTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius extraRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(60.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius extraTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius extraBottomDoubledNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius extraTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius extraRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(60.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius extraTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius extraBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius extraTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius extraRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(60.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius extraTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius extraBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius extraTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius extraRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(60.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius extraTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius extraBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius extraTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius extraRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(60.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius extraTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius extraBottomQuarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius extraTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius extraRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(60.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius extraTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius extraBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius extraTopEmptyLeft = BorderRadius.only(
+  static const BorderRadius extraTopZeroLeft = BorderRadius.only(
     topLeft: Radius.circular(60.0),
     topRight: Radius.circular(0.0),
   );
-  static const BorderRadius extraRightEmptyBottom = BorderRadius.only(
+  static const BorderRadius extraRightZeroBottom = BorderRadius.only(
     topRight: Radius.circular(60.0),
     bottomLeft: Radius.circular(0.0),
   );
-  static const BorderRadius extraTopEmptyRight = BorderRadius.only(
+  static const BorderRadius extraTopZeroRight = BorderRadius.only(
     topLeft: Radius.circular(60.0),
     bottomRight: Radius.circular(0.0),
   );
-  static const BorderRadius extraBottomEmptyBottom = BorderRadius.only(
+  static const BorderRadius extraBottomZeroBottom = BorderRadius.only(
     bottomLeft: Radius.circular(60.0),
     bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius extraTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius extraRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius extraTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius extraBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius extraTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius extraRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius extraTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius extraBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius extraTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius extraRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius extraTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius extraBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius extraTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius extraRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius extraTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius extraBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius extraTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius extraRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius extraTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius extraBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius extraTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius extraRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius extraTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius extraBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius extraTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius extraRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius extraTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius extraBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius extraTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius extraRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius extraTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius extraBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius extraTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius extraRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius extraTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius extraBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius extraTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius extraRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(60.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius extraTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius extraBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(60.0),
+    bottomRight: Radius.circular(48.0),
   );
   static const BorderRadius extraTopDotSizeLeft = BorderRadius.only(
     topLeft: Radius.circular(60.0),
@@ -2742,24 +5701,6 @@ abstract class Borders {
     bottomLeft: Radius.circular(60.0),
     bottomRight: Radius.circular(3.0),
   );
-  static const BorderRadius extraTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius extraRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(60.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius extraTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius extraBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(60.0),
-        bottomRight: Radius.circular(6.0),
-      );
   static const BorderRadius extraTopDotContainerSizeLeft = BorderRadius.only(
     topLeft: Radius.circular(60.0),
     topRight: Radius.circular(20.0),
@@ -2777,1973 +5718,6 @@ abstract class Borders {
       BorderRadius.only(
         bottomLeft: Radius.circular(60.0),
         bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius extraTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius extraRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(60.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius extraTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(60.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius extraBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(60.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius large = BorderRadius.all(Radius.circular(20.0));
-  static const BorderRadius largeTop = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius largeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius largeLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius largeRight = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius largeVertical = BorderRadius.vertical(
-    top: Radius.circular(20.0),
-    bottom: Radius.circular(20.0),
-  );
-  static const BorderRadius largeHorizontal = BorderRadius.horizontal(
-    left: Radius.circular(20.0),
-    right: Radius.circular(20.0),
-  );
-  static const BorderRadius largeTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius largeTopRight = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius largeBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius largeBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius largeTopLeftBottomRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius largeTopRightBottomLeft = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius largeTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius largeRightExtraBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(60.0),
-  );
-  static const BorderRadius largeTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius largeBottomExtraBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius largeTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius largeRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius largeTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius largeBottomDoubledNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius largeTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius largeRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius largeTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius largeBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius largeTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius largeRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius largeTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius largeBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius largeTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius largeRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius largeTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius largeBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius largeTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius largeRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius largeTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius largeBottomQuarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius largeTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius largeRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius largeTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius largeBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius largeTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius largeRightEmptyBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius largeTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius largeBottomEmptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius largeTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius largeRightDotSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(3.0),
-  );
-  static const BorderRadius largeTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius largeBottomDotSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius largeTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius largeRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius largeTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius largeBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius largeTopDotContainerSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius largeRightDotContainerSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius largeTopDotContainerSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius largeBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius largeTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius largeRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius largeTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius largeBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius doubledNormal = BorderRadius.all(
-    Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalTop = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalRight = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalVertical = BorderRadius.vertical(
-    top: Radius.circular(32.0),
-    bottom: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalHorizontal = BorderRadius.horizontal(
-    left: Radius.circular(32.0),
-    right: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalTopRight = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalTopLeftBottomRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalTopRightBottomLeft = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius doubledNormalTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius doubledNormalRightExtraBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(60.0),
-  );
-  static const BorderRadius doubledNormalTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius doubledNormalBottomExtraBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius doubledNormalTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius doubledNormalRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius doubledNormalTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius doubledNormalBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius doubledNormalTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius doubledNormalRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius doubledNormalTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius doubledNormalBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius doubledNormalTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius doubledNormalRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius doubledNormalTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius doubledNormalBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius doubledNormalTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius doubledNormalRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius doubledNormalTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius doubledNormalBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius doubledNormalTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius doubledNormalRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius doubledNormalTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius doubledNormalBottomQuarterBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(32.0),
-        bottomRight: Radius.circular(4.0),
-      );
-  static const BorderRadius doubledNormalTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius doubledNormalRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius doubledNormalTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius doubledNormalBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius doubledNormalTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius doubledNormalRightEmptyBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius doubledNormalTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius doubledNormalBottomEmptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius doubledNormalTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius doubledNormalRightDotSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(32.0),
-    bottomLeft: Radius.circular(3.0),
-  );
-  static const BorderRadius doubledNormalTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(32.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius doubledNormalBottomDotSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(32.0),
-        bottomRight: Radius.circular(3.0),
-      );
-  static const BorderRadius doubledNormalTopDotSeparatorSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(32.0),
-        topRight: Radius.circular(6.0),
-      );
-  static const BorderRadius doubledNormalRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(32.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius doubledNormalTopDotSeparatorSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(32.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius doubledNormalBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(32.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius doubledNormalTopDotContainerSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(32.0),
-        topRight: Radius.circular(20.0),
-      );
-  static const BorderRadius doubledNormalRightDotContainerSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(32.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius doubledNormalTopDotContainerSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(32.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius doubledNormalBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(32.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius doubledNormalTopMaxViewWidthSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(32.0),
-        topRight: Radius.circular(414.0),
-      );
-  static const BorderRadius doubledNormalRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(32.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius doubledNormalTopMaxViewWidthSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(32.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius doubledNormalBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(32.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius normal = BorderRadius.all(Radius.circular(16.0));
-  static const BorderRadius normalTop = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius normalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius normalLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius normalRight = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius normalVertical = BorderRadius.vertical(
-    top: Radius.circular(16.0),
-    bottom: Radius.circular(16.0),
-  );
-  static const BorderRadius normalHorizontal = BorderRadius.horizontal(
-    left: Radius.circular(16.0),
-    right: Radius.circular(16.0),
-  );
-  static const BorderRadius normalTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius normalTopRight = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius normalBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius normalBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius normalTopLeftBottomRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius normalTopRightBottomLeft = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius normalTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius normalRightExtraBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(60.0),
-  );
-  static const BorderRadius normalTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius normalBottomExtraBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius normalTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius normalRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius normalTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius normalBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius normalTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius normalRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius normalTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius normalBottomDoubledNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius normalTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius normalRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius normalTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius normalBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius normalTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius normalRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius normalTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius normalBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius normalTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius normalRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius normalTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius normalBottomQuarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius normalTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius normalRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius normalTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius normalBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius normalTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius normalRightEmptyBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius normalTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius normalBottomEmptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius normalTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius normalRightDotSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(16.0),
-    bottomLeft: Radius.circular(3.0),
-  );
-  static const BorderRadius normalTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius normalBottomDotSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius normalTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius normalRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(16.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius normalTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius normalBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(16.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius normalTopDotContainerSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius normalRightDotContainerSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(16.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius normalTopDotContainerSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius normalBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(16.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius normalTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius normalRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(16.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius normalTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(16.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius normalBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(16.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius small = BorderRadius.all(Radius.circular(12.0));
-  static const BorderRadius smallTop = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius smallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius smallLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius smallRight = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius smallVertical = BorderRadius.vertical(
-    top: Radius.circular(12.0),
-    bottom: Radius.circular(12.0),
-  );
-  static const BorderRadius smallHorizontal = BorderRadius.horizontal(
-    left: Radius.circular(12.0),
-    right: Radius.circular(12.0),
-  );
-  static const BorderRadius smallTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius smallTopRight = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius smallBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius smallBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius smallTopLeftBottomRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius smallTopRightBottomLeft = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius smallTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius smallRightExtraBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(60.0),
-  );
-  static const BorderRadius smallTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius smallBottomExtraBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius smallTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius smallRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius smallTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius smallBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius smallTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius smallRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius smallTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius smallBottomDoubledNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius smallTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius smallRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius smallTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius smallBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius smallTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius smallRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius smallTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius smallBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius smallTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius smallRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius smallTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius smallBottomQuarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius smallTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius smallRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius smallTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius smallBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius smallTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius smallRightEmptyBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius smallTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius smallBottomEmptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius smallTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius smallRightDotSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(12.0),
-    bottomLeft: Radius.circular(3.0),
-  );
-  static const BorderRadius smallTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius smallBottomDotSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius smallTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius smallRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(12.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius smallTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius smallBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(12.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius smallTopDotContainerSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius smallRightDotContainerSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(12.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius smallTopDotContainerSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius smallBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(12.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius smallTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius smallRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(12.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius smallTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(12.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius smallBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(12.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius half = BorderRadius.all(Radius.circular(8.0));
-  static const BorderRadius halfTop = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius halfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius halfLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius halfRight = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius halfVertical = BorderRadius.vertical(
-    top: Radius.circular(8.0),
-    bottom: Radius.circular(8.0),
-  );
-  static const BorderRadius halfHorizontal = BorderRadius.horizontal(
-    left: Radius.circular(8.0),
-    right: Radius.circular(8.0),
-  );
-  static const BorderRadius halfTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius halfTopRight = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius halfBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius halfBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius halfTopLeftBottomRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius halfTopRightBottomLeft = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius halfTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius halfRightExtraBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(60.0),
-  );
-  static const BorderRadius halfTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius halfBottomExtraBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius halfTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius halfRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius halfTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius halfBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius halfTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius halfRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius halfTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius halfBottomDoubledNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius halfTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius halfRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius halfTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius halfBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius halfTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius halfRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius halfTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius halfBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius halfTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius halfRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius halfTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius halfBottomQuarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius halfTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius halfRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius halfTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius halfBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius halfTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius halfRightEmptyBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius halfTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius halfBottomEmptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius halfTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius halfRightDotSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(3.0),
-  );
-  static const BorderRadius halfTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius halfBottomDotSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius halfTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius halfRightDotSeparatorSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(6.0),
-  );
-  static const BorderRadius halfTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius halfBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(8.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius halfTopDotContainerSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius halfRightDotContainerSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius halfTopDotContainerSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius halfBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(8.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius halfTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius halfRightMaxViewWidthSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(8.0),
-    bottomLeft: Radius.circular(414.0),
-  );
-  static const BorderRadius halfTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(8.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius halfBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(8.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius quarter = BorderRadius.all(Radius.circular(4.0));
-  static const BorderRadius quarterTop = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterRight = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterVertical = BorderRadius.vertical(
-    top: Radius.circular(4.0),
-    bottom: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterHorizontal = BorderRadius.horizontal(
-    left: Radius.circular(4.0),
-    right: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterTopRight = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterTopLeftBottomRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterTopRightBottomLeft = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius quarterTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius quarterRightExtraBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(60.0),
-  );
-  static const BorderRadius quarterTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius quarterBottomExtraBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius quarterTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius quarterRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius quarterTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius quarterBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius quarterTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius quarterRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius quarterTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius quarterBottomDoubledNormalBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(4.0),
-        bottomRight: Radius.circular(32.0),
-      );
-  static const BorderRadius quarterTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius quarterRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius quarterTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius quarterBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius quarterTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius quarterRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius quarterTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius quarterBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius quarterTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius quarterRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius quarterTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius quarterBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius quarterTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius quarterRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius quarterTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius quarterBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius quarterTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius quarterRightEmptyBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius quarterTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius quarterBottomEmptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius quarterTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius quarterRightDotSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(4.0),
-    bottomLeft: Radius.circular(3.0),
-  );
-  static const BorderRadius quarterTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius quarterBottomDotSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius quarterTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius quarterRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(4.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius quarterTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius quarterBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(4.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius quarterTopDotContainerSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius quarterRightDotContainerSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(4.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius quarterTopDotContainerSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius quarterBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(4.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius quarterTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius quarterRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(4.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius quarterTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(4.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius quarterBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(4.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius tiny = BorderRadius.all(Radius.circular(2.0));
-  static const BorderRadius tinyTop = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyRight = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyVertical = BorderRadius.vertical(
-    top: Radius.circular(2.0),
-    bottom: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyHorizontal = BorderRadius.horizontal(
-    left: Radius.circular(2.0),
-    right: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyTopRight = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyTopLeftBottomRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyTopRightBottomLeft = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius tinyTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius tinyRightExtraBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(60.0),
-  );
-  static const BorderRadius tinyTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius tinyBottomExtraBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius tinyTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius tinyRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius tinyTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius tinyBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius tinyTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius tinyRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius tinyTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius tinyBottomDoubledNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius tinyTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius tinyRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius tinyTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius tinyBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius tinyTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius tinyRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius tinyTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius tinyBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius tinyTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius tinyRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius tinyTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius tinyBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius tinyTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius tinyRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius tinyTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius tinyBottomQuarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius tinyTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius tinyRightEmptyBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius tinyTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius tinyBottomEmptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius tinyTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius tinyRightDotSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(3.0),
-  );
-  static const BorderRadius tinyTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius tinyBottomDotSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius tinyTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius tinyRightDotSeparatorSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(6.0),
-  );
-  static const BorderRadius tinyTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius tinyBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(2.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius tinyTopDotContainerSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius tinyRightDotContainerSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius tinyTopDotContainerSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius tinyBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(2.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius tinyTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius tinyRightMaxViewWidthSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(2.0),
-    bottomLeft: Radius.circular(414.0),
-  );
-  static const BorderRadius tinyTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(2.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius tinyBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(2.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius empty = BorderRadius.all(Radius.circular(0.0));
-  static const BorderRadius emptyTop = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyRight = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyVertical = BorderRadius.vertical(
-    top: Radius.circular(0.0),
-    bottom: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyHorizontal = BorderRadius.horizontal(
-    left: Radius.circular(0.0),
-    right: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyTopRight = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyTopLeftBottomRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyTopRightBottomLeft = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius emptyTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius emptyRightExtraBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(60.0),
-  );
-  static const BorderRadius emptyTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius emptyBottomExtraBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius emptyTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius emptyRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius emptyTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius emptyBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius emptyTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius emptyRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius emptyTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius emptyBottomDoubledNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius emptyTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius emptyRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius emptyTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius emptyBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius emptyTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius emptyRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius emptyTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius emptyBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius emptyTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius emptyRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius emptyTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius emptyBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius emptyTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius emptyRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius emptyTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius emptyBottomQuarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius emptyTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius emptyRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius emptyTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius emptyBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius emptyTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius emptyRightDotSizeBottom = BorderRadius.only(
-    topRight: Radius.circular(0.0),
-    bottomLeft: Radius.circular(3.0),
-  );
-  static const BorderRadius emptyTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius emptyBottomDotSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius emptyTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius emptyRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(0.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius emptyTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius emptyBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(0.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius emptyTopDotContainerSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius emptyRightDotContainerSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(0.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius emptyTopDotContainerSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius emptyBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(0.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius emptyTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius emptyRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(0.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius emptyTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(0.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius emptyBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(0.0),
-        bottomRight: Radius.circular(414.0),
       );
   static const BorderRadius dotSize = BorderRadius.all(Radius.circular(3.0));
   static const BorderRadius dotSizeTop = BorderRadius.only(
@@ -4790,6 +5764,182 @@ abstract class Borders {
     topRight: Radius.circular(3.0),
     bottomLeft: Radius.circular(3.0),
   );
+  static const BorderRadius dotSizeTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius dotSizeRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius dotSizeTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius dotSizeBottomZeroBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius dotSizeTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius dotSizeRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius dotSizeTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius dotSizeBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius dotSizeTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius dotSizeRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius dotSizeTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius dotSizeBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius dotSizeTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius dotSizeRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius dotSizeTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius dotSizeBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius dotSizeTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius dotSizeRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius dotSizeTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius dotSizeBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius dotSizeTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius dotSizeRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius dotSizeTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius dotSizeBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius dotSizeTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius dotSizeRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius dotSizeTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius dotSizeBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius dotSizeTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius dotSizeRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius dotSizeTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius dotSizeBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius dotSizeTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius dotSizeRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius dotSizeTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius dotSizeBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius dotSizeTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius dotSizeRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius dotSizeTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius dotSizeBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius dotSizeTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius dotSizeRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(3.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius dotSizeTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius dotSizeBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(3.0),
+    bottomRight: Radius.circular(48.0),
+  );
   static const BorderRadius dotSizeTopExtraLeft = BorderRadius.only(
     topLeft: Radius.circular(3.0),
     topRight: Radius.circular(60.0),
@@ -4806,153 +5956,6 @@ abstract class Borders {
     bottomLeft: Radius.circular(3.0),
     bottomRight: Radius.circular(60.0),
   );
-  static const BorderRadius dotSizeTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius dotSizeRightLargeBottom = BorderRadius.only(
-    topRight: Radius.circular(3.0),
-    bottomLeft: Radius.circular(20.0),
-  );
-  static const BorderRadius dotSizeTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius dotSizeBottomLargeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius dotSizeTopDoubledNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(32.0),
-  );
-  static const BorderRadius dotSizeRightDoubledNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(3.0),
-    bottomLeft: Radius.circular(32.0),
-  );
-  static const BorderRadius dotSizeTopDoubledNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(32.0),
-  );
-  static const BorderRadius dotSizeBottomDoubledNormalBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(3.0),
-        bottomRight: Radius.circular(32.0),
-      );
-  static const BorderRadius dotSizeTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius dotSizeRightNormalBottom = BorderRadius.only(
-    topRight: Radius.circular(3.0),
-    bottomLeft: Radius.circular(16.0),
-  );
-  static const BorderRadius dotSizeTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius dotSizeBottomNormalBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius dotSizeTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius dotSizeRightSmallBottom = BorderRadius.only(
-    topRight: Radius.circular(3.0),
-    bottomLeft: Radius.circular(12.0),
-  );
-  static const BorderRadius dotSizeTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius dotSizeBottomSmallBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius dotSizeTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius dotSizeRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(3.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius dotSizeTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius dotSizeBottomHalfBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius dotSizeTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius dotSizeRightQuarterBottom = BorderRadius.only(
-    topRight: Radius.circular(3.0),
-    bottomLeft: Radius.circular(4.0),
-  );
-  static const BorderRadius dotSizeTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius dotSizeBottomQuarterBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius dotSizeTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius dotSizeRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(3.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius dotSizeTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius dotSizeBottomTinyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius dotSizeTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius dotSizeRightEmptyBottom = BorderRadius.only(
-    topRight: Radius.circular(3.0),
-    bottomLeft: Radius.circular(0.0),
-  );
-  static const BorderRadius dotSizeTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius dotSizeBottomEmptyBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius dotSizeTopDotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSizeRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(3.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius dotSizeTopDotSeparatorSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSizeBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(3.0),
-        bottomRight: Radius.circular(6.0),
-      );
   static const BorderRadius dotSizeTopDotContainerSizeLeft = BorderRadius.only(
     topLeft: Radius.circular(3.0),
     topRight: Radius.circular(20.0),
@@ -4970,294 +5973,6 @@ abstract class Borders {
       BorderRadius.only(
         bottomLeft: Radius.circular(3.0),
         bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius dotSizeTopMaxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius dotSizeRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(3.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius dotSizeTopMaxViewWidthSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(3.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius dotSizeBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(3.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius dotSeparatorSize = BorderRadius.all(
-    Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeTop = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomLeft: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeRight = BorderRadius.only(
-    topRight: Radius.circular(6.0),
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeVertical = BorderRadius.vertical(
-    top: Radius.circular(6.0),
-    bottom: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeHorizontal =
-      BorderRadius.horizontal(
-        left: Radius.circular(6.0),
-        right: Radius.circular(6.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeTopRight = BorderRadius.only(
-    topRight: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(6.0),
-  );
-  static const BorderRadius dotSeparatorSizeTopLeftBottomRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopRightBottomLeft =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightExtraBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(60.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomExtraBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(60.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightLargeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomLargeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopDoubledNormalLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(6.0),
-        topRight: Radius.circular(32.0),
-      );
-  static const BorderRadius dotSeparatorSizeRightDoubledNormalBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(32.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopDoubledNormalRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(32.0),
-      );
-  static const BorderRadius dotSeparatorSizeBottomDoubledNormalBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(32.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightNormalBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(16.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomNormalBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(16.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightSmallBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(12.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomSmallBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(12.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(6.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius dotSeparatorSizeTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomHalfBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(8.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightQuarterBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(4.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomQuarterBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(4.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(6.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius dotSeparatorSizeTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomTinyBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(2.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightEmptyBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(0.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomEmptyBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(0.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius dotSeparatorSizeRightDotSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(3.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(6.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius dotSeparatorSizeBottomDotSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(3.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopDotContainerSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(6.0),
-        topRight: Radius.circular(20.0),
-      );
-  static const BorderRadius dotSeparatorSizeRightDotContainerSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopDotContainerSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius dotSeparatorSizeBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopMaxViewWidthSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(6.0),
-        topRight: Radius.circular(414.0),
-      );
-  static const BorderRadius dotSeparatorSizeRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(6.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius dotSeparatorSizeTopMaxViewWidthSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius dotSeparatorSizeBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(6.0),
-        bottomRight: Radius.circular(414.0),
       );
   static const BorderRadius dotContainerSize = BorderRadius.all(
     Radius.circular(20.0),
@@ -5309,6 +6024,183 @@ abstract class Borders {
         topRight: Radius.circular(20.0),
         bottomLeft: Radius.circular(20.0),
       );
+  static const BorderRadius dotContainerSizeTopZeroLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(0.0),
+  );
+  static const BorderRadius dotContainerSizeRightZeroBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(0.0),
+  );
+  static const BorderRadius dotContainerSizeTopZeroRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(0.0),
+  );
+  static const BorderRadius dotContainerSizeBottomZeroBottom =
+      BorderRadius.only(
+        bottomLeft: Radius.circular(20.0),
+        bottomRight: Radius.circular(0.0),
+      );
+  static const BorderRadius dotContainerSizeTopXxsLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(2.0),
+  );
+  static const BorderRadius dotContainerSizeRightXxsBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(2.0),
+  );
+  static const BorderRadius dotContainerSizeTopXxsRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius dotContainerSizeBottomXxsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(2.0),
+  );
+  static const BorderRadius dotContainerSizeTopXsLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(4.0),
+  );
+  static const BorderRadius dotContainerSizeRightXsBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(4.0),
+  );
+  static const BorderRadius dotContainerSizeTopXsRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius dotContainerSizeBottomXsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(4.0),
+  );
+  static const BorderRadius dotContainerSizeTopSLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(8.0),
+  );
+  static const BorderRadius dotContainerSizeRightSBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(8.0),
+  );
+  static const BorderRadius dotContainerSizeTopSRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius dotContainerSizeBottomSBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(8.0),
+  );
+  static const BorderRadius dotContainerSizeTopMsLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(10.0),
+  );
+  static const BorderRadius dotContainerSizeRightMsBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(10.0),
+  );
+  static const BorderRadius dotContainerSizeTopMsRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius dotContainerSizeBottomMsBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(10.0),
+  );
+  static const BorderRadius dotContainerSizeTopSmLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(12.0),
+  );
+  static const BorderRadius dotContainerSizeRightSmBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(12.0),
+  );
+  static const BorderRadius dotContainerSizeTopSmRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius dotContainerSizeBottomSmBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(12.0),
+  );
+  static const BorderRadius dotContainerSizeTopMLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(16.0),
+  );
+  static const BorderRadius dotContainerSizeRightMBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(16.0),
+  );
+  static const BorderRadius dotContainerSizeTopMRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius dotContainerSizeBottomMBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(16.0),
+  );
+  static const BorderRadius dotContainerSizeTopMlLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(20.0),
+  );
+  static const BorderRadius dotContainerSizeRightMlBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(20.0),
+  );
+  static const BorderRadius dotContainerSizeTopMlRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius dotContainerSizeBottomMlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(20.0),
+  );
+  static const BorderRadius dotContainerSizeTopLLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(24.0),
+  );
+  static const BorderRadius dotContainerSizeRightLBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(24.0),
+  );
+  static const BorderRadius dotContainerSizeTopLRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius dotContainerSizeBottomLBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(24.0),
+  );
+  static const BorderRadius dotContainerSizeTopXlLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(32.0),
+  );
+  static const BorderRadius dotContainerSizeRightXlBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(32.0),
+  );
+  static const BorderRadius dotContainerSizeTopXlRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius dotContainerSizeBottomXlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(32.0),
+  );
+  static const BorderRadius dotContainerSizeTopXxlLeft = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    topRight: Radius.circular(48.0),
+  );
+  static const BorderRadius dotContainerSizeRightXxlBottom = BorderRadius.only(
+    topRight: Radius.circular(20.0),
+    bottomLeft: Radius.circular(48.0),
+  );
+  static const BorderRadius dotContainerSizeTopXxlRight = BorderRadius.only(
+    topLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(48.0),
+  );
+  static const BorderRadius dotContainerSizeBottomXxlBottom = BorderRadius.only(
+    bottomLeft: Radius.circular(20.0),
+    bottomRight: Radius.circular(48.0),
+  );
   static const BorderRadius dotContainerSizeTopExtraLeft = BorderRadius.only(
     topLeft: Radius.circular(20.0),
     topRight: Radius.circular(60.0),
@@ -5326,150 +6218,6 @@ abstract class Borders {
       BorderRadius.only(
         bottomLeft: Radius.circular(20.0),
         bottomRight: Radius.circular(60.0),
-      );
-  static const BorderRadius dotContainerSizeTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius dotContainerSizeRightLargeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius dotContainerSizeTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius dotContainerSizeBottomLargeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius dotContainerSizeTopDoubledNormalLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(20.0),
-        topRight: Radius.circular(32.0),
-      );
-  static const BorderRadius dotContainerSizeRightDoubledNormalBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(32.0),
-      );
-  static const BorderRadius dotContainerSizeTopDoubledNormalRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(32.0),
-      );
-  static const BorderRadius dotContainerSizeBottomDoubledNormalBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(32.0),
-      );
-  static const BorderRadius dotContainerSizeTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius dotContainerSizeRightNormalBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(16.0),
-      );
-  static const BorderRadius dotContainerSizeTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius dotContainerSizeBottomNormalBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(16.0),
-      );
-  static const BorderRadius dotContainerSizeTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius dotContainerSizeRightSmallBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(12.0),
-      );
-  static const BorderRadius dotContainerSizeTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius dotContainerSizeBottomSmallBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(12.0),
-      );
-  static const BorderRadius dotContainerSizeTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius dotContainerSizeRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius dotContainerSizeTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius dotContainerSizeBottomHalfBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(8.0),
-      );
-  static const BorderRadius dotContainerSizeTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius dotContainerSizeRightQuarterBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(4.0),
-      );
-  static const BorderRadius dotContainerSizeTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius dotContainerSizeBottomQuarterBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(4.0),
-      );
-  static const BorderRadius dotContainerSizeTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius dotContainerSizeRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(20.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius dotContainerSizeTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius dotContainerSizeBottomTinyBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(2.0),
-      );
-  static const BorderRadius dotContainerSizeTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius dotContainerSizeRightEmptyBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(0.0),
-      );
-  static const BorderRadius dotContainerSizeTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(20.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius dotContainerSizeBottomEmptyBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(0.0),
       );
   static const BorderRadius dotContainerSizeTopDotSizeLeft = BorderRadius.only(
     topLeft: Radius.circular(20.0),
@@ -5489,360 +6237,53 @@ abstract class Borders {
         bottomLeft: Radius.circular(20.0),
         bottomRight: Radius.circular(3.0),
       );
-  static const BorderRadius dotContainerSizeTopDotSeparatorSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(20.0),
-        topRight: Radius.circular(6.0),
-      );
-  static const BorderRadius dotContainerSizeRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius dotContainerSizeTopDotSeparatorSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius dotContainerSizeBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius dotContainerSizeTopMaxViewWidthSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(20.0),
-        topRight: Radius.circular(414.0),
-      );
-  static const BorderRadius dotContainerSizeRightMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(20.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius dotContainerSizeTopMaxViewWidthSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius dotContainerSizeBottomMaxViewWidthSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(20.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius maxViewWidthSize = BorderRadius.all(
-    Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeTop = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottom = BorderRadius.only(
-    bottomLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomLeft: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeRight = BorderRadius.only(
-    topRight: Radius.circular(414.0),
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeVertical = BorderRadius.vertical(
-    top: Radius.circular(414.0),
-    bottom: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeHorizontal =
-      BorderRadius.horizontal(
-        left: Radius.circular(414.0),
-        right: Radius.circular(414.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeTopRight = BorderRadius.only(
-    topRight: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomLeft = BorderRadius.only(
-    bottomLeft: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomRight = BorderRadius.only(
-    bottomRight: Radius.circular(414.0),
-  );
-  static const BorderRadius maxViewWidthSizeTopLeftBottomRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(414.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopRightBottomLeft =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(414.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopExtraLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(60.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightExtraBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(60.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopExtraRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(60.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomExtraBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(60.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopLargeLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(20.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightLargeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopLargeRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(20.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomLargeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopDoubledNormalLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(414.0),
-        topRight: Radius.circular(32.0),
-      );
-  static const BorderRadius maxViewWidthSizeRightDoubledNormalBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(32.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopDoubledNormalRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(32.0),
-      );
-  static const BorderRadius maxViewWidthSizeBottomDoubledNormalBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(32.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopNormalLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(16.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightNormalBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(16.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopNormalRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(16.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomNormalBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(16.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopSmallLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(12.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightSmallBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(12.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopSmallRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(12.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomSmallBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(12.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopHalfLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(8.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightHalfBottom = BorderRadius.only(
-    topRight: Radius.circular(414.0),
-    bottomLeft: Radius.circular(8.0),
-  );
-  static const BorderRadius maxViewWidthSizeTopHalfRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(8.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomHalfBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(8.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopQuarterLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(4.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightQuarterBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(4.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopQuarterRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(4.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomQuarterBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(4.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopTinyLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(2.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightTinyBottom = BorderRadius.only(
-    topRight: Radius.circular(414.0),
-    bottomLeft: Radius.circular(2.0),
-  );
-  static const BorderRadius maxViewWidthSizeTopTinyRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(2.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomTinyBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(2.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopEmptyLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(0.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightEmptyBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(0.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopEmptyRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(0.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomEmptyBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(0.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopDotSizeLeft = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    topRight: Radius.circular(3.0),
-  );
-  static const BorderRadius maxViewWidthSizeRightDotSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(3.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopDotSizeRight = BorderRadius.only(
-    topLeft: Radius.circular(414.0),
-    bottomRight: Radius.circular(3.0),
-  );
-  static const BorderRadius maxViewWidthSizeBottomDotSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(3.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopDotSeparatorSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(414.0),
-        topRight: Radius.circular(6.0),
-      );
-  static const BorderRadius maxViewWidthSizeRightDotSeparatorSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(6.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopDotSeparatorSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius maxViewWidthSizeBottomDotSeparatorSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(6.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopDotContainerSizeLeft =
-      BorderRadius.only(
-        topLeft: Radius.circular(414.0),
-        topRight: Radius.circular(20.0),
-      );
-  static const BorderRadius maxViewWidthSizeRightDotContainerSizeBottom =
-      BorderRadius.only(
-        topRight: Radius.circular(414.0),
-        bottomLeft: Radius.circular(20.0),
-      );
-  static const BorderRadius maxViewWidthSizeTopDotContainerSizeRight =
-      BorderRadius.only(
-        topLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(20.0),
-      );
-  static const BorderRadius maxViewWidthSizeBottomDotContainerSizeBottom =
-      BorderRadius.only(
-        bottomLeft: Radius.circular(414.0),
-        bottomRight: Radius.circular(20.0),
-      );
 }
 
 abstract class Spaces {
   const Spaces._();
 
+  static const SizedBox zero = SizedBox.square(dimension: 0.0);
+  static const SizedBox zeroVertical = SizedBox(height: 0.0);
+  static const SizedBox zeroHorizontal = SizedBox(width: 0.0);
+  static const SizedBox xxs = SizedBox.square(dimension: 2.0);
+  static const SizedBox xxsVertical = SizedBox(height: 2.0);
+  static const SizedBox xxsHorizontal = SizedBox(width: 2.0);
+  static const SizedBox xs = SizedBox.square(dimension: 4.0);
+  static const SizedBox xsVertical = SizedBox(height: 4.0);
+  static const SizedBox xsHorizontal = SizedBox(width: 4.0);
+  static const SizedBox s = SizedBox.square(dimension: 8.0);
+  static const SizedBox sVertical = SizedBox(height: 8.0);
+  static const SizedBox sHorizontal = SizedBox(width: 8.0);
+  static const SizedBox ms = SizedBox.square(dimension: 10.0);
+  static const SizedBox msVertical = SizedBox(height: 10.0);
+  static const SizedBox msHorizontal = SizedBox(width: 10.0);
+  static const SizedBox sm = SizedBox.square(dimension: 12.0);
+  static const SizedBox smVertical = SizedBox(height: 12.0);
+  static const SizedBox smHorizontal = SizedBox(width: 12.0);
+  static const SizedBox m = SizedBox.square(dimension: 16.0);
+  static const SizedBox mVertical = SizedBox(height: 16.0);
+  static const SizedBox mHorizontal = SizedBox(width: 16.0);
+  static const SizedBox ml = SizedBox.square(dimension: 20.0);
+  static const SizedBox mlVertical = SizedBox(height: 20.0);
+  static const SizedBox mlHorizontal = SizedBox(width: 20.0);
+  static const SizedBox l = SizedBox.square(dimension: 24.0);
+  static const SizedBox lVertical = SizedBox(height: 24.0);
+  static const SizedBox lHorizontal = SizedBox(width: 24.0);
+  static const SizedBox xl = SizedBox.square(dimension: 32.0);
+  static const SizedBox xlVertical = SizedBox(height: 32.0);
+  static const SizedBox xlHorizontal = SizedBox(width: 32.0);
+  static const SizedBox xxl = SizedBox.square(dimension: 48.0);
+  static const SizedBox xxlVertical = SizedBox(height: 48.0);
+  static const SizedBox xxlHorizontal = SizedBox(width: 48.0);
   static const SizedBox extra = SizedBox.square(dimension: 60.0);
   static const SizedBox extraVertical = SizedBox(height: 60.0);
   static const SizedBox extraHorizontal = SizedBox(width: 60.0);
-  static const SizedBox large = SizedBox.square(dimension: 20.0);
-  static const SizedBox largeVertical = SizedBox(height: 20.0);
-  static const SizedBox largeHorizontal = SizedBox(width: 20.0);
-  static const SizedBox doubledNormal = SizedBox.square(dimension: 32.0);
-  static const SizedBox doubledNormalVertical = SizedBox(height: 32.0);
-  static const SizedBox doubledNormalHorizontal = SizedBox(width: 32.0);
-  static const SizedBox normal = SizedBox.square(dimension: 16.0);
-  static const SizedBox normalVertical = SizedBox(height: 16.0);
-  static const SizedBox normalHorizontal = SizedBox(width: 16.0);
-  static const SizedBox small = SizedBox.square(dimension: 12.0);
-  static const SizedBox smallVertical = SizedBox(height: 12.0);
-  static const SizedBox smallHorizontal = SizedBox(width: 12.0);
-  static const SizedBox half = SizedBox.square(dimension: 8.0);
-  static const SizedBox halfVertical = SizedBox(height: 8.0);
-  static const SizedBox halfHorizontal = SizedBox(width: 8.0);
-  static const SizedBox quarter = SizedBox.square(dimension: 4.0);
-  static const SizedBox quarterVertical = SizedBox(height: 4.0);
-  static const SizedBox quarterHorizontal = SizedBox(width: 4.0);
-  static const SizedBox tiny = SizedBox.square(dimension: 2.0);
-  static const SizedBox tinyVertical = SizedBox(height: 2.0);
-  static const SizedBox tinyHorizontal = SizedBox(width: 2.0);
-  static const SizedBox empty = SizedBox.square(dimension: 0.0);
-  static const SizedBox emptyVertical = SizedBox(height: 0.0);
-  static const SizedBox emptyHorizontal = SizedBox(width: 0.0);
   static const SizedBox dotSize = SizedBox.square(dimension: 3.0);
   static const SizedBox dotSizeVertical = SizedBox(height: 3.0);
   static const SizedBox dotSizeHorizontal = SizedBox(width: 3.0);
-  static const SizedBox dotSeparatorSize = SizedBox.square(dimension: 6.0);
-  static const SizedBox dotSeparatorSizeVertical = SizedBox(height: 6.0);
-  static const SizedBox dotSeparatorSizeHorizontal = SizedBox(width: 6.0);
   static const SizedBox dotContainerSize = SizedBox.square(dimension: 20.0);
   static const SizedBox dotContainerSizeVertical = SizedBox(height: 20.0);
   static const SizedBox dotContainerSizeHorizontal = SizedBox(width: 20.0);
-  static const SizedBox maxViewWidthSize = SizedBox.square(dimension: 414.0);
-  static const SizedBox maxViewWidthSizeVertical = SizedBox(height: 414.0);
-  static const SizedBox maxViewWidthSizeHorizontal = SizedBox(width: 414.0);
 
   static SizedBox h(double value) => SizedBox(height: value);
   static SizedBox w(double value) => SizedBox(width: value);

@@ -37,7 +37,7 @@ class LocalizationSettings extends StatelessWidget {
         supportedLocales[i].languageCode: Tooltip(
           message: languageNames[supportedLocales[i].languageCode],
           child: Padding(
-            padding: const EdgeInsets.all(Dimensions.small),
+            padding: Insets.sm,
             child: Text(supportedLocales[i].languageCode.capitalize),
           ),
         ),

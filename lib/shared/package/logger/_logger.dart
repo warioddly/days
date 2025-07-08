@@ -1,18 +1,21 @@
-import 'package:logger/logger.dart' as logger;
+import 'dart:developer' as developer;
 
-final class Logger {
+enum Level {
+  all(0),
+  trace(1000),
+  debug(2000),
+  info(3000),
+  warning(4000),
+  error(5000),
+  fatal(6000),
+  off(10000);
 
-  Logger._();
+  final int value;
 
-  static final logger.Logger _logger = logger.Logger(
-    printer: logger.PrettyPrinter(
-      methodCount: 0,
-      errorMethodCount: 5,
-      lineLength: 50,
-      colors: true,
-      printEmojis: true,
-    ),
-  );
+  const Level(this.value);
+}
+
+abstract final class Logger {
 
   static void d(
     dynamic message, {
@@ -20,7 +23,13 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.d(message, time: time, error: error, stackTrace: stackTrace);
+    log(
+      message,
+      time: time,
+      error: error,
+      stackTrace: stackTrace,
+      level: Level.debug,
+    );
   }
 
   static void e(
@@ -29,7 +38,13 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.e(message, time: time, error: error, stackTrace: stackTrace);
+    log(
+      message,
+      time: time,
+      error: error,
+      stackTrace: stackTrace,
+      level: Level.error,
+    );
   }
 
   static void i(
@@ -38,7 +53,13 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.i(message, time: time, error: error, stackTrace: stackTrace);
+    log(
+      message,
+      time: time,
+      error: error,
+      stackTrace: stackTrace,
+      level: Level.info,
+    );
   }
 
   static void t(
@@ -47,7 +68,13 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.t(message, time: time, error: error, stackTrace: stackTrace);
+    log(
+      message,
+      time: time,
+      error: error,
+      stackTrace: stackTrace,
+      level: Level.trace,
+    );
   }
 
   static void w(
@@ -56,17 +83,28 @@ final class Logger {
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.w(message, time: time, error: error, stackTrace: stackTrace);
+    log(
+      message,
+      time: time,
+      error: error,
+      stackTrace: stackTrace,
+      level: Level.warning,
+    );
   }
 
   static void log(
-    logger.Level level,
     dynamic message, {
+    Level level = Level.info,
     DateTime? time,
     Object? error,
     StackTrace? stackTrace,
   }) {
-    _logger.log(level, message, time: time, error: error, stackTrace: stackTrace);
+    developer.log(
+      message.toString(),
+      time: time,
+      error: error,
+      stackTrace: stackTrace,
+      name: level.name,
+    );
   }
-
 }

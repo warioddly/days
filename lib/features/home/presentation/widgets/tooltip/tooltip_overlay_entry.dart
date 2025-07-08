@@ -24,10 +24,10 @@ class TooltipOverlayEntry extends StatelessWidget {
       child: RepaintBoundary(
         child: IgnorePointer(
           child: Container(
-            padding: Insets.halfHorizontal + Insets.quarterVertical,
+            padding: Insets.sHorizontal + Insets.xsVertical,
             decoration: BoxDecoration(
               color: theme.primaryColor,
-              borderRadius: Borders.half,
+              borderRadius: Borders.s,
               border: Border.all(color: theme.colorScheme.onPrimary, width: 0.3),
               boxShadow: [
                 BoxShadow(
