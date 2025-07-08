@@ -10,14 +10,9 @@ import 'package:days/shared/ui/animations/fade_slide_animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class DaysLeftStatus extends StatefulWidget {
-  const DaysLeftStatus({super.key});
+class StatusBar extends StatelessWidget {
+  const StatusBar({super.key});
 
-  @override
-  State<DaysLeftStatus> createState() => _DaysLeftStatusState();
-}
-
-class _DaysLeftStatusState extends State<DaysLeftStatus> {
   @override
   Widget build(BuildContext context) {
     return FadeSlideAnimation(

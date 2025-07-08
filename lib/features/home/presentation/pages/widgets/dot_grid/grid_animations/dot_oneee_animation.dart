@@ -1,13 +1,12 @@
-import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
-import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_animation.dart';
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/grid_animations/dot_animation.dart';
 import 'package:flutter/cupertino.dart';
 
-final class DotHoverAnimation extends DotAnimation {
-  DotHoverAnimation({
+final class DotOneeeAnimation extends DotAnimation {
+  DotOneeeAnimation({
     required super.keys,
     required super.position,
     super.onComplete,
-    super.onOverlapping,
   });
 
   @override
@@ -17,10 +16,15 @@ final class DotHoverAnimation extends DotAnimation {
     VoidCallback? onComplete,
     OnOverlapping? onOverlapping,
   }) {
+    for (var i = 0; i < keys.length; i++) {
+      if (keyRenderBox(keys[i]) != null) {
+        disableOldDaysKey(keys[i]);
+      }
+    }
+
     for (final key in keys) {
       final box = keyRenderBox(key);
       if (box != null && isInside(box, position)) {
-        onOverlapping?.call(key, position);
         enableKey(key);
         onComplete?.call();
         break;

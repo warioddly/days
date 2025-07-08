@@ -1,5 +1,5 @@
-import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
-import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_animation.dart';
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/grid_animations/dot_animation.dart';
 import 'package:flutter/cupertino.dart';
 
 final class DotFollowersAnimation extends DotAnimation {

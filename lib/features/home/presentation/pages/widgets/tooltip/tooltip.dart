@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:days/core/constants/app_constants.dart';
+import 'package:days/core/constants/constants.dart';
 import 'package:days/core/utils/datetime_utils.dart';
-import 'package:days/features/home/presentation/widgets/tooltip/tooltip_overlay_entry.dart';
+import 'package:days/features/home/presentation/pages/widgets/tooltip/tooltip_overlay_entry.dart';
 import 'package:flutter/material.dart';
 
 const _tooltipDeactivateDuration = Duration(
-  milliseconds: AppConstants.deactivateDotDurationInMilliseconds,
+  milliseconds: Constants.deactivateDotDurationInMilliseconds,
 );
 
 final class TooltipOverlay {

@@ -1,5 +1,5 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/features/home/presentation/widgets/settings/theme_settings.dart';
+import 'package:days/features/home/presentation/pages/widgets/settings/theme_settings.dart';
 import 'package:flutter/material.dart';
 
 class AppSettings extends StatelessWidget {

@@ -1,5 +1,6 @@
 import 'package:days/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class LinkedText extends StatelessWidget {
   const LinkedText({required this.title, super.key, this.onPressed, this.style});
@@ -11,7 +12,10 @@ class LinkedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed,
+      onTap: () {
+        HapticFeedback.selectionClick();
+        onPressed?.call();
+      },
       child: Text(
         title,
         style: style ?? context.textTheme.labelLarge

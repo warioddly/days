@@ -1,8 +1,8 @@
 import 'package:days/core/utils/frame_rate_utils.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
-import 'package:days/features/home/presentation/widgets/dot_grid/dot_grid_body_builder.dart' show DotGridBodyBuilder;
-import 'package:days/features/home/presentation/widgets/dot_grid/dots/dot.dart';
-import 'package:days/features/home/presentation/widgets/tooltip/tooltip.dart' show TooltipOverlay;
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/dot_grid_body_builder.dart' show DotGridBodyBuilder;
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
+import 'package:days/features/home/presentation/pages/widgets/tooltip/tooltip.dart' show TooltipOverlay;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

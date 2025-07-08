@@ -1,4 +1,4 @@
-import 'package:days/core/constants/app_constants.dart';
+import 'package:days/core/constants/constants.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:days/shared/ui/widgets/dot_separator.dart';
@@ -18,7 +18,7 @@ class RelatedLinks extends StatelessWidget {
       children: [
         LinkedText(
           title: l10n.terms,
-          onPressed: () => launchUrlString(AppConstants.termsUrl),
+          onPressed: () => launchUrlString(Constants.termsUrl),
           style: Theme.of(context).textTheme.labelLarge?.copyWith(
             color: color,
           ),
@@ -26,7 +26,7 @@ class RelatedLinks extends StatelessWidget {
         DotSeparator(color: color),
         LinkedText(
           title: l10n.privacy,
-          onPressed: () => launchUrlString(AppConstants.privacyUrl),
+          onPressed: () => launchUrlString(Constants.privacyUrl),
           style: Theme.of(context).textTheme.labelLarge?.copyWith(
             color: color,
           ),

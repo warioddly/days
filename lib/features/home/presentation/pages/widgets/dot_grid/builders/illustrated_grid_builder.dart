@@ -1,6 +1,6 @@
-import 'package:days/features/home/presentation/widgets/dot_grid/builders/dot_grid_builder.dart';
-import 'package:days/features/home/presentation/widgets/dot_grid/dots/illustrated_dot.dart';
-import 'package:days/features/home/presentation/widgets/dot_grid/grid_animations/dot_hover_animation.dart';
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/builders/dot_grid_builder.dart';
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/illustrated_dot.dart';
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/grid_animations/dot_hover_animation.dart';
 import 'package:flutter/material.dart';
 
 class IllustratedGridBuilder extends DotGridBuilder {

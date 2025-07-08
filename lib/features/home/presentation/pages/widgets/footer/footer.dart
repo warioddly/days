@@ -1,6 +1,6 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/features/home/presentation/widgets/about/about_app_information.dart';
-import 'package:days/features/home/presentation/widgets/settings/settings.dart';
+import 'package:days/features/home/presentation/pages/widgets/about/about_app_information.dart';
+import 'package:days/features/home/presentation/pages/widgets/settings/settings.dart';
 import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:days/shared/ui/animations/fade_slide_animation.dart';
 import 'package:days/shared/ui/widgets/dot_separator.dart';

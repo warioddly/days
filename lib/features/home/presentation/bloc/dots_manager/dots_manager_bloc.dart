@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:days/core/constants/app_constants.dart';
+import 'package:days/core/constants/constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'dots_manager_event.dart';
@@ -38,7 +38,7 @@ class DotsManagerBloc extends Bloc<DotsManagerEvent, DotsManagerModelState> {
 
     _resetHoverActivatedDotsTimer = Timer(
       const Duration(
-        milliseconds: AppConstants.deactivateDotDurationInMilliseconds,
+        milliseconds: Constants.deactivateDotDurationInMilliseconds,
       ),
       () => add(DotsManagerUserOutsideClickEvent()),
     );
