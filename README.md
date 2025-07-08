@@ -1,9 +1,5 @@
 # Days
 
-<p align="center">
-  <img src="/assets/images/logo/logo.png" />
-</p>
-
 > **Days** is a mobile app that tracks how many days have passed and reminds you that every day matters — because a year has so few of them.
 
 ## 📽 Demo
