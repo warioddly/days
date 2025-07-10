@@ -7,8 +7,7 @@ enum Level {
   info(3000),
   warning(4000),
   error(5000),
-  fatal(6000),
-  off(10000);
+  fatal(6000);
 
   final int value;
 
@@ -16,81 +15,70 @@ enum Level {
 }
 
 abstract final class Logger {
-
   static void d(
     dynamic message, {
     DateTime? time,
     Object? error,
     StackTrace? stackTrace,
-  }) {
-    log(
-      message,
-      time: time,
-      error: error,
-      stackTrace: stackTrace,
-      level: Level.debug,
-    );
-  }
+  }) => log(
+    message,
+    time: time,
+    error: error,
+    stackTrace: stackTrace,
+    level: Level.debug,
+  );
 
   static void e(
     dynamic message, {
     DateTime? time,
     Object? error,
     StackTrace? stackTrace,
-  }) {
-    log(
-      message,
-      time: time,
-      error: error,
-      stackTrace: stackTrace,
-      level: Level.error,
-    );
-  }
+  }) => log(
+    message,
+    time: time,
+    error: error,
+    stackTrace: stackTrace,
+    level: Level.error,
+  );
 
   static void i(
     dynamic message, {
     DateTime? time,
     Object? error,
     StackTrace? stackTrace,
-  }) {
-    log(
-      message,
-      time: time,
-      error: error,
-      stackTrace: stackTrace,
-      level: Level.info,
-    );
-  }
+  }) => log(
+    message,
+    time: time,
+    error: error,
+    stackTrace: stackTrace,
+    level: Level.info,
+  );
 
   static void t(
     dynamic message, {
     DateTime? time,
     Object? error,
     StackTrace? stackTrace,
-  }) {
-    log(
-      message,
-      time: time,
-      error: error,
-      stackTrace: stackTrace,
-      level: Level.trace,
-    );
-  }
+  }) => log(
+    message,
+    time: time,
+    error: error,
+    stackTrace: stackTrace,
+    level: Level.trace,
+  );
 
   static void w(
     dynamic message, {
     DateTime? time,
     Object? error,
     StackTrace? stackTrace,
-  }) {
-    log(
-      message,
-      time: time,
-      error: error,
-      stackTrace: stackTrace,
-      level: Level.warning,
-    );
-  }
+  }) => log(
+    message,
+    time: time,
+    error: error,
+    stackTrace: stackTrace,
+    level: Level.warning,
+  );
 
   static void log(
     dynamic message, {
