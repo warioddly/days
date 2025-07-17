@@ -6,7 +6,7 @@ import 'package:days/features/home/data/model/settings_model.dart';
 
 class SettingsLocalDataSourceImpl implements SettingsDataSource {
 
-  final DbService db;
+  final LocalStorage db;
 
   const SettingsLocalDataSourceImpl({required this.db});
 

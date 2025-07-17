@@ -35,6 +35,6 @@ final class SettingsLoading extends $SettingsState {}
 final class SettingsLoaded extends $SettingsState {}
 
 final class SettingsError extends $SettingsState {
-  final Object message;
-  SettingsError(this.message);
+  final Object error;
+  SettingsError(this.error);
 }

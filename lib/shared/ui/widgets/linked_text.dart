@@ -1,4 +1,4 @@
-import 'package:days/core/extensions/theme_extensions.dart';
+import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

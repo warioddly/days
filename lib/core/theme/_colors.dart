@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart' show Brightness, BuildContext;
 import 'package:flutter/material.dart' show Color, Colors, Theme;
 
-abstract class DayColors {
+abstract final class DayColors {
 
   const DayColors();
 

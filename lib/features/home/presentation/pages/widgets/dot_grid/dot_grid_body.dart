@@ -20,18 +20,21 @@ class DotGridBody extends StatefulWidget {
 }
 
 class _DotGridBodyState extends State<DotGridBody> {
-
   final dotKeyManager = DotKeyManager();
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocListener(
       listeners: [
-        BlocListener<DotsManagerBloc, DotsManagerModelState>(listener: _dotsManagerListener),
+        BlocListener<DotsManagerBloc, DotsManagerModelState>(
+          listener: _dotsManagerListener,
+        ),
         ChangeNotifierProvider.value(value: dotKeyManager),
       ],
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: Breakpoints.maxViewWidthSize),
+        constraints: const BoxConstraints(
+          maxWidth: Breakpoints.maxViewWidthSize,
+        ),
         child: BlocConsumer<SettingsBloc, SettingsState>(
           listener: _settingsListener,
           builder: (context, state) {

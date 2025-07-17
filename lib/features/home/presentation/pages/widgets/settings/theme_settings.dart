@@ -1,4 +1,4 @@
-import 'package:days/core/extensions/theme_extensions.dart';
+import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
 import 'package:days/shared/ui/widgets/custom_segmented_control.dart';
 import 'package:flutter/cupertino.dart';

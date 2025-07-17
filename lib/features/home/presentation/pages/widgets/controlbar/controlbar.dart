@@ -1,5 +1,5 @@
 import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/extensions/theme_extensions.dart';
+import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/shared/ui/animations/fade_slide_animation.dart';

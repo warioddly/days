@@ -1,4 +1,4 @@
-import 'package:days/core/services/locator_service.dart';
+import 'package:days/core/services/di_service.dart';
 import 'package:days/core/services/router.dart';
 import 'package:days/core/theme/theme.dart' show AppTheme;
 import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
@@ -14,7 +14,7 @@ class DaysApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => getIt<ThemeBloc>()..add(GetTheme()),
+      create: (_) => GetIt.I.get<ThemeBloc>()..add(GetTheme()),
       child: BlocBuilder<ThemeBloc, Brightness>(
         builder: (context, theme) {
           return MaterialApp.router(

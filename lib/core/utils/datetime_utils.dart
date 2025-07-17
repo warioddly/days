@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class DateTimeUtils {
+abstract final class DateTimeUtils {
   static int getDaysFrom(DateTime start, DateTime end) {
     return DateTimeRange(start: start, end: end).duration.inDays;
   }

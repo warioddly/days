@@ -10,8 +10,6 @@ class GetThemeUseCase extends UseCase<void, Brightness> {
   GetThemeUseCase({required this.repository});
 
   @override
-  Future<Brightness> call(void params) async {
-    return repository.getTheme();
-  }
+  Future<Brightness> call(void params) async => repository.getTheme();
 
 }

@@ -1,6 +1,6 @@
 import 'package:days/core/interfaces/locator_module_interface.dart';
 import 'package:days/core/services/db_service.dart';
-import 'package:days/core/services/locator_service.dart';
+import 'package:days/core/services/di_service.dart';
 import 'package:days/features/home/data/datasource/settings_datasource/local/settings_local_datasource.dart';
 import 'package:days/features/home/data/datasource/settings_datasource/settings_datasource.dart';
 import 'package:days/features/home/data/mapper/settings_model_mapper.dart';
@@ -13,24 +13,28 @@ import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart
 
 class HomeModule extends LocatorModule {
   @override
-  void builder() {
+  void builder(GetIt getIt) {
     getIt
       ..registerFactory<SettingsModelMapper>(SettingsModelMapper.new)
       ..registerFactory<SettingsDataSource>(
-        () => SettingsLocalDataSourceImpl(db: getIt<DbService>()),
+        () => SettingsLocalDataSourceImpl(db: getIt.get<LocalStorage>()),
       )
       ..registerFactory<SettingsRepository>(
         () => SettingsRepositoryImpl(
-          localDataSource: getIt<SettingsDataSource>(),
-          settingsModelMapper: getIt<SettingsModelMapper>(),
+          localDataSource: getIt.get<SettingsDataSource>(),
+          settingsModelMapper: getIt.get<SettingsModelMapper>(),
         ),
       )
-      ..registerFactory(() => SetSettingsUseCase(repository: getIt<SettingsRepository>()))
-      ..registerFactory(() => GetSettingsUseCase(repository: getIt<SettingsRepository>()))
+      ..registerFactory(
+        () => SetSettingsUseCase(repository: getIt.get<SettingsRepository>()),
+      )
+      ..registerFactory(
+        () => GetSettingsUseCase(repository: getIt.get<SettingsRepository>()),
+      )
       ..registerFactory(
         () => SettingsBloc(
-          setSettingsUseCase: getIt<SetSettingsUseCase>(),
-          getSettingsUseCase: getIt<GetSettingsUseCase>(),
+          setSettingsUseCase: getIt.get<SetSettingsUseCase>(),
+          getSettingsUseCase: getIt.get<GetSettingsUseCase>(),
         ),
       )
       ..registerFactory(DotsManagerBloc.new);

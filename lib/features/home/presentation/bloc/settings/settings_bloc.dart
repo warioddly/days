@@ -14,10 +14,6 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     required this.setSettingsUseCase,
     required this.getSettingsUseCase,
   }) : super(SettingsState.initial()) {
-    _setup();
-  }
-
-  void _setup() {
     on<GetSettings>(getSettings);
     on<SetSettings>(setSettings);
   }
@@ -26,29 +22,28 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     GetSettings event,
     Emitter<SettingsState> emit,
   ) async {
-    try {
-      emit(state.copyWith(state: SettingsLoading()));
-
-      final entity = await getSettingsUseCase(null);
-
-      emit(state.copyWith(entity: entity, state: SettingsLoaded()));
-    } catch (e) {
-      emit(state.copyWith(state: SettingsError(e)));
-    }
+    _emitState(SettingsLoading());
+    final entity = await getSettingsUseCase(null);
+    emit(state.copyWith(entity: entity, state: SettingsLoaded()));
   }
 
   Future<void> setSettings(
     SetSettings event,
     Emitter<SettingsState> emit,
   ) async {
-    try {
-      emit(state.copyWith(state: SettingsLoading()));
-      await setSettingsUseCase(event.entity);
-      emit(state.copyWith(entity: event.entity));
+    _emitState(SettingsLoading());
+    await setSettingsUseCase(event.entity);
+    emit(state.copyWith(entity: event.entity));
+    add(GetSettings());
+  }
 
-      add(GetSettings());
-    } catch (e) {
-      emit(state.copyWith(state: SettingsError(e)));
-    }
+  void _emitState($SettingsState state) {
+    emit(this.state.copyWith(state: state));
+  }
+
+  @override
+  void onError(Object error, StackTrace stackTrace) {
+    super.onError(error, stackTrace);
+    _emitState(SettingsError(error));
   }
 }

@@ -9,8 +9,6 @@ class SetThemeUseCase extends UseCase<String, void> {
   SetThemeUseCase({required this.repository});
 
   @override
-  Future<void> call(String params) async {
-    repository.setTheme(params);
-  }
+  Future<void> call(String params) async => repository.setTheme(params);
 
 }
