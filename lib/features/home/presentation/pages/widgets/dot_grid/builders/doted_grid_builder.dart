@@ -30,7 +30,7 @@ class _DotedGridBuilderState extends DotGridState<DotedGridBuilder> {
       () => DotFollowersAnimation(
         keys: keys,
         position: position,
-        onComplete: () => onAnimationComplete(context),
+        onComplete: onAnimationComplete,
         onOverlapping: onOverlapping
       ),
     );

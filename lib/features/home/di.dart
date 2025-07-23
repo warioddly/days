@@ -6,9 +6,6 @@ import 'package:days/features/home/data/datasource/settings_datasource/settings_
 import 'package:days/features/home/data/mapper/settings_model_mapper.dart';
 import 'package:days/features/home/data/repository/settings_repository_impl.dart';
 import 'package:days/features/home/domain/repository/settings_repository.dart';
-import 'package:days/features/home/domain/usecase/get_settings_usecase.dart';
-import 'package:days/features/home/domain/usecase/set_settings_usecase.dart';
-import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 
 class HomeModule extends LocatorModule {
@@ -26,17 +23,7 @@ class HomeModule extends LocatorModule {
         ),
       )
       ..registerFactory(
-        () => SetSettingsUseCase(repository: getIt.get<SettingsRepository>()),
-      )
-      ..registerFactory(
-        () => GetSettingsUseCase(repository: getIt.get<SettingsRepository>()),
-      )
-      ..registerFactory(
-        () => SettingsBloc(
-          setSettingsUseCase: getIt.get<SetSettingsUseCase>(),
-          getSettingsUseCase: getIt.get<GetSettingsUseCase>(),
-        ),
-      )
-      ..registerFactory(DotsManagerBloc.new);
+        () => SettingsBloc(repository: getIt.get<SettingsRepository>()),
+      );
   }
 }

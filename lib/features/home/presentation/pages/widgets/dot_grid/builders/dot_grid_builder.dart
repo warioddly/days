@@ -1,41 +1,34 @@
 import 'package:days/core/utils/frame_rate_utils.dart';
-import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
-import 'package:days/features/home/presentation/pages/widgets/dot_grid/dot_grid_body_builder.dart' show DotGridBodyBuilder;
+import 'package:days/features/home/presentation/bloc/dots_manager_model.dart';
+import 'package:days/features/home/presentation/pages/widgets/dot_grid/dot_grid_body_builder.dart'
+    show DotGridBodyBuilder;
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
-import 'package:days/features/home/presentation/pages/widgets/tooltip/tooltip.dart' show TooltipOverlay;
+import 'package:days/features/home/presentation/pages/widgets/tooltip/tooltip.dart'
+    show TooltipOverlay;
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-final class DotKeyManager extends ChangeNotifier {
-
-  final keys = <GlobalKey<DotState>>[];
-
-  void clear() => keys.clear();
-
-}
 
 abstract class DotGridBuilder extends StatefulWidget {
   const DotGridBuilder({super.key});
 }
 
 abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
-
   final framer = Framer();
   final tooltip = TooltipOverlay();
 
-  late final dotKeyManager  = context.read<DotKeyManager>();
-  late final dotManagerBloc = context.read<DotsManagerBloc>();
+  DotsManagerModel get dotManagerModel => DotsManagerModel.of(context);
 
-  List<GlobalKey<DotState>> get keys => dotKeyManager.keys;
+  List<GlobalKey<DotState>> get keys => dotManagerModel.keys;
 
+  @nonVirtual
   @override
   Widget build(BuildContext context) {
     return DotGridBodyBuilder(
       now: DateTime.now(),
       onPanUpdate: onPanUpdate,
       itemBuilder: itemBuilder,
-      onBuildComplete: () => onAnimationComplete(context),
+      onBuildComplete: onAnimationComplete,
     );
   }
 
@@ -43,24 +36,18 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
 
   Widget itemBuilder(int index, DateTime date, DateTime now);
 
-  GlobalKey<DotState> createAndStoreDotKey() {
-    final key = GlobalKey<DotState>();
-    dotKeyManager.keys.add(key);
-    return key;
-  }
+  GlobalKey<DotState> createAndStoreDotKey() => dotManagerModel.addKey();
 
-  void onAnimationComplete(BuildContext context) {
-    dotManagerBloc.add(DotsManagerUserHoveredEvent());
-  }
+  void onAnimationComplete() => dotManagerModel.userHovered();
 
   void onDotEnable() {
-    HapticFeedback.lightImpact();
-    dotManagerBloc.add(DotsManagerActiveDotsIncrementEvent());
+    _vibrate();
+    dotManagerModel.incrementActiveDots();
   }
 
   void onDotDisable() {
-    HapticFeedback.lightImpact();
-    dotManagerBloc.add(DotsManagerActiveDotsDecrementEvent());
+    _vibrate();
+    dotManagerModel.decrementActiveDots();
   }
 
   void onOverlapping(GlobalKey<DotState> key, Offset position) {
@@ -71,10 +58,13 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
     tooltip.update(context, position, date);
   }
 
+  void _vibrate() {
+    HapticFeedback.lightImpact();
+  }
+
   @override
   void dispose() {
     tooltip.dispose();
     super.dispose();
   }
-
 }

@@ -33,10 +33,12 @@ class _DotedDotState extends DotState<DotedDot> {
   @override
   void initState() {
     super.initState();
-    if (widget.isActive) {
-      widget.onEnable?.call();
-      controller.setActive(true);
-    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (widget.isActive && mounted) {
+        widget.onEnable?.call();
+        controller.setActive(true);
+      }
+    });
   }
 
   @override

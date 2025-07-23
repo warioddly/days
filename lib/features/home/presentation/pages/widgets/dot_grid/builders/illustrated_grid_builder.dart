@@ -12,7 +12,6 @@ class IllustratedGridBuilder extends DotGridBuilder {
 
 class _IllustratedGridBuilderState
     extends DotGridState<IllustratedGridBuilder> {
-
   final dots = <IllustratedDot>[];
 
   @override
@@ -39,7 +38,7 @@ class _IllustratedGridBuilderState
       () => DotHoverAnimation(
         keys: keys,
         position: position,
-        onComplete: () => onAnimationComplete(context),
+        onComplete: onAnimationComplete,
         onOverlapping: onOverlapping,
       ),
     );

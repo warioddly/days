@@ -1,7 +1,7 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/home/domain/entity/settings_entity.dart';
-import 'package:days/features/home/presentation/bloc/dots_manager/dots_manager_bloc.dart';
+import 'package:days/features/home/presentation/bloc/dots_manager_model.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/features/l10n/_locale.dart' show l10n;
 import 'package:days/shared/package/animated_flip_counter/animated_flip_counter.dart';
@@ -21,19 +21,20 @@ class StatusBar extends StatelessWidget {
         padding: Insets.xl,
         child: Column(
           children: [
-            BlocBuilder<DotsManagerBloc, DotsManagerModelState>(
-              builder: (context, state) {
-                return RepaintBoundary(
-                  child: AnimatedFlipCounter(
-                    value: state.activeDotsCount,
+            RepaintBoundary(
+              child: ListenableBuilder(
+                listenable: context.read<DotsManagerModel>(),
+                builder: (context, _) {
+                  return AnimatedFlipCounter(
+                    value: context.read<DotsManagerModel>().activeDots,
                     duration: const Duration(seconds: 2),
                     curve: Curves.linearToEaseOut,
                     textStyle: context.textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
             Spaces.xs,
             BlocBuilder<SettingsBloc, SettingsState>(
