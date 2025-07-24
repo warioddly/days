@@ -3,6 +3,7 @@ import 'package:days/core/services/di_service.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager_model.dart';
 import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
 import 'package:days/features/home/presentation/pages/widgets/controlbar/controlbar.dart';
+import 'package:days/features/home/presentation/pages/widgets/controlbar/days_left_status.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dot_grid_body.dart';
 import 'package:days/features/home/presentation/pages/widgets/footer/footer.dart';
 import 'package:flutter/foundation.dart';
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // StatusBar(),
+                StatusBar(),
                 Spacer(),
                 DotGridBody(),
                 Spacer(),
