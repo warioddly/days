@@ -3,12 +3,11 @@ import 'dart:math';
 import 'package:days/core/assets/illustration_assets.dart';
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/utils/extensions/theme_extensions.dart';
-import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
+import 'package:days/features/app/presentation/bloc/theme_notifier.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
 import 'package:days/shared/ui/animations/utils/curves.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class IllustratedDot extends Dot {
   const IllustratedDot({
@@ -46,7 +45,8 @@ class _IllustratedDotState extends DotState<IllustratedDot> {
       dimension: Dimensions.dotContainerSize,
       child: Transform.translate(
         offset: _randomOffset,
-        child: BlocBuilder<ThemeBloc, Brightness>(
+        child: ListenableBuilder(
+          listenable: ThemeNotifier.of(context),
           builder: (context, state) {
             return ListenableBuilder(
               listenable: controller,

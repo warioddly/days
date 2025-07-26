@@ -6,10 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class DotsManagerModel extends ChangeNotifier {
-  static DotsManagerModel of(BuildContext context, {bool listen = false}) {
-    return context.read<DotsManagerModel>();
-  }
+class DotsManagerNotifier extends ChangeNotifier {
 
   final List<GlobalKey<DotState>> _keys = [];
 
@@ -54,13 +51,11 @@ class DotsManagerModel extends ChangeNotifier {
     );
   }
 
-  /// Инкремент активных точек
   void incrementActiveDots() {
     _activeDots += 1;
     notifyListeners();
   }
 
-  /// Декремент активных точек (с защитой от отрицательных значений)
   void decrementActiveDots() {
     if (_activeDots > 0) {
       _activeDots -= 1;
@@ -86,4 +81,10 @@ class DotsManagerModel extends ChangeNotifier {
     _resetHoverActivatedDotsTimer = null;
     super.dispose();
   }
+
+
+  static DotsManagerNotifier of(BuildContext context, {bool listen = false}) {
+    return Provider.of<DotsManagerNotifier>(context, listen: listen);
+  }
+
 }

@@ -1,5 +1,5 @@
 import 'package:days/core/utils/frame_rate_utils.dart';
-import 'package:days/features/home/presentation/bloc/dots_manager_model.dart';
+import 'package:days/features/home/presentation/bloc/dots_manager_notifier.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dot_grid_body_builder.dart'
     show DotGridBodyBuilder;
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
@@ -17,7 +17,7 @@ abstract class DotGridState<T extends DotGridBuilder> extends State<T> {
   final framer = Framer();
   final tooltip = TooltipOverlay();
 
-  DotsManagerModel get dotManagerModel => DotsManagerModel.of(context);
+  DotsManagerNotifier get dotManagerModel => DotsManagerNotifier.of(context);
 
   List<GlobalKey<DotState>> get keys => dotManagerModel.keys;
 

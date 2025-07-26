@@ -1,20 +1,20 @@
 import 'package:days/core/utils/extensions/theme_extensions.dart';
-import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
+import 'package:days/features/app/presentation/bloc/theme_notifier.dart';
 import 'package:days/shared/ui/widgets/custom_segmented_control.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ThemeSettings extends StatelessWidget {
   const ThemeSettings({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeBloc, Brightness>(
+    return ListenableBuilder(
+      listenable: ThemeNotifier.of(context),
       builder: (context, state) {
-        final selectedThemeIndex = state.index;
+        final selectedThemeIndex = ThemeNotifier.value(context).index;
         return CustomSegmentedControl(
-          initialIndex: state.index,
+          initialIndex: selectedThemeIndex,
           segments: [
             Icon(
                 CupertinoIcons.moon_stars_fill,
@@ -34,7 +34,7 @@ class ThemeSettings extends StatelessWidget {
               return;
             }
             HapticFeedback.selectionClick();
-            context.read<ThemeBloc>().add(SetTheme(Brightness.values[index]));
+            ThemeNotifier.of(context).setTheme = Brightness.values[index];
           },
         );
       },

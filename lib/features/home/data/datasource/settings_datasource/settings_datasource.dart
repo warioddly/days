@@ -1,10 +1,8 @@
 
-import 'package:days/features/home/data/model/settings_model.dart';
-
 abstract class SettingsDataSource {
 
-  void setSettings(SettingsModel entity);
+  void setGridType(String gridType);
 
-  Future<SettingsModel> getSettings();
+  Future<String?> getGridType();
 
 }

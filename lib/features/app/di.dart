@@ -5,9 +5,7 @@ import 'package:days/features/app/data/datasource/theme_datasource/local/theme_l
 import 'package:days/features/app/data/datasource/theme_datasource/theme_datasource.dart';
 import 'package:days/features/app/data/repository/theme_repository_impl.dart';
 import 'package:days/features/app/domain/repository/theme_repository.dart';
-import 'package:days/features/app/domain/usecase/get_theme_usecase.dart';
-import 'package:days/features/app/domain/usecase/set_theme_usecase.dart';
-import 'package:days/features/app/presentation/bloc/theme/theme_bloc.dart';
+import 'package:days/features/app/presentation/bloc/theme_notifier.dart';
 
 class AppModule extends LocatorModule {
   @override
@@ -21,17 +19,6 @@ class AppModule extends LocatorModule {
         () =>
             ThemeRepositoryImpl(localDataSource: getIt.get<ThemeDataSource>()),
       )
-      ..registerFactory(
-        () => SetThemeUseCase(repository: getIt.get<ThemeRepository>()),
-      )
-      ..registerFactory(
-        () => GetThemeUseCase(repository: getIt.get<ThemeRepository>()),
-      )
-      ..registerFactory(
-        () => ThemeBloc(
-          setThemeUseCase: getIt.get<SetThemeUseCase>(),
-          getThemeUseCase: getIt.get<GetThemeUseCase>(),
-        ),
-      );
+      ..registerFactory(() => ThemeNotifier(getIt.get()));
   }
 }

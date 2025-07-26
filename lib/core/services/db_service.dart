@@ -3,66 +3,88 @@ import 'dart:convert';
 import 'package:days/shared/package/logger/_logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final class LocalStorage {
-  LocalStorage._();
+class LocalStorage {
 
-  static final LocalStorage instance = LocalStorage._();
+  static final _instance = LocalStorage._internal();
 
-  static SharedPreferences? _preferences;
+  LocalStorage._internal();
+
+  static LocalStorage get instance => _instance;
+
+  late final SharedPreferences _preferences;
+
+  static bool _initialized = false;
+
+  static bool get initialized => _initialized;
 
   Future<void> init() async {
-    assert(
-      _preferences == null,
-      'LocalStorage is already initialized. Call LocalStorage.instance.clear() to reset.',
-    );
-    Logger.i('Initializing LocalStorage');
-    _preferences = await SharedPreferences.getInstance();
-    Logger.i('LocalStorage initialized');
+
+    assert(!_initialized, 'LocalStorage is already initialized');
+
+    _instance._preferences = await SharedPreferences.getInstance();
+
+    _initialized = true;
+
   }
 
-  void set(String key, dynamic value) {
-    _assertNotInitialized();
-    Logger.d('[DbService] set: $key');
+  Future<bool> set(String key, dynamic value) async {
+    Logger.d('[DbService] set: $key, $value');
     if (value is String) {
-      _preferences?.setString(key, value);
+      return _preferences.setString(key, value);
     } else if (value is int) {
-      _preferences?.setInt(key, value);
+      return _preferences.setInt(key, value);
     } else if (value is double) {
-      _preferences?.setDouble(key, value);
+      return _preferences.setDouble(key, value);
     } else if (value is bool) {
-      _preferences?.setBool(key, value);
+      return _preferences.setBool(key, value);
     } else if (value is List<String>) {
-      _preferences?.setStringList(key, value);
+      return _preferences.setStringList(key, value);
     } else if (value is DateTime) {
-      _preferences?.setString(key, value.toIso8601String());
+      return _preferences.setString(key, value.toIso8601String());
     } else if (value is Map) {
-      _preferences?.setString(key, json.encode(value));
+      return _preferences.setString(key, json.encode(value));
     } else {
-      throw Exception('Type not supported');
+      return false;
     }
   }
 
-  dynamic get(String key) {
-    _assertNotInitialized();
+  T? get<T>(String key) {
     Logger.d('[DbService] get: $key');
-    return _preferences?.get(key);
+
+    if (!_initialized) {
+      throw Exception('DbService is not initialized');
+    }
+
+    final value = _preferences.get(key);
+    if (value == null) {
+      Logger.w('[DbService] get: $key not found');
+      return null;
+    }
+
+    if (T == String) {
+      return _preferences.getString(key) as T?;
+    } else if (T == int) {
+      return _preferences.getInt(key) as T?;
+    } else if (T == bool) {
+      return _preferences.getBool(key) as T?;
+    } else if (T == double) {
+      return _preferences.getDouble(key) as T?;
+    } else if (T == List<String>) {
+      return _preferences.getStringList(key) as T?;
+    } else {
+      return _preferences.get(key) as T?;
+    }
   }
 
-  void remove(String key) {
-    _assertNotInitialized();
+  Future<bool> remove(String key) {
     Logger.d('[DbService] remove: $key');
-    _preferences?.remove(key);
+    return _preferences.remove(key);
   }
 
-  void clear() {
+  Future<bool>  clear() {
     Logger.d('[DbService] clear');
-    _preferences?.clear();
+    return _preferences.clear();
   }
 
-  void _assertNotInitialized() {
-    assert(
-      _preferences != null,
-      'LocalStorage is not initialized. Call LocalStorage.instance.init() first.',
-    );
-  }
+
 }

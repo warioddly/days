@@ -1,14 +1,13 @@
 import 'package:days/core/assets/illustration_assets.dart';
 import 'package:days/core/services/di_service.dart';
-import 'package:days/features/home/presentation/bloc/dots_manager_model.dart';
-import 'package:days/features/home/presentation/bloc/settings/settings_bloc.dart';
+import 'package:days/features/home/presentation/bloc/dots_manager_notifier.dart';
+import 'package:days/features/home/presentation/bloc/grid_type_notifier.dart';
 import 'package:days/features/home/presentation/pages/widgets/controlbar/controlbar.dart';
 import 'package:days/features/home/presentation/pages/widgets/controlbar/days_left_status.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dot_grid_body.dart';
 import 'package:days/features/home/presentation/pages/widgets/footer/footer.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide Tooltip;
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,13 +18,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final settingsBloc = GetIt.I.get<SettingsBloc>();
-  final dotsManagerModel = DotsManagerModel();
+  final gridTypeNotifier = GetIt.I.get<GridTypeNotifier>();
+  final dotsManagerModel = DotsManagerNotifier();
 
   @override
   void initState() {
     super.initState();
-    settingsBloc.add(GetSettings());
+    gridTypeNotifier.getGridType();
   }
 
   @override
@@ -40,42 +39,32 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
+    return MultiProvider(
       providers: [
-        BlocProvider.value(value: settingsBloc),
+        ChangeNotifierProvider.value(value: gridTypeNotifier),
         ChangeNotifierProvider.value(value: dotsManagerModel),
       ],
-      child: BlocListener(
-        bloc: settingsBloc,
-        listener: settingsListener,
-        child: const Scaffold(
-          body: SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                StatusBar(),
-                Spacer(),
-                DotGridBody(),
-                Spacer(),
-                ControlBar(),
-              ],
-            ),
+      child: const Scaffold(
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              StatusBar(),
+              Spacer(),
+              DotGridBody(),
+              Spacer(),
+              ControlBar(),
+            ],
           ),
-          bottomNavigationBar: Footer(),
         ),
+        bottomNavigationBar: Footer(),
       ),
     );
   }
 
-  void settingsListener(BuildContext context, SettingsState state) {
-    if (state.state is SettingsLoading) {
-      dotsManagerModel.reset();
-    }
-  }
-
   @override
   void dispose() {
-    settingsBloc.close();
+    gridTypeNotifier.dispose();
     dotsManagerModel.dispose();
     super.dispose();
   }

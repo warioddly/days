@@ -4,8 +4,8 @@ import 'package:days/features/home/domain/entity/settings_entity.dart';
 
 abstract class SettingsRepository {
 
-  void setSettings(SettingsEntity entity);
+  void setGridType(GridType gridType);
 
-  Future<SettingsEntity> getSettings();
+  Future<GridType> getGridType();
 
 }
