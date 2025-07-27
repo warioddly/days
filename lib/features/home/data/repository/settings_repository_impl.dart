@@ -1,6 +1,6 @@
 import 'package:days/features/home/data/datasource/settings_datasource/settings_datasource.dart';
 import 'package:days/features/home/data/mapper/grid_type_mapper.dart';
-import 'package:days/features/home/domain/entity/settings_entity.dart';
+import 'package:days/features/home/domain/entity/grid_type.dart';
 import 'package:days/features/home/domain/repository/settings_repository.dart';
 
 class SettingsRepositoryImpl implements SettingsRepository {

@@ -1,4 +1,5 @@
 import 'package:days/features/app/domain/repository/theme_repository.dart';
+import 'package:days/shared/package/logger/_logger.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' show BuildContext;
 import 'package:provider/provider.dart';
@@ -18,7 +19,12 @@ class ThemeNotifier extends ChangeNotifier {
       _brightness = newBrightness;
       _repository.setTheme(newBrightness.name);
     } catch (error, stackTrace) {
-      debugPrint('ThemeNotifier error: $error\n$stackTrace');
+      Logger.log(
+        'Error setting theme: ',
+        error: error,
+        stackTrace: stackTrace,
+        name: 'ThemeNotifier',
+      );
     }
 
     notifyListeners();

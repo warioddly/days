@@ -1,7 +1,6 @@
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
 import 'package:flutter/cupertino.dart';
 
-
 typedef OnOverlapping = void Function(GlobalKey<DotState> key, Offset position);
 
 abstract class DotAnimation {

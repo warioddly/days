@@ -1,5 +1,5 @@
 import 'package:days/core/interfaces/mapper_interface.dart';
-import 'package:days/features/home/domain/entity/settings_entity.dart';
+import 'package:days/features/home/domain/entity/grid_type.dart';
 
 class GridTypeMapper extends Mapper<String?, GridType> {
 

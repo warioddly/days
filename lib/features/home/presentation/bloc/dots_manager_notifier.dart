@@ -1,10 +1,15 @@
 import 'dart:async';
 
+import 'package:days/core/constants/constants.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/grid_animations/dot_disable_animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+const _dotDeactivateDuration = Duration(
+  milliseconds: Constants.deactivateDotDurationInMilliseconds,
+);
 
 class DotsManagerNotifier extends ChangeNotifier {
 
@@ -28,25 +33,16 @@ class DotsManagerNotifier extends ChangeNotifier {
 
   int get activeDots => _activeDots;
 
-  bool _userOutsideClicked = false;
-
-  bool get userOutsideClicked => _userOutsideClicked;
-
   void userOutsideClick() {
-    if (_userOutsideClicked) return;
-    _userOutsideClicked = true;
-
     _resetHoverActivatedDotsTimer?.cancel();
     _resetHoverActivatedDotsTimer = null;
     _disableAllDots();
-
-    notifyListeners();
   }
 
   void userHovered() {
     _resetHoverActivatedDotsTimer?.cancel();
     _resetHoverActivatedDotsTimer = Timer(
-      const Duration(seconds: 3),
+      _dotDeactivateDuration,
       userOutsideClick,
     );
   }
@@ -65,7 +61,6 @@ class DotsManagerNotifier extends ChangeNotifier {
 
   void reset() {
     _activeDots = 0;
-    _userOutsideClicked = false;
     clearKeys();
     _resetHoverActivatedDotsTimer?.cancel();
     notifyListeners();
@@ -82,9 +77,8 @@ class DotsManagerNotifier extends ChangeNotifier {
     super.dispose();
   }
 
-
-  static DotsManagerNotifier of(BuildContext context, {bool listen = false}) {
-    return Provider.of<DotsManagerNotifier>(context, listen: listen);
+  static DotsManagerNotifier of(BuildContext context) {
+    return Provider.of<DotsManagerNotifier>(context, listen: false);
   }
 
 }

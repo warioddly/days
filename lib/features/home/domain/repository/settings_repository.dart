@@ -1,6 +1,6 @@
 
 
-import 'package:days/features/home/domain/entity/settings_entity.dart';
+import 'package:days/features/home/domain/entity/grid_type.dart';
 
 abstract class SettingsRepository {
 

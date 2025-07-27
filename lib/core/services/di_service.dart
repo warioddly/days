@@ -1,7 +1,4 @@
-import 'package:days/core/interfaces/locator_module_interface.dart';
-import 'package:days/features/app/di.dart';
-import 'package:days/features/home/di.dart';
-import 'package:days/shared/package/logger/_logger.dart' show Logger;
+import 'package:days/shared/package/logger/_logger.dart';
 
 final class GetIt {
 
@@ -54,19 +51,12 @@ final class GetIt {
 
   void _assertContains<T extends Object>() {
     if (_bucket.containsKey(T)) {
-      Logger.w('Instance of $T already registered, replacing it');
+      _log('Instance of $T already registered, replacing it');
     }
   }
-}
 
-Future<void> $setupAppModules() async {
-  Logger.i('Setting up dependency injection');
-
-  final modules = <LocatorModule>[AppModule(), HomeModule()];
-
-  for (final module in modules) {
-    await module.builder(GetIt.I);
+  void _log(String message) {
+    Logger.log(message, name: 'GetIt');
   }
-
-  Logger.i('Dependency injection setup complete');
 }
+

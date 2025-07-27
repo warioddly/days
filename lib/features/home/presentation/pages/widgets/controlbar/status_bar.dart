@@ -1,6 +1,6 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/utils/extensions/theme_extensions.dart';
-import 'package:days/features/home/domain/entity/settings_entity.dart';
+import 'package:days/features/home/domain/entity/grid_type.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager_notifier.dart';
 import 'package:days/features/home/presentation/bloc/grid_type_notifier.dart';
 import 'package:days/features/l10n/_locale.dart' show l10n;

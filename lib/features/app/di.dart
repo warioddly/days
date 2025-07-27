@@ -13,11 +13,10 @@ class AppModule extends LocatorModule {
     getIt
       ..registerFactory<LocalStorage>(() => LocalStorage.instance)
       ..registerFactory<ThemeDataSource>(
-        () => ThemeLocalDataSourceImpl(db: getIt.get<LocalStorage>()),
+        () => ThemeLocalDataSourceImpl(db: getIt.get()),
       )
       ..registerFactory<ThemeRepository>(
-        () =>
-            ThemeRepositoryImpl(localDataSource: getIt.get<ThemeDataSource>()),
+        () => ThemeRepositoryImpl(localDataSource: getIt.get()),
       )
       ..registerFactory(() => ThemeNotifier(getIt.get()));
   }

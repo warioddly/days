@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:days/shared/package/logger/_logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class LocalStorage {
+final class LocalStorage {
 
   static final _instance = LocalStorage._internal();
 
@@ -28,7 +28,7 @@ class LocalStorage {
   }
 
   Future<bool> set(String key, dynamic value) async {
-    Logger.d('[DbService] set: $key, $value');
+    _log('Setting key: $key, value: $value');
     if (value is String) {
       return _preferences.setString(key, value);
     } else if (value is int) {
@@ -49,7 +49,7 @@ class LocalStorage {
   }
 
   T? get<T>(String key) {
-    Logger.d('[DbService] get: $key');
+    _log('Getting key: $key, type: ${T.toString()}');
 
     if (!_initialized) {
       throw Exception('DbService is not initialized');
@@ -57,7 +57,7 @@ class LocalStorage {
 
     final value = _preferences.get(key);
     if (value == null) {
-      Logger.w('[DbService] get: $key not found');
+      _log('Key not found: $key');
       return null;
     }
 
@@ -77,14 +77,17 @@ class LocalStorage {
   }
 
   Future<bool> remove(String key) {
-    Logger.d('[DbService] remove: $key');
+    _log('Removing key: $key');
     return _preferences.remove(key);
   }
 
   Future<bool>  clear() {
-    Logger.d('[DbService] clear');
+    _log('Clearing all preferences');
     return _preferences.clear();
   }
 
+  void _log(String message) {
+    Logger.log(message, level: Level.debug, name: 'LocalStorage');
+  }
 
 }

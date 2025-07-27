@@ -1,6 +1,7 @@
 import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/utils/extensions/theme_extensions.dart';
-import 'package:days/features/home/domain/entity/settings_entity.dart';
+import 'package:days/features/home/domain/entity/grid_type.dart';
+import 'package:days/features/home/presentation/bloc/dots_manager_notifier.dart';
 import 'package:days/features/home/presentation/bloc/grid_type_notifier.dart';
 import 'package:days/shared/ui/animations/fade_slide_animation.dart';
 import 'package:days/shared/ui/widgets/custom_segmented_control.dart';
@@ -42,6 +43,7 @@ class ControlBar extends StatelessWidget {
                     return;
                   }
                   GridTypeNotifier.of(context).setGridType = GridType.values[index];
+                  DotsManagerNotifier.of(context).reset();
                   HapticFeedback.selectionClick();
                 },
               );

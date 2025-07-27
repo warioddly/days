@@ -47,10 +47,10 @@ final class TooltipOverlay {
 
   OverlayEntry _tooltipOverlayEntry(BuildContext context) {
     return OverlayEntry(
-      builder: (_) {
-        final content = DateTimeUtils.format(_content);
-        return TooltipOverlayEntry(content: content, position: _position);
-      },
+      builder: (_) => TooltipOverlayEntry(
+        content: DateTimeUtils.format(_content),
+        position: _position,
+      ),
     );
   }
 
@@ -59,11 +59,14 @@ final class TooltipOverlay {
   }
 
   void dispose() {
-    _timer?.cancel();
-    _timer = null;
-    if (_overlayEntry != null) {
-      _overlayEntry?.remove();
-      _overlayEntry = null;
-    }
+    try {
+      _timer?.cancel();
+      _timer = null;
+      if (_overlayEntry != null) {
+        _overlayEntry?.remove();
+        _overlayEntry = null;
+      }
+    } catch (_) {}
+
   }
 }

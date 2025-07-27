@@ -2,8 +2,8 @@ import 'package:days/core/assets/illustration_assets.dart';
 import 'package:days/core/services/di_service.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager_notifier.dart';
 import 'package:days/features/home/presentation/bloc/grid_type_notifier.dart';
-import 'package:days/features/home/presentation/pages/widgets/controlbar/controlbar.dart';
-import 'package:days/features/home/presentation/pages/widgets/controlbar/days_left_status.dart';
+import 'package:days/features/home/presentation/pages/widgets/controlbar/control_bar.dart';
+import 'package:days/features/home/presentation/pages/widgets/controlbar/status_bar.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dot_grid_body.dart';
 import 'package:days/features/home/presentation/pages/widgets/footer/footer.dart';
 import 'package:flutter/foundation.dart';
@@ -19,7 +19,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final gridTypeNotifier = GetIt.I.get<GridTypeNotifier>();
-  final dotsManagerModel = DotsManagerNotifier();
+  final dotsManagerNotifier = DotsManagerNotifier();
 
   @override
   void initState() {
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: gridTypeNotifier),
-        ChangeNotifierProvider.value(value: dotsManagerModel),
+        ChangeNotifierProvider.value(value: dotsManagerNotifier),
       ],
       child: const Scaffold(
         body: SafeArea(
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     gridTypeNotifier.dispose();
-    dotsManagerModel.dispose();
+    dotsManagerNotifier.dispose();
     super.dispose();
   }
 }

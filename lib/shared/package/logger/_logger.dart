@@ -86,13 +86,14 @@ abstract final class Logger {
     DateTime? time,
     Object? error,
     StackTrace? stackTrace,
+    String? name,
   }) {
     developer.log(
       message.toString(),
       time: time,
       error: error,
       stackTrace: stackTrace,
-      name: level.name,
+      name: name ?? level.name.toUpperCase(),
     );
   }
 }

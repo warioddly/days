@@ -35,7 +35,7 @@ abstract class Dot extends StatefulWidget {
 
 abstract class DotState<T extends Dot> extends State<T> {
 
-  final DotController controller = DotController(false);
+  final controller = DotController(false);
 
   bool get isActive => controller.isActive;
 

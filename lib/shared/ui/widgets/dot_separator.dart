@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 class DotSeparator extends StatelessWidget {
   const DotSeparator({super.key, this.color});
 
-
   final Color? color;
 
   @override

@@ -1,5 +1,5 @@
 import 'package:days/core/constants/breakpoints.dart';
-import 'package:days/features/home/domain/entity/settings_entity.dart';
+import 'package:days/features/home/domain/entity/grid_type.dart';
 import 'package:days/features/home/presentation/bloc/grid_type_notifier.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/builders/doted_grid_builder.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/builders/illustrated_grid_builder.dart';
