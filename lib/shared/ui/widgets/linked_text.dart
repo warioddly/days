@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class LinkedText extends StatelessWidget {
-  const LinkedText({required this.title, super.key, this.onPressed, this.style});
+  const LinkedText({
+    required this.title,
+    super.key,
+    this.onPressed,
+    this.style,
+  });
 
   final VoidCallback? onPressed;
   final String title;
@@ -16,10 +21,7 @@ class LinkedText extends StatelessWidget {
         HapticFeedback.selectionClick();
         onPressed?.call();
       },
-      child: Text(
-        title,
-        style: style ?? context.textTheme.labelLarge
-      ),
+      child: Text(title, style: style ?? context.textTheme.labelLarge),
     );
   }
 }

@@ -45,26 +45,24 @@ class _DotedDotState extends DotState<DotedDot> {
     return SizedBox.square(
       dimension: Dimensions.dotContainerSize,
       child: ListenableBuilder(
-        listenable: ThemeNotifier.of(context),
+        listenable: Listenable.merge([
+          ThemeNotifier.of(context),
+          controller,
+        ]),
         builder: (context, _) {
-          return ListenableBuilder(
-            listenable: controller,
-            builder: (context, _) {
-              return AnimatedSwitcher(
-                duration: const Duration(milliseconds: 250),
-                reverseDuration: const Duration(milliseconds: 250),
-                switchInCurve: SharedCurves.bounceAnimation,
-                switchOutCurve: Curves.fastEaseInToSlowEaseOut,
-                transitionBuilder: (child, animation) =>
-                        ScaleTransition(scale: animation, child: child),
-                child: isActive
-                        ? DefaultDot(
-                          key: ObjectKey(widget.date?.toIso8601String() ?? ''),
-                          color: context.colorScheme.onPrimary,
-                          size: _dotSize,
-                        ) : dot,
-              );
-            },
+          return AnimatedSwitcher(
+            duration: const Duration(milliseconds: 250),
+            reverseDuration: const Duration(milliseconds: 250),
+            switchInCurve: SharedCurves.bounceAnimation,
+            switchOutCurve: Curves.fastEaseInToSlowEaseOut,
+            transitionBuilder: (child, animation) =>
+                ScaleTransition(scale: animation, child: child),
+            child: isActive
+                ? DefaultDot(
+              key: ObjectKey(widget.date?.toIso8601String() ?? ''),
+              color: context.colorScheme.onPrimary,
+              size: _dotSize,
+            ) : dot,
           );
         },
       ),

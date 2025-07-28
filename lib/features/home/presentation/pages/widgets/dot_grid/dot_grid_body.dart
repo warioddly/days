@@ -13,19 +13,19 @@ class DotGridBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: const BoxConstraints(maxWidth: Breakpoints.maxViewWidthSize),
-      child: ListenableBuilder(
-        listenable: GridTypeNotifier.of(context),
-        builder: (context, _) {
-          return RepaintBoundary(
-            child: BlurredSwitcher(
+      child: RepaintBoundary(
+        child: ListenableBuilder(
+          listenable: GridTypeNotifier.of(context),
+          builder: (context, _) {
+            return BlurredSwitcher(
               duration: Durations.medium1,
               child: switch (GridTypeNotifier.value(context)) {
                 GridType.doted => const DotedGridBuilder(),
                 GridType.illustrated => const IllustratedGridBuilder(),
               },
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
