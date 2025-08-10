@@ -49,7 +49,7 @@ final class LocalStorage {
   }
 
   T? get<T>(String key) {
-    _log('Getting key: $key, type: ${T.toString()}');
+    _log('Getting key: $key, type: $T');
 
     if (!_initialized) {
       throw Exception('DbService is not initialized');

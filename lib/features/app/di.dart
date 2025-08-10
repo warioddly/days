@@ -1,4 +1,4 @@
-import 'package:days/core/interfaces/locator_module_interface.dart';
+import 'package:days/core/base/locator_module_interface.dart';
 import 'package:days/core/services/db_service.dart';
 import 'package:days/core/services/di_service.dart';
 import 'package:days/features/app/data/datasource/theme_datasource/local/theme_local_datasource.dart';

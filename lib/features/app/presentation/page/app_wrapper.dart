@@ -18,7 +18,7 @@ class DaysApp extends StatelessWidget {
       child: Builder(
         builder: (context) => ListenableBuilder(
           listenable: ThemeNotifier.of(context),
-          builder: (context, child) {
+          builder: (context, _) {
             return MaterialApp(
               title: l10n.app_name,
               restorationScopeId: 'app',
