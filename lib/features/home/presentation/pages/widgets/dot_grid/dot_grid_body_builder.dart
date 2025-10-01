@@ -1,7 +1,7 @@
 import 'package:days/core/constants/breakpoints.dart';
-import 'package:days/core/constants/dimensions.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:days/core/utils/datetime_utils.dart';
-import 'package:days/shared/package/grid_builder/grid_builder.dart';
+import 'package:days/shared/ui/grids/grid_builder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

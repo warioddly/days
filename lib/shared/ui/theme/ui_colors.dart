@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart' show Brightness, BuildContext;
 import 'package:flutter/material.dart' show Color, Colors, Theme;
 
-abstract final class DayColors {
+abstract final class UIColors {
 
-  const DayColors();
+  const UIColors();
 
-  factory DayColors.of(BuildContext context) {
+  factory UIColors.of(BuildContext context) {
     final brightness = Theme.of(context).brightness;
     return switch (brightness) {
-      Brightness.dark => DarkDayColors(),
-      Brightness.light => LightDayColors(),
+      Brightness.dark => UIDarkColors(),
+      Brightness.light => UILightColors(),
     };
   }
 
@@ -27,7 +27,7 @@ abstract final class DayColors {
 
 }
 
-final class DarkDayColors extends DayColors {
+final class UIDarkColors extends UIColors {
 
   @override
   Color get background => Colors.black;
@@ -49,7 +49,7 @@ final class DarkDayColors extends DayColors {
 
 }
 
-final class LightDayColors extends DayColors {
+final class UILightColors extends UIColors {
   @override
   Color get background => Colors.white;
 

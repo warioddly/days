@@ -1,27 +1,21 @@
 import 'dart:convert';
-
-import 'package:days/shared/package/logger/_logger.dart';
+import 'dart:developer';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final class LocalStorage {
 
-  static final _instance = LocalStorage._internal();
+  static final instance = LocalStorage._internal();
 
   LocalStorage._internal();
-
-  static LocalStorage get instance => _instance;
 
   late final SharedPreferences _preferences;
 
   static bool _initialized = false;
 
-  static bool get initialized => _initialized;
-
   Future<void> init() async {
-
     assert(!_initialized, 'LocalStorage is already initialized');
 
-    _instance._preferences = await SharedPreferences.getInstance();
+    _preferences = await SharedPreferences.getInstance();
 
     _initialized = true;
 
@@ -86,8 +80,6 @@ final class LocalStorage {
     return _preferences.clear();
   }
 
-  void _log(String message) {
-    Logger.log(message, level: Level.debug, name: 'LocalStorage');
-  }
+  void _log(String message) => log(message, name: 'LocalStorage');
 
 }

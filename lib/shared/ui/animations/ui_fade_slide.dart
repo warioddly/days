@@ -1,8 +1,8 @@
-import 'package:days/shared/ui/animations/utils/curves.dart';
+import 'package:days/shared/ui/ui_curves.dart';
 import 'package:flutter/material.dart';
 
-class FadeSlideAnimation extends StatefulWidget {
-  const FadeSlideAnimation({
+class UIFadeSlide extends StatefulWidget {
+  const UIFadeSlide({
     required this.beginOffset,
     this.fadeDuration = Durations.medium1,
     this.slideDuration = Durations.extralong4,
@@ -16,10 +16,10 @@ class FadeSlideAnimation extends StatefulWidget {
   final Widget? child;
 
   @override
-  State<FadeSlideAnimation> createState() => _FadeSlideAnimationState();
+  State<UIFadeSlide> createState() => _UIFadeSlideState();
 }
 
-class _FadeSlideAnimationState extends State<FadeSlideAnimation>
+class _UIFadeSlideState extends State<UIFadeSlide>
     with TickerProviderStateMixin {
   late final Animation<double> _fadeAnimation;
   late final Animation<Offset> _slideAnimation;
@@ -50,7 +50,7 @@ class _FadeSlideAnimationState extends State<FadeSlideAnimation>
         .animate(
           CurvedAnimation(
             parent: _slideController,
-            curve: SharedCurves.bounceAnimation,
+            curve: UICurves.bounceSwitchAnimation,
           ),
         );
 

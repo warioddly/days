@@ -1,7 +1,6 @@
-import 'package:days/shared/package/logger/_logger.dart';
+import 'dart:developer';
 
 final class GetIt {
-
   GetIt._();
 
   static final GetIt _instance = GetIt._();
@@ -55,8 +54,5 @@ final class GetIt {
     }
   }
 
-  void _log(String message) {
-    Logger.log(message, name: 'GetIt');
-  }
+  void _log(String message) => log(message, name: 'GetIt');
 }
-

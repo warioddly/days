@@ -1,8 +1,8 @@
 import 'package:days/core/constants/constants.dart';
-import 'package:days/core/constants/dimensions.dart';
-import 'package:days/features/l10n/_locale.dart' show l10n;
-import 'package:days/shared/ui/widgets/dot_separator.dart';
-import 'package:days/shared/ui/widgets/linked_text.dart';
+import 'package:days/shared/l10n/_locale.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
+import 'package:days/shared/ui/dividers/ui_dot_divider.dart';
+import 'package:days/shared/ui/typography/ui_link_text.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -12,24 +12,23 @@ class RelatedLinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = Theme.of(context).colorScheme.secondary;
+    final typography = Theme.of(context).textTheme.labelLarge?.copyWith(
+      color: color,
+    );
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       spacing: Dimensions.s,
       children: [
-        LinkedText(
+        UILinkText(
           title: l10n.terms,
-          onPressed: () => launchUrlString(Constants.termsUrl),
-          style: Theme.of(context).textTheme.labelLarge?.copyWith(
-            color: color,
-          ),
+          onPressed: () => launchUrlString(kTermsUrl),
+          style: typography,
         ),
-        DotSeparator(color: color),
-        LinkedText(
+        UIDotDivider(color: color),
+        UILinkText(
           title: l10n.privacy,
-          onPressed: () => launchUrlString(Constants.privacyUrl),
-          style: Theme.of(context).textTheme.labelLarge?.copyWith(
-            color: color,
-          ),
+          onPressed: () => launchUrlString(kPrivacyUrl),
+          style: typography,
         ),
       ],
     );

@@ -1,5 +1,2 @@
 
-enum GridType {
-  illustrated,
-  doted,
-}
+enum GridType { illustrated, doted }

@@ -10,7 +10,7 @@ import 'package:days/features/home/presentation/bloc/grid_type_notifier.dart';
 
 class HomeModule extends LocatorModule {
   @override
-  void builder(GetIt getIt) {
+  Future<void> builder(GetIt getIt) async {
     getIt
       ..registerFactory<GridTypeMapper>(GridTypeMapper.new)
       ..registerFactory<SettingsDataSource>(

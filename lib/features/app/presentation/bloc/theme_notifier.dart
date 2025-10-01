@@ -1,7 +1,8 @@
+import 'dart:developer';
+
 import 'package:days/features/app/domain/repository/theme_repository.dart';
-import 'package:days/shared/package/logger/_logger.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart' show BuildContext;
+import 'package:flutter/material.dart' show BuildContext, ThemeMode;
 import 'package:provider/provider.dart';
 
 class ThemeNotifier extends ChangeNotifier {
@@ -9,17 +10,16 @@ class ThemeNotifier extends ChangeNotifier {
 
   ThemeNotifier(this._repository);
 
-  Brightness _brightness = Brightness.dark;
+  ThemeMode _themeMode = ThemeMode.system;
 
-  Brightness get brightness => _brightness;
-
-  set setTheme(Brightness newBrightness) {
+  void setTheme(ThemeMode themeMode) {
     try {
-      if (_brightness == newBrightness) return;
-      _brightness = newBrightness;
-      _repository.setTheme(newBrightness.name);
+      if (_themeMode == themeMode) return;
+      _themeMode = themeMode;
+      _repository.setTheme(themeMode.name);
+      notifyListeners();
     } catch (error, stackTrace) {
-      Logger.log(
+      log(
         'Error setting theme: ',
         error: error,
         stackTrace: stackTrace,
@@ -27,19 +27,18 @@ class ThemeNotifier extends ChangeNotifier {
       );
     }
 
-    notifyListeners();
   }
 
-  Future<void> getTheme() async {
-    _brightness = await _repository.getTheme();
+  void loadTheme() {
+    _themeMode = _repository.getTheme();
     notifyListeners();
   }
 
   static ThemeNotifier of(BuildContext context) {
-    return Provider.of<ThemeNotifier>(context, listen: false);
+    return Provider.of<ThemeNotifier>(context);
   }
 
-  static Brightness value(BuildContext context) {
-    return Provider.of<ThemeNotifier>(context, listen: false).brightness;
+  static ThemeMode value(BuildContext context) {
+    return of(context)._themeMode;
   }
 }

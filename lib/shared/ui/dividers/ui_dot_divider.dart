@@ -1,8 +1,8 @@
 import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:flutter/cupertino.dart';
 
-class DotSeparator extends StatelessWidget {
-  const DotSeparator({super.key, this.color});
+class UIDotDivider extends StatelessWidget {
+  const UIDotDivider({super.key, this.color});
 
   final Color? color;
 

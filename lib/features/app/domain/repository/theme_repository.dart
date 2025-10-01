@@ -1,7 +1,6 @@
-
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 abstract class ThemeRepository {
-  void setTheme(String theme);
-  Future<Brightness> getTheme();
+  void setTheme(String themeMode);
+  ThemeMode getTheme();
 }

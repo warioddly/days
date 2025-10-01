@@ -1,5 +1,5 @@
-import 'package:days/core/constants/dimensions.dart';
 import 'package:days/features/home/presentation/pages/widgets/settings/theme_settings.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class AppSettings extends StatelessWidget {
@@ -20,7 +20,6 @@ class AppSettings extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
-            spacing: Dimensions.sm,
             mainAxisSize: MainAxisSize.min,
             children: [
               ThemeSettings(),

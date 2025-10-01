@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class DayTextTheme extends TextTheme {
+class UITextTheme extends TextTheme {
 
-  const DayTextTheme();
+  const UITextTheme();
 
   @override
   TextStyle get displayLarge => const TextStyle(

@@ -1,23 +1,23 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:days/core/bootstrap/setup_modules.dart';
 import 'package:days/core/bootstrap/setup_system_ui.dart';
+import 'package:days/core/constants/constants.dart' show kAppName;
 import 'package:days/core/services/db_service.dart';
-import 'package:days/core/utils/on_error.dart';
 import 'package:days/features/app/presentation/page/app_wrapper.dart';
-import 'package:days/shared/package/logger/_logger.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 
-void main() => runZonedGuarded(runner, onErrorLog);
+void main() => runZonedGuarded(
+  $runner,
+  (e, s) => log('', name: kAppName, error: e, stackTrace: s),
+);
 
-Future<void> runner() async {
-
-  Logger.i('Days app started');
-
+Future<void> $runner() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  Logger.i('Days app initializing');
+  log('Days app started', name: kAppName);
 
   await Future.wait([
     LocalStorage.instance.init(),
@@ -25,8 +25,7 @@ Future<void> runner() async {
     $setupAppModules(),
   ]);
 
-  Logger.i('Days app initialized');
+  log('Days app initialized', name: kAppName);
 
   runApp(const DaysApp());
 }
-

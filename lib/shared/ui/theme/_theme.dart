@@ -1,22 +1,22 @@
-import 'package:days/core/constants/dimensions.dart';
-import 'package:days/core/theme/_colors.dart';
-import 'package:days/core/theme/_text_theme.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
+import 'package:days/shared/ui/theme/ui_colors.dart';
+import 'package:days/shared/ui/theme/ui_text_theme.dart';
 import 'package:flutter/material.dart';
 
-class AppTheme {
+class UITheme {
 
   static ThemeData resolveTheme(Brightness brightness) {
     return brightness == Brightness.light ? _lightTheme : _darkTheme;
   }
 
-  static const textTheme = DayTextTheme();
+  static const textTheme = UITextTheme();
 
   static final ThemeData _lightTheme = lightTheme();
 
   static final ThemeData _darkTheme = darkTheme();
 
   static ThemeData darkTheme() {
-    final colors = DarkDayColors();
+    final colors = UIDarkColors();
     return ThemeData(
       useMaterial3: true,
       fontFamily: 'ChakraPetch',
@@ -48,7 +48,7 @@ class AppTheme {
   }
 
   static ThemeData lightTheme() {
-    final colors = LightDayColors();
+    final colors = UILightColors();
     return ThemeData(
       useMaterial3: true,
       fontFamily: 'ChakraPetch',

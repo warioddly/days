@@ -1,9 +1,9 @@
-import 'package:days/core/theme/_colors.dart';
+import 'package:days/shared/ui/theme/ui_colors.dart';
 import 'package:flutter/material.dart';
 
 extension ThemeExtensions on BuildContext {
 
-  DayColors get colors => DayColors.of(this);
+  UIColors get colors => UIColors.of(this);
 
   ColorScheme get colorScheme => Theme.of(this).colorScheme;
 

@@ -1,4 +1,4 @@
-import 'package:days/core/constants/dimensions.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class DefaultDot extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:days/core/constants/dimensions.dart';
-import 'package:days/shared/ui/animations/blurred_switcher.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
+import 'package:days/shared/ui/animations/ui_blur_switcher.dart';
 import 'package:flutter/material.dart';
 
 class TooltipOverlayEntry extends StatelessWidget {
@@ -37,7 +37,7 @@ class TooltipOverlayEntry extends StatelessWidget {
                 ),
               ],
             ),
-            child: BlurredSwitcher(
+            child: UIBlurSwitcher(
               child: Text(
                 content,
                 key: ValueKey(content),

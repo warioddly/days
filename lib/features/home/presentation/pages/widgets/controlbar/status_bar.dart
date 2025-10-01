@@ -1,12 +1,12 @@
-import 'package:days/core/constants/dimensions.dart';
 import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/home/domain/entity/grid_type.dart';
 import 'package:days/features/home/presentation/bloc/dots_manager_notifier.dart';
 import 'package:days/features/home/presentation/bloc/grid_type_notifier.dart';
-import 'package:days/features/l10n/_locale.dart' show l10n;
+import 'package:days/shared/l10n/_locale.dart';
 import 'package:days/shared/package/animated_flip_counter/animated_flip_counter.dart';
-import 'package:days/shared/ui/animations/blurred_switcher.dart';
-import 'package:days/shared/ui/animations/fade_slide_animation.dart';
+import 'package:days/shared/ui/animations/ui_blur_switcher.dart';
+import 'package:days/shared/ui/animations/ui_fade_slide.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class StatusBar extends StatelessWidget {
@@ -14,7 +14,7 @@ class StatusBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadeSlideAnimation(
+    return UIFadeSlide(
       beginOffset: const Offset(0, -.8),
       child: Padding(
         padding: Insets.xl,
@@ -39,7 +39,7 @@ class StatusBar extends StatelessWidget {
             ListenableBuilder(
               listenable: GridTypeNotifier.of(context),
               builder: (context, _) {
-                return BlurredSwitcher(
+                return UIBlurSwitcher(
                   child: Text(
                     key: UniqueKey(),
                     switch (GridTypeNotifier.value(context)) {

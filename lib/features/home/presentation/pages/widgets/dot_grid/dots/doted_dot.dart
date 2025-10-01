@@ -1,9 +1,9 @@
-import 'package:days/core/constants/dimensions.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/app/presentation/bloc/theme_notifier.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
-import 'package:days/shared/ui/animations/utils/curves.dart';
+import 'package:days/shared/ui/ui_curves.dart';
 import 'package:flutter/cupertino.dart';
 
 const _dotSize = 5.0;
@@ -53,7 +53,7 @@ class _DotedDotState extends DotState<DotedDot> {
           return AnimatedSwitcher(
             duration: const Duration(milliseconds: 250),
             reverseDuration: const Duration(milliseconds: 250),
-            switchInCurve: SharedCurves.bounceAnimation,
+            switchInCurve: UICurves.bounceSwitchAnimation,
             switchOutCurve: Curves.fastEaseInToSlowEaseOut,
             transitionBuilder: (child, animation) =>
                 ScaleTransition(scale: animation, child: child),

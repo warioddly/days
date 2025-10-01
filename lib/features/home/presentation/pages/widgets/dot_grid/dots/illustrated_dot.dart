@@ -1,12 +1,12 @@
 import 'dart:math';
 
 import 'package:days/core/assets/illustration_assets.dart';
-import 'package:days/core/constants/dimensions.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/app/presentation/bloc/theme_notifier.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
-import 'package:days/shared/ui/animations/utils/curves.dart';
+import 'package:days/shared/ui/ui_curves.dart';
 import 'package:flutter/material.dart';
 
 class IllustratedDot extends Dot {
@@ -54,7 +54,7 @@ class _IllustratedDotState extends DotState<IllustratedDot> {
                 return AnimatedSwitcher(
                   duration: Durations.medium3,
                   reverseDuration: Durations.long3,
-                  switchInCurve: SharedCurves.bounceAnimation,
+                  switchInCurve: UICurves.bounceSwitchAnimation,
                   switchOutCurve: Curves.fastEaseInToSlowEaseOut,
                   transitionBuilder: (child, animation) =>
                       ScaleTransition(scale: animation, child: child),

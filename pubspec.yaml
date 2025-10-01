@@ -39,7 +39,7 @@ dependencies:
   url_launcher: ^6.3.1
   intl: ^0.20.2
   logger: ^2.5.0
-  dimengen: 0.4.0
+  dimengen: 0.6.0
 
 dev_dependencies:
   flutter_test:

@@ -1,15 +1,12 @@
 import 'dart:async';
 
-import 'package:days/core/constants/constants.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/dots/dot.dart';
 import 'package:days/features/home/presentation/pages/widgets/dot_grid/grid_animations/dot_disable_animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-const _dotDeactivateDuration = Duration(
-  milliseconds: Constants.deactivateDotDurationInMilliseconds,
-);
+const _dotDeactivateDuration = Duration(seconds: 3);
 
 class DotsManagerNotifier extends ChangeNotifier {
 

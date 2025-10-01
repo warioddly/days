@@ -8,7 +8,7 @@ class SettingsRepositoryImpl implements SettingsRepository {
   final SettingsDataSource localDataSource;
   final GridTypeMapper gridTypeMapper;
 
-  SettingsRepositoryImpl({
+  const SettingsRepositoryImpl({
     required this.localDataSource,
     required this.gridTypeMapper,
   });
@@ -19,10 +19,8 @@ class SettingsRepositoryImpl implements SettingsRepository {
   }
 
   @override
-  Future<GridType> getGridType() {
-    return localDataSource
-        .getGridType()
-        .then(gridTypeMapper.mapTo);
+  GridType getGridType() {
+    return gridTypeMapper.mapTo(localDataSource.getGridType());
   }
 
 }

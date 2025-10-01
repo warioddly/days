@@ -2,8 +2,8 @@ import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class LinkedText extends StatelessWidget {
-  const LinkedText({
+class UILinkText extends StatelessWidget {
+  const UILinkText({
     required this.title,
     super.key,
     this.onPressed,
