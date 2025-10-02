@@ -1,12 +1,12 @@
 import 'package:days/core/constants/constants.dart';
-import 'package:days/core/services/di_service.dart';
+import 'package:days/core/services/locator_service.dart';
 import 'package:days/features/app/presentation/bloc/theme_notifier.dart';
 import 'package:days/features/home/presentation/pages/home_page.dart';
 import 'package:days/shared/l10n/generated/day_localizations.dart';
 import 'package:days/shared/ui/theme/_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:provider/provider.dart' hide Locator;
 
 class DaysApp extends StatelessWidget {
   const DaysApp({super.key});
@@ -14,7 +14,7 @@ class DaysApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListenableProvider(
-      create: (_) => GetIt.I.get<ThemeNotifier>()..loadTheme(),
+      create: (_) => Locator.I.get<ThemeNotifier>()..loadTheme(),
       child: Builder(
         builder: (context) => ListenableBuilder(
           listenable: ThemeNotifier.of(context),

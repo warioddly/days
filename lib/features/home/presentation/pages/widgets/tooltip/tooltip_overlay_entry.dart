@@ -21,29 +21,36 @@ class TooltipOverlayEntry extends StatelessWidget {
       curve: Curves.linear,
       left: position.dx,
       top: position.dy,
-      child: RepaintBoundary(
-        child: IgnorePointer(
-          child: Container(
-            padding: Insets.sHorizontal + Insets.xsVertical,
-            decoration: BoxDecoration(
-              color: theme.primaryColor,
-              borderRadius: Borders.s,
-              border: Border.all(color: theme.colorScheme.onPrimary, width: 0.3),
-              boxShadow: [
-                BoxShadow(
-                  color: theme.colorScheme.onPrimary.withAlpha(70),
-                  blurRadius: 4,
-                  offset: const Offset(0, 2),
-                ),
-              ],
+      child: IgnorePointer(
+        child: DecoratedBox(
+          decoration: ShapeDecoration(
+            color: theme.primaryColor,
+            shape: RoundedSuperellipseBorder(
+              side: BorderSide(
+                color: theme.colorScheme.onPrimary,
+                width: 0.3,
+              ),
+              borderRadius: Borders.ms,
             ),
-            child: UIBlurSwitcher(
-              child: Text(
-                content,
-                key: ValueKey(content),
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.colorScheme.onPrimary,
-                  fontWeight: FontWeight.w600
+            shadows: [
+              BoxShadow(
+                color: theme.colorScheme.onPrimary.withAlpha(70),
+                blurRadius: 4,
+                offset: const Offset(0, 2),
+              ),
+            ],
+          ),
+          child: Padding(
+            padding: Insets.sHorizontal + Insets.xsVertical,
+            child: RepaintBoundary(
+              child: UIBlurSwitcher(
+                child: Text(
+                  content,
+                  key: ValueKey(content),
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: theme.colorScheme.onPrimary,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ),

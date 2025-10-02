@@ -1,27 +1,26 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'package:days/core/base/store_interface.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final class LocalStorage {
-
+final class LocalStorage implements Store {
   static final instance = LocalStorage._internal();
 
   LocalStorage._internal();
 
   late final SharedPreferences _preferences;
 
-  static bool _initialized = false;
+  bool _initialized = false;
 
   Future<void> init() async {
     assert(!_initialized, 'LocalStorage is already initialized');
-
     _preferences = await SharedPreferences.getInstance();
-
     _initialized = true;
-
   }
 
+  @override
   Future<bool> set(String key, dynamic value) async {
+    assert(_initialized, 'LocalStorage is not initialized');
     _log('Setting key: $key, value: $value');
     if (value is String) {
       return _preferences.setString(key, value);
@@ -42,12 +41,11 @@ final class LocalStorage {
     }
   }
 
+  @override
   T? get<T>(String key) {
-    _log('Getting key: $key, type: $T');
+    assert(_initialized, 'LocalStorage is not initialized');
 
-    if (!_initialized) {
-      throw Exception('DbService is not initialized');
-    }
+    _log('Getting key: $key, type: $T');
 
     final value = _preferences.get(key);
     if (value == null) {
@@ -70,16 +68,17 @@ final class LocalStorage {
     }
   }
 
+  @override
   Future<bool> remove(String key) {
     _log('Removing key: $key');
     return _preferences.remove(key);
   }
 
-  Future<bool>  clear() {
+  @override
+  Future<bool> clear() {
     _log('Clearing all preferences');
     return _preferences.clear();
   }
 
   void _log(String message) => log(message, name: 'LocalStorage');
-
 }

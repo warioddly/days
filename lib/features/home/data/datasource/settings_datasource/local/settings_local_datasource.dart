@@ -1,5 +1,5 @@
 import 'package:days/core/keys/storage_key.dart';
-import 'package:days/core/services/db_service.dart';
+import 'package:days/core/services/local_storage.dart';
 import 'package:days/features/home/data/datasource/settings_datasource/settings_datasource.dart';
 
 

@@ -1,11 +1,11 @@
 import 'dart:developer';
 
-final class GetIt {
-  GetIt._();
+final class Locator {
+  Locator._();
 
-  static final GetIt _instance = GetIt._();
+  static final Locator _instance = Locator._();
 
-  static GetIt get I => _instance;
+  static Locator get I => _instance;
 
   final _bucket = <Type, dynamic>{};
 
@@ -54,5 +54,5 @@ final class GetIt {
     }
   }
 
-  void _log(String message) => log(message, name: 'GetIt');
+  void _log(String message) => log(message, name: 'Locator');
 }
