@@ -34,7 +34,6 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   shared_preferences: ^2.3.5
-  provider: ^6.1.2
   url_launcher: ^6.3.1
   intl: ^0.20.2
   dimengen: 0.6.0

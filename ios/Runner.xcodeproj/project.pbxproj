@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,59 +12,19 @@
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		5E22D1192E0F085C00395DC3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428812DFB321300A06909 /* WidgetKit.framework */; platformFilters = (ios, macos, ); };
 		5E22D11A2E0F085C00395DC3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428832DFB321300A06909 /* SwiftUI.framework */; };
-		5E22D1262E0F085E00395DC3 /* DaysDotsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E22D1182E0F085B00395DC3 /* DaysDotsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5E51EF832E0ED1D00003E7B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E51EF7D2E0ED1D00003E7B5 /* Assets.xcassets */; };
 		5E51EF972E0EE1A10003E7B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E51EF7D2E0ED1D00003E7B5 /* Assets.xcassets */; };
 		5EE240142E0EA26500871009 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428812DFB321300A06909 /* WidgetKit.framework */; platformFilters = (ios, macos, ); };
 		5EE240152E0EA26500871009 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428832DFB321300A06909 /* SwiftUI.framework */; };
-		5EE240232E0EA26700871009 /* DaysCalendarExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5EE240132E0EA26400871009 /* DaysCalendarExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5EE240452E0EB33D00871009 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428812DFB321300A06909 /* WidgetKit.framework */; platformFilters = (ios, macos, ); };
 		5EE240462E0EB33D00871009 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB428832DFB321300A06909 /* SwiftUI.framework */; };
-		5EE240572E0EB33F00871009 /* DaysCalendarLockScreenExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5EE240442E0EB33D00871009 /* DaysCalendarLockScreenExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5E22D1242E0F085E00395DC3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5E22D1172E0F085B00395DC3;
-			remoteInfo = DaysDotsExtension;
-		};
-		5EE240212E0EA26700871009 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EE240122E0EA26400871009;
-			remoteInfo = DaysCalendarExtension;
-		};
-		5EE240552E0EB33F00871009 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EE240432E0EB33D00871009;
-			remoteInfo = DaysCalendarLockScreenExtension;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		5EB428962DFB321500A06909 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				5EE240572E0EB33F00871009 /* DaysCalendarLockScreenExtension.appex in Embed Foundation Extensions */,
-				5E22D1262E0F085E00395DC3 /* DaysDotsExtension.appex in Embed Foundation Extensions */,
-				5EE240232E0EA26700871009 /* DaysCalendarExtension.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,21 +65,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5E22D12A2E0F085E00395DC3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		5E22D12A2E0F085E00395DC3 /* Exceptions for "DaysDots" folder in "DaysDotsExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = 5E22D1172E0F085B00395DC3 /* DaysDotsExtension */;
 		};
-		5EE240272E0EA26700871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		5EE240272E0EA26700871009 /* Exceptions for "DaysCalendar" folder in "DaysCalendarExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = 5EE240122E0EA26400871009 /* DaysCalendarExtension */;
 		};
-		5EE2405B2E0EB33F00871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		5EE2405B2E0EB33F00871009 /* Exceptions for "DaysCalendarLockScreen" folder in "DaysCalendarLockScreenExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -129,10 +89,53 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5E22D11B2E0F085C00395DC3 /* DaysDots */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5E22D12A2E0F085E00395DC3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysDots; sourceTree = "<group>"; };
-		5E51EF9B2E0EEAD90003E7B5 /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
-		5EE240162E0EA26500871009 /* DaysCalendar */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5EE240272E0EA26700871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysCalendar; sourceTree = "<group>"; };
-		5EE240472E0EB33D00871009 /* DaysCalendarLockScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5EE2405B2E0EB33F00871009 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DaysCalendarLockScreen; sourceTree = "<group>"; };
+		5E22D11B2E0F085C00395DC3 /* DaysDots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5E22D12A2E0F085E00395DC3 /* Exceptions for "DaysDots" folder in "DaysDotsExtension" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = DaysDots;
+			sourceTree = "<group>";
+		};
+		5E51EF9B2E0EEAD90003E7B5 /* Utils */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5EE240162E0EA26500871009 /* DaysCalendar */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5EE240272E0EA26700871009 /* Exceptions for "DaysCalendar" folder in "DaysCalendarExtension" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = DaysCalendar;
+			sourceTree = "<group>";
+		};
+		5EE240472E0EB33D00871009 /* DaysCalendarLockScreen */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5EE2405B2E0EB33F00871009 /* Exceptions for "DaysCalendarLockScreen" folder in "DaysCalendarLockScreenExtension" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = DaysCalendarLockScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,7 +333,6 @@
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
-				5EB428962DFB321500A06909 /* Embed Foundation Extensions */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
@@ -339,9 +341,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5EE240222E0EA26700871009 /* PBXTargetDependency */,
-				5EE240562E0EB33F00871009 /* PBXTargetDependency */,
-				5E22D1252E0F085E00395DC3 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -494,13 +493,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -541,24 +536,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5E22D1252E0F085E00395DC3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5E22D1172E0F085B00395DC3 /* DaysDotsExtension */;
-			targetProxy = 5E22D1242E0F085E00395DC3 /* PBXContainerItemProxy */;
-		};
-		5EE240222E0EA26700871009 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EE240122E0EA26400871009 /* DaysCalendarExtension */;
-			targetProxy = 5EE240212E0EA26700871009 /* PBXContainerItemProxy */;
-		};
-		5EE240562E0EB33F00871009 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EE240432E0EB33D00871009 /* DaysCalendarLockScreenExtension */;
-			targetProxy = 5EE240552E0EB33F00871009 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		97C146FA1CF9000F007C117D /* Main.storyboard */ = {
@@ -639,7 +616,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 27;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = days;
@@ -675,7 +652,7 @@
 				CODE_SIGN_ENTITLEMENTS = Extensions/DaysDots/DaysDots.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -728,7 +705,7 @@
 				CODE_SIGN_ENTITLEMENTS = Extensions/DaysDots/DaysDots.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -778,7 +755,7 @@
 				CODE_SIGN_ENTITLEMENTS = Extensions/DaysDots/DaysDots.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -828,7 +805,7 @@
 				CODE_SIGN_ENTITLEMENTS = Extensions/DaysCalendar/DaysCalendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -881,7 +858,7 @@
 				CODE_SIGN_ENTITLEMENTS = Extensions/DaysCalendar/DaysCalendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -931,7 +908,7 @@
 				CODE_SIGN_ENTITLEMENTS = Extensions/DaysCalendar/DaysCalendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -980,7 +957,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1021,7 +998,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1059,7 +1036,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1202,7 +1179,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 27;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = days;
@@ -1232,7 +1209,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 27;
-				DEVELOPMENT_TEAM = X677Q66Q7S;
+				DEVELOPMENT_TEAM = NAYTRMT6PQ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = days;

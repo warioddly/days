@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:days/core/base/store_interface.dart';
+import 'package:days/core/base/store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final class LocalStorage implements Store {

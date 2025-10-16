@@ -1,6 +1,6 @@
 
 
-final class StorageKey {
+abstract final class StorageKey {
 
   static const gridType = 'GRID_TYPE';
 
