@@ -4,6 +4,7 @@ abstract class ViewModel extends ChangeNotifier {
   static T of<T extends ViewModel>(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<_ViewModel<T>>()!.viewModel;
   }
+
 }
 
 class _ViewModel<T extends ViewModel> extends InheritedNotifier {

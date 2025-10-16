@@ -39,7 +39,7 @@ class HomeViewModel extends ViewModel {
   void setGridType(GridType newGridType) {
     try {
       if (_gridType == newGridType) return;
-      _storage.set(StorageKey.gridType, newGridType);
+      _storage.set(StorageKey.gridType, newGridType.name);
       _gridType = newGridType;
     } catch (error, stackTrace) {
       log(

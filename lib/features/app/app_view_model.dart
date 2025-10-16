@@ -33,7 +33,7 @@ class AppViewModel extends ViewModel {
   void setThemeMode(ThemeMode themeMode) {
     try {
       if (_themeMode == themeMode) return;
-      _storage.set(StorageKey.theme, themeMode);
+      _storage.set(StorageKey.theme, themeMode.name);
       _themeMode = themeMode;
     } catch (error, stackTrace) {
       log('Error setting grid type: ', error: error, stackTrace: stackTrace, name: 'AppViewModel');
