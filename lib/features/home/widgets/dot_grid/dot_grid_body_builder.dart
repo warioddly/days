@@ -22,36 +22,31 @@ class DotGridBodyBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final mediaQuerySize = MediaQuery.sizeOf(context);
-    final viewSize = (mediaQuerySize.width > Breakpoints.maxViewWidthSize
+    final screenSize = MediaQuery.sizeOf(context);
+    final viewSize = (screenSize.width > Breakpoints.maxViewWidthSize
         ? Breakpoints.maxViewWidthSize
-        : mediaQuerySize.width) -
+        : screenSize.width) -
         (Dimensions.xl * 2);
 
-    return Center(
-      child: Padding(
-        padding: Insets.xlHorizontal,
-        child: SizedBox(
-          width: double.infinity,
-          height: viewSize / ((viewSize / 2) / (mediaQuerySize.height / 4)),
-          child: FittedBox(
-            fit: BoxFit.fitHeight,
-            child: GestureDetector(
-              behavior: HitTestBehavior.translucent,
-              onPanStart: (details) => onPanUpdate(details.globalPosition),
-              onPanUpdate: (details) => onPanUpdate(details.globalPosition),
-              child: GridBuilder(
-                now: now,
-                from: DateTime(now.year),
-                to: DateTime(now.year).add(const Duration(days: 365)),
-                lengthCalculate: DateTimeUtils.getDaysFrom,
-                dayCalculate: DateTimeUtils.addDays,
-                blockSize: const Size.square(Dimensions.dotContainerSize),
-                viewSize: Size(viewSize, mediaQuerySize.height),
-                itemBuilder: itemBuilder,
-                onBuildComplete: onBuildComplete,
-              ),
-            ),
+    return SizedBox(
+      width: viewSize,
+      height: viewSize / (viewSize / (screenSize.height / 2)),
+      child: FittedBox(
+        fit: BoxFit.fitHeight,
+        child: GestureDetector(
+          behavior: HitTestBehavior.translucent,
+          onPanStart: (details) => onPanUpdate(details.globalPosition),
+          onPanUpdate: (details) => onPanUpdate(details.globalPosition),
+          child: GridBuilder(
+            now: now,
+            from: DateTime(now.year),
+            to: DateTime(now.year).add(const Duration(days: 365)),
+            lengthCalculate: DateTimeUtils.getDaysFrom,
+            dayCalculate: DateTimeUtils.addDays,
+            blockSize: const Size.square(Dimensions.dotContainerSize),
+            viewSize: Size(viewSize, screenSize.height),
+            itemBuilder: itemBuilder,
+            onBuildComplete: onBuildComplete,
           ),
         ),
       ),

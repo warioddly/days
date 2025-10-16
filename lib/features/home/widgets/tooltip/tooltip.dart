@@ -58,10 +58,8 @@ final class TooltipOverlay {
     try {
       _timer?.cancel();
       _timer = null;
-      if (_overlayEntry != null) {
-        _overlayEntry?.remove();
-        _overlayEntry = null;
-      }
+      _overlayEntry?.remove();
+      _overlayEntry = null;
     } catch (_) {}
 
   }

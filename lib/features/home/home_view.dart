@@ -2,10 +2,10 @@ import 'package:days/core/assets/illustration_assets.dart';
 import 'package:days/core/base/view_model.dart';
 import 'package:days/features/home/dots_view_model.dart';
 import 'package:days/features/home/home_view_model.dart';
-import 'package:days/features/home/widgets/controlbar/control_bar.dart';
 import 'package:days/features/home/widgets/controlbar/status_bar.dart';
 import 'package:days/features/home/widgets/dot_grid/dot_grid_body.dart';
-import 'package:days/features/home/widgets/footer/footer.dart';
+import 'package:days/features/home/widgets/home_view_footer.dart';
+import 'package:days/shared/ui/dimensions/dimensions.dart' show Insets;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide Tooltip;
 
@@ -17,7 +17,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-
   final dotsManagerNotifier = DotsViewModel();
   final viewModel = HomeViewModel();
 
@@ -30,7 +29,6 @@ class _HomeViewState extends State<HomeView> {
       }
     }
   }
-
 
   @override
   void dispose() {
@@ -45,23 +43,21 @@ class _HomeViewState extends State<HomeView> {
       viewModel: viewModel,
       child: ViewModelProvider(
         viewModel: dotsManagerNotifier,
-        child: const Scaffold(
-          body: SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                StatusBar(),
-                Spacer(),
-                DotGridBody(),
-                Spacer(),
-                ControlBar(),
-              ],
+        child: Scaffold(
+          appBar: AppBar(
+            title: const StatusBar(),
+          ),
+          body: const SafeArea(
+            child: Center(
+              child: Padding(
+                padding: Insets.xl,
+                child: DotGridBody(),
+              ),
             ),
           ),
-          bottomNavigationBar: Footer(),
+          bottomNavigationBar: const HomeViewFooter(),
         ),
       ),
     );
   }
-
 }

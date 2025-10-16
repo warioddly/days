@@ -14,7 +14,6 @@ class StatusBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final viewModel = ViewModel.of<HomeViewModel>(context);
     return UIFadeSlide(
       beginOffset: const Offset(0, -.8),
@@ -23,13 +22,17 @@ class StatusBar extends StatelessWidget {
         child: Column(
           children: [
             RepaintBoundary(
-              child: AnimatedFlipCounter(
-                value: ViewModel.of<DotsViewModel>(context).activeDots,
-                duration: const Duration(seconds: 2),
-                curve: Curves.linearToEaseOut,
-                textStyle: context.textTheme.bodyMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+              child: Builder(
+                builder: (context) {
+                  return AnimatedFlipCounter(
+                    value: ViewModel.of<DotsViewModel>(context).activeDots,
+                    duration: const Duration(seconds: 2),
+                    curve: Curves.linearToEaseOut,
+                    textStyle: context.textTheme.bodyMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                },
               ),
             ),
             Spaces.xs,
@@ -41,9 +44,8 @@ class StatusBar extends StatelessWidget {
                   GridType.doted => l10n.days_left_in_the_year,
                 },
                 style: context.textTheme.labelLarge?.copyWith(
-                  color: CupertinoColors
-                      .tertiarySystemFill
-                      .darkHighContrastColor,
+                  color:
+                      CupertinoColors.tertiarySystemFill.darkHighContrastColor,
                 ),
               ),
             ),

@@ -12,6 +12,9 @@ analyzer:
     avoid_dynamic_calls: ignore
 include: package:flutter_lints/flutter.yaml
 
+formatter:
+  trailing_commas: preserve
+
 linter:
   rules:
     file_names: false
