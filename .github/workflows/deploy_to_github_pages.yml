@@ -1,4 +1,4 @@
-name: Deploy 
+name: Deploy To Github Pages
 
 on:
   push:
@@ -10,26 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      USERNAME: warioddly
-      EMAIL: ${{ secrets.EMAIL }}
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.32.2"
+          flutter-version: "3.35.2"
           channel: 'stable'
           cache: true
     
       - name: Run Flutter build
         run: |
-          # Enable web config in flutter
           flutter config --enable-web
-          
-          # Get project dependencies
           flutter pub get
-          
-          # Build project
-          flutter build web --release --base-href="/days/" --wasm
+          dart run build_runner build -d
+          flutter build web --release --wasm --base-href="/days/" 
 
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
