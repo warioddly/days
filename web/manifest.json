@@ -5,17 +5,12 @@
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#000000",
-    "description": "Your life in Days",
+    "description": "Days is a mobile app that tracks how many days have passed and reminds you that every day matters — because a year has so few of them.",
     "orientation": "portrait-primary",
     "prefer_related_applications": true,
     "icons": [
         {
-            "src": "icons/web-app-manifest-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/web-app-manifest-512x512.png",
+            "src": "icons/logo.png",
             "sizes": "512x512",
             "type": "image/png"
         }
