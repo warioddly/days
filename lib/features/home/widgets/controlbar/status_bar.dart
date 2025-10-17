@@ -41,7 +41,7 @@ class StatusBar extends StatelessWidget {
                 key: UniqueKey(),
                 switch (viewModel.gridType) {
                   GridType.illustrated => l10n.more_days_of_growth,
-                  GridType.doted => l10n.days_left_in_the_year,
+                  GridType.doted => l10n.days_left_in_the_year(DateTime.now().year),
                 },
                 style: context.textTheme.labelLarge?.copyWith(
                   color:

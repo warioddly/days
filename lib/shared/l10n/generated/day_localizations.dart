@@ -154,11 +154,11 @@ abstract class DayLocalizations {
   /// **'more days of growth'**
   String get more_days_of_growth;
 
-  /// No description provided for @days_left_in_the_year.
+  /// How many days are left in the year
   ///
   /// In en, this message translates to:
-  /// **'days left in the year'**
-  String get days_left_in_the_year;
+  /// **'days left in {year}'**
+  String days_left_in_the_year(Object year);
 }
 
 class _DayLocalizationsDelegate

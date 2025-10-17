@@ -9,5 +9,11 @@
     "restore": "restore",
     "github": "github",
     "more_days_of_growth": "more days of growth",
-    "days_left_in_the_year": "days left in the year"
+    "days_left_in_the_year": "days left in {year}",
+    "@days_left_in_the_year": {
+        "description": "How many days are left in the year",
+        "placeholders": {
+            "year": {}
+        }
+    }
 }

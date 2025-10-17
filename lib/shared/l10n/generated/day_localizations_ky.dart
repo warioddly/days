@@ -37,5 +37,7 @@ class DayLocalizationsKy extends DayLocalizations {
   String get more_days_of_growth => 'күн дагы өсүү';
 
   @override
-  String get days_left_in_the_year => 'күн өттү быйыл';
+  String days_left_in_the_year(Object year) {
+    return 'күн өттү $year';
+  }
 }

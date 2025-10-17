@@ -45,12 +45,13 @@ class _HomeViewState extends State<HomeView> {
         viewModel: dotsManagerNotifier,
         child: Scaffold(
           appBar: AppBar(
+            toolbarHeight: 100,
             title: const StatusBar(),
           ),
           body: const SafeArea(
             child: Center(
               child: Padding(
-                padding: Insets.xl,
+                padding: Insets.xlHorizontal,
                 child: DotGridBody(),
               ),
             ),

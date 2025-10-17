@@ -30,7 +30,6 @@ class AppViewModel extends ViewModel with LoggerMixin {
     } catch (error, stackTrace) {
       log('Error when load grid type: ', error: error, stackTrace: stackTrace);
     }
-    notifyListeners();
   }
 
   void setThemeMode(ThemeMode themeMode) {

@@ -7,5 +7,11 @@
     "about": "О нас",
     "github": "Github",
     "more_days_of_growth": "больше дней роста",
-    "days_left_in_the_year": "дней осталось в году"
+    "days_left_in_the_year": "дней прошло в {year} году",
+    "@days_left_in_the_year": {
+        "description": "How many days are left in the year",
+        "placeholders": {
+            "year": {}
+        }
+    }
 }

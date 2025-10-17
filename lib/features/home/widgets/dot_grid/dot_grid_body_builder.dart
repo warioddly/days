@@ -30,7 +30,7 @@ class DotGridBodyBuilder extends StatelessWidget {
 
     return SizedBox(
       width: viewSize,
-      height: viewSize / (viewSize / (screenSize.height / 2)),
+      height: viewSize / (viewSize / (screenSize.height / 1.8)),
       child: FittedBox(
         fit: BoxFit.fitHeight,
         child: GestureDetector(

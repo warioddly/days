@@ -17,16 +17,29 @@ class TooltipOverlayEntry extends StatelessWidget {
     final theme = Theme.of(context);
     final screenSize = MediaQuery.sizeOf(context);
 
-    final position = this.position - const Offset(70, 53);
-
-    final safePosition = Offset(
-      position.dx.clamp(20.0, screenSize.width - 160),
-      position.dy,
+    final textStyle = theme.textTheme.bodyMedium?.copyWith(
+      color: theme.colorScheme.onPrimary,
+      fontWeight: FontWeight.w600,
     );
 
-    return AnimatedPositioned(
-      duration: const Duration(milliseconds: 50),
-      curve: Curves.linear,
+    final textPainter = TextPainter(
+      text: TextSpan(text: content, style: textStyle),
+      textDirection: TextDirection.ltr,
+      maxLines: 1,
+    )..layout();
+
+    final desiredPosition = position - const Offset(70, 53);
+
+    var dx = desiredPosition.dx;
+    if (dx < 20) dx = 20;
+
+    if (dx + textPainter.width + 20 > screenSize.width) {
+      dx = screenSize.width - textPainter.width - 20;
+    }
+
+    final safePosition = Offset(dx, desiredPosition.dy);
+
+    return Positioned(
       left: safePosition.dx,
       top: safePosition.dy,
       child: IgnorePointer(
@@ -54,10 +67,7 @@ class TooltipOverlayEntry extends StatelessWidget {
               child: Text(
                 content,
                 key: ValueKey(content),
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.colorScheme.onPrimary,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: textStyle,
               ),
             ),
           ),

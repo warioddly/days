@@ -37,5 +37,7 @@ class DayLocalizationsRu extends DayLocalizations {
   String get more_days_of_growth => 'больше дней роста';
 
   @override
-  String get days_left_in_the_year => 'дней осталось в году';
+  String days_left_in_the_year(Object year) {
+    return 'дней прошло в $year году';
+  }
 }

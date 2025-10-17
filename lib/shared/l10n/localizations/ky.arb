@@ -7,5 +7,11 @@
     "about": "Жөнүндө",
     "github": "Github",
     "more_days_of_growth": "күн дагы өсүү",
-    "days_left_in_the_year": "күн өттү быйыл"
+    "days_left_in_the_year": "күн өттү {year}",
+    "@days_left_in_the_year": {
+        "description": "How many days are left in the year",
+        "placeholders": {
+            "year": {}
+        }
+    }
 }
