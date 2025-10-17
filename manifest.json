@@ -1,0 +1,18 @@
+{
+    "name": "days",
+    "short_name": "days",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "description": "Days is a mobile app that tracks how many days have passed and reminds you that every day matters — because a year has so few of them.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": true,
+    "icons": [
+        {
+            "src": "icons/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
