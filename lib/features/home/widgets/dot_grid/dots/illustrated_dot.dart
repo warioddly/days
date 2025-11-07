@@ -5,7 +5,6 @@ import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/home/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/widgets/dot_grid/dots/dot.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart';
-import 'package:days/shared/ui/ui_curves.dart';
 import 'package:flutter/material.dart';
 
 class IllustratedDot extends Dot {
@@ -47,13 +46,9 @@ class _IllustratedDotState extends DotState<IllustratedDot> {
         child:  ListenableBuilder(
           listenable: controller,
           builder: (context, _) {
-            return AnimatedSwitcher(
+            return buildDotSwitcher(
               duration: Durations.medium3,
               reverseDuration: Durations.long3,
-              switchInCurve: UICurves.bounceSwitchAnimation,
-              switchOutCurve: Curves.fastEaseInToSlowEaseOut,
-              transitionBuilder: (child, animation) =>
-                  ScaleTransition(scale: animation, child: child),
               child: isActive
                   ? Image.asset(
                 _image,
@@ -73,23 +68,6 @@ class _IllustratedDotState extends DotState<IllustratedDot> {
     );
   }
 
-  @override
-  void enable() {
-    if (isActive || !mounted) {
-      return;
-    }
-    controller.setActive(true);
-    widget.onEnable?.call();
-  }
-
-  @override
-  void disable([bool shouldDisableActive = false]) {
-    if (!isActive || (shouldDisableActive && widget.isActive)) {
-      return;
-    }
-    controller.setActive(false);
-    widget.onDisable?.call();
-  }
 
   double _randomSize() => Random().nextDouble() * (widget.isActive ? 9 : 6);
 }

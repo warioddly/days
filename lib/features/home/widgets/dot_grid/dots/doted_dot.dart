@@ -2,7 +2,6 @@ import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/home/widgets/dot_grid/dots/default_dot.dart';
 import 'package:days/features/home/widgets/dot_grid/dots/dot.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart';
-import 'package:days/shared/ui/ui_curves.dart';
 import 'package:flutter/cupertino.dart';
 
 const _dotSize = 5.0;
@@ -46,13 +45,9 @@ class _DotedDotState extends DotState<DotedDot> {
       child: ListenableBuilder(
         listenable: controller,
         builder: (context, _) {
-          return AnimatedSwitcher(
+          return buildDotSwitcher(
             duration: const Duration(milliseconds: 250),
             reverseDuration: const Duration(milliseconds: 250),
-            switchInCurve: UICurves.bounceSwitchAnimation,
-            switchOutCurve: Curves.fastEaseInToSlowEaseOut,
-            transitionBuilder: (child, animation) =>
-                ScaleTransition(scale: animation, child: child),
             child: isActive
                 ? DefaultDot(
               key: ObjectKey(widget.date?.toIso8601String() ?? ''),
@@ -63,24 +58,6 @@ class _DotedDotState extends DotState<DotedDot> {
         },
       ),
     );
-  }
-
-  @override
-  void enable() {
-    if (isActive || !mounted) {
-      return;
-    }
-    controller.setActive(true);
-    widget.onEnable?.call();
-  }
-
-  @override
-  void disable([bool shouldDisableActive = false]) {
-    if (!isActive || (shouldDisableActive && widget.isActive)) {
-      return;
-    }
-    controller.setActive(false);
-    widget.onDisable?.call();
   }
 
 

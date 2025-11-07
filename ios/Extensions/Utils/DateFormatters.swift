@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-func formatDate(_ entry: SimpleEntry) -> String {
+func formatDate(_ entry: DaysWidgetEntry) -> String {
 
     let date = entry.date
     let calendar = Calendar.current

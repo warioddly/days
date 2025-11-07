@@ -8,41 +8,24 @@
 import SwiftUI
 import WidgetKit
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let flowerName: String
-}
-
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), flowerName: "Flower-0")
+    func placeholder(in context: Context) -> DaysWidgetEntry {
+        DaysWidgetEntry(date: Date(), flowerName: "Flower-0")
     }
 
     func getSnapshot(
         in context: Context,
-        completion: @escaping (SimpleEntry) -> Void
+        completion: @escaping (DaysWidgetEntry) -> Void
     ) {
-        completion(SimpleEntry(date: Date(), flowerName: "Flower-0"))
+        completion(DaysWidgetEntry(date: Date(), flowerName: "Flower-0"))
     }
 
     func getTimeline(
         in context: Context,
-        completion: @escaping (Timeline<SimpleEntry>) -> Void
+        completion: @escaping (Timeline<DaysWidgetEntry>) -> Void
     ) {
-        var entries: [SimpleEntry] = []
-        let flowerNames = (0...10).map { "Flower-\($0)" }
-        let currentDate = Date()
-
-        for hourOffset in 0..<flowerNames.count {
-            let entryDate = Calendar.current.date(
-                byAdding: .hour,
-                value: hourOffset,
-                to: currentDate
-            )!
-            let flowerName = flowerNames[hourOffset]
-            entries.append(SimpleEntry(date: entryDate, flowerName: flowerName))
-        }
-
+        let flowerNames = generateFlowerNames()
+        let entries = createHourlyTimelineEntries(from: Date(), flowerNames: flowerNames)
         completion(Timeline(entries: entries, policy: .atEnd))
     }
 }
@@ -101,28 +84,6 @@ struct DaysCalendar: Widget {
 #Preview(as: .systemSmall) {
     DaysCalendar()
 } timeline: {
-
-    let flowerNames = (0...10).map { "Flower-\($0)" }
-
-    var entries: [SimpleEntry] = []
-    let currentDate = Date()
-
-    for hourOffset in 0..<flowerNames.count {
-        let entryDate = Calendar.current.date(
-            byAdding: .hour,
-            value: hourOffset,
-            to: currentDate
-        )!
-        let flowerName = flowerNames[hourOffset]
-
-        let entry = SimpleEntry(
-            date: entryDate,
-            flowerName: flowerName
-        )
-
-        entries.append(entry)
-    }
-
-    return entries
-
+    let flowerNames = generateFlowerNames()
+    return createHourlyTimelineEntries(from: Date(), flowerNames: flowerNames)
 }
