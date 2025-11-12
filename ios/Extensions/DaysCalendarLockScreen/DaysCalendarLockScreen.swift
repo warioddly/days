@@ -8,51 +8,28 @@
 import SwiftUI
 import WidgetKit
 
-struct SimpleEntry: TimelineEntry {
-    var date: Date
-    var flowerName: String
-}
-
 struct Provider: TimelineProvider {
 
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), flowerName: "Flower-0")
+    func placeholder(in context: Context) -> DaysWidgetEntry {
+        DaysWidgetEntry(date: Date(), flowerName: "Flower-0")
     }
 
     func getSnapshot(
         in context: Context,
-        completion: @escaping @Sendable (SimpleEntry) -> Void
+        completion: @escaping @Sendable (DaysWidgetEntry) -> Void
     ) {
-        completion(SimpleEntry(date: Date(), flowerName: "Flower-0"))
+        completion(DaysWidgetEntry(date: Date(), flowerName: "Flower-0"))
     }
 
     func getTimeline(
         in context: Context,
-        completion: @escaping @Sendable (Timeline<SimpleEntry>) -> Void
+        completion: @escaping @Sendable (Timeline<DaysWidgetEntry>) -> Void
     ) {
-        let flowerNames = (0...10).map { "Flower-\($0)" }
-        let calendar = Calendar.current
-        let currentDate = Date()
+        let flowerNames = generateFlowerNames()
+        let entries = createDailyTimelineEntries(from: Date(), flowerNames: flowerNames)
 
-        let entries: [SimpleEntry] = (0..<7).compactMap { offset in
-            guard
-                let entryDate = calendar.date(
-                    byAdding: .day,
-                    value: offset,
-                    to: calendar.startOfDay(for: currentDate)
-                )
-            else {
-                return nil
-            }
-
-            let index = abs(entryDate.hashValue) % flowerNames.count
-            let flowerName = flowerNames[index]
-
-            return SimpleEntry(date: entryDate, flowerName: flowerName)
-        }
-
-        let nextMidnight = calendar.nextDate(
-            after: currentDate,
+        let nextMidnight = Calendar.current.nextDate(
+            after: Date(),
             matching: DateComponents(hour: 0),
             matchingPolicy: .strict
         )!
@@ -186,22 +163,6 @@ struct DaysCalendarLockScreen: Widget {
 #Preview(as: .accessoryCircular) {
     DaysCalendarLockScreen()
 } timeline: {
-    let flowerNames = (0...10).map { "Flower-\($0)" }
-    let calendar = Calendar.current
-    let currentDate = Date()
-
-    let entries: [SimpleEntry] = (0..<7).map { dayOffset in
-        let entryDate = calendar.date(
-            byAdding: .day,
-            value: dayOffset,
-            to: currentDate
-        )!
-        let startOfDay = calendar.startOfDay(for: entryDate)
-        let index = abs(startOfDay.hashValue) % flowerNames.count
-        let flowerName = flowerNames[index]
-
-        return SimpleEntry(date: entryDate, flowerName: flowerName)
-    }
-
-    return entries
+    let flowerNames = generateFlowerNames()
+    return createDailyTimelineEntries(from: Date(), flowerNames: flowerNames)
 }
