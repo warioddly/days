@@ -1,29 +1,32 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:days/core/bootstrap/setup_system_ui.dart';
-import 'package:days/core/constants/constants.dart' show kAppName;
+import 'package:days/core/services/image_cache_service.dart';
 import 'package:days/core/services/local_storage.dart';
+import 'package:days/core/utils/logger.dart';
 import 'package:days/features/app/app_view.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/foundation.dart' show kDebugMode, kIsWeb;
 import 'package:flutter/material.dart';
 
 void main() => runZonedGuarded(
   $runner,
-  (e, s) => log('', name: kAppName, error: e, stackTrace: s),
+  (e, s) => logger.log('Crash App', error: e, stackTrace: s),
 );
 
 Future<void> $runner() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  log('Days app started', name: kAppName);
+  logger.log('Days app started');
+
+  kEnableLogging = kDebugMode;
 
   await Future.wait([
+    ImageCacheService.precacheImages(),
     LocalStorage.instance.init(),
     if (!kIsWeb) $setupSystemUI(),
   ]);
 
-  log('Days app initialized', name: kAppName);
+  logger.log('Days app initialized');
 
   runApp(const AppView());
 }

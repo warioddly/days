@@ -1,5 +1,4 @@
 template-arb-file: en.arb
-synthetic-package: false
 arb-dir: lib/shared/l10n/localizations/
 output-dir: lib/shared/l10n/generated/
 output-localization-file: day_localizations.dart

@@ -1,9 +1,8 @@
-
 import 'dart:math';
 
-const String _assetPath = 'assets/images/icons/illustrations';
-
 final class IllustrationAssets {
+  static const String _assetPath = 'assets/images/icons/illustrations';
+
   static const List<String> illustrations = [
     '$_assetPath/2.png',
     '$_assetPath/3.png',
@@ -148,5 +147,4 @@ final class IllustrationAssets {
     final random = Random().nextInt(illustrations.length);
     return illustrations[random];
   }
-
 }

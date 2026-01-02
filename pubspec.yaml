@@ -17,10 +17,10 @@ homepage: https://github.com/warioddly/days
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.2025.0+32
+version: 1.2026.0+33
 
 environment:
-  sdk: ^3.8.0
+  sdk: ">=3.10.4"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -37,7 +37,7 @@ dependencies:
   shared_preferences: ^2.3.5
   url_launcher: ^6.3.1
   intl: ^0.20.2
-  dimengen: 0.6.0
+  dimengen: 1.0.1
 
 dev_dependencies:
   flutter_test:

@@ -15,7 +15,6 @@ final class DotController extends ChangeNotifier {
 
 }
 
-
 abstract class Dot extends StatefulWidget {
   const Dot({
     this.isActive = false,

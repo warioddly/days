@@ -44,7 +44,7 @@ class _IllustratedDotState extends DotState<IllustratedDot> {
       dimension: Dimensions.dotContainerSize,
       child: Transform.translate(
         offset: _randomOffset,
-        child:  ListenableBuilder(
+        child: ListenableBuilder(
           listenable: controller,
           builder: (context, _) {
             return AnimatedSwitcher(
@@ -56,16 +56,14 @@ class _IllustratedDotState extends DotState<IllustratedDot> {
                   ScaleTransition(scale: animation, child: child),
               child: isActive
                   ? Image.asset(
-                _image,
-                color: context.colorScheme.onPrimary,
-              )
+                      _image,
+                      color: context.colorScheme.onPrimary,
+                    )
                   : DefaultDot(
-                key: UniqueKey(),
-                size: 1.5,
-                color: widget.isActive
-                    ? Colors.transparent
-                    : context.colorScheme.onPrimary,
-              ),
+                      key: UniqueKey(),
+                      size: 1.5,
+                      color: widget.isActive ? Colors.transparent : context.colorScheme.onPrimary,
+                    ),
             );
           },
         ),

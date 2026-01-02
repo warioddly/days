@@ -1,10 +1,10 @@
 import 'package:days/core/assets/illustration_assets.dart';
-import 'package:days/core/base/view_model.dart';
 import 'package:days/features/home/dots_view_model.dart';
 import 'package:days/features/home/home_view_model.dart';
 import 'package:days/features/home/widgets/controlbar/status_bar.dart';
 import 'package:days/features/home/widgets/dot_grid/dot_grid_body.dart';
 import 'package:days/features/home/widgets/home_view_footer.dart';
+import 'package:days/shared/package/vm/view_model.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart' show Insets;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide Tooltip;

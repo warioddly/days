@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:days/core/base/view_model.dart';
 import 'package:days/features/home/widgets/dot_grid/dots/dot.dart';
 import 'package:days/features/home/widgets/dot_grid/grid_animations/dot_disable_animation.dart';
+import 'package:days/shared/package/vm/view_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -1,9 +1,9 @@
-import 'package:days/core/base/view_model.dart';
 import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/home/dots_view_model.dart';
 import 'package:days/features/home/home_view_model.dart';
 import 'package:days/shared/l10n/_locale.dart';
 import 'package:days/shared/package/animated_flip_counter/animated_flip_counter.dart';
+import 'package:days/shared/package/vm/view_model.dart';
 import 'package:days/shared/ui/animations/ui_blur_switcher.dart';
 import 'package:days/shared/ui/animations/ui_fade_slide.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart';

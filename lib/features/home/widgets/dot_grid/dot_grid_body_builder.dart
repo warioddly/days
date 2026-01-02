@@ -21,36 +21,23 @@ class DotGridBodyBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final screenSize = MediaQuery.sizeOf(context);
-    final viewSize = (screenSize.width > Breakpoints.maxViewWidthSize
-        ? Breakpoints.maxViewWidthSize
-        : screenSize.width) -
+    final viewSize =
+        (screenSize.width > Breakpoints.maxViewWidthSize
+            ? Breakpoints.maxViewWidthSize
+            : screenSize.width) -
         (Dimensions.xl * 2);
 
-    return SizedBox(
-      width: viewSize,
-      height: viewSize / (viewSize / (screenSize.height / 1.8)),
-      child: FittedBox(
-        fit: BoxFit.fitHeight,
-        child: GestureDetector(
-          behavior: HitTestBehavior.translucent,
-          onPanStart: (details) => onPanUpdate(details.globalPosition),
-          onPanUpdate: (details) => onPanUpdate(details.globalPosition),
-          child: GridBuilder(
-            now: now,
-            from: DateTime(now.year),
-            to: DateTime(now.year).add(const Duration(days: 365)),
-            lengthCalculate: DateTimeUtils.getDaysFrom,
-            dayCalculate: DateTimeUtils.addDays,
-            blockSize: const Size.square(Dimensions.dotContainerSize),
-            viewSize: Size(viewSize, screenSize.height),
-            itemBuilder: itemBuilder,
-            onBuildComplete: onBuildComplete,
-          ),
-        ),
-      ),
+    return GridBuilder(
+      now: now,
+      from: DateTime(now.year),
+      to: DateTime(now.year).add(const Duration(days: 365)),
+      lengthCalculate: DateTimeUtils.getDaysFrom,
+      dayCalculate: DateTimeUtils.addDays,
+      blockSize: const Size.square(Dimensions.dotContainerSize),
+      viewSize: Size(viewSize, screenSize.height),
+      itemBuilder: itemBuilder,
+      onBuildComplete: onBuildComplete,
     );
-
   }
 }

@@ -34,13 +34,13 @@ class _IllustratedGridBuilderState
 
   @override
   void onPanUpdate(Offset position) {
-    framer.throttle(
-      () => DotHoverAnimation(
-        keys: keys,
-        position: position,
-        onComplete: onAnimationComplete,
-        onOverlapping: onOverlapping,
-      ),
-    );
+    // framer.throttle(
+    //   () => DotHoverAnimation(
+    //     keys: keys,
+    //     position: position,
+    //     onComplete: onAnimationComplete,
+    //     onOverlapping: onOverlapping,
+    //   ),
+    // );
   }
 }

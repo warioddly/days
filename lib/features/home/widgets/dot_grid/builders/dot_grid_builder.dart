@@ -1,14 +1,38 @@
-import 'package:days/core/base/view_model.dart';
 import 'package:days/core/utils/frame_rate_utils.dart';
 import 'package:days/features/home/dots_view_model.dart';
 import 'package:days/features/home/widgets/dot_grid/dot_grid_body_builder.dart'
     show DotGridBodyBuilder;
 import 'package:days/features/home/widgets/dot_grid/dots/dot.dart';
-import 'package:days/features/home/widgets/tooltip/tooltip.dart'
-    show TooltipOverlay;
+import 'package:days/features/home/widgets/tooltip/tooltip.dart' show TooltipOverlay;
+import 'package:days/shared/package/vm/view_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+class DotGridRenderObjectWidget extends SingleChildRenderObjectWidget {
+  const DotGridRenderObjectWidget({
+    required super.child,
+    super.key,
+  });
+
+  @override
+  DotGridRenderBox createRenderObject(BuildContext context) {
+    return DotGridRenderBox();
+  }
+
+  @override
+  void updateRenderObject(
+    BuildContext context,
+    DotGridRenderBox renderObject,
+  ) {}
+}
+
+class DotGridRenderBox extends RenderBox {
+  @override
+  void performLayout() {
+    size = constraints.biggest;
+  }
+}
 
 abstract class DotGridBuilder extends StatefulWidget {
   const DotGridBuilder({super.key});
