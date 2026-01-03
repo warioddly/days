@@ -6,8 +6,8 @@ import 'package:days/shared/ui/typography/ui_link_text.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-class RelatedLinks extends StatelessWidget {
-  const RelatedLinks({super.key});
+class PrivacyPolicyLinks extends StatelessWidget {
+  const PrivacyPolicyLinks({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +21,13 @@ class RelatedLinks extends StatelessWidget {
       children: [
         UILinkText(
           title: l10n.terms,
-          onPressed: () => launchUrlString(kTermsUrl),
+          onTap: () => launchUrlString(kTermsUrl),
           style: typography,
         ),
         UIDotDivider(color: color),
         UILinkText(
           title: l10n.privacy,
-          onPressed: () => launchUrlString(kPrivacyUrl),
+          onTap: () => launchUrlString(kPrivacyUrl),
           style: typography,
         ),
       ],

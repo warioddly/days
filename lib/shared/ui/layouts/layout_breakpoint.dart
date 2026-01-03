@@ -9,7 +9,9 @@ class LayoutBreakpoint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: Breakpoints.maxViewWidthSize),
+      constraints: const BoxConstraints(
+        maxWidth: Breakpoints.maxViewWidthSize,
+      ),
       child: child,
     );
   }

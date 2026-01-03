@@ -1,6 +1,6 @@
 import 'package:days/core/utils/extensions/theme_extensions.dart';
+import 'package:days/shared/ui/animations/ui_curves.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart';
-import 'package:days/shared/ui/ui_curves.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,8 +21,7 @@ class UISegmentedControl<T> extends StatefulWidget {
   State<UISegmentedControl> createState() => _UISegmentedControlState();
 }
 
-class _UISegmentedControlState extends State<UISegmentedControl>
-    with TickerProviderStateMixin {
+class _UISegmentedControlState extends State<UISegmentedControl> with TickerProviderStateMixin {
   late final bounceAnimation = CurvedAnimation(
     parent: bounceAnimationController,
     curve: Curves.easeInOutCubicEmphasized,
@@ -72,19 +71,20 @@ class _UISegmentedControlState extends State<UISegmentedControl>
           behavior: HitTestBehavior.opaque,
           child: AnimatedBuilder(
             animation: bounceAnimationController,
-            builder: (context, child) {
-              return Transform.scale(
-                scale: bounceAnimationController.value,
-                child: child,
-              );
-            },
+            builder: (context, child) => Transform.scale(
+              scale: bounceAnimationController.value,
+              child: child,
+            ),
             child: SizedBox(
               height: 50,
               width: controlBarWidth,
               child: DecoratedBox(
-                decoration: const ShapeDecoration(
-                  color: CupertinoColors.tertiarySystemFill,
-                  shape: RoundedSuperellipseBorder(borderRadius: Borders.msl),
+                decoration: ShapeDecoration(
+                  color: switch (Theme.brightnessOf(context)) {
+                    Brightness.light => CupertinoColors.tertiarySystemFill,
+                    Brightness.dark => CupertinoColors.tertiarySystemFill.darkHighContrastColor,
+                  },
+                  shape: const RoundedSuperellipseBorder(borderRadius: Borders.msl),
                 ),
                 child: Stack(
                   children: [

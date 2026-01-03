@@ -27,26 +27,24 @@ class _AppViewState extends State<AppView> {
   Widget build(BuildContext context) {
     return ViewModelProvider(
       viewModel: viewModel,
-      child: Builder(
-        builder: (context) => ListenableBuilder(
-          listenable: viewModel,
-          builder: (context, _) {
-            return MaterialApp(
-              title: kAppName,
-              themeMode: viewModel.themeMode,
-              debugShowCheckedModeBanner: false,
-              theme: UITheme.lightTheme(),
-              darkTheme: UITheme.darkTheme(),
-              scrollBehavior: const CupertinoScrollBehavior(),
-              localizationsDelegates: DayLocalizations.localizationsDelegates,
-              supportedLocales: DayLocalizations.supportedLocales,
-              home: MediaQuery(
-                data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
-                child: const HomeView(),
-              ),
-            );
-          },
-        ),
+      child: ListenableBuilder(
+        listenable: viewModel,
+        builder: (context, _) {
+          return MaterialApp(
+            title: kAppName,
+            themeMode: viewModel.themeMode,
+            debugShowCheckedModeBanner: false,
+            theme: UITheme.lightTheme(),
+            darkTheme: UITheme.darkTheme(),
+            scrollBehavior: const CupertinoScrollBehavior(),
+            localizationsDelegates: DayLocalizations.localizationsDelegates,
+            supportedLocales: DayLocalizations.supportedLocales,
+            home: MediaQuery(
+              data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+              child: const HomeView(),
+            ),
+          );
+        },
       ),
     );
   }

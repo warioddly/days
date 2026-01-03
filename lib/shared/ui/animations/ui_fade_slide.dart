@@ -1,4 +1,4 @@
-import 'package:days/shared/ui/ui_curves.dart';
+import 'package:days/shared/ui/animations/ui_curves.dart';
 import 'package:flutter/material.dart';
 
 class UIFadeSlide extends StatefulWidget {

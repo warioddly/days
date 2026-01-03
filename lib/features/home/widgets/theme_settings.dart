@@ -1,5 +1,5 @@
-import 'package:days/shared/package/vm/view_model.dart';
 import 'package:days/features/app/app_view_model.dart';
+import 'package:days/shared/package/vm/view_model.dart';
 import 'package:days/shared/ui/tabs/ui_segmented_control.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

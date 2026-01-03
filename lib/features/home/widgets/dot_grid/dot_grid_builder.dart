@@ -2,11 +2,10 @@
 
 import 'dart:math' as math;
 
-import 'package:days/features/home/widgets/dot_grid/dots/dot.dart';
-import 'package:days/features/home/widgets/dot_grid/dots/illustrated_dot_render_object_widget.dart';
 import 'package:flutter/gestures.dart' show PanGestureRecognizer;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 class DotGridRenderObjectWidget extends SingleChildRenderObjectWidget {
@@ -49,9 +48,6 @@ class DotGridBuilderRenderBox extends RenderBox with RenderObjectWithChildMixin<
   }
 
   @override
-  bool hitTestSelf(Offset position) => true;
-
-  @override
   void paint(PaintingContext context, Offset offset) {
     if (child != null) {
       context.paintChild(child!, offset);
@@ -80,9 +76,7 @@ abstract class DotBuilderRenderObjectWidget extends MultiChildRenderObjectWidget
   }) : super(children: children);
 
   @override
-  RenderBox createRenderObject(BuildContext context) {
-    return DotBuilderRenderObjectBox();
-  }
+  RenderBox createRenderObject(BuildContext context) => DotBuilderRenderObjectBox();
 }
 
 class DotBuilderRenderObjectBox extends RenderBox
@@ -137,6 +131,7 @@ class DotBuilderRenderObjectBox extends RenderBox
         col * spacingX + spacingX / 2,
         row * spacingY + spacingY / 2,
       );
+      childParentData?.dayIndex = index;
 
       child = childParentData?.nextSibling;
       index++;
@@ -173,17 +168,51 @@ class DotBuilderRenderObjectBox extends RenderBox
   }
 }
 
-class DotParentData extends ContainerBoxParentData<RenderBox> {
-  int day = 0;
-}
-
 abstract class DotRenderObjectWidget extends LeafRenderObjectWidget {
   const DotRenderObjectWidget({super.key});
 }
 
 abstract class DotRenderObjectBox extends RenderBox {
+  bool _isActive = false;
+
+  bool get isActive => _isActive;
+
+  void setActive(bool value) {
+    if (isActive != value) {
+      _isActive = value;
+      HapticFeedback.mediumImpact();
+    }
+  }
+
+  int get dayIndex {
+    final parentData = this.parentData;
+    if (parentData is DotParentData) {
+      return parentData.dayIndex;
+    }
+    return 0;
+  }
+
+  bool get isDefaultActiveDay {
+    final now = DateTime.now();
+    final dotDate = DateTime(now.year).add(Duration(days: dayIndex));
+    return DateUtils.isSameDay(now, dotDate) || dotDate.isBefore(now);
+  }
+
+  @override
+  void attach(PipelineOwner owner) {
+    super.attach(owner);
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      if (!isDefaultActiveDay) return;
+      _isActive = true;
+    });
+  }
+
   @override
   void performLayout() {
     size = constraints.biggest;
   }
+}
+
+class DotParentData extends ContainerBoxParentData<RenderBox> {
+  int dayIndex = 0;
 }
