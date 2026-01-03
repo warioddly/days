@@ -37,6 +37,16 @@ deep_clean: ## Deep clean
 gen_locale: ## Generate localization files
 	@flutter gen-l10n
 
+# Obfuscate build commands
+build_obfuscate_apk: ## Build obfuscated APK
+	@flutter build apk --release --obfuscate --split-debug-info=build/app/outputs/symbols
+
+build_obfuscate_aab: ## Build obfuscated AppBundle
+	@flutter build appbundle --release --obfuscate --split-debug-info=build/app/outputs/symbols
+
+build_obfuscate_ios: ## Build obfuscated iOS app
+	@flutter build ios --release --obfuscate --split-debug-info=build/ios/outputs/symbols
+
 # Aliases
 r: run ## Alias for run
 p: profile ## Alias for profile
