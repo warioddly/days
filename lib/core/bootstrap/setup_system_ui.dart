@@ -1,12 +1,9 @@
-
-import 'dart:developer';
-
+import 'package:days/core/utils/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 Future<void> $setupSystemUI() async {
-
-  log('Setup system ui', name: 'System Overlay');
+  logger.log('Setup system ui', name: 'System Overlay');
 
   await [
     SystemChrome.setPreferredOrientations([
@@ -17,11 +14,12 @@ Future<void> $setupSystemUI() async {
       SystemUiMode.manual,
       overlays: [SystemUiOverlay.top],
     ),
-    Future(() => SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
-    ))
+    Future(
+      () => SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+      ),
+    ),
   ].wait;
 
-  log('Done setup system ui', name: 'System Overlay');
-
+  logger.log('Done setup system ui', name: 'System Overlay');
 }

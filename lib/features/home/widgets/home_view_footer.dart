@@ -1,6 +1,7 @@
 import 'package:days/features/home/widgets/about_app_information.dart';
-import 'package:days/features/home/widgets/controlbar/control_bar.dart';
-import 'package:days/features/home/widgets/settings/settings.dart';
+import 'package:days/features/home/widgets/control_bar.dart';
+import 'package:days/features/home/widgets/app_settings.dart';
+import 'package:days/features/home/widgets/tooltip/tooltip_provider.dart';
 import 'package:days/shared/l10n/_locale.dart';
 import 'package:days/shared/ui/animations/ui_fade_slide.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart';
@@ -28,16 +29,25 @@ class HomeViewFooter extends StatelessWidget {
               children: [
                 UILinkText(
                   title: l10n.settings,
-                  onPressed: () => _showBottomSheet(context, const AppSettings()),
+                  onTap: () {
+                    TooltipProvider.of(context).dispose();
+                    _showBottomSheet(
+                      context,
+                      const AppSettings(),
+                    );
+                  },
                 ),
                 const UIDotDivider(),
                 UILinkText(
                   title: l10n.about,
-                  onPressed: () => _showBottomSheet(
-                    context,
-                    const AboutAppInformation(),
-                    showDragHandle: true,
-                  ),
+                  onTap: () {
+                    TooltipProvider.of(context).dispose();
+                    _showBottomSheet(
+                      context,
+                      const AboutAppInformation(),
+                      showDragHandle: true,
+                    );
+                  },
                 ),
               ],
             ),

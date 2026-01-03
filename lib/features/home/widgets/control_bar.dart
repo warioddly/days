@@ -1,6 +1,7 @@
-import 'package:days/core/base/view_model.dart';
-import 'package:days/features/home/dots_view_model.dart';
+import 'package:days/features/home/dot_manager.dart';
 import 'package:days/features/home/home_view_model.dart';
+import 'package:days/features/home/widgets/tooltip/tooltip_provider.dart';
+import 'package:days/shared/package/vm/view_model.dart';
 import 'package:days/shared/ui/animations/ui_fade_slide.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:days/shared/ui/tabs/ui_segmented_control.dart';
@@ -28,7 +29,8 @@ class ControlBar extends StatelessWidget {
               },
               onValueChanged: (gridType) {
                 viewModel.setGridType(gridType);
-                ViewModel.of<DotsViewModel>(context).reset();
+                TooltipProvider.of(context).dispose();
+                DotManager.of(context).reset();
               },
             ),
           ),

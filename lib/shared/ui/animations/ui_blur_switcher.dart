@@ -8,7 +8,7 @@ class UIBlurSwitcher extends StatelessWidget {
 
   const UIBlurSwitcher({
     required this.child,
-    this.duration = Durations.medium2,
+    this.duration = Durations.medium3,
     super.key,
   });
 

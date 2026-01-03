@@ -1,11 +1,11 @@
 import 'package:days/core/base/store.dart';
-import 'package:days/core/base/view_model.dart';
 import 'package:days/core/keys/storage_key.dart';
 import 'package:days/core/services/local_storage.dart';
-import 'package:days/core/utils/mixins/logger_mixin.dart';
+import 'package:days/core/utils/logger.dart';
+import 'package:days/shared/package/vm/view_model.dart';
 import 'package:flutter/material.dart';
 
-class AppViewModel extends ViewModel with LoggerMixin {
+class AppViewModel extends ViewModel with Logger {
   AppViewModel([Store? store]) : _storage = store ?? LocalStorage.instance {
     _loadTheme();
   }
@@ -27,6 +27,7 @@ class AppViewModel extends ViewModel with LoggerMixin {
         'dark' => ThemeMode.dark,
         _ => ThemeMode.system,
       };
+      log('Theme loaded: $_themeMode');
     } catch (error, stackTrace) {
       log('Error when load grid type: ', error: error, stackTrace: stackTrace);
     }
@@ -34,9 +35,13 @@ class AppViewModel extends ViewModel with LoggerMixin {
 
   void setThemeMode(ThemeMode themeMode) {
     try {
-      if (_themeMode == themeMode) return;
+      if (_themeMode == themeMode) {
+        log('Theme is already set to $themeMode');
+        return;
+      }
       _storage.set(StorageKey.theme, themeMode.name);
       _themeMode = themeMode;
+      log('Theme set to $themeMode');
     } catch (error, stackTrace) {
       log('Error setting grid type: ', error: error, stackTrace: stackTrace);
     }

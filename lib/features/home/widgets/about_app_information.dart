@@ -1,5 +1,5 @@
 import 'package:days/core/constants/constants.dart';
-import 'package:days/features/home/widgets/settings/related_links.dart';
+import 'package:days/features/home/widgets/privacy_policy_links.dart';
 import 'package:days/shared/l10n/_locale.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:days/shared/ui/layouts/layout_breakpoint.dart';
@@ -53,7 +53,7 @@ class AboutAppInformation extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                const RelatedLinks(),
+                const PrivacyPolicyLinks(),
               ],
             ),
           ),

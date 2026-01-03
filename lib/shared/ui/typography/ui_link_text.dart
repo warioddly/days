@@ -6,11 +6,11 @@ class UILinkText extends StatelessWidget {
   const UILinkText({
     required this.title,
     super.key,
-    this.onPressed,
+    this.onTap,
     this.style,
   });
 
-  final VoidCallback? onPressed;
+  final VoidCallback? onTap;
   final String title;
   final TextStyle? style;
 
@@ -18,10 +18,13 @@ class UILinkText extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        HapticFeedback.selectionClick();
-        onPressed?.call();
+        HapticFeedback.lightImpact();
+        onTap?.call();
       },
-      child: Text(title, style: style ?? context.textTheme.labelLarge),
+      child: Text(
+        title,
+        style: style ?? context.textTheme.labelLarge,
+      ),
     );
   }
 }
