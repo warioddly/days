@@ -21,8 +21,7 @@ class UISegmentedControl<T> extends StatefulWidget {
   State<UISegmentedControl> createState() => _UISegmentedControlState();
 }
 
-class _UISegmentedControlState extends State<UISegmentedControl>
-    with TickerProviderStateMixin {
+class _UISegmentedControlState extends State<UISegmentedControl> with TickerProviderStateMixin {
   late final bounceAnimation = CurvedAnimation(
     parent: bounceAnimationController,
     curve: Curves.easeInOutCubicEmphasized,
