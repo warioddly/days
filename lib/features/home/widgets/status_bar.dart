@@ -20,6 +20,7 @@ class StatusBar extends StatelessWidget {
       child: Padding(
         padding: Insets.xl,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             RepaintBoundary(
               child: Builder(
