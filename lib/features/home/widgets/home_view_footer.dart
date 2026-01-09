@@ -1,6 +1,6 @@
 import 'package:days/features/home/widgets/about_app_information.dart';
-import 'package:days/features/home/widgets/control_bar.dart';
 import 'package:days/features/home/widgets/app_settings.dart';
+import 'package:days/features/home/widgets/control_bar.dart';
 import 'package:days/features/home/widgets/tooltip/tooltip_provider.dart';
 import 'package:days/shared/l10n/_locale.dart';
 import 'package:days/shared/ui/animations/ui_fade_slide.dart';

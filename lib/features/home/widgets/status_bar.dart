@@ -8,7 +8,6 @@ import 'package:days/shared/ui/animations/ui_blur_switcher.dart';
 import 'package:days/shared/ui/animations/ui_fade_slide.dart';
 import 'package:days/shared/ui/dimensions/dimensions.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class StatusBar extends StatelessWidget {
   const StatusBar({super.key});
@@ -19,37 +18,42 @@ class StatusBar extends StatelessWidget {
       beginOffset: const Offset(0, -.8),
       child: Padding(
         padding: Insets.xl,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            RepaintBoundary(
-              child: Builder(
-                builder: (context) => AnimatedFlipCounter(
-                  value: DotManager.of(context).counter,
-                  duration: const Duration(seconds: 2),
-                  curve: Curves.linearToEaseOut,
-                  textStyle: context.textTheme.bodyMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
+        child: Center(
+          child: Column(
+            children: [
+              RepaintBoundary(
+                child: Builder(
+                  builder: (context) => AnimatedFlipCounter(
+                    value: DotManager.of(context).counter,
+                    duration: const Duration(seconds: 2),
+                    curve: Curves.linearToEaseOut,
+                    textStyle: context.textTheme.bodyMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Spaces.xs,
-            Builder(
-              builder: (context) => UIBlurSwitcher(
-                child: Text(
-                  key: UniqueKey(),
-                  switch (ViewModel.of<HomeViewModel>(context).gridType) {
-                    GridType.illustrated => l10n.more_days_of_growth,
-                    GridType.doted => l10n.days_left_in_the_year(DateTime.now().year),
-                  },
-                  style: context.textTheme.labelLarge?.copyWith(
-                    color: CupertinoColors.tertiarySystemFill.darkHighContrastColor,
+              Spaces.xs,
+              Builder(
+                builder: (context) => UIBlurSwitcher(
+                  child: Text(
+                    key: UniqueKey(),
+                    switch (ViewModel.of<HomeViewModel>(context).gridType) {
+                      GridType.illustrated => l10n.more_days_of_growth,
+                      GridType.doted => l10n.days_left_in_the_year(
+                        DateTime.now().year,
+                      ),
+                    },
+                    style: context.textTheme.labelLarge?.copyWith(
+                      color: CupertinoColors
+                          .tertiarySystemFill
+                          .darkHighContrastColor,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

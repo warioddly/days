@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_setters_without_getters
 
 import 'dart:async';
-import 'dart:math' as math;
 
 import 'package:days/core/utils/extensions/theme_extensions.dart';
 import 'package:days/features/home/dot_manager.dart';

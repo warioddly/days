@@ -3,7 +3,6 @@ import 'package:days/features/home/home_view_model.dart';
 import 'package:days/features/home/widgets/dot_grid/dot_grid_builder.dart';
 import 'package:days/features/home/widgets/dot_grid/doted_dot_render_object_widget.dart';
 import 'package:days/features/home/widgets/dot_grid/illustrated_dot_render_object_widget.dart';
-import 'package:days/features/home/widgets/tooltip/tooltip_provider.dart';
 import 'package:days/shared/package/vm/view_model.dart';
 import 'package:days/shared/ui/animations/ui_blur_switcher.dart';
 import 'package:days/shared/ui/animations/ui_vsync_provider.dart';
